@@ -1,10 +1,9 @@
 {
-  "name": "portfolio",
+  "name": "isk-portfolio",
   "version": "0.0.0",
   "scripts": {
-		"ng": "ng",
-		"serve": "ng serve",
-    "gen": "ng g c",
+    "ng": "ng",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

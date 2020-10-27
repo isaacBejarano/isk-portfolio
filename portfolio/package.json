@@ -2,8 +2,9 @@
   "name": "portfolio",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
+		"ng": "ng",
+		"serve": "ng serve",
+    "gen": "ng g c",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

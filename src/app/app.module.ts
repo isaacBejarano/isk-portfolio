@@ -1,12 +1,16 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
+import { NavbarComponent } from './navbar/navbar.component';
+import { MasterheadComponent } from './masterhead/masterhead.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    NavbarComponent,
+    MasterheadComponent
   ],
   imports: [
     BrowserModule,

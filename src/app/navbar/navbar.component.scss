@@ -13,7 +13,13 @@
 
     img {
       max-width: 50px;
-    }
+		}
+		&:hover {
+			mix-blend-mode: luminosity;
+		}
+		&:active {
+			mix-blend-mode: soft-light;
+		}
   }
 
   .navbar-nav {
@@ -63,7 +69,7 @@
             color: #1abc9c;
           }
           &.nav-link:active {
-            color: $active-1;
+            color: gainsboro;
           }
         }
       }

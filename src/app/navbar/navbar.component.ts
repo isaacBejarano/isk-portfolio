@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class NavbarComponent implements OnInit {
   title = 'portfolio';
   menu = '';
-  page0 = 'culex';
+  page0 = 'featured';
   page1 = 'portfolio';
   page2 = 'about';
   page3 = 'contact';

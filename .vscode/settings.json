@@ -1,0 +1,9 @@
+{
+  "prettier.useTabs": true,
+  "vetur.format.options.useTabs": true,
+  "javascript.format.insertSpaceAfterKeywordsInControlFlowStatements": false,
+"notebook.kernelProviderAssociations": [],
+"typescript.tsdk": "",
+"javascript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false,
+"typescript.format.insertSpaceAfterFunctionKeywordForAnonymousFunctions": false
+}

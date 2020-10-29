@@ -1,11 +1,11 @@
 <!-- Featured Section-->
 <section class="page-section featured" id="featured">
-  <div class="__container">
+  <div class="container">
     <!-- Featured Section Heading-->
     <h2
-      class="page-section-heading text-center text-uppercase text-secondary mb-5"
+      class="page-section-heading text-center text-primary font-weight-lighter mb-5"
     >
-      Featured
+      featured
     </h2>
     <section class="featured-heading">
       <h3
@@ -13,88 +13,119 @@
       >
         Culex
       </h3>
-      <h4
-        class="page-section-heading text-center text-secondary mb-0"
-      >
+      <h4 class="page-section-heading text-center text-gray mb-0">
         ES5 library to make HTTP requests
       </h4>
-		</section>
-		
+    </section>
+
     <!-- Icon Divider-->
     <div class="divider-custom">
       <div class="divider-custom-line"></div>
       <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
       <div class="divider-custom-line"></div>
-		</div>
-		
+    </div>
+
     <!-- Featured Box -->
-    <div class="__row">
+    <div class="row">
       <!-- link - Culex -->
-      <div class="__col">
+      <div class="col d-flex justify-content-center p-0">
         <div
-          class="featured-item mx-auto"
+          class="portfolio-item"
           data-toggle="modal"
           data-target="#featuredModal"
         >
           <div
-            class="featured-item-caption d-flex align-items-center justify-content-center h-100 w-100"
+            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
           >
-            <div class="featured-item-caption-content text-center text-white">
+            <div class="portfolio-item-caption-content text-center text-white">
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="assets/img/portfolio/culex.png" alt="" />
+          <img
+            id="culex-pic"
+            class="img-fluid border"
+            src="assets/img/portfolio/culex.png"
+            alt="culex mosquito"
+          />
         </div>
       </div>
-		</div>
-		
-		<!-- Featured Modal -->
-			<!-- Portfolio Modal 2-->
-			<div
-			class="featured-modal modal fade"
-			id="featuredModal"
-			tabindex="-1"
-			role="dialog"
-			aria-labelledby="featuredModalLabel"
-			aria-hidden="true"
-		>
-			<div class="modal-dialog modal-xl" role="document">
-				<div class="modal-content">
-					<button class="close" type="button" data-dismiss="modal" aria-label="Close">
-						<span aria-hidden="true"><i class="fas fa-times"></i></span>
-					</button>
-					<div class="modal-body text-center">
-						<div class="container">
-							<div class="row justify-content-center">
-								<div class="col-lg-8">
-									<!-- Portfolio Modal - Title-->
-									<h2 class="featured-modal-title text-secondary text-uppercase mb-0" id="featuredModalLabel">
-										Tasty Cake
-									</h2>
-									<!-- Icon Divider-->
-									<div class="divider-custom">
-										<div class="divider-custom-line"></div>
-										<div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-										<div class="divider-custom-line"></div>
-									</div>
-									<!-- Portfolio Modal - Image-->
-									<img class="img-fluid rounded mb-5" src="assets/img/portfolio/culex.png" alt="" />
-									<!-- Portfolio Modal - Text-->
-									<p class="mb-5">
-										Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia neque assumenda ipsam nihil,
-										molestias magnam, recusandae quos quis inventore quisquam velit asperiores, vitae? Reprehenderit
-										soluta, eos quod consequuntur itaque. Nam.
-									</p>
-									<button class="btn btn-primary" data-dismiss="modal">
-										<i class="fas fa-times fa-fw"></i>
-										Close
-									</button>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    </div>
+
+    <!-- Featured Modal -->
+    <div
+      class="portfolio-modal modal fade"
+      id="featuredModal"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="featuredModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-xl" role="document">
+        <div class="modal-content">
+          <button
+            class="close"
+            type="button"
+            data-dismiss="modal"
+            aria-label="Close"
+          >
+            <span aria-hidden="true"><i class="fas fa-times"></i></span>
+          </button>
+          <div class="modal-body text-center">
+            <div class="container">
+              <div class="row justify-content-center">
+                <div class="col-lg-8">
+                  <!-- Portfolio Modal - Title-->
+                  <h2
+                    class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                    id="featuredModal"
+                  >
+                    Culex
+                  </h2>
+                  <!-- Icon Divider-->
+                  <div class="divider-custom">
+                    <div class="divider-custom-line"></div>
+                    <div class="divider-custom-icon">
+                      <i class="fas fa-star"></i>
+                    </div>
+                    <div class="divider-custom-line"></div>
+                  </div>
+                  <!-- Portfolio Modal - Image-->
+                  <img
+                    class="img-fluid rounded mb-5"
+                    src="assets/img/portfolio/culex.png"
+                    alt=""
+                  />
+                  <!-- Portfolio Modal - Text-->
+                  <p class="mb-5 text-justify">
+                    Culex.js is an easy-to-use and lightweight ES5 library to
+                    fetch JSON data from RESTful APIs through the HTTP protocol
+                    by using the ES5 XMLHttpRequest object. Coded in TypeScript,
+                    the library is available in both TypeScript and ES5
+                    versions. A minified ES5 version is also provided. Clone the
+                    repo or donwload the package from...
+                    <a
+                      class="d-block text-center py-2"
+                      href="https://github.com/isaacBejarano/culex.js"
+                      target="_blank"
+                      onclick="confirm('Culex.js will open in a new window')"
+                    >
+                      https://github.com/isaacBejarano/culex.js
+                    </a>
+                    Give the repo a "star" if you enjoyed Culex.js
+                    <span class="d-block pt-2 text-gray"
+                      >Disclaimer: the library is still in beta phase
+                    </span>
+                  </p>
+                  <button class="btn btn-primary" data-dismiss="modal">
+                    <i class="fas fa-times fa-fw"></i>
+                    Close
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>

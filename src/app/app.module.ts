@@ -7,6 +7,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { MasterheadComponent } from './masterhead/masterhead.component';
 import { FeaturedComponent } from './featured/featured.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FooterComponent } from './footer/footer.component';
+import { SocialComponent } from './social/social.component';
+import { ScrollComponent } from './scroll/scroll.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +18,9 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
     MasterheadComponent,
     FeaturedComponent,
     PortfolioComponent,
+    FooterComponent,
+    SocialComponent,
+    ScrollComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

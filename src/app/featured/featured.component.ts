@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Shared } from '../utils/shared';
 
 @Component({
   selector: 'app-featured',
@@ -7,6 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturedComponent implements OnInit {
   title = 'Culex';
+  img = 'portfolio/culex.png';
+  alt = 'culex github repo';
+
   subtitle = 'ES5 library to make HTTP requests';
   paragraphPart1 =
     'Culex.js is an easy-to-use and lightweight ES5 library \
@@ -14,7 +18,12 @@ export class FeaturedComponent implements OnInit {
   paragraphPart2 = 'and give the repo a "star" if you enjoyed Culex.js.';
   paragraphPart3 = 'Disclaimer: the library is still in beta phase.';
   link = 'https://github.com/isaacBejarano/culex.js';
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  openLink(): boolean {
+    return Shared.openLink();
+  }
 }

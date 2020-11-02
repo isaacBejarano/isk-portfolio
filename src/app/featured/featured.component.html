@@ -92,8 +92,8 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/portfolio/culex.png"
-                    alt=""
+                    src="assets/img/{{ img }}"
+                    alt="{{ alt }}"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
@@ -102,7 +102,7 @@
                       class="text-center py-2"
                       href="{{ link }}"
                       target="_blank"
-                      onclick="confirm('Culex.js will open in a new window')"
+                      (click)="openLink()"
                     >
                       {{ link }}
                     </a>

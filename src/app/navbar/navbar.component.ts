@@ -8,7 +8,8 @@ declare let jQuery: any; // ~jQuery Easing
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  title = 'portfolio';
+  img = 'portfolio/codhex-logo.png';
+  alt = 'codhex logo';
   menu = '';
   page0 = 'featured';
   page1 = 'portfolio';

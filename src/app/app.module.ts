@@ -6,19 +6,18 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { MasterheadComponent } from './masterhead/masterhead.component';
 import { FeaturedComponent } from './featured/featured.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     MasterheadComponent,
-    FeaturedComponent
+    FeaturedComponent,
+    PortfolioComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

@@ -8,12 +8,11 @@
 
   // Featured Box
   .col {
+    // Theme override
     .portfolio-item {
       position: relative !important;
 
       .portfolio-item-caption {
-        width: 400px !important;
-        //
         position: absolute !important;
         top: 0 !important;
         left: 0 !important;
@@ -21,12 +20,13 @@
         opacity: 0 !important;
         background-color: rgba(26, 188, 156, 0.9) !important;
         &:hover {
+          cursor: pointer;
           opacity: 1 !important;
         }
       }
 
       img {
-        width: 400px;
+        max-width: 400px !important;
         border-width: 3px !important;
       }
     }

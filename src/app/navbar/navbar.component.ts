@@ -10,7 +10,7 @@ declare let jQuery: any; // ~jQuery Easing
 export class NavbarComponent implements OnInit {
   img = 'portfolio/codhex-logo.png';
   alt = 'codhex logo';
-  menu = '';
+  menu = 'menu';
   page0 = 'featured';
   page1 = 'portfolio';
   page2 = 'about';

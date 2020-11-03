@@ -1,13 +1,14 @@
-@import "../../styles"; // globals
-
 .navbar-brand {
   img {
     width: 50px;
+  }
+  span {
+    color: orange;
   }
   &:hover {
     mix-blend-mode: luminosity;
   }
   &:active {
-    mix-blend-mode: soft-light;
+    mix-blend-mode: color-burn;
   }
 }

@@ -91,7 +91,7 @@
               <i class="fas fa-plus fa-3x"></i>
             </div>
           </div>
-          <img class="img-fluid" src="assets/img/{{ img4 }}" alt="alt4" />
+          <img class="img-fluid" src="assets/img/{{ img4 }}" alt="{{ alt4 }}" />
         </div>
       </div>
       <!-- Portfolio Item 5-->
@@ -183,8 +183,17 @@
                 alt="{{ alt1 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text1 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart1 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link1 }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link1 }}
+                </a>
+                {{ star }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -238,12 +247,21 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/portfolio/cake.png"
-                alt=""
+                src="assets/img/{{ img2 }}"
+                alt="{{ alt2 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text2 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart2 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link2 }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link2 }}
+                </a>
+                {{ star }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -297,12 +315,21 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/portfolio/circus.png"
-                alt=""
+                src="assets/img/{{ img3 }}"
+                alt="{{ alt3 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text3 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart3 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link3 }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link3 }}
+                </a>
+                {{ star }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -356,12 +383,21 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/portfolio/game.png"
-                alt=""
+                src="assets/img/{{ img4 }}"
+                alt="{{ alt4 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text4 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart4 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link4 }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link4 }}
+                </a>
+                {{ star }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -415,12 +451,21 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/portfolio/safe.png"
-                alt=""
+                src="assets/img/{{ img5 }}"
+                alt="{{ alt5 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text5 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart5 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link5 }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link5 }}
+                </a>
+                {{ star }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -474,12 +519,61 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/portfolio/submarine.png"
-                alt=""
+                src="assets/img/{{ img6 }}"
+                alt="{{ alt6 }}"
               />
               <!-- Portfolio Modal - Text-->
-              <p class="mb-5">
-                {{ text6 }}
+              <p class="mb-5 text-justify">
+                {{ paragraphPart6 }}
+                <a
+                  class="text-center py-2"
+                  href="{{ link6a }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6a }}
+                </a>
+                <a
+                  class="text-center py-2"
+                  href="{{ link6b }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6b }}
+                </a>
+                <a
+                  class="text-center py-2"
+                  href="{{ link6c }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6c }}
+                </a>
+                <a
+                  class="text-center py-2"
+                  href="{{ link6d }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6d }}
+                </a>
+                <a
+                  class="text-center py-2"
+                  href="{{ link6e }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6e }}
+                </a>
+                <a
+                  class="text-center py-2"
+                  href="{{ link6f }}"
+                  target="_blank"
+                  (click)="openLink()"
+                >
+                  {{ link6f }}
+                </a>
+                {{ stars }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>

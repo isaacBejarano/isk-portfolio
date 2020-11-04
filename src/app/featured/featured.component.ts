@@ -23,6 +23,7 @@ export class FeaturedComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // methods
   openLink(): boolean {
     return Shared.openLink();
   }

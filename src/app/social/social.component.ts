@@ -7,8 +7,6 @@ import { Shared } from '../utils/shared';
   styleUrls: ['./social.component.scss'],
 })
 export class SocialComponent {
-  follow = 'Follow me on';
-
   link1 = 'https://www.linkedin.com/in/isaac-bejarano';
   faIcon1 = 'fab fa-fw fa-linkedin-in';
 

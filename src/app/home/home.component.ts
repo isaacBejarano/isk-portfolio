@@ -133,8 +133,8 @@ export class HomeComponent implements OnInit, OnDestroy {
       /* RESET THEME ANCHOR URL -fragment- after dalay, when OnInit */
       const anchor = `/#${activatedRoute.snapshot.fragment}`;
 
-      if (anchor === '' || anchor === '/' || anchor === '/#') {
-        setTimeout(() => router.navigate(['']), 100); // router.navigateByUrl(anchor);
+      if (anchor !== '/#null') {
+        setTimeout(() => router.navigate(['']), 30); // router.navigateByUrl(anchor);
       }
     })(jQuery, this.activatedRoute, this.router); // ~jQuery Easing
   }

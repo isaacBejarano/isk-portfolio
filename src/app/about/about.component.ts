@@ -9,6 +9,4 @@ export class AboutComponent {
   title = 'about';
 
   constructor() {}
-
-  // ngOnInit(): void {}
 }

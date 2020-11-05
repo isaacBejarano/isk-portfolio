@@ -5,8 +5,18 @@
 
   <!-- Copyright Section-->
   <div class="copyright py-4 text-center text-white">
-    <span class="d-block">{{ built }}</span>
-    <span class="d-block">{{ license }}</span>
-    <small>{{ copyright }}</small>
+    <span class="d-block"
+      >made with
+      <a [href]="toolLink" target="_blank" (click)="openLink()">
+        {{ tool }}
+      </a>
+    </span>
+    <span class="d-block">
+      <a [href]="themeLink" target="_blank" (click)="openLink()">
+        {{ theme }}
+      </a>
+      under {{ license }} license</span
+    >
+    <small>Copyright © {{ copyright }}</small>
   </div>
 </footer>

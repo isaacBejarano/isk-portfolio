@@ -1,10 +1,10 @@
 <div class="p-5">
-  <h4 class="text-uppercase mb-4">{{ follow }}</h4>
+  <h4 class="text-uppercase mb-4">Follow me on</h4>
 
   <!-- linked in -->
   <a
     class="btn btn-outline-light btn-social mx-1"
-    href="{{ link1 }}"
+    [href]="link1"
     target="_blank"
     (click)="openLink()"
   >
@@ -14,7 +14,7 @@
   <!-- github -->
   <a
     class="btn btn-outline-light btn-social mx-1"
-    href="{{ link2 }}"
+    [href]="link2"
     target="_blank"
     (click)="openLink()"
   >

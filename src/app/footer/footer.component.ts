@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Shared } from '../utils/shared';
 
 @Component({
   selector: 'app-footer',
@@ -6,9 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  built = 'built with Angular';
-  license = 'Start Bootstrap Theme under MIT license';
-  copyright = 'Copyright © Isaac Bejarano 2020';
+  tool = 'Angular';
+  toolLink = 'https://angular.io';
+  theme = 'Start Bootstrap Theme';
+  themeLink = 'https://startbootstrap.com/previews/freelancer/';
+  license = 'MIT';
+  copyright = 'Isaac Bejarano 2020';
 
   constructor() {}
+
+  // methods
+  openLink(): boolean {
+    return Shared.openLink();
+  }
 }

@@ -6,7 +6,8 @@
     "gen": "ng g c",
     "serve": "ng serve",
     "serve:o": "ng serve --open",
-    "build": "ng build --prod",
+    "build": "ng build",
+    "build:p": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"

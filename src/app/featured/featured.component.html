@@ -42,10 +42,10 @@
             </div>
           </div>
           <img
-            id="culex-pic"
+            [id]="id"
             class="border img-fluid border rounded-sm"
-            src="assets/img/portfolio/culex.png"
-            alt="culex mosquito"
+            [src]="src"
+            [alt]="alt"
           />
         </div>
       </div>
@@ -92,22 +92,22 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ img }}"
-                    alt="{{ alt }}"
+                    [src]="src"
+                    [alt]="alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ paragraphPart1 }}
+                    {{ p1 }}
                     <a
                       class="text-center py-2"
-                      href="{{ link }}"
+                      [href]="link"
                       target="_blank"
                       (click)="openLink()"
                     >
                       {{ link }}
                     </a>
-                    {{ paragraphPart2 }}
-                    <span class="text-gray">{{ paragraphPart3 }} </span>
+                    {{ p2 }}
+                    <span class="text-gray">{{ p3 }} </span>
                   </p>
                   <button class="btn btn-primary" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

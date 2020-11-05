@@ -1,22 +1,27 @@
-import { Component } from '@angular/core';
-import { Shared } from '../utils/shared';
+import { Component, OnInit } from '@angular/core';
+import { store } from '../store/store';
 
 @Component({
   selector: 'app-social',
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.scss'],
 })
-export class SocialComponent {
-  link1 = 'https://www.linkedin.com/in/isaac-bejarano';
-  faIcon1 = 'fab fa-fw fa-linkedin-in';
-
-  link2 = 'https://github.com/isaacBejarano';
-  faIcon2 = 'fab fa-github';
+export class SocialComponent implements OnInit {
+  icon1: string;
+  link1: string;
+  icon2: string;
+  link2: string;
+  openLink: () => boolean;
 
   constructor() {}
 
-  // methods
-  openLink(): boolean {
-    return Shared.openLink();
+  ngOnInit(): void {
+    // --> props
+    this.icon1 = store.social.icon1;
+    this.link1 = store.social.link1;
+    this.icon2 = store.social.icon2;
+    this.link2 = store.social.link2;
+    // --> shared methods
+    this.openLink = store.openLink;
   }
 }

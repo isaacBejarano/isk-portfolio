@@ -8,16 +8,16 @@ import { Shared } from '../utils/shared';
 })
 export class FeaturedComponent {
   title = 'Culex';
-  img = 'portfolio/culex.png';
-  alt = 'culex github repo';
-
   subtitle = 'ES5 library to make HTTP requests';
-  paragraphPart1 =
+  id = 'culex-pic';
+  src = 'assets/img/portfolio/culex.png';
+  alt = 'culex github repo';
+  link = 'https://github.com/isaacBejarano/culex.js';
+  p1 =
     'Culex.js is an easy-to-use and lightweight ES5 library \
     to fetch JSON data from RESTful APIs. Visit';
-  paragraphPart2 = 'and give the repo a "star" if you enjoyed Culex.js.';
-  paragraphPart3 = 'Disclaimer: the library is still in beta phase.';
-  link = 'https://github.com/isaacBejarano/culex.js';
+  p2 = 'and give the repo a "star" if you enjoyed Culex.js.';
+  p3 = 'Disclaimer: the library is still in beta phase.';
 
   constructor() {}
 

@@ -1,32 +1,37 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { store } from '../store/store';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.scss'],
 })
-export class NavbarComponent {
-  homePic = 'portfolio/codhex-logo.png';
-  homeAlt = 'codhex logo';
-  hamburger = 'menu';
-  home = 'home';
-  page1 = 'featured';
-  page2 = 'portfolio';
-  page3 = 'about';
-  page4 = 'contact';
+export class NavbarComponent implements OnInit {
+  home: string;
+  homeSrc: string;
+  homeAlt: string;
+  hamburger: string;
+  page1: string;
+  page2: string;
+  page3: string;
+  page4: string;
+  hashIt: (ref: string) => string;
+  capitalLetter: (ref: string) => string;
 
   constructor() {}
 
-  // methods
-  hashIt(ref: string): string {
-    return '#' + ref;
-  }
-
-  capitalLetter(str: string): string {
-    let capitalized = str.substr(0, 1).toUpperCase();
-
-    capitalized += str.substr(1, str.length);
-
-    return capitalized;
+  ngOnInit(): void {
+    // --> props
+    this.home = store.navbar.home;
+    this.homeSrc = store.navbar.homeSrc;
+    this.homeAlt = store.navbar.homeAlt;
+    this.hamburger = store.navbar.hamburger;
+    this.page1 = store.navbar.page1;
+    this.page2 = store.navbar.page2;
+    this.page3 = store.navbar.page3;
+    this.page4 = store.navbar.page4;
+    // --> shared methods
+    this.hashIt = store.hashIt;
+    this.capitalLetter = store.capitalLetter;
   }
 }

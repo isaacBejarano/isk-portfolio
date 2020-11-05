@@ -12,11 +12,14 @@ declare let jQuery: any; // ~jQuery Easing
 export class HomeComponent implements OnInit, OnDestroy {
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
+  /*  NOTE: hrefs (from navbar.component + scroll.component)
+      must already exist in upper hierarchy (app.component)
+      so this JQuery algorithm can ref them */
   ngOnInit(): void {
     /*!
-      Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
-      Copyright 2013-2020 Start Bootstrap
-      Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
+    Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
+    Copyright 2013-2020 Start Bootstrap
+    Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
 
       JQuery plugin - JQuery Easing
       https://github.com/gdsmith/jquery.easing

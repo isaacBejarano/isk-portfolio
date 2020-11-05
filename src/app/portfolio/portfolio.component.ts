@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Shared } from '../utils/shared';
 
 @Component({
@@ -6,7 +6,7 @@ import { Shared } from '../utils/shared';
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
-export class PortfolioComponent implements OnInit {
+export class PortfolioComponent {
   // common
   star = 'and give it a "star".';
   stars = 'and give them a "star".';
@@ -65,8 +65,6 @@ export class PortfolioComponent implements OnInit {
   link6f = 'https://github.com/isaacBejarano/fibonacci-sequencer';
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   // methods
   openLink(): boolean {

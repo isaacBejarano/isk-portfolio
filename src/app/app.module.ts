@@ -28,7 +28,7 @@ import { ErrorComponent } from './error/error.component';
     AboutComponent,
     ContactComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

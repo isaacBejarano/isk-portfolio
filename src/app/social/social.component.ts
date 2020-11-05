@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Shared } from '../utils/shared';
 
 @Component({
@@ -6,7 +6,7 @@ import { Shared } from '../utils/shared';
   templateUrl: './social.component.html',
   styleUrls: ['./social.component.scss'],
 })
-export class SocialComponent implements OnInit {
+export class SocialComponent {
   follow = 'Follow me on';
 
   link1 = 'https://www.linkedin.com/in/isaac-bejarano';
@@ -17,8 +17,7 @@ export class SocialComponent implements OnInit {
 
   constructor() {}
 
-  ngOnInit(): void {}
-
+  // methods
   openLink(): boolean {
     return Shared.openLink();
   }

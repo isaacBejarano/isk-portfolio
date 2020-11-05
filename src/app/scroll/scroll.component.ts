@@ -1,14 +1,12 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
   styleUrls: ['./scroll.component.scss'],
 })
-export class ScrollComponent implements OnInit {
+export class ScrollComponent {
   icon = 'fa fa-chevron-up';
 
   constructor() {}
-
-  ngOnInit(): void {}
 }

@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 declare let jQuery: any; // ~jQuery Easing
@@ -9,7 +9,7 @@ declare let jQuery: any; // ~jQuery Easing
   styleUrls: ['./home.component.scss'],
 })
 // OnChanges,
-export class HomeComponent implements OnDestroy, OnInit {
+export class HomeComponent implements OnInit, OnDestroy {
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {

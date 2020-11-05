@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Shared } from '../utils/shared';
 
 @Component({
@@ -6,7 +6,7 @@ import { Shared } from '../utils/shared';
   templateUrl: './featured.component.html',
   styleUrls: ['./featured.component.scss'],
 })
-export class FeaturedComponent implements OnInit {
+export class FeaturedComponent {
   title = 'Culex';
   img = 'portfolio/culex.png';
   alt = 'culex github repo';
@@ -20,8 +20,6 @@ export class FeaturedComponent implements OnInit {
   link = 'https://github.com/isaacBejarano/culex.js';
 
   constructor() {}
-
-  ngOnInit(): void {}
 
   // methods
   openLink(): boolean {

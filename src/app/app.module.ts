@@ -10,6 +10,10 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { SocialComponent } from './social/social.component';
 import { ScrollComponent } from './scroll/scroll.component';
+import { AboutComponent } from './about/about.component';
+import { ContactComponent } from './contact/contact.component';
+import { HomeComponent } from './home/home.component';
+import { ErrorComponent } from './error/error.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import { ScrollComponent } from './scroll/scroll.component';
     PortfolioComponent,
     FooterComponent,
     SocialComponent,
-    ScrollComponent
+    ScrollComponent,
+    AboutComponent,
+    ContactComponent,
+    HomeComponent,
+    ErrorComponent
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

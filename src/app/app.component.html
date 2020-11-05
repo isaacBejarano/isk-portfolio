@@ -1,23 +1,12 @@
-<!-- ** TEMPLATE ** -->
-
-<!-- Navigation -->
+<!-- * Navigation - UI component * -->
 <app-navbar></app-navbar>
 
-<!-- Masthead -->
-<app-masterhead></app-masterhead>
+<!-- *** ROUTER *** -->
+<router-outlet></router-outlet>
 
-<!-- Featured - Culex -->
-<app-featured></app-featured>
-
-<!-- Potfolio -->
-<app-portfolio></app-portfolio>
-
-<!-- Footer -->
+<!-- * Footer - UI component * -->
 <app-footer>
   <!-- multiple transclusion -->
-  <app-social class="slot1"></app-social>
-  <app-scroll class="slot2"></app-scroll>
+  <app-social id="slot-footer-1"></app-social>
+  <app-scroll id="slot-footer-2"></app-scroll>
 </app-footer>
-
-<!-- ** ROUTER ** -->
-<router-outlet></router-outlet>

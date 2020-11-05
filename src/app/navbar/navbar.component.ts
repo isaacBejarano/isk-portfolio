@@ -1,4 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  // OnChanges,
+  // AfterContentChecked,
+  // AfterViewChecked,
+  // OnDestroy,
+} from '@angular/core';
+
+import { Router, ActivatedRoute } from '@angular/router';
 
 declare let jQuery: any; // ~jQuery Easing
 
@@ -8,6 +17,7 @@ declare let jQuery: any; // ~jQuery Easing
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  home = 'Home';
   img = 'portfolio/codhex-logo.png';
   alt = 'codhex logo';
   menu = 'menu';
@@ -16,7 +26,7 @@ export class NavbarComponent implements OnInit {
   page2 = 'about';
   page3 = 'contact';
 
-  constructor() {}
+  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     /*!
@@ -26,58 +36,67 @@ export class NavbarComponent implements OnInit {
      */
     //  JQuery plugin - JQuery Easing
     //  https://github.com/gdsmith/jquery.easing
-    (($) => {
-      'use strict'; // Start of use strict
+    (($, activatedRoute, router): void => {
+      // 'use strict'; // Start of use strict
+
       // Smooth scrolling using jQuery easing
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on(
         'click',
         // prettier-ignore
         function(): boolean {
-          if (
-            location.pathname.replace(/^\//, '') ===
-              this.pathname.replace(/^\//, '') &&
-            location.hostname === this.hostname
-          )
-           {
-            let target = $(this.hash);
-            target = target.length
-              ? target
-              : $('[name=' + this.hash.slice(1) + ']');
-            if (target.length) {
-              $('html, body').animate(
-                {
-                  scrollTop: target.offset().top - 71,
-                },
-                1000,
-                'easeInOutExpo' // this is the plugin methods // https://gsgd.co.uk/sandbox/jquery/easing/
-              );
-              return false;
+            if (
+              location.pathname.replace(/^\//, '') ===
+                this.pathname.replace(/^\//, '') &&
+              location.hostname === this.hostname
+            )
+             {
+              let target = $(this.hash);
+
+              target = target.length
+                ? target
+                : $('[name=' + this.hash.slice(1) + ']');
+
+              if (target.length) {
+                $('html, body').animate(
+                  {
+                    scrollTop: target.offset().top - 71,
+                  },
+                  1000,
+                  'easeInOutExpo' // this is the plugin methods // https://gsgd.co.uk/sandbox/jquery/easing/
+                );
+                return false;
+              }
             }
           }
-        }
       );
+
       // Scroll to top button appear
       $(document).on(
         'scroll',
         // prettier-ignore
         function(): any {
-        const scrollDistance = $(this).scrollTop();
-        if (scrollDistance > 100) {
-          $('.scroll-to-top').fadeIn();
-        } else {
-          $('.scroll-to-top').fadeOut();
-        }
-      }
+
+            const scrollDistance = $(this).scrollTop();
+
+            if (scrollDistance > 100) {
+              $('.scroll-to-top').fadeIn();
+            } else {
+              $('.scroll-to-top').fadeOut();
+            }
+          }
       );
+
       // Closes responsive menu when a scroll trigger link is clicked
       $('.js-scroll-trigger').on('click', () => {
         ($('.navbar-collapse') as any).collapse('hide');
       });
+
       // Activate scrollspy to add active class to navbar items on scroll
       ($('body') as any).scrollspy({
         target: '#mainNav',
         offset: 80,
       });
+
       // Collapse Navbar
       const navbarCollapse = () => {
         if ($('#mainNav').offset().top > 100) {
@@ -86,10 +105,13 @@ export class NavbarComponent implements OnInit {
           $('#mainNav').removeClass('navbar-shrink');
         }
       };
+
       // Collapse now if page is not at top
       navbarCollapse();
+
       // Collapse the navbar when page is scrolled
       $(window).on('scroll', navbarCollapse);
+
       // Floating label headings for the contact form
       $(() => {
         $('body')
@@ -98,29 +120,44 @@ export class NavbarComponent implements OnInit {
             '.floating-label-form-group',
             // prettier-ignore
             function(e): void {
-            $(this).toggleClass(
-              'floating-label-form-group-with-value',
-              !!$(e.target).val()
-            );
-          }
+              $(this).toggleClass(
+                'floating-label-form-group-with-value',
+                !!$(e.target).val()
+              );
+            }
           )
           .on(
             'focus',
             '.floating-label-form-group',
             // prettier-ignore
             function(): void {
-            $(this).addClass('floating-label-form-group-with-focus');
-          }
+              $(this).addClass('floating-label-form-group-with-focus');
+            }
           )
           .on(
             'blur',
             '.floating-label-form-group',
             // prettier-ignore
             function(): void {
-            $(this).removeClass('floating-label-form-group-with-focus');
-          }
+              $(this).removeClass('floating-label-form-group-with-focus');
+            }
           );
       });
-    })(jQuery); // ~jQuery Easing
+
+      /* RESET URL PARAMS WHEN COMING FORM ANOTHER PAGE */
+      // console.log('ngOnInit', this.activatedRoute.queryParamMap);
+      // console.log('ngOnInit', this.activatedRoute.queryParams);
+      // console.log('ngOnInit', this.activatedRoute.params);
+      // console.log('ngOnInit', this.activatedRoute.paramMap);
+      // console.log('ngOnInit', this.activatedRoute.snapshot.fragment);
+      const anchor = `/#${activatedRoute.snapshot.fragment}`;
+      console.log(anchor);
+
+      if (anchor === '/#') {
+        setTimeout(() => router.navigate(['']), 100);
+        // router.navigateByUrl(anchor);
+      }
+      ////
+    })(jQuery, this.activatedRoute, this.router); // ~jQuery Easing
   }
 }

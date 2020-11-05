@@ -1,12 +1,4 @@
-import {
-  Component,
-  OnInit,
-  // OnChanges,
-  // AfterContentChecked,
-  // AfterViewChecked,
-  // OnDestroy,
-} from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 declare let jQuery: any; // ~jQuery Easing
@@ -17,27 +9,28 @@ declare let jQuery: any; // ~jQuery Easing
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
-  home = 'Home';
-  img = 'portfolio/codhex-logo.png';
-  alt = 'codhex logo';
-  menu = 'menu';
-  page0 = 'featured';
-  page1 = 'portfolio';
-  page2 = 'about';
-  page3 = 'contact';
+  hometitle = 'Home';
+  homepic = 'portfolio/codhex-logo.png';
+  homealt = 'codhex logo';
+  hamburger = 'menu';
+  page1 = 'featured';
+  page2 = 'portfolio';
+  page3 = 'about';
+  page4 = 'contact';
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
 
   ngOnInit(): void {
     /*!
-     * Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
-     * Copyright 2013-2020 Start Bootstrap
-     * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-     */
-    //  JQuery plugin - JQuery Easing
-    //  https://github.com/gdsmith/jquery.easing
+      Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
+      Copyright 2013-2020 Start Bootstrap
+      Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
+
+      JQuery plugin - JQuery Easing
+      https://github.com/gdsmith/jquery.easing
+    */
     (($, activatedRoute, router): void => {
-      // 'use strict'; // Start of use strict
+      'use strict'; // Start of use strict
 
       // Smooth scrolling using jQuery easing
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on(
@@ -62,7 +55,8 @@ export class NavbarComponent implements OnInit {
                     scrollTop: target.offset().top - 71,
                   },
                   1000,
-                  'easeInOutExpo' // this is the plugin methods // https://gsgd.co.uk/sandbox/jquery/easing/
+                  // see plugin methods --> https://gsgd.co.uk/sandbox/jquery/easing/
+                  'easeInOutExpo'
                 );
                 return false;
               }
@@ -144,20 +138,12 @@ export class NavbarComponent implements OnInit {
           );
       });
 
-      /* RESET URL PARAMS WHEN COMING FORM ANOTHER PAGE */
-      // console.log('ngOnInit', this.activatedRoute.queryParamMap);
-      // console.log('ngOnInit', this.activatedRoute.queryParams);
-      // console.log('ngOnInit', this.activatedRoute.params);
-      // console.log('ngOnInit', this.activatedRoute.paramMap);
-      // console.log('ngOnInit', this.activatedRoute.snapshot.fragment);
+      /* RESET THEME ANCHOR URL -fragment- after dalay, when OnInit */
       const anchor = `/#${activatedRoute.snapshot.fragment}`;
-      console.log(anchor);
 
-      if (anchor === '/#') {
-        setTimeout(() => router.navigate(['']), 100);
-        // router.navigateByUrl(anchor);
+      if (anchor === '' || anchor === '/' || anchor === '/#') {
+        setTimeout(() => router.navigate(['']), 100); // router.navigateByUrl(anchor);
       }
-      ////
     })(jQuery, this.activatedRoute, this.router); // ~jQuery Easing
   }
 }

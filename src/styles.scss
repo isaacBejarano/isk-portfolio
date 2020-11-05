@@ -74,6 +74,10 @@
     font-size: 1.5em;
   }
 }
+
+// to component!!! **********************************
+// https://stackoverflow.com/questions/50836289/clearing-router-fragment-in-angular-6/50837054
+
 .masthead {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
@@ -195,13 +199,13 @@ form .row:first-child .floating-label-form-group {
   border-top: 1px solid #e9ecef;
 }
 
-.footer {
-  padding-top: 5rem;
-  padding-bottom: 5rem;
-  background-color: #2c3e50;
-  color: #fff;
-}
+// .footer {
+//   padding-top: 5rem;
+//   padding-bottom: 5rem;
+//   background-color: #2c3e50;
+//   color: #fff;
+// }
 
-.copyright {
-  background-color: #1a252f;
-}
+// .copyright {
+//   background-color: #1a252f;
+// }

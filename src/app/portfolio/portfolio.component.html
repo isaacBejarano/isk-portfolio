@@ -185,15 +185,14 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart1 }}
-                <a
-                  class="text-center py-2"
-                  href="{{ link1 }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link1 }}
+                <a href="{{ link1 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
                 </a>
                 {{ star }}
+                {{ paragraphPart1B }}
+                <a href="{{ linkPages }}" target="_blank" (click)="openLink()">
+                  {{ linkText2 }}.
+                </a>
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>
@@ -253,13 +252,9 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart2 }}
-                <a
-                  class="text-center py-2"
-                  href="{{ link2 }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link2 }}
+                {{ visitThis }}
+                <a href="{{ link2 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
                 </a>
                 {{ star }}
               </p>
@@ -321,13 +316,9 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart3 }}
-                <a
-                  class="text-center py-2"
-                  href="{{ link3 }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link3 }}
+                {{ visitThis }}
+                <a href="{{ link3 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
                 </a>
                 {{ star }}
               </p>
@@ -388,14 +379,9 @@
               />
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
-                {{ paragraphPart4 }}
-                <a
-                  class="text-center py-2"
-                  href="{{ link4 }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link4 }}
+                {{ paragraphPart4 }} {{ visitThis }}
+                <a href="{{ link4 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
                 </a>
                 {{ star }}
               </p>
@@ -456,14 +442,9 @@
               />
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
-                {{ paragraphPart5 }}
-                <a
-                  class="text-center py-2"
-                  href="{{ link5 }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link5 }}
+                {{ paragraphPart5 }} {{ visitThis }}
+                <a href="{{ link5 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
                 </a>
                 {{ star }}
               </p>
@@ -524,55 +505,49 @@
               />
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
-                {{ paragraphPart6 }}
+                {{ visitList }}
                 <a
-                  class="text-center py-2"
+                  class="d-a"
                   href="{{ link6a }}"
                   target="_blank"
                   (click)="openLink()"
-                >
-                  {{ link6a }}
-                </a>
+                  >{{ link6aText }}</a
+                >,
                 <a
-                  class="text-center py-2"
+                  class="d-a"
                   href="{{ link6b }}"
                   target="_blank"
                   (click)="openLink()"
-                >
-                  {{ link6b }}
-                </a>
+                  >{{ link6bText }}</a
+                >,
                 <a
-                  class="text-center py-2"
-                  href="{{ link6c }}"
-                  target="_blank"
-                  (click)="openLink()"
-                >
-                  {{ link6c }}
-                </a>
-                <a
-                  class="text-center py-2"
+                  class="d-a"
                   href="{{ link6d }}"
                   target="_blank"
                   (click)="openLink()"
-                >
-                  {{ link6d }}
-                </a>
+                  >{{ link6dText }}</a
+                >,
                 <a
-                  class="text-center py-2"
+                  class="d-a"
+                  href="{{ link6c }}"
+                  target="_blank"
+                  (click)="openLink()"
+                  >{{ link6cText }}</a
+                >,
+                <a
+                  class="d-a"
                   href="{{ link6e }}"
                   target="_blank"
                   (click)="openLink()"
-                >
-                  {{ link6e }}
-                </a>
+                  >{{ link6eText }}</a
+                >,
                 <a
-                  class="text-center py-2"
+                  class="d-a"
                   href="{{ link6f }}"
                   target="_blank"
                   (click)="openLink()"
+                  >{{ link6fText }}</a
                 >
-                  {{ link6f }}
-                </a>
                 {{ stars }}
               </p>
               <button class="btn btn-primary" data-dismiss="modal">

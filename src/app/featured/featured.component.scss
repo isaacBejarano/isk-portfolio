@@ -1,3 +1,5 @@
+@import "../../sass/globals"; // globals
+
 .container {
   h2 {
     font-size: 3rem;
@@ -26,7 +28,6 @@
       }
 
       img {
-        max-width: 400px !important;
         border-width: 3px !important;
       }
     }
@@ -37,5 +38,17 @@
     img {
       border-width: 3px !important;
     }
+  }
+}
+
+@media (min-width: 320px) {
+  #featured-pic  {
+    max-width: 400px !important;
+    max-width: 272 !important;
+  }
+}
+@media (min-width: $breakpoint-sm) {
+  #featured-pic {
+    max-width: 400px !important;
   }
 }

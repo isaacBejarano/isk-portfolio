@@ -28,9 +28,10 @@
     <!-- Featured Box -->
     <div class="row">
       <!-- link - Culex -->
-      <div class="col d-flex justify-content-center px-4">
+      <div class="col d-flex justify-content-center">
         <div
-          class="portfolio-item"
+          id="featured-pic"
+          class="portfolio-item mx-auto"
           data-toggle="modal"
           data-target="#featuredModal"
         >
@@ -43,7 +44,7 @@
           </div>
           <img
             [id]="id"
-            class="border img-fluid border rounded-sm"
+            class="border img-fluid border rounded-lg"
             [src]="src"
             [alt]="alt"
           />
@@ -98,13 +99,8 @@
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
                     {{ p1 }}
-                    <a
-                      class="text-center py-2"
-                      [href]="link"
-                      target="_blank"
-                      (click)="openLink()"
-                    >
-                      {{ link }}
+                    <a [href]="link" target="_blank" (click)="openLink()">
+                      {{ linkText }}
                     </a>
                     {{ p2 }}
                     <span class="text-gray">{{ p3 }} </span>

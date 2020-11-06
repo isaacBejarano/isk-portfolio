@@ -13,10 +13,11 @@ export class FeaturedComponent {
   src = 'assets/img/portfolio/culex.png';
   alt = 'culex github repo';
   link = 'https://github.com/isaacBejarano/culex.js';
+  linkText = 'Github';
   p1 =
     'Culex.js is an easy-to-use and lightweight ES5 library \
-    to fetch JSON data from RESTful APIs. Visit';
-  p2 = 'and give the repo a "star" if you enjoyed Culex.js.';
+    to fetch JSON data from RESTful APIs. Visit this repository at';
+  p2 = 'and give it a "star" if you enjoyed Culex.js.';
   p3 = 'Disclaimer: the library is still in beta phase.';
 
   constructor() {}

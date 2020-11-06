@@ -23,12 +23,10 @@ export class MasterheadComponent implements OnInit, OnDestroy {
   @Output() emitedScroll = new EventEmitter();
 
   ngOnInit(): void {
-    console.log('OnInit');
     this.fireEvent();
   }
 
   ngOnDestroy(): void {
-    console.log('ngOnDestroy');
     this.fireEvent();
   }
 

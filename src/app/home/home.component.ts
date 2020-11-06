@@ -1,3 +1,10 @@
+/*!
+Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
+Copyright 2013-2020 Start Bootstrap
+Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
+
+JQuery plugin - JQuery Easing https://github.com/gdsmith/jquery.easing */
+
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
@@ -8,22 +15,15 @@ declare let jQuery: any; // ~jQuery Easing
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
 })
-// OnChanges,
 export class HomeComponent implements OnInit, OnDestroy {
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {}
+  constructor(
+    //
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {}
 
-  /*  NOTE: hrefs (from navbar.component + scroll.component)
-      must already exist in upper hierarchy (app.component)
-      so this JQuery algorithm can ref them */
+  // SCROLL Animation - JQuery plugin - Easing
   ngOnInit(): void {
-    /*!
-    Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
-    Copyright 2013-2020 Start Bootstrap
-    Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-
-      JQuery plugin - JQuery Easing
-      https://github.com/gdsmith/jquery.easing
-    */
     (($, activatedRoute, router): void => {
       'use strict'; // Start of use strict
 
@@ -140,8 +140,13 @@ export class HomeComponent implements OnInit, OnDestroy {
         setTimeout(() => router.navigate(['']), 30); // router.navigateByUrl(anchor);
       }
     })(jQuery, this.activatedRoute, this.router); // ~jQuery Easing
+
+    /*  NOTE: hrefs (from navbar.component + scroll.component)
+      must already exist in upper hierarchy (app.component)
+      so this JQuery algorithm can reference them. */
   }
 
+  // remove class .active when we're in view "about" and "contact"
   ngOnDestroy(): void {
     const scrollable: HTMLAnchorElement = document.querySelector(
       '.js-scroll-trigger.active'
@@ -150,5 +155,10 @@ export class HomeComponent implements OnInit, OnDestroy {
     if (scrollable) {
       scrollable.classList.remove('active');
     }
+  }
+
+  // ALLOW SCROLL only in home.component <-- masterhead.component emit
+  scroll(): void {
+    document.getElementById('scroller').classList.toggle('d-none');
   }
 }

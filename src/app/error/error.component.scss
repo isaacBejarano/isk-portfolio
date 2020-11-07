@@ -1,0 +1,28 @@
+@import "../../sass/globals"; // globals
+
+.row {
+  padding: 6rem 0 2rem;
+  h2 {
+    font-size: 1rem;
+    font-weight: bold !important;
+  }
+  p {
+    max-width: $breakpoint-sm;
+  }
+}
+@media screen and (min-width: $breakpoint-md) {
+  .row {
+    padding-top: 8rem;
+    h2 {
+      font-size: 1.5rem;
+      font-weight: initial !important;
+    }
+  }
+}
+@media screen and (min-width: $breakpoint-lg) {
+  .row {
+    h2 {
+      font-size: 2rem;
+    }
+  }
+}

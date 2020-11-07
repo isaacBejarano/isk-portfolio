@@ -1,3 +1,5 @@
+import { EventEmitter } from '@angular/core';
+
 export class Shared {
   constructor() {}
 
@@ -12,5 +14,8 @@ export class Shared {
 
   public static capitalLetter(str: string): string {
     return str.substr(0, 1).toUpperCase() + str.substr(1, str.length);
+  }
+  public static fireEvent(eventName: EventEmitter<any>): void {
+    eventName.emit();
   }
 }

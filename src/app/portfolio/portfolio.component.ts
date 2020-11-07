@@ -1,88 +1,132 @@
-import { Component } from '@angular/core';
-import { Shared } from '../utils/shared';
+import { Component, OnInit } from '@angular/core';
+import { strict } from 'assert';
+import { store } from '../store/store';
 
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
   styleUrls: ['./portfolio.component.scss'],
 })
-export class PortfolioComponent {
+export class PortfolioComponent implements OnInit {
   // common
-  star = 'and give it a "star".';
-  stars = 'and give them a "star".';
-  linkText = 'Github';
-  linkText2 = 'Github Pages';
-  visitList = 'Visit these repositories:';
-  visitThis = 'Visit this repository at';
-  visitThese = 'Visit these repositories at';
-
+  star: string;
+  stars: string;
+  linkText: string;
+  linkText2: string;
+  visitList: string;
+  visitThis: string;
+  visitThese: string;
   // imgage 1
-  img1 = 'portfolio/papiro.png';
-  alt1 = 'Responsive Bootstrap project';
-  title1 = 'Responsive Bootstrap';
-  paragraphPart1 =
-    'Responsive mobile-first web app made with Bootstrap and LESS.';
-  paragraphPart1B = `Don't forget see it live at`;
-
-  link1 = 'https://github.com/isaacBejarano/isaacbejarano.github.io';
-  linkPages = 'https://isaacbejarano.github.io/';
-
+  img1: string;
+  alt1: string;
+  title1: string;
+  paragraphPart1: string;
+  paragraphPart1B: string;
+  link1: string;
+  linkPages: string;
   // imgage 2
-  img2 = 'portfolio/rockets.png';
-  alt2 = 'Typescript project';
-  title2 = 'Typescript';
-  paragraphPart2 =
-    'UI made with Typescript to create rockets and thrusters.\
-     Object Oriented Programmmig (OOP).';
-  link2 = 'https://github.com/isaacBejarano/ts-rockets';
-
+  img2: string;
+  alt2: string;
+  title2: string;
+  paragraphPart2: string;
+  link2: string;
   // imgage 3
-  img3 = 'portfolio/joker.png';
-  alt3 = 'AJAX + JQuery project';
-  title3 = 'AJAX + JQuery';
-  paragraphPart3 =
-    'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
-    Made with JQuery.';
-  link3 = 'https://github.com/isaacBejarano/joker';
-
+  img3: string;
+  alt3: string;
+  title3: string;
+  paragraphPart3: string;
+  link3: string;
   // imgage 4
-  img4 = 'portfolio/beers.png';
-  alt4 = 'SASS + Javascript project';
-  title4 = 'SASS + Javascript';
-  paragraphPart4 =
-    'UI for rating. It uses SASS and scalable algorithms to persist ":hover" and ":active" pseudo-classes.';
-  link4 = 'https://github.com/isaacBejarano/rating-beers';
-
+  img4: string;
+  alt4: string;
+  title4: string;
+  paragraphPart4: string;
+  link4: string;
   // imgage 5
-  img5 = 'portfolio/restopolitan.png';
-  alt5 = 'Leaflet project';
-  title5 = 'Leaflet + AJAX';
-  paragraphPart5 =
-    'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
-     Made with JQuery.';
-  link5 = 'https://github.com/isaacBejarano/leaflet_filtres';
-
+  img5: string;
+  alt5: string;
+  title5: string;
+  paragraphPart5: string;
+  link5: string;
   // imgage 6
-  img6 = 'portfolio/algorithms.png';
-  alt6 = 'JavaScript Algorithms project';
-  title6 = 'JavaScript Algorithms';
-  link6a = 'https://github.com/isaacBejarano/price-down-breaker';
-  link6b = 'https://github.com/isaacBejarano/binary-search';
-  link6c = 'https://github.com/isaacBejarano/quicksort';
-  link6d = 'https://github.com/isaacBejarano/is-int';
-  link6e = 'https://github.com/isaacBejarano/string-mirror';
-  link6f = 'https://github.com/isaacBejarano/fibonacci-sequencer';
-  link6aText = 'Down Breaker';
-  link6bText = 'Binary Search';
-  link6cText = 'Quick Sort';
-  link6dText = 'Is Int';
-  link6eText = 'String Mirror';
-  link6fText = 'Fibonacci Sequencer';
+  img6: string;
+  alt6: string;
+  title6: string;
+  link6a: string;
+  link6b: string;
+  link6c: string;
+  link6d: string;
+  link6e: string;
+  link6f: string;
+  link6aText: string;
+  link6bText: string;
+  link6cText: string;
+  link6dText: string;
+  link6eText: string;
+  link6fText: string;
+  openLink: () => void;
 
   constructor() {}
 
-  // methods
-  openLink(): boolean {
-    return Shared.openLink();
+  ngOnInit(): void {
+    // --> props
+    // common
+    this.star = store.portfolio.star;
+    this.stars = store.portfolio.stars;
+    this.linkText = store.portfolio.linkText;
+    this.linkText2 = store.portfolio.linkText2;
+    this.visitList = store.portfolio.visitList;
+    this.visitThis = store.portfolio.visitThis;
+    this.visitThese = store.portfolio.visitThese;
+    // imgage 1
+    this.img1 = store.portfolio.img1;
+    this.alt1 = store.portfolio.alt1;
+    this.title1 = store.portfolio.title1;
+    this.paragraphPart1 = store.portfolio.paragraphPart1;
+    this.paragraphPart1B = store.portfolio.paragraphPart1B;
+    this.link1 = store.portfolio.link1;
+    this.linkPages = store.portfolio.linkPages;
+    // imgage 2
+    this.img2 = store.portfolio.img2;
+    this.alt2 = store.portfolio.alt2;
+    this.title2 = store.portfolio.title2;
+    this.paragraphPart2 = store.portfolio.paragraphPart2;
+    this.link2 = store.portfolio.link2;
+    // imgage 3
+    this.img3 = store.portfolio.img3;
+    this.alt3 = store.portfolio.alt3;
+    this.title3 = store.portfolio.title3;
+    this.paragraphPart3 = store.portfolio.paragraphPart3;
+    this.link3 = store.portfolio.link3;
+    // imgage 4
+    this.img4 = store.portfolio.img4;
+    this.alt4 = store.portfolio.alt4;
+    this.title4 = store.portfolio.title4;
+    this.paragraphPart4 = store.portfolio.paragraphPart4;
+    this.link4 = store.portfolio.link4;
+    // imgage 5
+    this.img5 = store.portfolio.img5;
+    this.alt5 = store.portfolio.alt5;
+    this.title5 = store.portfolio.title5;
+    this.paragraphPart5 = store.portfolio.paragraphPart5;
+    this.link5 = store.portfolio.link5;
+    // imgage 6
+    this.img6 = store.portfolio.img6;
+    this.alt6 = store.portfolio.alt6;
+    this.title6 = store.portfolio.title6;
+    this.link6a = store.portfolio.link6a;
+    this.link6b = store.portfolio.link6b;
+    this.link6c = store.portfolio.link6c;
+    this.link6d = store.portfolio.link6d;
+    this.link6e = store.portfolio.link6e;
+    this.link6f = store.portfolio.link6f;
+    this.link6aText = store.portfolio.link6aText;
+    this.link6bText = store.portfolio.link6bText;
+    this.link6cText = store.portfolio.link6cText;
+    this.link6dText = store.portfolio.link6dText;
+    this.link6eText = store.portfolio.link6eText;
+    this.link6fText = store.portfolio.link6fText;
+    // --> shared methods
+    this.openLink = store.openLink;
   }
 }

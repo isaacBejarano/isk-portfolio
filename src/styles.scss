@@ -4,6 +4,9 @@
 // CUSTOM STYLES
 @import "./sass/globals"; // globals
 @import "./sass/bootstrap"; // Bootstrap
+body > * {
+  user-select: none;
+}
 
 /*!
   Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)

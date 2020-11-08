@@ -7,6 +7,7 @@ import { store } from '../store/store';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  root: '/';
   home: string;
   homeSrc: string;
   homeAlt: string;

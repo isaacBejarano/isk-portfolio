@@ -9,6 +9,6 @@ export class ContactComponent implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 0); // to counter balance JQuery Animation trail
   }
 }

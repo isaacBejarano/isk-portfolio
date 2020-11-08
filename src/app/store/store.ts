@@ -127,6 +127,36 @@ export const store = {
     link6eText: 'String Mirror',
     link6fText: 'Fibonacci Sequencer',
   },
+  about: {
+    title: 'about',
+    hello: `Hi, I'm Isaac.`,
+    p1:
+      'I used to work in audiovisual postproduction and\
+    I was pretty dexterous at image manipulation with Photoshop but I felt\
+    it would be useful to boost my designer skills.\
+    Taking into account that the majority of media design we consume today is on screen,\
+    I decided to join the neverending exciting web developement world.',
+    p2a:
+      'I easily fell in love with HTML and CSS, and programming quickly got my attention.\
+    I suddenly remembered those days when',
+    p2b: 'I was 12 year old and I was coding Pascal',
+    p2c:
+      'extracurricularwise, making humble text editors in Delphi.\
+    Thus I reconnected to my inner-coder and my need of deepening in JavaScript and\
+    Object Oriented Programming quickly beacame addicitve.',
+    p3a:
+      'Having gained specialized training after completing the Frontend bootcamp at',
+    p3link:
+      'https://cibernarium.barcelonactiva.cat/es/ficha-actividad?activityId=1002836',
+    p3linkText: 'IT Academy Barcelona',
+    p3b: `I've proudly become a pretty educated web developer today.\
+    And although I excell in Frontend, which blends my cerative background\
+    with my innate analytic mind, I also feel comfortable in both`,
+    stak1: 'MEAN',
+    stak2: 'LAMP',
+    p3c: 'Full Stack.',
+    bye: 'Be the code be with you! ;)',
+  },
 
   // --> shared methods
   hashIt(ref: string): string {

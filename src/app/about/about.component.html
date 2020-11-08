@@ -14,30 +14,46 @@
     <!-- About Section Content-->
     <div class="row text-justify">
       <div class="col-lg-4 ml-auto">
-        <p class="lead">
-          Freelancer is a free bootstrap theme created by Start Bootstrap. The
-          download includes the complete source files including HTML, CSS, and
-          JavaScript as well as optional SASS stylesheets for easy
-          customization.
+        <p class="lead py-1">
+          {{ hello }}
+        </p>
+
+        <p class="lead py-1">
+          {{ p1 }}
         </p>
       </div>
+
       <div class="col-lg-4 mr-auto">
-        <p class="lead">
-          You can create your own custom avatar for the masthead, change the
-          icon in the dividers, and add your email address to the contact form
-          to make it fully functional!
+        <p class="lead py-1">
+          {{ p2a }}
+          <b class="text-secondary font-weight-bold p-0 m-0">
+            {{ p2b }} </b
+          >{{ p2c }}
         </p>
       </div>
-    </div>
-    <!-- About Section Button-->
-    <div class="text-center mt-4">
-      <a
-        class="btn btn-xl btn-outline-light"
-        href="https://startbootstrap.com/themes/freelancer/"
-      >
-        <i class="fas fa-download mr-2"></i>
-        Free Download!
-      </a>
+
+      <div class="col-lg-4 mr-auto">
+        <p class="lead py-1">
+          {{ p3a }}
+          <a [href]="p3link" target="_blank" (click)="openLink()">
+            <strong class="text-secondary font-weight-bold">
+              {{ p3linkText }}</strong
+            > </a
+          >, {{ p3b }}
+          <b class="text-secondary font-weight-bold">
+            {{ stak1 }}
+          </b>
+          and
+          <b class="text-secondary font-weight-bold">
+            {{ stak2 }}
+          </b>
+          {{ p3c }}
+        </p>
+
+        <p class="lead py-1">
+          {{ bye }}
+        </p>
+      </div>
     </div>
   </div>
 </section>

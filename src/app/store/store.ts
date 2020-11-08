@@ -59,9 +59,11 @@ export const store = {
     stars: 'and give them a "star".',
     linkText: 'Github',
     linkText2: 'Github Pages',
+    linkText3: 'Codepen',
     visitList: 'Visit these repositories:',
     visitThis: 'Visit this repository at',
     visitThese: 'Visit these repositories at',
+    dontforget: `Don't forget to see it live at`,
 
     // imgage 1
     img1: 'portfolio/papiro.png',
@@ -69,7 +71,6 @@ export const store = {
     title1: 'Responsive Bootstrap',
     paragraphPart1:
       'Responsive mobile-first web app made with Bootstrap and LESS.',
-    paragraphPart1B: `Don't forget to see it live at`,
     link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
     linkPages: 'https://isaacbejarano.github.io/',
 
@@ -99,6 +100,7 @@ export const store = {
       'UI for rating. It uses SASS and scalable algorithms to persist\
       ":hover" and ":active" pseudo-classes.',
     link4: 'https://github.com/isaacBejarano/rating-beers',
+    link4b: 'https://codepen.io/eRoboto/pen/bGpKwgM',
 
     // imgage 5
     img5: 'portfolio/restopolitan.png',
@@ -132,7 +134,8 @@ export const store = {
     title7: 'SASS',
     paragraphPart7:
       'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
-       link7: 'https://github.com/isaacBejarano/sass-stripes',
+    link7: 'https://github.com/isaacBejarano/sass-stripes',
+    link7b: 'https://codepen.io/eRoboto/pen/eYZZerg',
   },
   about: {
     title: 'about',

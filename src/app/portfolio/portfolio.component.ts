@@ -13,6 +13,7 @@ export class PortfolioComponent implements OnInit {
   stars: string;
   linkText: string;
   linkText2: string;
+  linkText3: string;
   visitList: string;
   visitThis: string;
   visitThese: string;
@@ -21,7 +22,7 @@ export class PortfolioComponent implements OnInit {
   alt1: string;
   title1: string;
   paragraphPart1: string;
-  paragraphPart1B: string;
+  dontforget: string;
   link1: string;
   linkPages: string;
   // imgage 2
@@ -42,6 +43,7 @@ export class PortfolioComponent implements OnInit {
   title4: string;
   paragraphPart4: string;
   link4: string;
+  link4b: string;
   // imgage 5
   img5: string;
   alt5: string;
@@ -70,6 +72,7 @@ export class PortfolioComponent implements OnInit {
   title7: string;
   paragraphPart7: string;
   link7: string;
+  link7b: string;
   // image NEW
   imgNew: string;
   altNew: string;
@@ -89,6 +92,7 @@ export class PortfolioComponent implements OnInit {
     this.stars = store.portfolio.stars;
     this.linkText = store.portfolio.linkText;
     this.linkText2 = store.portfolio.linkText2;
+    this.linkText3 = store.portfolio.linkText3;
     this.visitList = store.portfolio.visitList;
     this.visitThis = store.portfolio.visitThis;
     this.visitThese = store.portfolio.visitThese;
@@ -97,7 +101,7 @@ export class PortfolioComponent implements OnInit {
     this.alt1 = store.portfolio.alt1;
     this.title1 = store.portfolio.title1;
     this.paragraphPart1 = store.portfolio.paragraphPart1;
-    this.paragraphPart1B = store.portfolio.paragraphPart1B;
+    this.dontforget = store.portfolio.dontforget;
     this.link1 = store.portfolio.link1;
     this.linkPages = store.portfolio.linkPages;
     // imgage 2
@@ -118,6 +122,7 @@ export class PortfolioComponent implements OnInit {
     this.title4 = store.portfolio.title4;
     this.paragraphPart4 = store.portfolio.paragraphPart4;
     this.link4 = store.portfolio.link4;
+    this.link4b = store.portfolio.link4b;
     // imgage 5
     this.img5 = store.portfolio.img5;
     this.alt5 = store.portfolio.alt5;
@@ -146,6 +151,7 @@ export class PortfolioComponent implements OnInit {
     this.title7 = store.portfolio.title7;
     this.paragraphPart7 = store.portfolio.paragraphPart7;
     this.link7 = store.portfolio.link7;
+    this.link7b = store.portfolio.link7b;
     // NEW
     this.imgNew = store.featured.src;
     this.altNew = store.featured.alt;

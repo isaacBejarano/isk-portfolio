@@ -9,7 +9,9 @@ import { store } from '../store/store';
 export class AboutComponent implements OnInit {
   title: string;
   hello: string;
-  p1: string;
+  p1a: string;
+  p1b: string;
+  p1c: string;
   p2a: string;
   p2b: string;
   p2c: string;
@@ -30,7 +32,9 @@ export class AboutComponent implements OnInit {
     // --> props
     this.title = store.about.title;
     this.hello = store.about.hello;
-    this.p1 = store.about.p1;
+    this.p1a = store.about.p1a;
+    this.p1b = store.about.p1b;
+    this.p1c = store.about.p1c;
     this.p2a = store.about.p2a;
     this.p2b = store.about.p2b;
     this.p2c = store.about.p2c;

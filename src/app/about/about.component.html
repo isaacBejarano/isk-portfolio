@@ -19,7 +19,11 @@
         </p>
 
         <p class="lead py-1">
-          {{ p1 }}
+          {{ p1a }}
+          <b class="text-secondary font-weight-bold p-0 m-0">
+            {{ p1b }}
+          </b>
+          {{ p1c }}
         </p>
       </div>
 
@@ -27,8 +31,9 @@
         <p class="lead py-1">
           {{ p2a }}
           <b class="text-secondary font-weight-bold p-0 m-0">
-            {{ p2b }} </b
-          >{{ p2c }}
+            {{ p2b }}
+          </b>
+          {{ p2c }}
         </p>
       </div>
 
@@ -37,8 +42,8 @@
           {{ p3a }}
           <a [href]="p3link" target="_blank" (click)="openLink()">
             <strong class="text-secondary font-weight-bold">
-              {{ p3linkText }}</strong
-            > </a
+              <u>{{ p3linkText }}</u>
+            </strong></a
           >, {{ p3b }}
           <b class="text-secondary font-weight-bold">
             {{ stak1 }}

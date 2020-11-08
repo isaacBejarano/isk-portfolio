@@ -5,7 +5,7 @@
     <h2
       class="page-section-heading text-center text-primary font-weight-lighter mb-5"
     >
-      featured
+      new
     </h2>
     <section class="featured-heading">
       <h3
@@ -45,7 +45,7 @@
           <img
             [id]="id"
             class="border img-fluid border rounded-lg"
-            [src]="src"
+            src="assets/img/{{ src }}"
             [alt]="alt"
           />
         </div>
@@ -93,17 +93,17 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
-                    [src]="src"
+                    src="assets/img/{{ src }}"
                     [alt]="alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ p1 }}
+                    {{ p1 }} {{ visitThis }}
                     <a [href]="link" target="_blank" (click)="openLink()">
                       {{ linkText }}
                     </a>
-                    {{ p2 }}
-                    <span class="text-gray">{{ p3 }} </span>
+                    {{ star }}
+                    <span class="text-gray">{{ p2 }} </span>
                   </p>
                   <button class="btn btn-primary" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

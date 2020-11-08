@@ -64,6 +64,20 @@ export class PortfolioComponent implements OnInit {
   link6dText: string;
   link6eText: string;
   link6fText: string;
+  // imgage 7
+  img7: string;
+  alt7: string;
+  title7: string;
+  paragraphPart7: string;
+  link7: string;
+  // image NEW
+  imgNew: string;
+  altNew: string;
+  titleNew: string;
+  p1: string;
+  p2: string;
+  linkNew: string;
+  // methods shared
   openLink: () => void;
 
   constructor() {}
@@ -126,6 +140,19 @@ export class PortfolioComponent implements OnInit {
     this.link6dText = store.portfolio.link6dText;
     this.link6eText = store.portfolio.link6eText;
     this.link6fText = store.portfolio.link6fText;
+    // imgage 7
+    this.img7 = store.portfolio.img7;
+    this.alt7 = store.portfolio.alt7;
+    this.title7 = store.portfolio.title7;
+    this.paragraphPart7 = store.portfolio.paragraphPart7;
+    this.link7 = store.portfolio.link7;
+    // NEW
+    this.imgNew = store.featured.src;
+    this.altNew = store.featured.alt;
+    this.titleNew = store.featured.title;
+    this.p1 = store.featured.p1;
+    this.p2 = store.featured.p2;
+    this.linkNew = store.featured.link;
     // --> shared methods
     this.openLink = store.openLink;
   }

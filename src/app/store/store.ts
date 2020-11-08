@@ -11,7 +11,7 @@ export const store = {
     homeSrc: '../../assets/img/portfolio/codhex-logo.png',
     homeAlt: 'codhex logo',
     hamburger: 'menu',
-    page1: 'featured',
+    page1: 'new',
     page2: 'portfolio',
     page3: 'about',
     page4: 'contact',
@@ -44,15 +44,14 @@ export const store = {
     title: 'Culex',
     subtitle: 'ES5 library to make HTTP requests',
     id: 'culex-pic',
-    src: 'assets/img/portfolio/culex.png',
+    src: 'portfolio/culex.png',
     alt: 'culex github repo',
     link: 'https://github.com/isaacBejarano/culex.js',
     linkText: 'Github',
     p1:
       'Culex.js is an easy-to-use and lightweight ES5 library \
-      to fetch JSON data from RESTful APIs. Visit this repository at',
-    p2: 'and give it a "star" if you enjoyed Culex.js.',
-    p3: 'Disclaimer: the library is still in beta phase.',
+      to fetch JSON data from RESTful APIs.',
+    p2: 'Disclaimer: the library is still in beta phase.',
   },
   portfolio: {
     // common
@@ -70,7 +69,7 @@ export const store = {
     title1: 'Responsive Bootstrap',
     paragraphPart1:
       'Responsive mobile-first web app made with Bootstrap and LESS.',
-    paragraphPart1B: `Don't forget see it live at`,
+    paragraphPart1B: `Don't forget to see it live at`,
     link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
     linkPages: 'https://isaacbejarano.github.io/',
 
@@ -86,7 +85,7 @@ export const store = {
     // imgage 3
     img3: 'portfolio/joker.png',
     alt3: 'AJAX + JQuery project',
-    title3: 'AJAX + JQuery',
+    title3: 'JQuery + AJAX',
     paragraphPart3:
       'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
       Made with JQuery.',
@@ -94,8 +93,8 @@ export const store = {
 
     // imgage 4
     img4: 'portfolio/beers.png',
-    alt4: 'SASS + Javascript project',
-    title4: 'SASS + Javascript',
+    alt4: 'Javascript project',
+    title4: 'Javascript',
     paragraphPart4:
       'UI for rating. It uses SASS and scalable algorithms to persist\
       ":hover" and ":active" pseudo-classes.',
@@ -126,14 +125,24 @@ export const store = {
     link6dText: 'Is Int',
     link6eText: 'String Mirror',
     link6fText: 'Fibonacci Sequencer',
+
+    // imgage 7
+    img7: 'portfolio/stripes.png',
+    alt7: 'SASS project',
+    title7: 'SASS',
+    paragraphPart7:
+      'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
+       link7: 'https://github.com/isaacBejarano/sass-stripes',
   },
   about: {
     title: 'about',
     hello: `Hi, I'm Isaac.`,
-    p1:
+    p1a:
       'I used to work in audiovisual postproduction and\
-    I was pretty dexterous at image manipulation with Photoshop but I felt\
-    it would be useful to boost my designer skills.\
+    I was pretty dexterous at image manipulation with',
+    p1b: 'Photoshop',
+    p1c:
+      'but I felt it would be useful to boost my designer skills.\
     Taking into account that the majority of media design we consume today is on screen,\
     I decided to join the neverending exciting web developement world.',
     p2a:

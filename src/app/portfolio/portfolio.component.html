@@ -114,7 +114,7 @@
         </div>
       </div>
       <!-- Portfolio Item 6-->
-      <div class="col-md-6 col-lg-4">
+      <div class="col-md-6 col-lg-4 mb-5">
         <div
           class="portfolio-item mx-auto"
           data-toggle="modal"
@@ -132,13 +132,55 @@
           <img class="img-fluid" src="assets/img/{{ img6 }}" alt="{{ alt6 }}" />
         </div>
       </div>
+      <!-- Portfolio Item 7 -->
+      <div class="col-md-6 col-lg-4 mb-5">
+        <div
+          class="portfolio-item mx-auto"
+          data-toggle="modal"
+          data-target="#portfolioModal7"
+        >
+          <div
+            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
+          >
+            <div
+              class="portfolio-item-caption-content text-center text-primary"
+            >
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img class="img-fluid" src="assets/img/{{ img7 }}" alt="{{ alt7 }}" />
+        </div>
+      </div>
+      <!-- Portfolio Item - NEW -->
+      <div class="col-md-6 col-lg-4">
+        <div
+          class="portfolio-item mx-auto"
+          data-toggle="modal"
+          data-target="#portfolioModalNew"
+        >
+          <div
+            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
+          >
+            <div
+              class="portfolio-item-caption-content text-center text-primary"
+            >
+              <i class="fas fa-plus fa-3x"></i>
+            </div>
+          </div>
+          <img
+            class="img-fluid"
+            src="assets/img/{{ imgNew }}"
+            alt="{{ altNew }}"
+          />
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
 <!-- MODALS -->
 
-<!-- Portfolio Modal 1-->
+<!-- Portfolio Modal 1 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal1"
@@ -184,12 +226,11 @@
               />
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
-                {{ paragraphPart1 }}
+                {{ paragraphPart1 }} {{ visitThis }}
                 <a href="{{ link1 }}" target="_blank" (click)="openLink()">
                   {{ linkText }}
                 </a>
-                {{ star }}
-                {{ paragraphPart1B }}
+                {{ star }} {{ paragraphPart1B }}
                 <a href="{{ linkPages }}" target="_blank" (click)="openLink()">
                   {{ linkText2 }}.
                 </a>
@@ -205,7 +246,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 2-->
+<!-- Portfolio Modal 2 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal2"
@@ -269,7 +310,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 3-->
+<!-- Portfolio Modal 3 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal3"
@@ -333,7 +374,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 4-->
+<!-- Portfolio Modal 4 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal4"
@@ -396,7 +437,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 5-->
+<!-- Portfolio Modal 5 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal5"
@@ -459,7 +500,7 @@
     </div>
   </div>
 </div>
-<!-- Portfolio Modal 6-->
+<!-- Portfolio Modal 6 -->
 <div
   class="portfolio-modal modal fade"
   id="portfolioModal6"
@@ -549,6 +590,133 @@
                   >{{ link6fText }}</a
                 >
                 {{ stars }}
+              </p>
+              <button class="btn btn-primary" data-dismiss="modal">
+                <i class="fas fa-times fa-fw"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Modal 7 -->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModal7"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="portfolioModal7Label"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button
+        class="close"
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title-->
+              <h2
+                class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                id="portfolioModal5Label"
+              >
+                {{ title7 }}
+              </h2>
+              <!-- Icon Divider-->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Portfolio Modal - Image-->
+              <img
+                class="img-fluid rounded mb-5"
+                src="assets/img/{{ img7 }}"
+                alt="{{ alt7 }}"
+              />
+              <!-- Portfolio Modal - Text-->
+              <p class="mb-5 text-justify">
+                {{ paragraphPart7 }} {{ visitThis }}
+                <a href="{{ link7 }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
+                </a>
+                {{ star }}
+              </p>
+              <button class="btn btn-primary" data-dismiss="modal">
+                <i class="fas fa-times fa-fw"></i>
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Portfolio Modal NEW -->
+<div
+  class="portfolio-modal modal fade"
+  id="portfolioModalNew"
+  tabindex="-1"
+  role="dialog"
+  aria-labelledby="portfolioModalNewLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-xl" role="document">
+    <div class="modal-content">
+      <button
+        class="close"
+        type="button"
+        data-dismiss="modal"
+        aria-label="Close"
+      >
+        <span aria-hidden="true"><i class="fas fa-times"></i></span>
+      </button>
+      <div class="modal-body text-center">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <!-- Portfolio Modal - Title-->
+              <h2
+                class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                id="portfolioModal5Label"
+              >
+                {{ titleNew }}
+              </h2>
+              <!-- Icon Divider-->
+              <div class="divider-custom">
+                <div class="divider-custom-line"></div>
+                <div class="divider-custom-icon">
+                  <i class="fas fa-star"></i>
+                </div>
+                <div class="divider-custom-line"></div>
+              </div>
+              <!-- Portfolio Modal - Image-->
+              <img
+                class="img-fluid rounded mb-5"
+                src="assets/img/{{ imgNew }}"
+                alt="{{ altNew }}"
+              />
+              <!-- Portfolio Modal - Text-->
+              <p class="mb-5 text-justify">
+                {{ p1 }} {{ visitThis }}
+                <a href="{{ linkNew }}" target="_blank" (click)="openLink()">
+                  {{ linkText }}
+                </a>
+                {{ star }}
+                <span class="text-gray">{{ p2 }} </span>
               </p>
               <button class="btn btn-primary" data-dismiss="modal">
                 <i class="fas fa-times fa-fw"></i>

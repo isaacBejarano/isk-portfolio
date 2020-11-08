@@ -16,7 +16,9 @@ export class FeaturedComponent implements OnInit {
   linkText: string;
   p1: string;
   p2: string;
-  p3: string;
+  // common
+  visitThis: string;
+  star: string;
   openLink: () => void;
 
   constructor() {}
@@ -32,7 +34,9 @@ export class FeaturedComponent implements OnInit {
     this.linkText = store.featured.linkText;
     this.p1 = store.featured.p1;
     this.p2 = store.featured.p2;
-    this.p3 = store.featured.p3;
+    // common
+    this.visitThis = store.portfolio.visitThis;
+    this.star = store.portfolio.star;
     // --> shared methods
     this.openLink = store.openLink;
   }

@@ -1,0 +1,8 @@
+@import "../../sass/globals"; // globals
+
+p.lead {
+  a strong:hover {
+	color: $white !important;
+	font-weight: inherit !important;
+  }
+}

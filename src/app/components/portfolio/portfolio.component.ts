@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { strict } from 'assert';
-import { store } from '../store/store';
+import { store } from '../../store/store';
 
 @Component({
   selector: 'app-portfolio',

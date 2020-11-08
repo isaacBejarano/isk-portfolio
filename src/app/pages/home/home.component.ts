@@ -162,3 +162,4 @@ export class HomeComponent implements OnInit, OnDestroy {
     document.getElementById('scroller').classList.toggle('d-none');
   }
 }
+

@@ -1,12 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { store } from '../store/store';
+import { store } from '../../store/store';
 
 @Component({
-  selector: 'app-social',
-  templateUrl: './social.component.html',
-  styleUrls: ['./social.component.scss'],
+  selector: 'app-follow',
+  templateUrl: './follow.component.html',
+  styleUrls: ['./follow.component.scss']
 })
-export class SocialComponent implements OnInit {
+export class FollowComponent implements OnInit {
+
   icon1: string;
   link1: string;
   icon2: string;
@@ -24,4 +25,5 @@ export class SocialComponent implements OnInit {
     // --> shared methods
     this.openLink = store.openLink;
   }
+
 }

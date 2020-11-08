@@ -3,32 +3,35 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 
 import { AppComponent } from './app.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { MasterheadComponent } from './masterhead/masterhead.component';
-import { FeaturedComponent } from './featured/featured.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { FooterComponent } from './footer/footer.component';
-import { SocialComponent } from './social/social.component';
-import { ScrollComponent } from './scroll/scroll.component';
-import { AboutComponent } from './about/about.component';
-import { ContactComponent } from './contact/contact.component';
-import { HomeComponent } from './home/home.component';
-import { ErrorComponent } from './error/error.component';
+// pages - routes
+import { HomeComponent } from './pages/home/home.component';
+import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
+import { ErrorComponent } from './pages/error/error.component';
+// shared components
+import { NavbarComponent } from './shared/navbar/navbar.component';
+import { FooterComponent } from './shared/footer/footer.component';
+import { FollowComponent } from './shared/follow/follow.component';
+import { ScrollComponent } from './shared/scroll/scroll.component';
+// unique components
+import { MasterheadComponent } from './components/masterhead/masterhead.component';
+import { FeaturedComponent } from './components/featured/featured.component';
+import { PortfolioComponent } from './components/portfolio/portfolio.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+    HomeComponent,
+    AboutComponent,
+    ContactComponent,
+    ErrorComponent,
     NavbarComponent,
+    FooterComponent,
+    ScrollComponent,
     MasterheadComponent,
     FeaturedComponent,
     PortfolioComponent,
-    FooterComponent,
-    SocialComponent,
-    ScrollComponent,
-    AboutComponent,
-    ContactComponent,
-    HomeComponent,
-    ErrorComponent,
+    FollowComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

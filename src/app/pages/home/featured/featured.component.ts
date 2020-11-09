@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { store } from '../../store/store';
+import { store } from '../../../store/store';
 
 @Component({
   selector: 'app-featured',

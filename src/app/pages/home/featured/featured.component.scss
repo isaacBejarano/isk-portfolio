@@ -1,4 +1,4 @@
-@import "../../../sass/globals"; // globals
+@import "../../../../sass/globals"; // globals
 
 .container {
   h2 {
@@ -42,7 +42,7 @@
 }
 
 @media (min-width: 320px) {
-  #featured-pic  {
+  #featured-pic {
     max-width: 400px !important;
     max-width: 272 !important;
   }

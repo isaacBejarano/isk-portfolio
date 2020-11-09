@@ -15,9 +15,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FollowComponent } from './shared/follow/follow.component';
 import { ScrollComponent } from './shared/scroll/scroll.component';
 // unique components
-import { MasterheadComponent } from './components/masterhead/masterhead.component';
-import { FeaturedComponent } from './components/featured/featured.component';
-import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { MasterheadComponent } from './pages/home/masterhead/masterhead.component';
+import { FeaturedComponent } from './pages/home/featured/featured.component';
+import { PortfolioComponent } from './pages/home/portfolio/portfolio.component';
 import { PrivacyEsComponent } from './pages/lgpd/privacy-es/privacy-es.component';
 import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component';
 

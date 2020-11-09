@@ -22,16 +22,18 @@ export class ContactComponent implements OnInit {
 
   // methods
   createForm(): void {
+    const regex = '[a-zA-Z0-9_.-]+@[a-zA-Z0-9._]+.[a-zA-Z0-9]{2,3}$'; // qweqwe@wdqds.de
+
     this.form = this.fb.group({
-      name: ['', Validators.required],
-      email: ['', Validators.required],
+      name: ['', [Validators.required, Validators.minLength(2)]],
+      email: ['', [Validators.required, Validators.pattern(regex)]],
       msg: ['', Validators.required],
       lgpd: ['', Validators.required],
     });
   }
 
   submit(): void {
-    // console.log(this.form.valid);
-    // console.log(this.form.value);
+    console.log(this.form.valid);
+    console.log(this.form.value);
   }
 }

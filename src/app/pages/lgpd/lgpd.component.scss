@@ -1,0 +1,24 @@
+@import "../../../sass/globals"; // globals
+
+nav {
+  margin-top: 4rem;
+  max-width: $breakpoint-md;
+}
+
+main {
+  max-width: $breakpoint-md;
+
+  h2 {
+    font-size: 1.5rem;
+  }
+  p,
+  ul {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: $breakpoint-lg) {
+  nav {
+    margin-top: 5rem !important;
+  }
+}

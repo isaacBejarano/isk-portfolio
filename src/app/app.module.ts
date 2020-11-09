@@ -6,9 +6,9 @@ import { AppComponent } from './app.component';
 // pages - routes
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
+import { ContactComponent } from './pages/contact/contact.component';
 import { LgpdComponent } from './pages/lgpd/lgpd.component';
 import { ErrorComponent } from './pages/error/error.component';
-import { ContactComponent } from './pages/contact/contact.component';
 // shared components
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -18,6 +18,8 @@ import { ScrollComponent } from './shared/scroll/scroll.component';
 import { MasterheadComponent } from './components/masterhead/masterhead.component';
 import { FeaturedComponent } from './components/featured/featured.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
+import { PrivacyEsComponent } from './pages/lgpd/privacy-es/privacy-es.component';
+import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     FeaturedComponent,
     PortfolioComponent,
     FollowComponent,
+    PrivacyEsComponent,
+    PrivacyEnComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],

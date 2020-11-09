@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ContactComponent } from './pages/contact/contact.component';
+import { LgpdComponent } from './pages/lgpd/lgpd.component';
 import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
@@ -18,6 +19,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent,
+  },
+  {
+    path: 'lgpd',
+    component: LgpdComponent,
   },
   {
     path: '**',

@@ -1,13 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AppComponent } from './app.component';
 // pages - routes
 import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
+import { LgpdComponent } from './pages/lgpd/lgpd.component';
 import { ErrorComponent } from './pages/error/error.component';
+import { ContactComponent } from './pages/contact/contact.component';
 // shared components
 import { NavbarComponent } from './shared/navbar/navbar.component';
 import { FooterComponent } from './shared/footer/footer.component';
@@ -24,6 +25,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     HomeComponent,
     AboutComponent,
     ContactComponent,
+    LgpdComponent,
     ErrorComponent,
     NavbarComponent,
     FooterComponent,
@@ -33,7 +35,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
     PortfolioComponent,
     FollowComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })

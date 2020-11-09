@@ -8,58 +8,58 @@ import { Shared } from '../../../utils/shared';
 export class PrivacyEnComponent {
   title = 'Privacy Policy';
   // declaración
-  heading1 = 'Declaración';
+  heading1 = 'Statement';
   titular = 'Isaac Bejarano';
   website = 'isaacbejarano.site';
   // identidad del responsable
-  heading2 = 'Identidad del responsable';
+  heading2 = 'Responsible identity';
   email = 'isaacbejaranopro@gmail.com';
   // principios tratamiento de datos
-  heading3 = 'Principios aplicados en el tratamiento de datos';
-  principle1 = 'Principio de licitud, lealtad y transparencia';
-  principle2 = 'Principio de minimización de datos';
-  principle3 = 'Principio de limitación del plazo de conservación';
-  principle4 = 'Principio de integridad y confidencialidad';
+  heading3 = 'Principles applied in data processing';
+  principle1 = 'Principle of legality, loyalty and transparency';
+  principle2 = 'Data minimization principle';
+  principle3 = 'Principle of limitation of the conservation period';
+  principle4 = 'Principle of integrity and confidentiality';
   // obtención de datos
-  heading4 = 'Obtención de datos personales';
+  heading4 = 'Obtaining personal data';
   // tus derechos
-  heading5 = 'Tus derechos';
+  heading5 = 'Your rights';
   // finalidad
-  heading6 = 'Finalidad del tratamiento de datos personales';
-  tratamiento = 'Formularios de contacto';
+  heading6 = 'Purpose of the processing of personal data';
+  tratamiento = 'Contact forms';
   socialLink1 = 'https://es.linkedin.com/legal/privacy-policy';
   socialLink2 =
     'https://docs.github.com/es/free-pro-team@latest/github/site-policy/github-privacy-statement';
   socialTitle1 = 'Linked In';
   socialTitle2 = 'Github';
   // Seguridad de los datos personales
-  heading7 = 'Seguridad de los datos personales';
+  heading7 = 'Personal data security';
   hostingLink = 'https://www.cdmon.com/es/';
   hostingTitle = 'cdmon';
   // contenido
-  heading8 = 'Contenido de otros sitios web';
+  heading8 = 'Content from other websites';
   // cookies
-  heading9 = 'Política de Cookies';
+  heading9 = 'Cookies policy';
   // legitimación
-  heading10 = 'Legitimación para el tratamiento de datos';
+  heading10 = 'Legitimation for data processing';
   // categoria datos
-  heading11 = 'Categorías de datos personales';
+  heading11 = 'Categories of personal data';
   // conservación datos
-  heading12 = 'Conservación de datos personales';
+  heading12 = 'Preservation of personal data';
   // destinatarios datos
-  heading13 = 'Destinatarios de datos personales';
+  heading13 = 'Recipients of personal data';
   thirdPartyLink = 'https://analytics.google.com';
   thirdPartyTitle = 'Google Analytics';
   // navegación web
-  heading14 = 'Navegación Web';
+  heading14 = 'Web navegation';
   // veracidad de datos
-  heading15 = 'Exactitud y veracidad de los datos personales';
+  heading15 = 'Accuracy and veracity of personal data';
   // aceptación
-  heading16 = 'Aceptación y consentimiento';
+  heading16 = 'Acceptance and consent';
   // revocabilidad
-  heading17 = 'Revocabilidad';
+  heading17 = 'Revocability';
   // cambios en la política
-  heading18 = 'Cambios en la Política de Privacidad';
+  heading18 = 'Changes to the Privacy Policy';
   // shared methods
   openLink = Shared.openLink;
 

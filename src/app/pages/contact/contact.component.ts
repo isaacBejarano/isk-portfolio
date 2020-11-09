@@ -31,8 +31,7 @@ export class ContactComponent implements OnInit {
   }
 
   submit(): void {
-    console.log(this.form.valid);
-    console.log(this.form.value);
-    console.log(this.form);
+    // console.log(this.form.valid);
+    // console.log(this.form.value);
   }
 }

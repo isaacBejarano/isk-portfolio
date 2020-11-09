@@ -1,11 +1,8 @@
-import { EventEmitter } from '@angular/core';
-import { Shared } from '../utils/shared';
-
 /* Single Source of Truth */
 
-export const store = {
+export let store = {
   // --> props
-  // 1. UI Components
+  // 1. UI Shared Components
   navbar: {
     home: 'home',
     homeSrc: '../../assets/img/portfolio/codhex-logo.png',
@@ -32,6 +29,7 @@ export const store = {
   },
   scroll: {
     icon: 'fa fa-chevron-up',
+    show: false, // dafault
   },
   // 2. Pages and Sections
   masterhead: {
@@ -169,18 +167,8 @@ export const store = {
     p3c: 'Full Stack.',
     bye: 'Be the code be with you! ;)',
   },
-
-  // --> shared methods
-  hashIt(ref: string): string {
-    return Shared.hashIt(ref);
-  },
-  capitalLetter(str: string): string {
-    return Shared.capitalLetter(str);
-  },
-  openLink(): boolean {
-    return Shared.openLink();
-  },
-  fireEvent(eventName: EventEmitter<any>): void {
-    return Shared.fireEvent(eventName);
+  // --> methods
+  setShow(x: boolean): void {
+    this.scroll.show = x;
   },
 };

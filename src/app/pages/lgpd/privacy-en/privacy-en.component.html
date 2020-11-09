@@ -1,4 +1,4 @@
-<h1 class="text-center pb-5">Política de Privacidad</h1>
+<h1 class="text-center pb-5">{{ title }}</h1>
 
 <!-- declaración -->
 <section class="mb-4">
@@ -226,13 +226,13 @@
   </p>
   <ul class="text-left">
     <li>
-      <a [href]="socialLink1" target="_blank" (click)="openLink()">
+      <a [href]="socialLink1" rel="nofollow" target="_blank" (click)="openLink()">
         <i class="fab fa-linkedin mr-1"></i>
         {{ socialTitle1 }}
       </a>
     </li>
     <li>
-      <a [href]="socialLink2" target="_blank" (click)="openLink()">
+      <a [href]="socialLink2" rel="nofollow" target="_blank" (click)="openLink()">
         <i class="fab fa-github mr-1"></i>
         {{ socialTitle2 }}
       </a>
@@ -261,7 +261,7 @@
   </p>
   <p>
     El sitio Web está alojado en
-    <a [href]="hostingLink" target="_blank" (click)="openLink()">
+    <a [href]="hostingLink" rel="nofollow" target="_blank" (click)="openLink()">
       {{ hostingTitle }}</a
     >. La seguridad de tus datos está garantizada, ya que toman todas las
     medidas de seguridad necesarias para ello. Puedes consultar su política de
@@ -341,7 +341,7 @@
       </p>
       <p>
         Encontrarás más información en:
-        <a [href]="thirdPartyLink" target="_blank" (click)="openLink()">{{
+        <a [href]="thirdPartyLink" rel="nofollow" target="_blank" (click)="openLink()">{{
           thirdPartyLink
         }}</a>
       </p>

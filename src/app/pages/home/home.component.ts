@@ -1,12 +1,12 @@
-/*!
-Start Bootstrap - Freelancer v6.0.4 (https://startbootstrap.com/themes/freelancer)
-Copyright 2013-2020 Start Bootstrap
-Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE)
-
-JQuery plugin - JQuery Easing https://github.com/gdsmith/jquery.easing */
-
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterViewChecked,
+  DoCheck,
+  OnDestroy,
+} from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { store } from '../../store/store';
 
 declare let jQuery: any; // ~jQuery Easing
 
@@ -14,17 +14,23 @@ declare let jQuery: any; // ~jQuery Easing
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent
+  implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
+  //
   constructor(
     //
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
 
-  // SCROLL Animation - JQuery plugin - Easing
+  // I) SCROLL Animation - JQuery plugin - Easing
   ngOnInit(): void {
     (($, activatedRoute, router): void => {
-      'use strict'; // Start of use strict
+      'use strict';
+
+      /* 1. JQUERY EASING */
+      // navbar.component + scroll.component dependencies of app.component
+      // so this algorithm can reference them.
 
       // Smooth scrolling using jQuery easing
       $('a.js-scroll-trigger[href*="#"]:not([href="#"])').on(
@@ -49,8 +55,7 @@ export class HomeComponent implements OnInit, OnDestroy {
                     scrollTop: target.offset().top - 71,
                   },
                   1000,
-                  // see plugin methods --> https://gsgd.co.uk/sandbox/jquery/easing/
-                  'easeInOutExpo'
+                  'easeInOutExpo' // see plugin methods
                 );
                 return false;
               }
@@ -132,20 +137,28 @@ export class HomeComponent implements OnInit, OnDestroy {
           );
       });
 
-      /* RESET THEME ANCHOR URL -fragment- after dalay, when OnInit */
+      /* 2. RESET URL FRAGMENT FROM OTHER ROUTES:VIEWS */
       const anchor = `/#${activatedRoute.snapshot.fragment}`;
 
       if (anchor !== '/#null') {
-        setTimeout(() => router.navigate(['']), 30); // router.navigateByUrl(anchor);
+        setTimeout(() => router.navigate(['']), 30);
       }
-    })(jQuery, this.activatedRoute, this.router); // ~jQuery Easing
-
-    /*  NOTE: hrefs (from navbar.component + scroll.component)
-      must already exist in upper hierarchy (app.component)
-      so this JQuery algorithm can reference them. */
+    })(jQuery, this.activatedRoute, this.router);
   }
 
-  // remove class .active when we're in view "about" and "contact"
+  // II) SCROLL Animation - enabled only in "home.component"
+  ngAfterViewChecked(): void {
+    store.setShow(true); // scroller -> state true
+  }
+
+  // III) SCROLL Animation - enable scroller view
+  ngDoCheck(): void {
+    if (store.scroll.show) {
+      document.getElementById('scroller').classList.remove('d-none');
+    }
+  }
+
+  // IV) "home.component" navbar style ".active" remove when in "about.component" and "contact.component"
   ngOnDestroy(): void {
     const scrollable: HTMLAnchorElement = document.querySelector(
       '.js-scroll-trigger.active'
@@ -155,10 +168,4 @@ export class HomeComponent implements OnInit, OnDestroy {
       scrollable.classList.remove('active');
     }
   }
-
-  // ALLOW SCROLL only in home.component <-- masterhead.component emit
-  scroll(): void {
-    document.getElementById('scroller').classList.toggle('d-none');
-  }
 }
-

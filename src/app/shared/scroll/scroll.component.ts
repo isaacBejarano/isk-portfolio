@@ -1,22 +1,17 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { store } from '../../store/store';
+import { Shared } from '../../utils/shared';
 
 @Component({
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
 })
-export class ScrollComponent implements OnInit {
-  icon: string;
-  home: string;
-  hashIt: (ref: string) => string;
+export class ScrollComponent {
+  // --> props
+  icon = store.scroll.icon;
+  home = store.navbar.home;
+  // --> shared methods
+  hashIt = Shared.hashIt;
 
   constructor() {}
-
-  ngOnInit(): void {
-    // --> props
-    this.icon = store.scroll.icon;
-    this.home = store.navbar.home;
-    // --> shared methods
-    this.hashIt = store.hashIt;
-  }
 }

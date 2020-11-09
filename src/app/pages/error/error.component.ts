@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-declare let gsap: any;
+declare let gsap: any; // page 404 animation plugin
 
 @Component({
   selector: 'app-error',

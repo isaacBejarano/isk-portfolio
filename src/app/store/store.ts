@@ -42,14 +42,16 @@ export let store = {
     title: 'Culex',
     subtitle: 'ES5 library to make HTTP requests',
     id: 'culex-pic',
-    src: 'portfolio/culex.png',
-    alt: 'culex github repo',
     link: 'https://github.com/isaacBejarano/culex.js',
     linkText: 'Github',
     p1:
       'Culex.js is an easy-to-use and lightweight ES5 library \
-      to fetch JSON data from RESTful APIs.',
+    to fetch JSON data from RESTful APIs.',
     p2: 'Disclaimer: the library is still in beta phase.',
+    // affects portfolio last image
+    target: '#portfolioModal8',
+    src: 'portfolio/culex.png',
+    alt: 'culex github repo',
   },
   portfolio: {
     // common
@@ -64,6 +66,7 @@ export let store = {
     dontforget: `Don't forget to see it live at`,
 
     // image 1
+    target1: '#portfolioModal1',
     img1: 'portfolio/papiro.png',
     alt1: 'Responsive Bootstrap project',
     title1: 'Responsive Bootstrap',
@@ -73,6 +76,7 @@ export let store = {
     linkPages: 'https://isaacbejarano.github.io/',
 
     // image 2
+    target2: '#portfolioModal2',
     img2: 'portfolio/rockets.png',
     alt2: 'Typescript project',
     title2: 'Typescript',
@@ -82,6 +86,7 @@ export let store = {
     link2: 'https://github.com/isaacBejarano/ts-rockets',
 
     // image 3
+    target3: '#portfolioModal3',
     img3: 'portfolio/joker.png',
     alt3: 'AJAX + JQuery project',
     title3: 'JQuery + AJAX',
@@ -91,6 +96,7 @@ export let store = {
     link3: 'https://github.com/isaacBejarano/joker',
 
     // image 4
+    target4: '#portfolioModal4',
     img4: 'portfolio/beers.png',
     alt4: 'Javascript project',
     title4: 'Javascript',
@@ -101,6 +107,7 @@ export let store = {
     link4b: 'https://codepen.io/eRoboto/pen/bGpKwgM',
 
     // image 5
+    target5: '#portfolioModal5',
     img5: 'portfolio/restopolitan.png',
     alt5: 'Leaflet project',
     title5: 'Leaflet + AJAX',
@@ -110,6 +117,7 @@ export let store = {
     link5: 'https://github.com/isaacBejarano/leaflet_filtres',
 
     // image 6
+    target6: '#portfolioModal6',
     img6: 'portfolio/algorithms.png',
     alt6: 'JavaScript Algorithms project',
     title6: 'JavaScript Algorithms',
@@ -127,6 +135,7 @@ export let store = {
     link6fText: 'Fibonacci Sequencer',
 
     // image 7
+    target7: '#portfolioModal7',
     img7: 'portfolio/stripes.png',
     alt7: 'SASS project',
     title7: 'SASS',

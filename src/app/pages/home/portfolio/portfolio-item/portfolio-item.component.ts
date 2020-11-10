@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styleUrls: ['./portfolio-item.component.scss'],
 })
 export class PortfolioItemComponent {
-  // passed in
+  // passed in props
   @Input() inProps: {
     id: string;
     target: string;

@@ -7,6 +7,8 @@ import { Shared } from '../../../utils/shared';
   templateUrl: './portfolio.component.html',
 })
 export class PortfolioComponent {
+  portfolios = ['#transcluded-portfolio-1', '#transcluded-portfolio-2'];
+
   // --> props
   // common
   star = store.portfolio.star;

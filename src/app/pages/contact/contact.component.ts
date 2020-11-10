@@ -8,15 +8,15 @@ import { Shared } from '../../utils/shared';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent implements OnInit, DoCheck {
+  privacyLink: 'lgpd';
+  privacyText = 'Privacy Policy';
   form: FormGroup;
-  // --> shared methods
-  openLink = Shared.openLink;
 
   constructor(private fb: FormBuilder) {}
 
   // hooks
   ngOnInit(): void {
-    window.scrollTo(0, 0); // to counter effect JQuery Animation trail
+    Shared.pageToTop();
     store.setShow(false); // scroller -> state false
     this.createForm(); // Reactive Formular
   }

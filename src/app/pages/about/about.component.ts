@@ -32,7 +32,7 @@ export class AboutComponent implements OnInit, DoCheck {
 
   // hooks
   ngOnInit(): void {
-    window.scrollTo(0, 0); // to counter effect JQuery Animation trail
+    Shared.pageToTop();
     store.setShow(false); // scroller -> state false
   }
 

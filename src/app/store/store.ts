@@ -5,7 +5,7 @@ export let store = {
   // 1. UI Shared Components
   navbar: {
     home: 'home',
-    homeSrc: '../../assets/img/portfolio/codhex-logo.png',
+    homeSrc: './assets/img/portfolio/codhex-logo.png',
     homeAlt: 'codhex logo',
     hamburger: 'menu',
     page1: 'new',
@@ -33,7 +33,7 @@ export let store = {
   },
   // 2. Pages and Sections
   masterhead: {
-    src: '../../assets/img/portfolio/Isaac-bejarano-s4.jpg',
+    src: './assets/img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
     title: 'Web Developer - Full Stack - MEAN - LAMP',

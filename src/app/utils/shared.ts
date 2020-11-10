@@ -1,3 +1,5 @@
+import { Router } from '@angular/router';
+
 export class Shared {
   constructor() {}
 
@@ -12,5 +14,14 @@ export class Shared {
 
   public static capitalLetter(str: string): string {
     return str.substr(0, 1).toUpperCase() + str.substr(1, str.length);
+  }
+
+  public static pageToTop(): void {
+    window.scrollTo(0, 0);
+  }
+
+  // to reroute on buttons and other alements different from <a>
+  public static reroute(routerInstance: Router, route: string): void {
+    routerInstance.navigate([route]);
   }
 }

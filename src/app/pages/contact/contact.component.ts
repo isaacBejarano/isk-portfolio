@@ -38,7 +38,7 @@ export class ContactComponent implements OnInit, DoCheck {
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern(regex)]],
       msg: ['', [Validators.required, Validators.minLength(15)]],
-      lgpd: [false, Validators.required],
+      lgpd: [false, Validators.requiredTrue],
     });
   }
 

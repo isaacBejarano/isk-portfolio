@@ -90,14 +90,21 @@
                   type="checkbox"
                   class="mr-2"
                 />
-                <!-- aria-label="Checkbox for following text input" -->
-                <!-- LGPD - PRIVACY POLICY -->
-                Read and accept the
-                <a rel="nofollow" href="/lgpd" rel="nofollow" target="_blank" (click)="openLink()">
-                  Privacy Policy
-                </a>
-                of this site.
               </label>
+              <!-- aria-label="Checkbox for following text input" -->
+              <!-- LGPD - PRIVACY POLICY -->
+              Read and accept the
+              <a
+                rel="nofollow"
+                href="/lgpd"
+                rel="nofollow"
+                target="_blank"
+                (click)="openLink()"
+                class="px-1"
+              >
+                Privacy Policy
+              </a>
+              of this site.
               <!-- </div> -->
               <p class="help-block text-danger"></p>
             </div>
@@ -118,14 +125,14 @@
         </form>
       </div>
 
-      <!-- LISTENERS -->
+      <!-- DEBUGG -->
       <hr />
       <pre class="border border-warning p-3">
-        form state: {{ form.valid }}
+        form valid: {{ form.valid }}
         <br>
-        form state: {{ form.status }}
+        form status: {{ form.status }}
         <br>
-        form state: {{ form.value | json }}
+        form value: {{ form.value | json }}
       </pre>
     </div>
   </div>

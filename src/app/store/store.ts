@@ -136,7 +136,7 @@ export let store = {
     link7b: 'https://codepen.io/eRoboto/pen/eYZZerg',
   },
   about: {
-    title: 'about',
+    title: 'about me',
     hello: `Hi, I'm Isaac.`,
     p1a:
       'I used to work in audiovisual postproduction and\
@@ -165,7 +165,7 @@ export let store = {
     stak1: 'MEAN',
     stak2: 'LAMP',
     p3c: 'Full Stack.',
-    bye: 'Be the code be with you! ;)',
+    bye: 'May the code be with you! ;)',
   },
   // --> methods
   setShow(x: boolean): void {

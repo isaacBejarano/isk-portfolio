@@ -20,6 +20,7 @@ import { FeaturedComponent } from './pages/home/featured/featured.component';
 import { PortfolioComponent } from './pages/home/portfolio/portfolio.component';
 import { PrivacyEsComponent } from './pages/lgpd/privacy-es/privacy-es.component';
 import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component';
+import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/portfolio-item.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component
     FollowComponent,
     PrivacyEsComponent,
     PrivacyEnComponent,
+    PortfolioItemComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],

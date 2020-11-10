@@ -63,7 +63,7 @@ export let store = {
     visitThese: 'Visit these repositories at',
     dontforget: `Don't forget to see it live at`,
 
-    // imgage 1
+    // image 1
     img1: 'portfolio/papiro.png',
     alt1: 'Responsive Bootstrap project',
     title1: 'Responsive Bootstrap',
@@ -72,7 +72,7 @@ export let store = {
     link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
     linkPages: 'https://isaacbejarano.github.io/',
 
-    // imgage 2
+    // image 2
     img2: 'portfolio/rockets.png',
     alt2: 'Typescript project',
     title2: 'Typescript',
@@ -81,7 +81,7 @@ export let store = {
        Object Oriented Programmmig (OOP).',
     link2: 'https://github.com/isaacBejarano/ts-rockets',
 
-    // imgage 3
+    // image 3
     img3: 'portfolio/joker.png',
     alt3: 'AJAX + JQuery project',
     title3: 'JQuery + AJAX',
@@ -90,7 +90,7 @@ export let store = {
       Made with JQuery.',
     link3: 'https://github.com/isaacBejarano/joker',
 
-    // imgage 4
+    // image 4
     img4: 'portfolio/beers.png',
     alt4: 'Javascript project',
     title4: 'Javascript',
@@ -100,7 +100,7 @@ export let store = {
     link4: 'https://github.com/isaacBejarano/rating-beers',
     link4b: 'https://codepen.io/eRoboto/pen/bGpKwgM',
 
-    // imgage 5
+    // image 5
     img5: 'portfolio/restopolitan.png',
     alt5: 'Leaflet project',
     title5: 'Leaflet + AJAX',
@@ -109,7 +109,7 @@ export let store = {
        Made with JQuery.',
     link5: 'https://github.com/isaacBejarano/leaflet_filtres',
 
-    // imgage 6
+    // image 6
     img6: 'portfolio/algorithms.png',
     alt6: 'JavaScript Algorithms project',
     title6: 'JavaScript Algorithms',
@@ -126,7 +126,7 @@ export let store = {
     link6eText: 'String Mirror',
     link6fText: 'Fibonacci Sequencer',
 
-    // imgage 7
+    // image 7
     img7: 'portfolio/stripes.png',
     alt7: 'SASS project',
     title7: 'SASS',

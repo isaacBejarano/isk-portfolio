@@ -17,6 +17,55 @@ declare let jQuery: any; // ~jQuery Easing
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
   //
+  props1 = {
+    id: 'transcluded-portfolio-1',
+    target: '#portfolioModal1',
+    src: store.portfolio.img1,
+    alt: store.portfolio.alt1,
+  };
+  props2 = {
+    id: 'transcluded-portfolio-2',
+    target: '#portfolioModal2',
+    src: store.portfolio.img2,
+    alt: store.portfolio.alt2,
+  };
+  props3 = {
+    id: 'transcluded-portfolio-3',
+    target: '#portfolioModal3',
+    src: store.portfolio.img3,
+    alt: store.portfolio.alt3,
+  };
+  props4 = {
+    id: 'transcluded-portfolio-4',
+    target: '#portfolioModal4',
+    src: store.portfolio.img4,
+    alt: store.portfolio.alt4,
+  };
+  props5 = {
+    id: 'transcluded-portfolio-5',
+    target: '#portfolioModal5',
+    src: store.portfolio.img5,
+    alt: store.portfolio.alt5,
+  };
+  props6 = {
+    id: 'transcluded-portfolio-6',
+    target: '#portfolioModal6',
+    src: store.portfolio.img6,
+    alt: store.portfolio.alt6,
+  };
+  props7 = {
+    id: 'transcluded-portfolio-7',
+    target: '#portfolioModal7',
+    src: store.portfolio.img7,
+    alt: store.portfolio.alt7,
+  };
+  propsNEW = {
+    id: 'transcluded-portfolio-NEW',
+    target: '#portfolioModalNEW',
+    src: store.featured.src,
+    alt: store.featured.alt,
+  };
+
   constructor(
     //
     private activatedRoute: ActivatedRoute,

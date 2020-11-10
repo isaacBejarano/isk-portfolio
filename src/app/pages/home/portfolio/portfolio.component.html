@@ -18,161 +18,44 @@
 
     <!-- Portfolio Grid Items -->
     <div class="row">
-      <!-- Portfolio Item 1-->
+      <!-- Portfolio Item 1 -->
       <div class="col-md-6 col-lg-4 mb-5">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal1"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img1 }}" alt="{{ alt1 }}" />
-        </div>
+        <ng-content select="#transcluded-portfolio-1"></ng-content>
       </div>
-      <!-- Portfolio Item 2-->
+
+      <!-- Portfolio Item 2 -->
       <div class="col-md-6 col-lg-4 mb-5">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal2"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img2 }}" alt="{{ alt2 }}" />
-        </div>
+        <ng-content select="#transcluded-portfolio-2"></ng-content>
       </div>
-      <!-- Portfolio Item 3-->
+
+      <!-- Portfolio Item 3 -->
       <div class="col-md-6 col-lg-4 mb-5">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal3"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img3 }}" alt="{{ alt3 }}" />
-        </div>
+        <ng-content select="#transcluded-portfolio-3"></ng-content>
       </div>
-      <!-- Portfolio Item 4-->
-      <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal4"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img4 }}" alt="{{ alt4 }}" />
-        </div>
-      </div>
-      <!-- Portfolio Item 5-->
-      <div class="col-md-6 col-lg-4 mb-5 mb-md-0">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal5"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img5 }}" alt="{{ alt5 }}" />
-        </div>
-      </div>
-      <!-- Portfolio Item 6-->
+
+      <!-- Portfolio Item 4 -->
       <div class="col-md-6 col-lg-4 mb-5">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal6"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img6 }}" alt="{{ alt6 }}" />
-        </div>
+        <ng-content select="#transcluded-portfolio-4"></ng-content>
       </div>
+
+      <!-- Portfolio Item 5 -->
+      <div class="col-md-6 col-lg-4 mb-5">
+        <ng-content select="#transcluded-portfolio-5"></ng-content>
+      </div>
+
+      <!-- Portfolio Item 6 -->
+      <div class="col-md-6 col-lg-4 mb-5">
+        <ng-content select="#transcluded-portfolio-6"></ng-content>
+      </div>
+
       <!-- Portfolio Item 7 -->
       <div class="col-md-6 col-lg-4 mb-5">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModal7"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img class="img-fluid" src="assets/img/{{ img7 }}" alt="{{ alt7 }}" />
-        </div>
+        <ng-content select="#transcluded-portfolio-7"></ng-content>
       </div>
-      <!-- Portfolio Item - NEW -->
-      <div class="col-md-6 col-lg-4">
-        <div
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#portfolioModalNew"
-        >
-          <div
-            class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-          >
-            <div
-              class="portfolio-item-caption-content text-center text-primary"
-            >
-              <i class="fas fa-plus fa-3x"></i>
-            </div>
-          </div>
-          <img
-            class="img-fluid"
-            src="assets/img/{{ imgNew }}"
-            alt="{{ altNew }}"
-          />
-        </div>
+
+      <!-- Portfolio Item NEW -->
+      <div class="col-md-6 col-lg-4 mb-5">
+        <ng-content select="#transcluded-portfolio-NEW"></ng-content>
       </div>
     </div>
   </div>
@@ -227,11 +110,21 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart1 }} {{ visitThis }}
-                <a href="{{ link1 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link1 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }} {{ dontforget }}
-                <a href="{{ linkPages }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ linkPages }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText2 }}.
                 </a>
               </p>
@@ -294,7 +187,12 @@
               <p class="mb-5 text-justify">
                 {{ paragraphPart2 }}
                 {{ visitThis }}
-                <a href="{{ link2 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link2 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }}
@@ -358,7 +256,12 @@
               <p class="mb-5 text-justify">
                 {{ paragraphPart3 }}
                 {{ visitThis }}
-                <a href="{{ link3 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link3 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }}
@@ -421,11 +324,21 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart4 }} {{ visitThis }}
-                <a href="{{ link4 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link4 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }} {{ dontforget }}
-                <a href="{{ link4b }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link4b }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText3 }}.
                 </a>
               </p>
@@ -487,7 +400,12 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart5 }} {{ visitThis }}
-                <a href="{{ link5 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link5 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }}
@@ -552,42 +470,48 @@
                 {{ visitList }}
                 <a
                   class="d-a"
-                  href="{{ link6a }}" rel="nofollow"
+                  href="{{ link6a }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6aText }}</a
                 >,
                 <a
                   class="d-a"
-                  href="{{ link6b }}" rel="nofollow"
+                  href="{{ link6b }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6bText }}</a
                 >,
                 <a
                   class="d-a"
-                  href="{{ link6d }}" rel="nofollow"
+                  href="{{ link6d }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6dText }}</a
                 >,
                 <a
                   class="d-a"
-                  href="{{ link6c }}" rel="nofollow"
+                  href="{{ link6c }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6cText }}</a
                 >,
                 <a
                   class="d-a"
-                  href="{{ link6e }}" rel="nofollow"
+                  href="{{ link6e }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6eText }}</a
                 >,
                 <a
                   class="d-a"
-                  href="{{ link6f }}" rel="nofollow"
+                  href="{{ link6f }}"
+                  rel="nofollow"
                   target="_blank"
                   (click)="openLink()"
                   >{{ link6fText }}</a
@@ -652,12 +576,22 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ paragraphPart7 }} {{ visitThis }}
-                <a href="{{ link7 }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link7 }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }}
                 {{ dontforget }}
-                <a href="{{ link7b }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ link7b }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText3 }}.
                 </a>
               </p>
@@ -675,10 +609,10 @@
 <!-- Portfolio Modal NEW -->
 <div
   class="portfolio-modal modal fade"
-  id="portfolioModalNew"
+  id="portfolioModalNEW"
   tabindex="-1"
   role="dialog"
-  aria-labelledby="portfolioModalNewLabel"
+  aria-labelledby="portfolioModalNEWLabel"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-xl" role="document">
@@ -719,7 +653,12 @@
               <!-- Portfolio Modal - Text-->
               <p class="mb-5 text-justify">
                 {{ p1 }} {{ visitThis }}
-                <a href="{{ linkNew }}" rel="nofollow" target="_blank" (click)="openLink()">
+                <a
+                  href="{{ linkNew }}"
+                  rel="nofollow"
+                  target="_blank"
+                  (click)="openLink()"
+                >
                   {{ linkText }}
                 </a>
                 {{ star }}

@@ -5,12 +5,12 @@ import { Component, Input } from '@angular/core';
   templateUrl: './portfolio-item.component.html',
 })
 export class PortfolioItemComponent {
-  // passed in props
-  @Input() inProps: {
-    id: string;
+  // props  <- from <app-home>
+  @Input() item: {
     target: string;
     src: string;
     alt: string;
+    // ...
   };
 
   constructor() {}

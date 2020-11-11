@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { store } from '../../../store/store';
 import { Shared } from '../../../utils/shared';
+import { store } from '../../../store/store';
 
 @Component({
   selector: 'app-featured',
@@ -11,20 +11,12 @@ export class FeaturedComponent {
   // props to Input()
   divider = 'divider-dark';
 
-  // --> props
-  // featured ~new
-  title = store.featured.title;
-  subtitle = store.featured.subtitle;
-  id = store.featured.id;
-  src = store.featured.src;
-  alt = store.featured.alt;
-  link1 = store.featured.link1;
-  repo1 = store.featured.repo1;
-  p1 = store.featured.p1;
-  p2 = store.featured.p2;
-  // common
-  visit = store.portfolio.common.visit;
-  star = store.portfolio.common.star;
+  // portfolio
+  common = store.portfolio.common; // common
+  modal8 = store.portfolio.modal8; // ~new
+  // new
+  new = store.new;
+
   // --> shared methods
   openLink = Shared.openLink;
 

@@ -16,54 +16,8 @@ declare let jQuery: any; // ~jQuery Easing
 })
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
-  // ~modal 1
-  props1 = {
-    target: store.portfolio.modal1.target,
-    src: store.portfolio.modal1.src,
-    alt: store.portfolio.modal1.alt,
-  };
-  // ~modal 2
-  props2 = {
-    target: store.portfolio.modal2.target,
-    src: store.portfolio.modal2.src,
-    alt: store.portfolio.modal2.alt,
-  };
-  // ~modal 3
-  props3 = {
-    target: store.portfolio.modal3.target,
-    src: store.portfolio.modal3.src,
-    alt: store.portfolio.modal3.alt,
-  };
-  // ~modal 4
-  props4 = {
-    target: store.portfolio.modal4.target,
-    src: store.portfolio.modal4.src,
-    alt: store.portfolio.modal4.alt,
-  };
-  // ~modal 5
-  props5 = {
-    target: store.portfolio.modal5.target,
-    src: store.portfolio.modal5.src,
-    alt: store.portfolio.modal5.alt,
-  };
-  // ~modal 6
-  props6 = {
-    target: store.portfolio.modal6.target,
-    src: store.portfolio.modal6.src,
-    alt: store.portfolio.modal6.alt,
-  };
-  // ~modal 7
-  props7 = {
-    target: store.portfolio.modal7.target,
-    src: store.portfolio.modal7.src,
-    alt: store.portfolio.modal7.alt,
-  };
-  // ~featured
-  props8 = {
-    target: store.featured.target,
-    src: store.featured.src,
-    alt: store.featured.alt,
-  };
+  // portfolio
+  portfolio = store.portfolio;
 
   constructor(
     //

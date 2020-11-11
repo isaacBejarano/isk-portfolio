@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { store } from '../../store/store';
 import { Shared } from '../../utils/shared';
+import { store } from '../../store/store';
 
 @Component({
   selector: 'app-follow',

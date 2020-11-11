@@ -11,10 +11,10 @@
       <h3
         class="page-section-heading text-center text-uppercase text-secondary mb-3"
       >
-        {{ title }}
+        {{ modal8.title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
-        {{ subtitle }}
+        {{ new.subtitle }}
       </h4>
     </section>
 
@@ -39,10 +39,10 @@
             </div>
           </div>
           <img
-            [id]="id"
+            [id]="new.imgId"
             class="border img-fluid border rounded-lg"
-            src="assets/img/{{ src }}"
-            [alt]="alt"
+            src="assets/img/{{ modal8.src }}"
+            [alt]="modal8.alt"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                     id="featuredModal"
                   >
-                    {{ title }}
+                    {{ modal8.title }}
                   </h2>
 
                   <!-- Icon Divider-->
@@ -85,22 +85,22 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ src }}"
-                    [alt]="alt"
+                    src="assets/img/{{ modal8.src }}"
+                    [alt]="modal8.alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ p1 }} {{ visit }}
+                    {{ modal8.p1 }} {{ common.visit }}
                     <a
-                      [href]="link1"
+                      [href]="modal8.link1"
                       rel="nofollow"
                       target="_blank"
                       (click)="openLink()"
                     >
-                      {{ repo1 }}
+                      {{ common.repo1 }}
                     </a>
-                    {{ star }}
-                    <span class="text-gray">{{ p2 }} </span>
+                    {{ common.star }}
+                    <span class="text-gray">{{ modal8.p2 }} </span>
                   </p>
                   <button class="btn btn-primary" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

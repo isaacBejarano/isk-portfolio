@@ -58,41 +58,41 @@
 <!-- MODALS -->
 
 <!-- A Portfolio Modal 1 -->
-<app-portfolio-modal [modalComp]="modal1.component">
+<app-portfolio-modal [modal]="portfolio.modal1">
   <p class="mb-5 text-justify">
-    {{ modal1.text.p1 }} {{ common.visit }}
+    {{ portfolio.modal1.p1 }} {{ portfolio.common.visit }}
     <a
-      href="{{ modal1.text.link1 }}"
+      href="{{ portfolio.modal1.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ common.repo1 }}
+      {{ portfolio.common.repo1 }}
     </a>
-    {{ common.star }} {{ common.dontforget }}
+    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
     <a
-      href="{{ modal1.text.link2 }}"
+      href="{{ portfolio.modal1.link2 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ common.repo2 }}.
+      {{ portfolio.common.repo2 }}.
     </a>
   </p>
 </app-portfolio-modal>
 
-<app-portfolio-modal [modalComp]="modal2.component">
+<app-portfolio-modal [modal]="portfolio.modal2">
   <p class="mb-5 text-justify">
-    {{ modal2.text.p1 }}
-    {{ common.visit }}
+    {{ portfolio.modal2.p1 }}
+    {{ portfolio.common.visit }}
     <a
-      href="{{ modal2.text.link1 }}"
+      href="{{ portfolio.modal2.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ common.repo1 }}
+      {{ portfolio.common.repo1 }}
     </a>
-    {{ common.star }}
+    {{ portfolio.common.star }}
   </p>
 </app-portfolio-modal>

@@ -42,20 +42,9 @@ export let store = {
     title: 'Web Developer - Full Stack - MEAN - LAMP',
   },
   // featured ~new
-  featured: {
-    title: 'Culex',
+  new: {
+    imgId: 'culex-pic',
     subtitle: 'ES5 library to make HTTP requests',
-    id: 'culex-pic',
-    link1: 'https://github.com/isaacBejarano/culex.js',
-    repo1: 'Github',
-    p1:
-      'Culex.js is an easy-to-use and lightweight ES5 library \
-    to fetch JSON data from RESTful APIs.',
-    p2: 'Disclaimer: the library is still in beta phase.',
-    // affects portfolio last image
-    target: '#portfolioModal8',
-    src: 'portfolio/culex.png',
-    alt: 'culex github repo',
   },
   // portfolio
   portfolio: {
@@ -75,6 +64,8 @@ export let store = {
     modal1: {
       title: 'Responsive Bootstrap',
       target: '#portfolioModal1',
+      id: 'portfolioModal1',
+      label: 'portfolioModal1Lbabel',
       src: 'portfolio/papiro.png',
       alt: 'Responsive Bootstrap project',
       p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
@@ -85,6 +76,8 @@ export let store = {
     modal2: {
       title: 'Typescript',
       target: '#portfolioModal2',
+      id: 'portfolioModal2',
+      label: 'portfolioModal2Lbabel',
       src: 'portfolio/rockets.png',
       alt: 'Typescript project',
       p1:
@@ -96,6 +89,8 @@ export let store = {
     modal3: {
       title: 'JQuery + AJAX',
       target: '#portfolioModal3',
+      id: 'portfolioModal3',
+      label: 'portfolioModal3Lbabel',
       src: 'portfolio/joker.png',
       alt: 'AJAX + JQuery project',
       p1:
@@ -107,6 +102,8 @@ export let store = {
     modal4: {
       title: 'Javascript',
       target: '#portfolioModal4',
+      id: 'portfolioModal4',
+      label: 'portfolioModal4Lbabel',
       src: 'portfolio/beers.png',
       alt: 'Javascript project',
       p1:
@@ -119,6 +116,8 @@ export let store = {
     modal5: {
       title: 'Leaflet + AJAX',
       target: '#portfolioModal5',
+      id: 'portfolioModal5',
+      label: 'portfolioModal5Lbabel',
       src: 'portfolio/restopolitan.png',
       alt: 'Leaflet project',
       p1:
@@ -130,6 +129,8 @@ export let store = {
     modal6: {
       title: 'JavaScript Algorithms',
       target: '#portfolioModal6',
+      id: 'portfolioModal6',
+      label: 'portfolioModal6Lbabel',
       src: 'portfolio/algorithms.png',
       alt: 'JavaScript Algorithms project',
       link1: 'https://github.com/isaacBejarano/price-down-breaker',
@@ -149,12 +150,28 @@ export let store = {
     modal7: {
       title: 'SASS',
       target: '#portfolioModal7',
+      id: 'portfolioModal7',
+      label: 'portfolioModal7Lbabel',
       src: 'portfolio/stripes.png',
       alt: 'SASS project',
       p1:
         'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
       link1: 'https://github.com/isaacBejarano/sass-stripes',
       link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
+    },
+    // modal 8 ~new
+    modal8: {
+      title: 'Culex',
+      target: '#portfolioModal8',
+      id: 'portfolioModal8',
+      label: 'portfolioModal8Lbabel',
+      src: 'portfolio/culex.png',
+      alt: 'culex github repo',
+      p1:
+        'Culex.js is an easy-to-use and lightweight ES5 library \
+      to fetch JSON data from RESTful APIs.',
+      p2: 'Disclaimer: the library is still in beta phase.',
+      link1: 'https://github.com/isaacBejarano/culex.js',
     },
   },
   // about

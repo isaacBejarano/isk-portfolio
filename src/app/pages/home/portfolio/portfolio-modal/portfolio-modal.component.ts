@@ -10,13 +10,13 @@ export class PortfolioModalComponent {
   divider = 'divider-dark';
 
   // prop <- from <app-portfolio>
-  @Input() modalComp: {
-    // modal.component
+  @Input() modal: {
+    title: string;
     id: string;
     label: string;
-    title: string;
     src: string;
     alt: string;
+    // ...
   };
 
   // --> shared methods

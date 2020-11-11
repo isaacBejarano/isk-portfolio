@@ -7,6 +7,9 @@ import { store } from '../../../store/store';
   styleUrls: ['./masterhead.component.scss'],
 })
 export class MasterheadComponent {
+  // props to Input()
+  divider = 'divider-light';
+
   // --> props
   src = store.masterhead.src;
   alt = store.masterhead.alt;

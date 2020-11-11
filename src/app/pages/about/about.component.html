@@ -6,11 +6,8 @@
       {{ title }}
     </h2>
     <!-- Icon Divider-->
-    <div class="divider-custom divider-light">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-      <div class="divider-custom-line"></div>
-    </div>
+    <app-divider [color]="divider"></app-divider>
+
     <!-- About Section Content-->
     <div class="row text-justify">
       <div class="col-lg-4 ml-auto">
@@ -40,7 +37,12 @@
       <div class="col-lg-4 mr-auto">
         <p class="lead py-1">
           {{ p3a }}
-          <a [href]="p3link" rel="nofollow" target="_blank" (click)="openLink()">
+          <a
+            [href]="p3link"
+            rel="nofollow"
+            target="_blank"
+            (click)="openLink()"
+          >
             <strong class="text-secondary font-weight-bold">
               <u>{{ p3linkText }}</u>
             </strong></a

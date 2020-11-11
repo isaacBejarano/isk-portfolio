@@ -19,11 +19,7 @@
     </section>
 
     <!-- Icon Divider-->
-    <div class="divider-custom">
-      <div class="divider-custom-line"></div>
-      <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
-      <div class="divider-custom-line"></div>
-    </div>
+    <app-divider [color]="divider"></app-divider>
 
     <!-- Featured Box -->
     <div class="row">
@@ -82,14 +78,10 @@
                   >
                     {{ title }}
                   </h2>
+
                   <!-- Icon Divider-->
-                  <div class="divider-custom">
-                    <div class="divider-custom-line"></div>
-                    <div class="divider-custom-icon">
-                      <i class="fas fa-star"></i>
-                    </div>
-                    <div class="divider-custom-line"></div>
-                  </div>
+                  <app-divider [color]="divider"></app-divider>
+
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
@@ -99,7 +91,12 @@
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
                     {{ p1 }} {{ visitThis }}
-                    <a [href]="link" rel="nofollow" target="_blank" (click)="openLink()">
+                    <a
+                      [href]="link"
+                      rel="nofollow"
+                      target="_blank"
+                      (click)="openLink()"
+                    >
                       {{ linkText }}
                     </a>
                     {{ star }}

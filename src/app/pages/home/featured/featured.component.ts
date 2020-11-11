@@ -8,6 +8,9 @@ import { Shared } from '../../../utils/shared';
   styleUrls: ['./featured.component.scss'],
 })
 export class FeaturedComponent {
+  // props to Input()
+  divider = 'divider-dark';
+
   // --> props
   title = store.featured.title;
   subtitle = store.featured.subtitle;

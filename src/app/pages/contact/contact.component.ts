@@ -8,6 +8,9 @@ import { Shared } from '../../utils/shared';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent implements OnInit, DoCheck {
+  // props to Input()
+  divider = 'divider-dark';
+  // props
   privacyLink: 'lgpd';
   privacyText = 'Privacy Policy';
   form: FormGroup;

@@ -7,26 +7,60 @@ import { Shared } from '../../../utils/shared';
   templateUrl: './portfolio.component.html',
 })
 export class PortfolioComponent {
-  portfolios = ['#transcluded-portfolio-1', '#transcluded-portfolio-2'];
+  // prop -> to <app-divider> Input()
+  divider = 'divider-light';
+
+  // modals text common
+  modalTextCommon = {
+    star: store.portfolio.star,
+    stars: store.portfolio.stars,
+    repo1: store.portfolio.linkText,
+    repo2: store.portfolio.linkText2,
+    repo3: store.portfolio.linkText3,
+    list: store.portfolio.visitList,
+    visit: store.portfolio.visitThis,
+    visits: store.portfolio.visitThese,
+    dontforget: store.portfolio.dontforget,
+  };
+
+  // modal 1
+  modal1 = {
+    component: {
+      id: 'portfolioModal1',
+      ariaLabel: 'portfolioModal1Label',
+      title: store.portfolio.title1,
+      img: store.portfolio.img1,
+      alt: store.portfolio.alt1,
+    },
+    text: {
+      p1: store.portfolio.paragraphPart1,
+      link1: store.portfolio.link1,
+      link2: store.portfolio.linkPages,
+    },
+  };
+
+  // modal 2
+  modal2 = {
+    component: {
+      id: 'portfolioModal2',
+      ariaLabel: 'portfolioModal2Label',
+      title: store.portfolio.title2,
+      img: store.portfolio.img2,
+      alt: store.portfolio.alt2,
+    },
+    text: {
+      p1: store.portfolio.paragraphPart2,
+      link1: store.portfolio.link2,
+    },
+  };
 
   // --> props
-  // common
-  star = store.portfolio.star;
-  stars = store.portfolio.stars;
-  linkText = store.portfolio.linkText;
-  linkText2 = store.portfolio.linkText2;
-  linkText3 = store.portfolio.linkText3;
-  visitList = store.portfolio.visitList;
-  visitThis = store.portfolio.visitThis;
-  visitThese = store.portfolio.visitThese;
+
   // imgage 1
-  img1 = store.portfolio.img1;
-  alt1 = store.portfolio.alt1;
-  title1 = store.portfolio.title1;
-  paragraphPart1 = store.portfolio.paragraphPart1;
-  dontforget = store.portfolio.dontforget;
-  link1 = store.portfolio.link1;
-  linkPages = store.portfolio.linkPages;
+  // paragraphPart1 = store.portfolio.paragraphPart1;
+  // dontforget = store.portfolio.dontforget;
+  // link1 = store.portfolio.link1;
+  // linkPages = store.portfolio.linkPages;
   // imgage 2
   img2 = store.portfolio.img2;
   alt2 = store.portfolio.alt2;

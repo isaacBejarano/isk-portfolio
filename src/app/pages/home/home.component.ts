@@ -17,10 +17,6 @@ declare let jQuery: any; // ~jQuery Easing
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
   //
-  test = 'transcluded-portfolio-1';
-  portfolios = ['transcluded-portfolio-1', 'transcluded-portfolio-2'];
-
-  //
   props1 = {
     target: store.portfolio.target1,
     src: store.portfolio.img1,

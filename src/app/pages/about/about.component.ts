@@ -8,6 +8,9 @@ import { Shared } from '../../utils/shared';
   styleUrls: ['./about.component.scss'],
 })
 export class AboutComponent implements OnInit, DoCheck {
+  // props to Input()
+  divider = 'divider-light';
+
   // --> props
   title = store.about.title;
   hello = store.about.hello;

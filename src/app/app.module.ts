@@ -21,6 +21,8 @@ import { PortfolioComponent } from './pages/home/portfolio/portfolio.component';
 import { PrivacyEsComponent } from './pages/lgpd/privacy-es/privacy-es.component';
 import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component';
 import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/portfolio-item.component';
+import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/portfolio-modal.component';
+import { DividerComponent } from './shared/divider/divider.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/po
     PrivacyEsComponent,
     PrivacyEnComponent,
     PortfolioItemComponent,
+    PortfolioModalComponent,
+    DividerComponent,
   ],
   imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
   providers: [],

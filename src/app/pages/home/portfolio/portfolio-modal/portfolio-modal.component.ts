@@ -13,9 +13,9 @@ export class PortfolioModalComponent {
   @Input() modalComp: {
     // modal.component
     id: string;
-    ariaLabel: string;
+    label: string;
     title: string;
-    img: string;
+    src: string;
     alt: string;
   };
 

@@ -4,7 +4,7 @@
   [id]="modalComp.id"
   tabindex="-1"
   role="dialog"
-  [attr.aria-labelledby]="modalComp.ariaLabel"
+  [attr.aria-labelledby]="modalComp.label"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-xl" role="document">
@@ -24,7 +24,7 @@
               <!-- Portfolio Modal - Title-->
               <h2
                 class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                [id]="modalComp.ariaLabel"
+                [id]="modalComp.label"
               >
                 {{ modalComp.title }}
               </h2>
@@ -34,7 +34,7 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="img-fluid rounded mb-5"
-                src="assets/img/{{ modalComp.img }}"
+                src="assets/img/{{ modalComp.src }}"
                 [alt]="modalComp.alt"
               />
               <!-- ABCD - Portfolio Modal - Text-->

@@ -12,18 +12,19 @@ export class FeaturedComponent {
   divider = 'divider-dark';
 
   // --> props
+  // featured ~new
   title = store.featured.title;
   subtitle = store.featured.subtitle;
   id = store.featured.id;
   src = store.featured.src;
   alt = store.featured.alt;
-  link = store.featured.link;
-  linkText = store.featured.linkText;
+  link1 = store.featured.link1;
+  repo1 = store.featured.repo1;
   p1 = store.featured.p1;
   p2 = store.featured.p2;
   // common
-  visitThis = store.portfolio.visitThis;
-  star = store.portfolio.star;
+  visit = store.portfolio.common.visit;
+  star = store.portfolio.common.star;
   // --> shared methods
   openLink = Shared.openLink;
 

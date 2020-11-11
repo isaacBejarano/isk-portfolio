@@ -60,23 +60,23 @@
 <!-- A Portfolio Modal 1 -->
 <app-portfolio-modal [modalComp]="modal1.component">
   <p class="mb-5 text-justify">
-    {{ modal1.text.p1 }} {{ modalTextCommon.visit }}
+    {{ modal1.text.p1 }} {{ common.visit }}
     <a
       href="{{ modal1.text.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ modalTextCommon.repo1 }}
+      {{ common.repo1 }}
     </a>
-    {{ modalTextCommon.star }} {{ modalTextCommon.dontforget }}
+    {{ common.star }} {{ common.dontforget }}
     <a
       href="{{ modal1.text.link2 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ modalTextCommon.repo2 }}.
+      {{ common.repo2 }}.
     </a>
   </p>
 </app-portfolio-modal>
@@ -84,15 +84,15 @@
 <app-portfolio-modal [modalComp]="modal2.component">
   <p class="mb-5 text-justify">
     {{ modal2.text.p1 }}
-    {{ modalTextCommon.visit }}
+    {{ common.visit }}
     <a
       href="{{ modal2.text.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ modalTextCommon.repo1 }}
+      {{ common.repo1 }}
     </a>
-    {{ modalTextCommon.star }}
+    {{ common.star }}
   </p>
 </app-portfolio-modal>

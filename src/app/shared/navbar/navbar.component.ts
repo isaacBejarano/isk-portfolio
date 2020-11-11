@@ -10,8 +10,8 @@ import { Shared } from '../../utils/shared';
 export class NavbarComponent {
   // --> props
   home = store.navbar.home;
-  homeSrc = store.navbar.homeSrc;
-  homeAlt = store.navbar.homeAlt;
+  src = store.navbar.src;
+  alt = store.navbar.alt;
   hamburger = store.navbar.hamburger;
   page1 = store.navbar.page1;
   page2 = store.navbar.page2;

@@ -2,23 +2,25 @@
 
 export let store = {
   // --> props
-  // 1. UI Shared Components
+  // navbar
   navbar: {
     home: 'home',
-    homeSrc: './assets/img/portfolio/codhex-logo.png',
-    homeAlt: 'codhex logo',
+    src: './assets/img/portfolio/codhex-logo.png',
+    alt: 'codhex logo',
     hamburger: 'menu',
     page1: 'new',
     page2: 'portfolio',
     page3: 'about',
     page4: 'contact',
   },
+  // social
   social: {
     icon1: 'fab fa-fw fa-linkedin-in',
-    link1: 'https://www.linkedin.com/in/isaac-bejarano',
     icon2: 'fab fa-github',
+    link1: 'https://www.linkedin.com/in/isaac-bejarano',
     link2: 'https://github.com/isaacBejarano',
   },
+  // footer
   footer: {
     tool: 'Angular',
     theme: 'Start Bootstrap Theme',
@@ -27,23 +29,25 @@ export let store = {
     license: 'MIT',
     copyright: 'Isaac Bejarano 2020',
   },
+  // scroll
   scroll: {
     icon: 'fa fa-chevron-up',
     show: false, // dafault
   },
-  // 2. Pages and Sections
+  // masterhead
   masterhead: {
     src: './assets/img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
     title: 'Web Developer - Full Stack - MEAN - LAMP',
   },
+  // featured ~new
   featured: {
     title: 'Culex',
     subtitle: 'ES5 library to make HTTP requests',
     id: 'culex-pic',
-    link: 'https://github.com/isaacBejarano/culex.js',
-    linkText: 'Github',
+    link1: 'https://github.com/isaacBejarano/culex.js',
+    repo1: 'Github',
     p1:
       'Culex.js is an easy-to-use and lightweight ES5 library \
     to fetch JSON data from RESTful APIs.',
@@ -53,97 +57,107 @@ export let store = {
     src: 'portfolio/culex.png',
     alt: 'culex github repo',
   },
+  // portfolio
   portfolio: {
     // common
-    star: 'and give it a "star".',
-    stars: 'and give them a "star".',
-    linkText: 'Github',
-    linkText2: 'Github Pages',
-    linkText3: 'Codepen',
-    visitList: 'Visit these repositories:',
-    visitThis: 'Visit this repository at',
-    visitThese: 'Visit these repositories at',
-    dontforget: `Don't forget to see it live at`,
-
-    // image 1
-    target1: '#portfolioModal1',
-    img1: 'portfolio/papiro.png',
-    alt1: 'Responsive Bootstrap project',
-    title1: 'Responsive Bootstrap',
-    paragraphPart1:
-      'Responsive mobile-first web app made with Bootstrap and LESS.',
-    link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
-    linkPages: 'https://isaacbejarano.github.io/',
-
-    // image 2
-    target2: '#portfolioModal2',
-    img2: 'portfolio/rockets.png',
-    alt2: 'Typescript project',
-    title2: 'Typescript',
-    paragraphPart2:
-      'UI made with Typescript to create rockets and thrusters.\
-       Object Oriented Programmmig (OOP).',
-    link2: 'https://github.com/isaacBejarano/ts-rockets',
-
-    // image 3
-    target3: '#portfolioModal3',
-    img3: 'portfolio/joker.png',
-    alt3: 'AJAX + JQuery project',
-    title3: 'JQuery + AJAX',
-    paragraphPart3:
-      'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
-      Made with JQuery.',
-    link3: 'https://github.com/isaacBejarano/joker',
-
-    // image 4
-    target4: '#portfolioModal4',
-    img4: 'portfolio/beers.png',
-    alt4: 'Javascript project',
-    title4: 'Javascript',
-    paragraphPart4:
-      'UI for rating. It uses SASS and scalable algorithms to persist\
-      ":hover" and ":active" pseudo-classes.',
-    link4: 'https://github.com/isaacBejarano/rating-beers',
-    link4b: 'https://codepen.io/eRoboto/pen/bGpKwgM',
-
-    // image 5
-    target5: '#portfolioModal5',
-    img5: 'portfolio/restopolitan.png',
-    alt5: 'Leaflet project',
-    title5: 'Leaflet + AJAX',
-    paragraphPart5:
-      'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
-       Made with JQuery.',
-    link5: 'https://github.com/isaacBejarano/leaflet_filtres',
-
-    // image 6
-    target6: '#portfolioModal6',
-    img6: 'portfolio/algorithms.png',
-    alt6: 'JavaScript Algorithms project',
-    title6: 'JavaScript Algorithms',
-    link6a: 'https://github.com/isaacBejarano/price-down-breaker',
-    link6b: 'https://github.com/isaacBejarano/binary-search',
-    link6c: 'https://github.com/isaacBejarano/quicksort',
-    link6d: 'https://github.com/isaacBejarano/is-int',
-    link6e: 'https://github.com/isaacBejarano/string-mirror',
-    link6f: 'https://github.com/isaacBejarano/fibonacci-sequencer',
-    link6aText: 'Down Breaker',
-    link6bText: 'Binary Search',
-    link6cText: 'Quick Sort',
-    link6dText: 'Is Int',
-    link6eText: 'String Mirror',
-    link6fText: 'Fibonacci Sequencer',
-
-    // image 7
-    target7: '#portfolioModal7',
-    img7: 'portfolio/stripes.png',
-    alt7: 'SASS project',
-    title7: 'SASS',
-    paragraphPart7:
-      'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
-    link7: 'https://github.com/isaacBejarano/sass-stripes',
-    link7b: 'https://codepen.io/eRoboto/pen/eYZZerg',
+    common: {
+      star: 'and give it a "star".',
+      stars: 'and give them a "star".',
+      repo1: 'Github',
+      repo2: 'Github Pages',
+      repo3: 'Codepen',
+      list: 'Visit these repositories:',
+      visit: 'Visit this repository at',
+      visits: 'Visit these repositories at',
+      dontforget: `Don't forget to see it live at`,
+    },
+    // modal 1
+    modal1: {
+      title: 'Responsive Bootstrap',
+      target: '#portfolioModal1',
+      src: 'portfolio/papiro.png',
+      alt: 'Responsive Bootstrap project',
+      p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
+      link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
+      link2: 'https://isaacbejarano.github.io/',
+    },
+    // modal 2
+    modal2: {
+      title: 'Typescript',
+      target: '#portfolioModal2',
+      src: 'portfolio/rockets.png',
+      alt: 'Typescript project',
+      p1:
+        'UI made with Typescript to create rockets and thrusters.\
+        Object Oriented Programmmig (OOP).',
+      link1: 'https://github.com/isaacBejarano/ts-rockets',
+    },
+    // modal 3
+    modal3: {
+      title: 'JQuery + AJAX',
+      target: '#portfolioModal3',
+      src: 'portfolio/joker.png',
+      alt: 'AJAX + JQuery project',
+      p1:
+        'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
+        Made with JQuery.',
+      link1: 'https://github.com/isaacBejarano/joker',
+    },
+    // modal 4
+    modal4: {
+      title: 'Javascript',
+      target: '#portfolioModal4',
+      src: 'portfolio/beers.png',
+      alt: 'Javascript project',
+      p1:
+        'UI for rating. It uses SASS and scalable algorithms to persist\
+        ":hover" and ":active" pseudo-classes.',
+      link1: 'https://github.com/isaacBejarano/rating-beers',
+      link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
+    },
+    // modal 5
+    modal5: {
+      title: 'Leaflet + AJAX',
+      target: '#portfolioModal5',
+      src: 'portfolio/restopolitan.png',
+      alt: 'Leaflet project',
+      p1:
+        'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
+        Made with JQuery.',
+      link1: 'https://github.com/isaacBejarano/leaflet_filtres',
+    },
+    // modal 6
+    modal6: {
+      title: 'JavaScript Algorithms',
+      target: '#portfolioModal6',
+      src: 'portfolio/algorithms.png',
+      alt: 'JavaScript Algorithms project',
+      link1: 'https://github.com/isaacBejarano/price-down-breaker',
+      link2: 'https://github.com/isaacBejarano/binary-search',
+      link3: 'https://github.com/isaacBejarano/quicksort',
+      link4: 'https://github.com/isaacBejarano/is-int',
+      link5: 'https://github.com/isaacBejarano/string-mirror',
+      link6: 'https://github.com/isaacBejarano/fibonacci-sequencer',
+      js1: 'Down Breaker',
+      js2: 'Binary Search',
+      js3: 'Quick Sort',
+      js4: 'Is Int',
+      js5: 'String Mirror',
+      js6: 'Fibonacci Sequencer',
+    },
+    // modal 7
+    modal7: {
+      title: 'SASS',
+      target: '#portfolioModal7',
+      src: 'portfolio/stripes.png',
+      alt: 'SASS project',
+      p1:
+        'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
+      link1: 'https://github.com/isaacBejarano/sass-stripes',
+      link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
+    },
   },
+  // about
   about: {
     title: 'about me',
     hello: `Hi, I'm Isaac.`,

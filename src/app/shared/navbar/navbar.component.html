@@ -4,7 +4,7 @@
     <!-- We dont' use routerLink here so JQuery Animation can work in home.component -->
     <!-- <a class="navbar-brand js-scroll-trigger" [routerLink]="/"> -->
     <a class="navbar-brand js-scroll-trigger" [href]="hashIt(home)">
-      <img [src]="homeSrc" [alt]="homeAlt" />
+      <img [src]="src" [alt]="alt" />
       <span> {{ capitalLetter(home) }} </span>
     </a>
     <button

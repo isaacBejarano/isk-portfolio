@@ -16,42 +16,49 @@ declare let jQuery: any; // ~jQuery Easing
 })
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
-  //
+  // ~modal 1
   props1 = {
-    target: store.portfolio.target1,
-    src: store.portfolio.img1,
-    alt: store.portfolio.alt1,
+    target: store.portfolio.modal1.target,
+    src: store.portfolio.modal1.src,
+    alt: store.portfolio.modal1.alt,
   };
+  // ~modal 2
   props2 = {
-    target: store.portfolio.target2,
-    src: store.portfolio.img2,
-    alt: store.portfolio.alt2,
+    target: store.portfolio.modal2.target,
+    src: store.portfolio.modal2.src,
+    alt: store.portfolio.modal2.alt,
   };
+  // ~modal 3
   props3 = {
-    target: store.portfolio.target3,
-    src: store.portfolio.img3,
-    alt: store.portfolio.alt3,
+    target: store.portfolio.modal3.target,
+    src: store.portfolio.modal3.src,
+    alt: store.portfolio.modal3.alt,
   };
+  // ~modal 4
   props4 = {
-    target: store.portfolio.target4,
-    src: store.portfolio.img4,
-    alt: store.portfolio.alt4,
+    target: store.portfolio.modal4.target,
+    src: store.portfolio.modal4.src,
+    alt: store.portfolio.modal4.alt,
   };
+  // ~modal 5
   props5 = {
-    target: store.portfolio.target5,
-    src: store.portfolio.img5,
-    alt: store.portfolio.alt5,
+    target: store.portfolio.modal5.target,
+    src: store.portfolio.modal5.src,
+    alt: store.portfolio.modal5.alt,
   };
+  // ~modal 6
   props6 = {
-    target: store.portfolio.target6,
-    src: store.portfolio.img6,
-    alt: store.portfolio.alt6,
+    target: store.portfolio.modal6.target,
+    src: store.portfolio.modal6.src,
+    alt: store.portfolio.modal6.alt,
   };
+  // ~modal 7
   props7 = {
-    target: store.portfolio.target7,
-    src: store.portfolio.img7,
-    alt: store.portfolio.alt7,
+    target: store.portfolio.modal7.target,
+    src: store.portfolio.modal7.src,
+    alt: store.portfolio.modal7.alt,
   };
+  // ~featured
   props8 = {
     target: store.featured.target,
     src: store.featured.src,

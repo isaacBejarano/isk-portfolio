@@ -31,11 +31,11 @@
                 id="name"
                 formControlName="name"
                 class="form-control"
-                [class]="{ valid: validName }"
                 type="text"
                 placeholder="Name"
                 autocomplete="off"
               />
+              <!-- CSS validation -->
               <div
                 class="invalid"
                 *ngIf="
@@ -43,7 +43,16 @@
                   form.get('name').touched
                 "
               >
-                {{ contact.invalid1 }}
+                {{ contact.required1 }}
+              </div>
+              <div
+                class="invalid"
+                *ngIf="
+                  form.get('name').hasError('minlength') &&
+                  form.get('name').touched
+                "
+              >
+                {{ contact.match1 }}
               </div>
             </div>
           </div>
@@ -58,11 +67,11 @@
                 id="email"
                 formControlName="email"
                 class="form-control"
-                [class]="{ valid: validEmail }"
                 type="text"
                 placeholder="Email Address"
                 autocomplete="off"
               />
+              <!-- CSS validation -->
               <div
                 class="invalid"
                 *ngIf="
@@ -70,7 +79,16 @@
                   form.get('email').touched
                 "
               >
-                {{ contact.invalid2 }}
+                {{ contact.required2 }}
+              </div>
+              <div
+                class="invalid"
+                *ngIf="
+                  form.get('email').hasError('pattern') &&
+                  form.get('email').touched
+                "
+              >
+                {{ contact.match2 }}
               </div>
             </div>
           </div>
@@ -85,11 +103,11 @@
                 id="message"
                 formControlName="msg"
                 class="form-control"
-                [class]="{ valid: validEmail }"
                 rows="5"
                 placeholder="Message"
                 autocomplete="off"
               ></textarea>
+              <!-- CSS validation -->
               <div
                 class="invalid invalid-textarea"
                 *ngIf="
@@ -97,7 +115,16 @@
                   form.get('msg').touched
                 "
               >
-                {{ contact.invalid3 }}
+                {{ contact.required3 }}
+              </div>
+              <div
+                class="invalid invalid-textarea"
+                *ngIf="
+                  form.get('msg').hasError('minlength') &&
+                  form.get('msg').touched
+                "
+              >
+                {{ contact.match3 }}
               </div>
             </div>
           </div>
@@ -131,7 +158,7 @@
                   form.get('lgpd').touched
                 "
               >
-                {{ contact.invalid4 }}
+                {{ contact.required4 }}
               </div>
             </div>
           </div>

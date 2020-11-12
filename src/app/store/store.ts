@@ -214,10 +214,13 @@ export let store = {
     text: 'Privacy Policy',
     warn1: 'Please read and accept the',
     warn2: 'of this site.',
-    invalid1: 'Please enter your name',
-    invalid2: 'Please enter your email adress',
-    invalid3: 'Please leave a message',
-    invalid4: 'Please tick the checkbox above',
+    required1: 'Please enter your name',
+    required2: 'Please enter your email adress',
+    required3: 'Please leave a message',
+    required4: 'Please tick the checkbox above',
+    match1: 'Your name must have more than 1 letter',
+    match2: 'Your email must comply with the structure "account@some-email.domain"',
+    match3: 'Your message must have mimimum 10 letters',
   },
   // lgpd
   lgpd: {

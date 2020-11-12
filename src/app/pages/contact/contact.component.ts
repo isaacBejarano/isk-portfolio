@@ -12,23 +12,6 @@ export class ContactComponent implements OnInit, DoCheck {
   // prop -> to <app-divider> Input()
   divider = 'divider-dark';
 
-  // .valid class
-  validName = `
-    !form.get('name').hasError('required') &&
-    form.get('name').touched
-      ? true
-      : false`;
-  validEmail = `
-    !form.get('email').hasError('required') &&
-    form.get('email').touched
-      ? true
-      : false`;
-  validMsg = `
-    !form.get('msg').hasError('required') &&
-    form.get('msg').touched
-      ? true
-      : false`;
-
   contact = store.getContact as object | any;
   form: FormGroup;
 
@@ -52,7 +35,7 @@ export class ContactComponent implements OnInit, DoCheck {
 
   // methods
   createForm(): void {
-    const regex = '[a-zA-Z0-9_.-]+@[a-zA-Z0-9._]+.[a-zA-Z0-9]{2,3}$';
+    const regex = '[\\w_.-]+[@]{1}[\\w_.-]+[.]{1}[\\w]{2,3}$';
 
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],

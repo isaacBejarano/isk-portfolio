@@ -1,0 +1,25 @@
+@import "../../../sass/globals";
+
+@mixin validate($color) {
+  color: $color;
+  padding-left: 0.5rem;
+  border: 1px solid $color;
+  border-width: 0 0 0 3px;
+}
+
+.invalid {
+  @include validate($invalid-color);
+  &:focus {
+    color: $invalid-color;
+  }
+  &-textarea {
+    position: absolute;
+    top: 4.5rem;
+  }
+}
+
+.valid {
+  &:focus {
+    color: $valid-color;
+  }
+}

@@ -210,8 +210,14 @@ export let store = {
   },
   // contact
   contact: {
-    privacyLink: 'lgpd',
-    privacyText: 'Privacy Policy',
+    link: '/contact/lgpd',
+    text: 'Privacy Policy',
+    warn1: 'Please read and accept the',
+    warn2: 'of this site.',
+    invalid1: 'Please enter your name',
+    invalid2: 'Please enter your email adress',
+    invalid3: 'Please leave a message',
+    invalid4: 'Please tick the checkbox above',
   },
   // lgpd
   lgpd: {
@@ -328,8 +334,6 @@ export let store = {
       // cambios en la política
       heading18: 'Changes to the Privacy Policy',
     },
-    link: '/contact/lgpd',
-    text: 'Privacy Policy',
   },
 
   // getters
@@ -356,6 +360,9 @@ export let store = {
   },
   get getAbout(): object {
     return this.about;
+  },
+  get getContact(): object {
+    return this.contact;
   },
   get getLgpd(): object {
     return this.lgpd;

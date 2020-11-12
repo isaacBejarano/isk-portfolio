@@ -31,11 +31,20 @@
                 id="name"
                 formControlName="name"
                 class="form-control"
+                [class]="{ valid: validName }"
                 type="text"
                 placeholder="Name"
+                autocomplete="off"
               />
-              <!-- data-validation-required-message="Please enter your name." -->
-              <p class="help-block text-danger"></p>
+              <div
+                class="invalid"
+                *ngIf="
+                  form.get('name').hasError('required') &&
+                  form.get('name').touched
+                "
+              >
+                {{ contact.invalid1 }}
+              </div>
             </div>
           </div>
 
@@ -49,10 +58,20 @@
                 id="email"
                 formControlName="email"
                 class="form-control"
+                [class]="{ valid: validEmail }"
                 type="text"
                 placeholder="Email Address"
+                autocomplete="off"
               />
-              <p class="help-block text-danger"></p>
+              <div
+                class="invalid"
+                *ngIf="
+                  form.get('email').hasError('required') &&
+                  form.get('email').touched
+                "
+              >
+                {{ contact.invalid2 }}
+              </div>
             </div>
           </div>
 
@@ -66,46 +85,57 @@
                 id="message"
                 formControlName="msg"
                 class="form-control"
+                [class]="{ valid: validEmail }"
                 rows="5"
                 placeholder="Message"
+                autocomplete="off"
               ></textarea>
-              <p class="help-block text-danger"></p>
+              <div
+                class="invalid invalid-textarea"
+                *ngIf="
+                  form.get('msg').hasError('required') &&
+                  form.get('msg').touched
+                "
+              >
+                {{ contact.invalid3 }}
+              </div>
             </div>
           </div>
 
           <!-- LGPD -->
           <div class="control-group">
-            <!-- <div
-              class="form-group floating-label-form-group controls mb-0 pb-2"
-            > -->
             <div class="input-group">
               <label for="lgpd">
                 <input
                   id="lgpd"
                   formControlName="lgpd"
-                  type="checkbox"
                   class="mr-2"
+                  type="checkbox"
                 />
               </label>
-              <!-- aria-label="Checkbox for following text input" -->
 
               <!-- LGPD - PRIVACY POLICY -->
-              Read and accept the
+              {{ contact.warn1 }}
               <a
-                [routerLink]="[lgpd.link]"
+                [routerLink]="[contact.link]"
                 routerLinkActive="router-link-active"
                 class="px-1"
                 rel="nofollow"
-                >{{ lgpd.text }}</a
+                >{{ contact.text }}</a
               >
-              of this site.
-              <!-- </div> -->
-              <p class="help-block text-danger"></p>
+              {{ contact.warn2 }}
+              <div
+                class="invalid ml-2 mt-0"
+                *ngIf="
+                  form.get('lgpd').hasError('required') &&
+                  form.get('lgpd').touched
+                "
+              >
+                {{ contact.invalid4 }}
+              </div>
             </div>
           </div>
 
-          <!-- feedback -->
-          <div id="success"></div>
           <!-- Submit -->
           <div class="form-group mt-5">
             <button

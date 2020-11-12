@@ -7,10 +7,10 @@ import { store } from '../../store/store';
   templateUrl: './scroll.component.html',
 })
 export class ScrollComponent {
-  // --> props
-  icon = store.scroll.icon;
-  home = store.navbar.home;
-  // --> shared methods
+  scroll = store.getScroll as object | any;
+  navbar = store.getNavbar as object | any;
+
+  // <- shared methods
   hashIt = Shared.hashIt;
 
   constructor() {}

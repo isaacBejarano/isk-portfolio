@@ -7,14 +7,10 @@ import { store } from '../../../store/store';
   styleUrls: ['./masterhead.component.scss'],
 })
 export class MasterheadComponent {
-  // props to Input()
+  // prop -> to <app-divider> Input()
   divider = 'divider-light';
 
-  // --> props
-  src = store.masterhead.src;
-  alt = store.masterhead.alt;
-  name = store.masterhead.name;
-  title = store.masterhead.title;
+  masterhead = store.getMasterhead as object | any;
 
   constructor() {}
 }

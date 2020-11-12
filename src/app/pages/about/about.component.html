@@ -3,7 +3,7 @@
   <div class="container">
     <!-- About Section Heading-->
     <h2 class="page-section-heading text-center text-uppercase text-white">
-      {{ title }}
+      {{ about.title }}
     </h2>
     <!-- Icon Divider-->
     <app-divider [color]="divider"></app-divider>
@@ -12,53 +12,53 @@
     <div class="row text-justify">
       <div class="col-lg-4 ml-auto">
         <p class="lead py-1">
-          {{ hello }}
+          {{ about.hello }}
         </p>
 
         <p class="lead py-1">
-          {{ p1a }}
+          {{ about.p1a }}
           <b class="text-secondary font-weight-bold p-0 m-0">
-            {{ p1b }}
+            {{ about.p1b }}
           </b>
-          {{ p1c }}
+          {{ about.p1c }}
         </p>
       </div>
 
       <div class="col-lg-4 mr-auto">
         <p class="lead py-1">
-          {{ p2a }}
+          {{ about.p2a }}
           <b class="text-secondary font-weight-bold p-0 m-0">
-            {{ p2b }}
+            {{ about.p2b }}
           </b>
-          {{ p2c }}
+          {{ about.p2c }}
         </p>
       </div>
 
       <div class="col-lg-4 mr-auto">
         <p class="lead py-1">
-          {{ p3a }}
+          {{ about.p3a }}
           <a
-            [href]="p3link"
+            [href]="about.p3link"
             rel="nofollow"
             target="_blank"
             (click)="openLink()"
           >
             <strong class="text-secondary font-weight-bold">
-              <u>{{ p3linkText }}</u>
+              <u>{{ about.p3linkText }}</u>
             </strong></a
-          >, {{ p3b }}
+          >, {{ about.p3b }}
           <b class="text-secondary font-weight-bold">
-            {{ stak1 }}
+            {{ about.stak1 }}
           </b>
-          and
+          {{ about.and }}
           <b class="text-secondary font-weight-bold">
-            {{ stak2 }}
+            {{ about.stak2 }}
           </b>
-          {{ p3c }}
+          {{ about.p3c }}
         </p>
 
         <p class="lead py-1">
-          {{ bye }}
+          {{ about.bye }}
         </p>
       </div>
     </div>

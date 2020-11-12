@@ -8,20 +8,20 @@ import { store } from '../../store/store';
   templateUrl: './contact.component.html',
 })
 export class ContactComponent implements OnInit, DoCheck {
-  // props to Input()
+  // prop -> to <app-divider> Input()
   divider = 'divider-dark';
-  // props
-  privacyLink: 'lgpd';
-  privacyText = 'Privacy Policy';
+
+  lgpd = store.getLgpd as object | any;
+
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {}
 
   // hooks
   ngOnInit(): void {
-    Shared.pageToTop();
-    store.setShow(false); // scroller -> state false
-    this.createForm(); // Reactive Formular
+    Shared.pageToTop(); // <- shared
+    store.setScrollShow = false; // scroller -> state false
+    this.createForm();
   }
 
   ngDoCheck(): void {

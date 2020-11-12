@@ -21,7 +21,7 @@ const routes: Routes = [
     component: ContactComponent,
   },
   {
-    path: 'lgpd',
+    path: 'contact/lgpd',
     component: LgpdComponent,
   },
   {

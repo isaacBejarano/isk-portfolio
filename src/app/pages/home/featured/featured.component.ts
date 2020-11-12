@@ -11,13 +11,10 @@ export class FeaturedComponent {
   // props to Input()
   divider = 'divider-dark';
 
-  // portfolio
-  common = store.portfolio.common; // common
-  modal8 = store.portfolio.modal8; // ~new
-  // new
-  new = store.new;
+  portfolio = store.getPortfolio as object | any; // common + modal8
+  new = store.getNew as object | any; // featured ~new
 
-  // --> shared methods
+  // <- shared methods
   openLink = Shared.openLink;
 
   constructor() {}

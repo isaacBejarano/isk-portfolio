@@ -16,8 +16,7 @@ declare let jQuery: any; // ~jQuery Easing
 })
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
-  // portfolio
-  portfolio = store.portfolio;
+  portfolio = store.getPortfolio as object | any;
 
   constructor(
     //
@@ -150,7 +149,7 @@ export class HomeComponent
 
   // II) SCROLL Animation - enabled only in "home.component"
   ngAfterViewChecked(): void {
-    store.setShow(true); // scroller -> state true
+    store.setScrollShow = true; // scroller -> state true
   }
 
   // III) SCROLL Animation - enable scroller view

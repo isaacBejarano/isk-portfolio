@@ -8,16 +8,9 @@ import { store } from '../../store/store';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  // --> props
-  home = store.navbar.home;
-  src = store.navbar.src;
-  alt = store.navbar.alt;
-  hamburger = store.navbar.hamburger;
-  page1 = store.navbar.page1;
-  page2 = store.navbar.page2;
-  page3 = store.navbar.page3;
-  page4 = store.navbar.page4;
-  // --> shared methods
+  navbar = store.getNavbar as object | any;
+
+  // <- shared methods
   hashIt = Shared.hashIt;
   capitalLetter = Shared.capitalLetter;
 

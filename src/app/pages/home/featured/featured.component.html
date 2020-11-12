@@ -11,7 +11,7 @@
       <h3
         class="page-section-heading text-center text-uppercase text-secondary mb-3"
       >
-        {{ modal8.title }}
+        {{ portfolio.modal8.title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
         {{ new.subtitle }}
@@ -41,8 +41,8 @@
           <img
             [id]="new.imgId"
             class="border img-fluid border rounded-lg"
-            src="assets/img/{{ modal8.src }}"
-            [alt]="modal8.alt"
+            src="assets/img/{{ portfolio.modal8.src }}"
+            [alt]="portfolio.modal8.alt"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                     id="featuredModal"
                   >
-                    {{ modal8.title }}
+                    {{ portfolio.modal8.title }}
                   </h2>
 
                   <!-- Icon Divider-->
@@ -85,22 +85,22 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ modal8.src }}"
-                    [alt]="modal8.alt"
+                    src="assets/img/{{ portfolio.modal8.src }}"
+                    [alt]="portfolio.modal8.alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ modal8.p1 }} {{ common.visit }}
+                    {{ portfolio.modal8.p1 }} {{ portfolio.common.visit }}
                     <a
-                      [href]="modal8.link1"
+                      [href]="portfolio.modal8.link1"
                       rel="nofollow"
                       target="_blank"
                       (click)="openLink()"
                     >
-                      {{ common.repo1 }}
+                      {{ portfolio.common.repo1 }}
                     </a>
-                    {{ common.star }}
-                    <span class="text-gray">{{ modal8.p2 }} </span>
+                    {{ portfolio.common.star }}
+                    <span class="text-gray">{{ portfolio.modal8.p2 }} </span>
                   </p>
                   <button class="btn btn-primary" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

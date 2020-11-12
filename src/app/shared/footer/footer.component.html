@@ -7,16 +7,26 @@
   <div class="copyright py-4 text-center text-white">
     <span class="d-block"
       >made with
-      <a [href]="link1" rel="nofollow" target="_blank" (click)="openLink()">
-        {{ tool }}
+      <a
+        [href]="footer.link1"
+        rel="nofollow"
+        target="_blank"
+        (click)="openLink()"
+      >
+        {{ footer.tool }}
       </a>
     </span>
     <span class="d-block">
-      <a [href]="link2" rel="nofollow" target="_blank" (click)="openLink()">
-        {{ theme }}
+      <a
+        [href]="footer.link2"
+        rel="nofollow"
+        target="_blank"
+        (click)="openLink()"
+      >
+        {{ footer.theme }}
       </a>
-      under {{ license }} license</span
+      under {{ footer.license }} license</span
     >
-    <small>Copyright © {{ copyright }}</small>
+    <small>Copyright © {{ footer.copyright }}</small>
   </div>
 </footer>

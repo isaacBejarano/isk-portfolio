@@ -88,13 +88,15 @@
                 />
               </label>
               <!-- aria-label="Checkbox for following text input" -->
+
               <!-- LGPD - PRIVACY POLICY -->
               Read and accept the
               <a
-                [routerLink]="['/lgpd']"
+                routerLink="{{ lgpd.link }}"
                 routerLinkActive="router-link-active"
                 class="px-1"
-                >{{ privacyText }}</a
+                rel="nofollow"
+                >{{ lgpd.text }}</a
               >
               of this site.
               <!-- </div> -->
@@ -129,3 +131,6 @@
     </div>
   </div>
 </section>
+
+<!-- ^^ ROUTER - pages ^^ -->
+<!-- <router-outlet></router-outlet> -->

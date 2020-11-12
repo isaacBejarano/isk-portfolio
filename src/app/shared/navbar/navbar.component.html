@@ -3,9 +3,9 @@
   <div class="container">
     <!-- We dont' use routerLink here so JQuery Animation can work in home.component -->
     <!-- <a class="navbar-brand js-scroll-trigger" [routerLink]="/"> -->
-    <a class="navbar-brand js-scroll-trigger" [href]="hashIt(home)">
-      <img [src]="src" [alt]="alt" />
-      <span> {{ capitalLetter(home) }} </span>
+    <a class="navbar-brand js-scroll-trigger" [href]="hashIt(navbar.home)">
+      <img [src]="navbar.src" [alt]="navbar.alt" />
+      <span> {{ capitalLetter(navbar.home) }} </span>
     </a>
     <button
       class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold bg-primary text-white rounded"
@@ -16,7 +16,7 @@
       aria-expanded="false"
       aria-label="Toggle navigation"
     >
-      {{ hamburger }}
+      {{ navbar.hamburger }}
       <i class="fas fa-bars"></i>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
@@ -24,31 +24,31 @@
         <li class="nav-item mx-0 mx-lg-1">
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
-            [href]="hashIt(page1)"
-            >{{ page1 }}
+            [href]="hashIt(navbar.page1)"
+            >{{ navbar.page1 }}
           </a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
-            [href]="hashIt(page2)"
-            >{{ page2 }}</a
+            [href]="hashIt(navbar.page2)"
+            >{{ navbar.page2 }}</a
           >
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
-            [routerLink]="page3"
+            [routerLink]="navbar.page3"
             routerLinkActive="active"
-            >{{ page3 }}</a
+            >{{ navbar.page3 }}</a
           >
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
-            [routerLink]="page4"
+            [routerLink]="navbar.page4"
             routerLinkActive="active"
-            >{{ page4 }}</a
+            >{{ navbar.page4 }}</a
           >
         </li>
       </ul>

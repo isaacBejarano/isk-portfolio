@@ -1,13 +1,14 @@
-<h1 class="text-center pb-5">{{ title }}</h1>
+<h1 class="text-center pb-5">{{ lgpd.en.title }}</h1>
 
 <!-- declaración -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading1 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading1 }}</h2>
   <p>
-    <b class="text-primary">{{ titular }}</b> informs you about its Policy
-    Privacy regarding the treatment and protection of character data personal
-    users and customers that may be collected by the browsing or contracting
-    services through the website <b class="text-primary">{{ website }}</b
+    <b class="text-primary">{{ lgpd.en.titular }}</b> informs you about its
+    Policy Privacy regarding the treatment and protection of character data
+    personal users and customers that may be collected by the browsing or
+    contracting services through the website
+    <b class="text-primary">{{ lgpd.en.website }}</b
     >.
   </p>
 
@@ -28,23 +29,23 @@
 
 <!-- identidad del responsable -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading2 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading2 }}</h2>
   <ul class="text-left">
     <li>
-      Headline: <b class="text-primary">{{ titular }}</b>
+      Headline: <b class="text-primary">{{ lgpd.en.titular }}</b>
     </li>
     <li>
-      Email: <b class="text-primary">{{ email }}</b>
+      Email: <b class="text-primary">{{ lgpd.en.email }}</b>
     </li>
     <li>
-      Website: <b class="text-primary">{{ website }}</b>
+      Website: <b class="text-primary">{{ lgpd.en.website }}</b>
     </li>
   </ul>
 </section>
 
 <!-- principios tratamiento de datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading3 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading3 }}</h2>
   <p>
     Principles applied in the treatment of data In the treatment of your
     personal data, the Holder will apply the following principles that are
@@ -54,7 +55,7 @@
   <ul>
     <li>
       <p>
-        <b class="text-primary mr-1">{{ principle1 }}:</b>
+        <b class="text-primary mr-1">{{ lgpd.en.principle1 }}:</b>
         The Holder will always require consent for the treatment of your
         personal data that can be for one or more specific purposes about which
         you will be informed in advance with absolute transparency.
@@ -62,14 +63,14 @@
     </li>
     <li>
       <p>
-        <b class="text-primary mr-1">{{ principle2 }}:</b>
+        <b class="text-primary mr-1">{{ lgpd.en.principle2 }}:</b>
         The Owner will request only the data strictly necessary for the purpose
         or purposes requested.
       </p>
     </li>
     <li>
       <p>
-        <b class="text-primary mr-1">{{ principle3 }}:</b>
+        <b class="text-primary mr-1">{{ lgpd.en.principle3 }}:</b>
         The data will be kept for the time strictly necessary to the purpose or
         purposes of the treatment. The Owner will inform you of the term of
         corresponding conservation according to the purpose. In the case of
@@ -79,7 +80,7 @@
     </li>
     <li>
       <p>
-        <b class="text-primary mr-1">{{ principle4 }}:</b>
+        <b class="text-primary mr-1">{{ lgpd.en.principle4 }}:</b>
         Your data will be treated in such a way that its security,
         confidentiality and integrity is guaranteed. You should know that the
         Holder takes the necessary precautions to avoid access not authorized or
@@ -91,11 +92,11 @@
 
 <!-- obtención de datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading4 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading4 }}</h2>
   <p>
-    To browse <b class="text-primary">{{ website }}</b> It is not necessary that
-    you provide any personal data. The cases in which you do provide your
-    personal data are the following
+    To browse <b class="text-primary">{{ lgpd.en.website }}</b> It is not
+    necessary that you provide any personal data. The cases in which you do
+    provide your personal data are the following
   </p>
   <ul class="text-left">
     <li>
@@ -106,7 +107,7 @@
 
 <!-- Tus derechos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading5 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading5 }}</h2>
   <p>
     The Owner informs you that regarding your personal data you have the right
     to:
@@ -131,8 +132,8 @@
   <p>
     To exercise your rights of access, rectification, cancellation, portability
     and opposition you have to send an email to
-    <b class="text-primary">{{ email }}</b> specifying the name that you entered
-    in the contact form.
+    <b class="text-primary">{{ lgpd.en.email }}</b> specifying the name that you
+    entered in the contact form.
   </p>
   <p>
     You have the right to effective judicial protection and to file a claim
@@ -144,7 +145,7 @@
 
 <!-- finalidad -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading6 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading6 }}</h2>
   <p>
     When you connect to the website to send an email to the Owner, you subscribe
     to their newsletter or make a contract, you are facilitating personal
@@ -162,7 +163,7 @@
   <ul class="text-left">
     <li>
       <p>
-        <b class="text-primary mr-1">{{ tratamiento }}:</b>
+        <b class="text-primary mr-1">{{ lgpd.en.tratamiento }}:</b>
         The Holder requests personal data among which may be: Name and surname,
         email address, telephone number and address of your website in order to
         respond to your queries. For example, the Owner uses this data to
@@ -224,24 +225,24 @@
   <ul class="text-left">
     <li>
       <a
-        [href]="socialLink1"
+        [href]="lgpd.en.socialLink1"
         rel="nofollow"
         target="_blank"
         (click)="openLink()"
       >
         <i class="fab fa-linkedin mr-1"></i>
-        {{ socialTitle1 }}
+        {{ lgpd.en.socialTitle1 }}
       </a>
     </li>
     <li>
       <a
-        [href]="socialLink2"
+        [href]="lgpd.en.socialLink2"
         rel="nofollow"
         target="_blank"
         (click)="openLink()"
       >
         <i class="fab fa-github mr-1"></i>
-        {{ socialTitle2 }}
+        {{ lgpd.en.socialTitle2 }}
       </a>
     </li>
   </ul>
@@ -259,7 +260,7 @@
 
 <!-- seguridad -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading7 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading7 }}</h2>
   <p>
     To protect your personal data, the Holder takes all precautions reasonable
     and follow industry best practices to avoid their loss, misuse, improper
@@ -267,8 +268,13 @@
   </p>
   <p>
     The website is hosted on
-    <a [href]="hostingLink" rel="nofollow" target="_blank" (click)="openLink()">
-      {{ hostingTitle }}</a
+    <a
+      [href]="lgpd.en.hostingLink"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ lgpd.en.hostingTitle }}</a
     >. The security of your data is guaranteed, since they take all the
     necessary security measures for this. You can check their policy privacy for
     more information.
@@ -277,7 +283,7 @@
 
 <!-- contenido  -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading8 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading8 }}</h2>
   <p>
     The pages of this website may include embedded content (for example, videos,
     images, articles, etc.). The embedded content of other websites behave in
@@ -291,7 +297,7 @@
 
 <!-- cookies  -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading9 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading9 }}</h2>
   <p>
     For this website to work properly you need to use cookies, which is
     information that is stored in your web browser.
@@ -304,7 +310,7 @@
 
 <!-- legitimación  -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading10 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading10 }}</h2>
   <p>The legal basis for the processing of your data is: consent.</p>
   <p>
     To contact the Owner, subscribe to a newsletter or carry out comments on
@@ -314,7 +320,7 @@
 
 <!-- categoria datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading11 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading11 }}</h2>
   <p>The categories of personal data that the Owner deals with are:</p>
   <ul class="text-left">
     <li>Identification data.</li>
@@ -323,7 +329,7 @@
 
 <!-- conservación datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading12 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading12 }}</h2>
   <p>
     The personal data that you provide to the Holder will be kept until request
     its deletion.
@@ -332,11 +338,11 @@
 
 <!-- principios tratamiento de datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading13 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading13 }}</h2>
   <ul>
     <li>
       <p>
-        <b class="text-primary mr-1">{{ thirdPartyTitle }}</b>
+        <b class="text-primary mr-1">{{ lgpd.en.thirdPartyTitle }}</b>
         is a web analytics service provided by Google, Inc., a company of
         Delaware whose main office is at 1600 Amphitheater Parkway, Mountain
         View (California), CA 94043, United States (“Google”).
@@ -344,11 +350,11 @@
       <p>
         You will find more information in:
         <a
-          [href]="thirdPartyLink"
+          [href]="lgpd.en.thirdPartyLink"
           rel="nofollow"
           target="_blank"
           (click)="openLink()"
-          >{{ thirdPartyLink }}</a
+          >{{ lgpd.en.thirdPartyLink }}</a
         >
       </p>
       <p>
@@ -369,17 +375,17 @@
 
 <!-- navegación web -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading14 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading14 }}</h2>
   <p>
-    When browsing {{ website }} non-identifying data can be collected, which may
-    include, IP address, geolocation, a record of how use the services and
-    sites, browsing habits and other data that do not can be used to identify
-    you.
+    When browsing {{ lgpd.en.website }} non-identifying data can be collected,
+    which may include, IP address, geolocation, a record of how use the services
+    and sites, browsing habits and other data that do not can be used to
+    identify you.
   </p>
   <p>The website uses the following third-party analysis services:</p>
   <ul>
     <li>
-      {{ thirdPartyTitle }}
+      {{ lgpd.en.thirdPartyTitle }}
     </li>
   </ul>
   <p>
@@ -391,7 +397,7 @@
 
 <!-- veracidad de datos -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading15 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading15 }}</h2>
   <p>
     You undertake that the data provided to the Holder are correct, complete,
     accurate and current, as well as to maintain them properly updated.
@@ -405,7 +411,7 @@
 
 <!-- aceptación -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading16 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading16 }}</h2>
   <p>
     As a user of the website, you declare that you have been informed of the
     conditions on the protection of personal data, you accept and consent to the
@@ -416,12 +422,12 @@
 
 <!-- revocabilidad -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading17 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading17 }}</h2>
   <p>
-    To exercise your rights of access, rectification, cancellation,
-     portability and opposition you have to send an email to
-    <b class="text-primary">{{ email }}</b> with the request, specifying the
-    name you entered in the contact form.
+    To exercise your rights of access, rectification, cancellation, portability
+    and opposition you have to send an email to
+    <b class="text-primary">{{ lgpd.en.email }}</b> with the request, specifying
+    the name you entered in the contact form.
   </p>
   <p>
     The exercise of your rights does not include any data that the Holder is
@@ -431,7 +437,7 @@
 
 <!-- cambios en la política -->
 <section class="mb-4">
-  <h2 class="text-left">{{ heading18 }}</h2>
+  <h2 class="text-left">{{ lgpd.en.heading18 }}</h2>
   <p>
     The Owner reserves the right to modify this Policy of Privacy to adapt it to
     legislative or jurisprudential developments, as well as to industry

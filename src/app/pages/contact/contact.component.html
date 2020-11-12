@@ -19,7 +19,7 @@
           novalidate="novalidate"
           autocomplete="off"
           [formGroup]="form"
-          (submit)="submit()"
+          (ngSubmit)="onSubmit()"
         >
           <!-- Name -->
           <div class="control-group">
@@ -92,7 +92,7 @@
               <!-- LGPD - PRIVACY POLICY -->
               Read and accept the
               <a
-                routerLink="{{ lgpd.link }}"
+                [routerLink]="[lgpd.link]"
                 routerLinkActive="router-link-active"
                 class="px-1"
                 rel="nofollow"
@@ -131,6 +131,3 @@
     </div>
   </div>
 </section>
-
-<!-- ^^ ROUTER - pages ^^ -->
-<!-- <router-outlet></router-outlet> -->

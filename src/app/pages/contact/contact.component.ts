@@ -12,10 +12,12 @@ export class ContactComponent implements OnInit, DoCheck {
   divider = 'divider-dark';
 
   lgpd = store.getLgpd as object | any;
-
   form: FormGroup;
 
   constructor(private fb: FormBuilder) {}
+  // Unchecked runtime.lastError: The message port closed before a response was received.
+  // https://jasonwatmore.com/post/2020/07/07/angular-10-reactive-forms-validation-example
+  // WAPALIZER DABA ERROR.. lo deasactivé
 
   // hooks
   ngOnInit(): void {
@@ -45,7 +47,7 @@ export class ContactComponent implements OnInit, DoCheck {
     });
   }
 
-  submit(): void {
+  onSubmit(): void {
     console.log(this.form.valid);
     console.log(this.form.value);
   }

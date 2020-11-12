@@ -4,7 +4,7 @@ import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 
 @Component({
-  selector: 'app-lgpd',
+  selector: 'app-lgpd', // '/contact/lgpd
   templateUrl: './lgpd.component.html',
   styleUrls: ['./lgpd.component.scss'],
 })

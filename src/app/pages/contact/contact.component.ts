@@ -2,6 +2,7 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
+import { Event, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -46,7 +47,7 @@ export class ContactComponent implements OnInit, DoCheck {
   }
 
   onSubmit(): void {
-    console.log('validity', this.form.valid);
-    console.log(this.form.value);
+    return;
+    // return this.form.valid ? true : false;
   }
 }

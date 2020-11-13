@@ -20,6 +20,8 @@
           autocomplete="off"
           [formGroup]="form"
           (ngSubmit)="onSubmit()"
+          method="POST"
+          action="http://localhost/api/post_contacts.php"
         >
           <!-- Name -->
           <div class="control-group">
@@ -29,6 +31,7 @@
               <label>Name</label>
               <input
                 id="name"
+                name="name"
                 formControlName="name"
                 class="form-control"
                 type="text"
@@ -65,6 +68,7 @@
               <label>Email Address</label>
               <input
                 id="email"
+                name="email"
                 formControlName="email"
                 class="form-control"
                 type="text"
@@ -101,6 +105,7 @@
               <label>Message</label>
               <textarea
                 id="message"
+                name="msg"
                 formControlName="msg"
                 class="form-control"
                 rows="5"
@@ -135,6 +140,7 @@
               <label for="lgpd">
                 <input
                   id="lgpd"
+                  name="lgpd"
                   formControlName="lgpd"
                   class="mr-2"
                   type="checkbox"
@@ -169,6 +175,8 @@
               id="sendMessageButton"
               class="btn btn-primary btn-xl"
               type="submit"
+              name="submited"
+              value="valid"
             >
               Send
             </button>
@@ -187,4 +195,34 @@
       </pre>
     </div>
   </div>
+
+  <!-- CLASSIC FORMULAR + PHP API WORKS -->
+  <!-- <form
+    method="POST"
+    action="http://localhost/api/post_contacts.php"
+    novalidate="novalidate"
+    autocomplete="off"
+  >
+
+    <label>Name</label>
+    <input name="name" type="text" placeholder="Name" autocomplete="off" />
+
+    <label>Email Address</label>
+    <input
+      name="email"
+      type="text"
+      placeholder="Email Address"
+      autocomplete="off"
+    />
+
+    <label>Message</label>
+    <textarea name="msg" placeholder="Message" autocomplete="off"></textarea>
+
+
+    <label>
+      <input name="lgpd" type="checkbox" />
+    </label>
+
+    <button type="submit" name="submited" value="valid">Send</button>
+  </form> -->
 </section>

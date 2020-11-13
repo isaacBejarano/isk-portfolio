@@ -36,7 +36,10 @@ export class ContactComponent implements OnInit, DoCheck {
 
   // methods
   createForm(): void {
-    const regex = '[\\w_.-]+[@]{1}[\\w_.-]+[.]{1}[\\w]{2,3}$';
+    const regex =
+      '[a-z0-9]+([._-]?[a-z0-9]+)*' +
+      '@' +
+      '[a-z0-9]+([._-]?[a-z0-9]+)*.[a-z]{2,4}';
 
     this.form = this.fb.group({
       name: ['', [Validators.required, Validators.minLength(2)]],
@@ -47,7 +50,7 @@ export class ContactComponent implements OnInit, DoCheck {
   }
 
   onSubmit(): void {
-    return;
+    // return;
     // return this.form.valid ? true : false;
   }
 }

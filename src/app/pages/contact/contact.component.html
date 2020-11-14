@@ -30,33 +30,20 @@
             >
               <label>Name</label>
               <input
-                id="name"
-                name="name"
-                formControlName="name"
                 class="form-control"
                 type="text"
                 placeholder="Name"
                 autocomplete="off"
+                formControlName="name"
+                [class.is-invalid]="validate('name') > 0"
               />
               <!-- CSS validation -->
-              <div
-                class="invalid"
-                *ngIf="
-                  form.get('name').hasError('required') &&
-                  form.get('name').touched
-                "
-              >
+              <small class="text-danger" *ngIf="validate('name') === 1">
                 {{ contact.required1 }}
-              </div>
-              <div
-                class="invalid"
-                *ngIf="
-                  form.get('name').hasError('minlength') &&
-                  form.get('name').touched
-                "
-              >
+              </small>
+              <small class="text-danger" *ngIf="validate('name') === 2">
                 {{ contact.match1 }}
-              </div>
+              </small>
             </div>
           </div>
 
@@ -67,33 +54,12 @@
             >
               <label>Email Address</label>
               <input
-                id="email"
-                name="email"
                 formControlName="email"
                 class="form-control"
                 type="text"
                 placeholder="Email Address"
                 autocomplete="off"
               />
-              <!-- CSS validation -->
-              <div
-                class="invalid"
-                *ngIf="
-                  form.get('email').hasError('required') &&
-                  form.get('email').touched
-                "
-              >
-                {{ contact.required2 }}
-              </div>
-              <div
-                class="invalid"
-                *ngIf="
-                  form.get('email').hasError('pattern') &&
-                  form.get('email').touched
-                "
-              >
-                {{ contact.match2 }}
-              </div>
             </div>
           </div>
 
@@ -104,8 +70,6 @@
             >
               <label>Message</label>
               <textarea
-                id="message"
-                name="msg"
                 formControlName="msg"
                 class="form-control"
                 rows="5"
@@ -138,13 +102,7 @@
           <div class="control-group">
             <div class="input-group">
               <label for="lgpd">
-                <input
-                  id="lgpd"
-                  name="lgpd"
-                  formControlName="lgpd"
-                  class="mr-2"
-                  type="checkbox"
-                />
+                <input formControlName="lgpd" class="mr-2" type="checkbox" />
               </label>
 
               <!-- LGPD - PRIVACY POLICY -->
@@ -186,12 +144,13 @@
 
       <!-- DEBUGG -->
       <hr />
-      <pre class="border border-warning p-3">
+      <pre class="border border-danger p-3">
         form.valid: {{ form.valid }}
         <br>
         form.status: {{ form.status }}
         <br>
         form.value: {{ form.value | json }}
+     
       </pre>
     </div>
   </div>

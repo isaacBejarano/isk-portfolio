@@ -54,4 +54,29 @@ export class ContactComponent implements OnInit, DoCheck {
     // return;
     // return this.form.valid ? true : false;
   }
+
+  // 1. required
+  required(name: string): boolean {
+    return this.form.get(name).invalid && this.form.get(name).touched;
+  }
+
+  // 2. specific of each input
+  validate(name: string): number {
+    let errors = 0; // valid
+
+    if (name === 'name') {
+      if (this.form.get(name).invalid && this.form.get(name).touched) {
+        errors += 1;
+      }
+      if (
+        this.form.get(name).hasError('minlength') &&
+        this.form.get(name).touched
+      ) {
+        errors += 1;
+      }
+    }
+
+    return errors;
+  }
+  //
 }

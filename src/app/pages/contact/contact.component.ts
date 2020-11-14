@@ -2,6 +2,7 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-contact',
@@ -9,19 +10,27 @@ import { store } from '../../store/store';
   styleUrls: ['./contact.component.scss'],
 })
 export class ContactComponent implements OnInit, DoCheck {
-  // prop -> to <app-divider> Input()
-  divider = 'divider-dark';
-
+  divider = 'divider-dark'; // prop -> to <app-divider> Input()
   contact = store.getContact as object | any;
   form: FormGroup;
 
-  constructor(private fb: FormBuilder) {}
+  constructor(
+    //
+    private fb: FormBuilder,
+    private ApiService: ApiService
+  ) {}
 
   // hooks
   ngOnInit(): void {
     Shared.pageToTop(); // <- shared
     store.setScrollShow = false; // scroller -> state false
-    this.createForm();
+    this.createForm(); // reactive forms
+
+    // this.ApiService.postContacts().subscribe((user) => console.log(user));
+
+    this.ApiService.getSpanishCountries().subscribe((country) =>
+      console.log(country)
+    );
   }
 
   ngDoCheck(): void {
@@ -41,7 +50,7 @@ export class ContactComponent implements OnInit, DoCheck {
       '[a-z0-9]+([._-]?[a-z0-9]+)*.[a-z]{2,4}';
 
     this.form = this.fb.group({
-      // def value, sync, async
+      // def value, sync, async (e.g. login)
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern(regex)]],
       msg: ['', [Validators.required, Validators.minLength(10)]],
@@ -49,23 +58,24 @@ export class ContactComponent implements OnInit, DoCheck {
     });
   }
 
-  send(): void {
+  send(): boolean {
     console.log(this.form);
-    // return;
-    // return this.form.valid ? true : false;
+
+    // onsubmit
+    return !this.form.valid ? false : true;
   }
 
-  // 1. required
-  required(name: string): boolean {
-    return this.form.get(name).invalid && this.form.get(name).touched;
-  }
-
-  // 2. specific of each input
+  // required + specific of each input
   validate(name: string): number {
+    const requiredName =
+      // invalid-feedback
+      this.form.get(name).invalid && this.form.get(name).touched;
+
     let errors = 0; // valid
 
+    // invalid-feedback
     if (name === 'name') {
-      if (this.form.get(name).invalid && this.form.get(name).touched) {
+      if (requiredName) {
         errors += 1;
       }
       if (

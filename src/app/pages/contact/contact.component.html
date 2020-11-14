@@ -15,11 +15,9 @@
       <div class="col-lg-8 mx-auto">
         <!-- FORMULAR -->
         <form
-          id="contactForm"
-          novalidate="novalidate"
-          autocomplete="off"
           [formGroup]="form"
           (ngSubmit)="send()"
+          autocomplete="off"
           method="POST"
           action="http://localhost/api/post_contacts.php"
         >
@@ -33,15 +31,17 @@
                 class="form-control"
                 type="text"
                 placeholder="Name"
-                autocomplete="off"
                 formControlName="name"
                 [class.is-invalid]="validate('name') > 0"
               />
               <!-- CSS validation -->
-              <small class="text-danger" *ngIf="validate('name') === 1">
+              <small
+                class="invalid-feedback"
+                *ngIf="validate('name') === 1"
+              >
                 {{ contact.required1 }}
               </small>
-              <small class="text-danger" *ngIf="validate('name') === 2">
+              <small class="invalid-feedback" *ngIf="validate('name') === 2">
                 {{ contact.match1 }}
               </small>
             </div>
@@ -54,12 +54,19 @@
             >
               <label>Email Address</label>
               <input
-                formControlName="email"
-                class="form-control"
+                class="form-control border border-white"
                 type="text"
                 placeholder="Email Address"
-                autocomplete="off"
+                formControlName="email"
               />
+              <!-- [class.is-invalid]="validate('email') > 0" -->
+              <!-- CSS validation -->
+              <!-- <small class="invalid-feedback" *ngIf="validate('email') === 1">
+                {{ contact.required2 }}
+              </small>
+              <small class="invalid-feedback" *ngIf="validate('email') === 2">
+                {{ contact.match2 }}
+              </small> -->
             </div>
           </div>
 
@@ -70,31 +77,19 @@
             >
               <label>Message</label>
               <textarea
-                formControlName="msg"
-                class="form-control"
                 rows="5"
+                class="form-control border border-white"
                 placeholder="Message"
-                autocomplete="off"
+                formControlName="msg"
               ></textarea>
+              <!-- [class.is-invalid]="validate('msg') > 0" -->
               <!-- CSS validation -->
-              <div
-                class="invalid invalid-textarea"
-                *ngIf="
-                  form.get('msg').hasError('required') &&
-                  form.get('msg').touched
-                "
-              >
+              <!-- <small class="invalid-feedback" *ngIf="validate('msg') === 1">
                 {{ contact.required3 }}
-              </div>
-              <div
-                class="invalid invalid-textarea"
-                *ngIf="
-                  form.get('msg').hasError('minlength') &&
-                  form.get('msg').touched
-                "
-              >
+              </small>
+              <small class="invalid-feedback" *ngIf="validate('msg') === 2">
                 {{ contact.match3 }}
-              </div>
+              </small> -->
             </div>
           </div>
 
@@ -102,39 +97,35 @@
           <div class="control-group">
             <div class="input-group">
               <label for="lgpd">
-                <input formControlName="lgpd" class="mr-2" type="checkbox" />
+                <input class="mr-2" type="checkbox" formControlName="lgpd" />
+                <!-- [class.is-invalid]="validate('lgp') > 0" -->
               </label>
 
               <!-- LGPD - PRIVACY POLICY -->
               {{ contact.warn1 }}
               <a
-                [routerLink]="[contact.link]"
-                routerLinkActive="router-link-active"
                 class="px-1"
                 rel="nofollow"
+                [routerLink]="[contact.link]"
+                routerLinkActive="router-link-active"
                 >{{ contact.text }}</a
               >
               {{ contact.warn2 }}
-              <div
-                class="invalid ml-2 mt-0"
-                *ngIf="
-                  form.get('lgpd').hasError('required') &&
-                  form.get('lgpd').touched
-                "
-              >
+              <!-- CSS validation -->
+              <!-- <small class="invalid-feedback" *ngIf="validate('lgpd') === 1">
                 {{ contact.required4 }}
-              </div>
+              </small> -->
             </div>
           </div>
 
           <!-- Submit -->
           <div class="form-group mt-5">
             <button
-              id="sendMessageButton"
-              class="btn btn-outline-dark btn-xl"
+              class="btn btn-outline-dark btn-lg"
               type="submit"
               name="submited"
               value="valid"
+              [disabled]="!form.valid"
             >
               Send
             </button>
@@ -149,8 +140,7 @@
         <br>
         form.status: {{ form.status }}
         <br>
-        form.value: {{ form.value | json }}
-     
+        form.value: {{ form.value | json }}     
       </pre>
     </div>
   </div>

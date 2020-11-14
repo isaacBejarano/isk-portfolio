@@ -4,24 +4,30 @@
   padding-top: 5rem;
 }
 
-@mixin validate($color) {
-  color: $color;
-  padding-left: 0.5rem;
-  border: 1px solid $color;
-  border-width: 0 0 0 3px;
-}
+// theme cuztomize
 
-.invalid {
-  @include validate($invalid-color);
-  &:focus {
-    color: $invalid-color;
-  }
-  &-textarea {
-    position: absolute;
-    top: 4.5rem;
-  }
+.control-group label {
+  font-size: 1.5rem;
 }
 
 .floating-label-form-group-with-value label {
-  color: $custom;
+  color: gray;
+}
+
+.floating-label-form-group input.is-invalid {
+  border: 1px solid $danger !important;
+  border-radius: 10px;
+  padding-left: 5px;
+}
+
+.custom-select.is-invalid,
+.form-control.is-invalid,
+.was-validated .custom-select:invalid,
+.was-validated .form-control:invalid {
+  border-color: #dc3545 !important;
+  border-width: 1px !important;
+}
+
+[type="submit"]:disabled {
+  cursor: not-allowed;
 }

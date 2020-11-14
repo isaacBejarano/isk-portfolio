@@ -23,6 +23,8 @@ import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component
 import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/portfolio-item.component';
 import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/portfolio-modal.component';
 import { DividerComponent } from './shared/divider/divider.component';
+// services
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,12 @@ import { DividerComponent } from './shared/divider/divider.component';
     PortfolioModalComponent,
     DividerComponent,
   ],
-  imports: [BrowserModule, ReactiveFormsModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

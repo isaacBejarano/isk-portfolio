@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "gen": "ng g c",
+    "service": "ng g s",
     "serve": "ng serve",
     "serve:o": "ng serve --open",
     "build": "ng build",

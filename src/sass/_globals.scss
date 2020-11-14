@@ -13,6 +13,7 @@ $white: #fff;
 $valid-color: #1abc9c; // ~theme primary
 $invalid-color: crimson;
 $warning: #ffc107;
+$danger: #dc3545;
 
 // CUSTOMIZE THEME
 
@@ -40,3 +41,4 @@ a:not(.nav-link) {
 body .bg-primary {
   background-color: desaturate($custom, 30) !important;
 }
+

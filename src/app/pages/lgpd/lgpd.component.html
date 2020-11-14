@@ -3,14 +3,14 @@
   <ul class="nav nav-tabs px-5">
     <li class="nav-item">
       <a
-        class="nav-link text-warning border border-warning"
+        class="nav-link text-custom border border-warning"
         [routerLink]="lgpd.close"
         >CLOSE
       </a>
     </li>
     <li class="nav-item">
       <a
-        class="nav-link"
+        class="nav-link text-dark"
         rel="nofollow"
         href="javascript:void(0)"
         (click)="switch(1)"
@@ -19,7 +19,7 @@
     </li>
     <li class="nav-item">
       <a
-        class="nav-link"
+        class="nav-link text-dark"
         rel="nofollow"
         href="javascript:void(0)"
         (click)="switch(2)"
@@ -41,7 +41,7 @@
 
 <!-- close window -->
 <section class="d-flex flex-column py-5">
-  <button class="align-self-center btn btn-primary" (click)="reroute()">
+  <button class="align-self-center btn btn-outline-dark" (click)="reroute()">
     <i class="fas fa-times fa-fw"></i>
     Close
   </button>

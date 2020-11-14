@@ -2,7 +2,6 @@ import { Component, OnInit, DoCheck } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
-import { Event, RouterEvent } from '@angular/router';
 
 @Component({
   selector: 'app-contact',
@@ -42,6 +41,7 @@ export class ContactComponent implements OnInit, DoCheck {
       '[a-z0-9]+([._-]?[a-z0-9]+)*.[a-z]{2,4}';
 
     this.form = this.fb.group({
+      // def value, sync, async
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern(regex)]],
       msg: ['', [Validators.required, Validators.minLength(10)]],
@@ -49,7 +49,8 @@ export class ContactComponent implements OnInit, DoCheck {
     });
   }
 
-  onSubmit(): void {
+  send(): void {
+    console.log(this.form);
     // return;
     // return this.form.valid ? true : false;
   }

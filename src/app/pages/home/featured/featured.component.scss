@@ -1,8 +1,12 @@
 @import "../../../../sass/globals"; // globals
 
+.portfolio-modal button.close:focus {
+  outline: 0;
+}
+
 .container {
   h2 {
-    font-size: 3rem;
+    font-size: 4.5rem;
   }
   h4 {
     font-size: 1.5rem;
@@ -20,7 +24,7 @@
         left: 0 !important;
         transition: all 0.2s ease-in-out !important;
         opacity: 0 !important;
-        background-color: rgba(26, 188, 156, 0.9) !important;
+        background-color: $custom !important;
         &:hover {
           cursor: pointer;
           opacity: 1 !important;

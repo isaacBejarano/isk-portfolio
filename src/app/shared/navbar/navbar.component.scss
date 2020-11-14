@@ -1,3 +1,5 @@
+@import "../../../sass/globals"; // globals
+
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -17,13 +19,16 @@
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:hover {
   color: #1abc9c;
+  color: $custom;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link:active,
 #mainNav .navbar-nav li.nav-item a.nav-link:focus {
   color: #fff;
+  color: $custom-bg;
 }
 #mainNav .navbar-nav li.nav-item a.nav-link.active {
   color: #1abc9c;
+  color: $custom;
 }
 #mainNav .navbar-toggler {
   font-size: 80%;
@@ -45,13 +50,17 @@
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
     color: #fff;
+    color: inherit;
     background: #1abc9c;
+    background: $custom;
   }
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active,
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     color: #fff;
+    color: inherit;
     background: #1abc9c;
+    background: $custom;
   }
 
   #mainNav.navbar-shrink {
@@ -62,21 +71,41 @@
     font-size: 1.5em;
   }
 }
+
 // theme override
 .navbar-brand {
   img {
     width: 50px;
   }
   span {
-    color: orange;
+    color: $custom;
   }
   &:hover {
     mix-blend-mode: luminosity;
   }
   &:active {
     mix-blend-mode: color-burn;
+    opacity: 0.2;
   }
 }
+
 .nav-link:hover {
   cursor: pointer;
+}
+
+.navbar-toggler {
+  color: $white !important;
+  border-color: $custom !important;
+  &:hover {
+    color: darken($custom, 50%) !important;
+    background-color: $custom !important;
+    border-color: darken($custom, 20%) !important;
+  }
+  &:focus {
+    outline-width: 0;
+  }
+  &:active {
+    border-radius: 0 !important;
+    transition: border-radius .2s;
+  }
 }

@@ -1,18 +1,14 @@
+<div
+  class="portfolio-item border border-dark mx-auto"
+  data-toggle="modal"
+  [attr.data-target]="item.target"
+>
   <div
-    class="portfolio-item mx-auto"
-    data-toggle="modal"
-    [attr.data-target]="item.target"
+    class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white text-custom"
   >
-    <div
-      class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white"
-    >
-      <div class="portfolio-item-caption-content text-center text-primary">
-        <i class="fas fa-plus fa-3x"></i>
-      </div>
+    <div class="portfolio-item-caption-content text-center">
+      <i class="fas fa-plus fa-3x"></i>
     </div>
-    <img
-      class="img-fluid"
-      src="assets/img/{{ item.src }}"
-      [alt]="item.alt"
-    />
   </div>
+  <img class="img-fluid " src="assets/img/{{ item.src }}" [alt]="item.alt" />
+</div>

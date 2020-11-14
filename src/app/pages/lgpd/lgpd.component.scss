@@ -1,5 +1,12 @@
 @import "../../../sass/globals"; // globals
 
+a {
+  // color: inherit !important;
+  &:hover {
+    color: $custom-bg !important;
+  }
+}
+
 nav {
   margin-top: 4rem;
   max-width: $breakpoint-md;

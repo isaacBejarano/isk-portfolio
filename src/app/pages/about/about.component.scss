@@ -1,5 +1,9 @@
 @import "../../../sass/globals"; // globals
 
+.page-section .container {
+  padding-top: 5rem;
+}
+
 p.lead {
   a strong:hover {
     color: $white !important;

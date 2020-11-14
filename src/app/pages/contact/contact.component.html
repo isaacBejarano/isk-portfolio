@@ -19,7 +19,7 @@
           novalidate="novalidate"
           autocomplete="off"
           [formGroup]="form"
-          (ngSubmit)="onSubmit()"
+          (ngSubmit)="send()"
           method="POST"
           action="http://localhost/api/post_contacts.php"
         >
@@ -173,7 +173,7 @@
           <div class="form-group mt-5">
             <button
               id="sendMessageButton"
-              class="btn btn-primary btn-xl"
+              class="btn btn-outline-dark btn-xl"
               type="submit"
               name="submited"
               value="valid"
@@ -187,42 +187,12 @@
       <!-- DEBUGG -->
       <hr />
       <pre class="border border-warning p-3">
-        form valid: {{ form.valid }}
+        form.valid: {{ form.valid }}
         <br>
-        form status: {{ form.status }}
+        form.status: {{ form.status }}
         <br>
-        form value: {{ form.value | json }}
+        form.value: {{ form.value | json }}
       </pre>
     </div>
   </div>
-
-  <!-- CLASSIC FORMULAR + PHP API WORKS -->
-  <!-- <form
-    method="POST"
-    action="http://localhost/api/post_contacts.php"
-    novalidate="novalidate"
-    autocomplete="off"
-  >
-
-    <label>Name</label>
-    <input name="name" type="text" placeholder="Name" autocomplete="off" />
-
-    <label>Email Address</label>
-    <input
-      name="email"
-      type="text"
-      placeholder="Email Address"
-      autocomplete="off"
-    />
-
-    <label>Message</label>
-    <textarea name="msg" placeholder="Message" autocomplete="off"></textarea>
-
-
-    <label>
-      <input name="lgpd" type="checkbox" />
-    </label>
-
-    <button type="submit" name="submited" value="valid">Send</button>
-  </form> -->
 </section>

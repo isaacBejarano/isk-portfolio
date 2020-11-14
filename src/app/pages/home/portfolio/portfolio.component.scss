@@ -1,0 +1,5 @@
+@import "../../../../sass/globals"; // globals
+
+a:not(.nav-link):hover {
+  color: $custom-bg;
+}

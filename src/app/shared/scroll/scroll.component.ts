@@ -5,6 +5,7 @@ import { store } from '../../store/store';
 @Component({
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
+  styleUrls: ['./scroll.component.scss'],
 })
 export class ScrollComponent {
   scroll = store.getScroll as object | any;

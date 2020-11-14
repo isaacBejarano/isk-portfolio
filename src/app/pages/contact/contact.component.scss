@@ -1,5 +1,9 @@
 @import "../../../sass/globals";
 
+.page-section .container {
+  padding-top: 5rem;
+}
+
 @mixin validate($color) {
   color: $color;
   padding-left: 0.5rem;
@@ -16,4 +20,8 @@
     position: absolute;
     top: 4.5rem;
   }
+}
+
+.floating-label-form-group-with-value label {
+  color: $custom;
 }

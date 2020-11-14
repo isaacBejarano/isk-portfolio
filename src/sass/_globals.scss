@@ -2,9 +2,40 @@
 .text-gray {
   color: #6c757d;
 }
-$white: #fff;
-$valid-color: #1abc9c; // ~theme primary
-$invalid-color: crimson;
+
 $breakpoint-sm: 576px;
 $breakpoint-md: 768px;
 $breakpoint-lg: 992px;
+
+$custom: orange;
+$custom-bg: darken($custom, 8%);
+$white: #fff;
+$valid-color: #1abc9c; // ~theme primary
+$invalid-color: crimson;
+
+// CUSTOMIZE THEME
+
+a:not(.nav-link) {
+  color: $custom;
+}
+
+.btn-outline-light:hover {
+  color: $white !important;
+  background-color: transparent !important;
+}
+
+.text-primary {
+  color: $custom !important;
+}
+
+.btn-primary {
+  color: $custom !important;
+}
+
+.text-custom {
+  color: $custom !important;
+}
+
+body .bg-primary {
+  background-color: desaturate($custom, 30) !important;
+}

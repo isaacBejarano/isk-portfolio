@@ -5,6 +5,7 @@ import { store } from '../../../store/store';
 @Component({
   selector: 'app-portfolio',
   templateUrl: './portfolio.component.html',
+  styleUrls: ['./portfolio.component.scss'],
 })
 export class PortfolioComponent {
   // prop -> to <app-divider> Input()

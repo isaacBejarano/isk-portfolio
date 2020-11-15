@@ -80,7 +80,7 @@ export class ContactComponent implements OnInit, DoCheck {
       // GET
       this.apiService
         .getMany()
-        .subscribe((country) => console.log('GET', country));
+        .subscribe((countries) => console.log('GET', countries));
 
       // GET/:id
       this.apiService
@@ -99,6 +99,11 @@ export class ContactComponent implements OnInit, DoCheck {
       this.apiService
         .putOne('1', wholeObjectBeforePUT)
         .subscribe((country) => console.log('PUT/:id', country));
+
+      // DELETE/:id
+      this.apiService
+        .deleteOne('1')
+        .subscribe((country) => console.log('DELETE/:id', country));
     }
   }
 

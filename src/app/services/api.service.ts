@@ -10,7 +10,7 @@ import { IntfaceContact } from '../interfaces/contact';
 export class ApiService {
   // endpointGET = 'http://localhost/api/get_contacts.php';
   api1 = 'https://jsonplaceholder.typicode.com'; // no CORS
-  api2 = 'http://localhost/api/post_contacts.php';
+  api2 = 'http://localhost/api'; // entrypoint is index.php
   api3 = 'https://restcountries.eu/rest/v2/lang/es';
 
   constructor(private http: HttpClient) {}
@@ -48,8 +48,8 @@ export class ApiService {
 
   // GET
   getMany(): Observable<object> {
-    return this.http.get<IntfaceContact[]>(`${this.api1}/posts`).pipe(
-      map((res: IntfaceContact[]) =>
+    return this.http.get<object[]>(`${this.api2}/get`).pipe(
+      map((res: object[]) =>
         res.map((country: any) => ({
           country: country.name,
           code: country.alpha3Code,
@@ -57,6 +57,16 @@ export class ApiService {
       )
     );
   }
+  // getMany(): Observable<object> {
+  //   return this.http.get<IntfaceContact[]>(`${this.api1}/posts`).pipe(
+  //     map((res: IntfaceContact[]) =>
+  //       res.map((country: any) => ({
+  //         country: country.name,
+  //         code: country.alpha3Code,
+  //       }))
+  //     )
+  //   );
+  // }
 
   // GET/:id
   getOne(id: string): Observable<object> {
@@ -70,6 +80,10 @@ export class ApiService {
     return this.http
       .put<IntfaceContact>(`${this.api1}/posts/${id}`, update)
       .pipe(map((res: object) => res));
-      // NOTE: PUT requires to send the whole object === Schema
+    // NOTE: PUT requires to send the whole object === Schema
+  }
+  // DELETE/:id
+  deleteOne(id: string): Observable<object> {
+    return this.http.delete<IntfaceContact>(`${this.api1}/posts/${id}`).pipe(map((res: object) => res));
   }
 }

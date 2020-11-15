@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 import { ApiService } from '../../services/api.service';
+import { IntfaceContact } from '../../interfaces/contact';
 
 @Component({
   selector: 'app-contact',
@@ -15,9 +16,9 @@ export class ContactComponent implements OnInit, DoCheck {
   form: FormGroup;
 
   constructor(
-    //
+    // Don't use name "ApiService" as prop / it shadows ApiService class"
     private fb: FormBuilder,
-    private ApiService: ApiService
+    private apiService: ApiService
   ) {}
 
   // hooks
@@ -26,11 +27,13 @@ export class ContactComponent implements OnInit, DoCheck {
     store.setScrollShow = false; // scroller -> state false
     this.createForm(); // reactive forms
 
-    // this.ApiService.postContacts().subscribe((user) => console.log(user));
+    // this.apiService.postContacts().subscribe((user) =>
+    //   console.log('lol', user)
+    // );
 
-    this.ApiService.getSpanishCountries().subscribe((country) =>
-      console.log(country)
-    );
+    // this.apiService.getSpanishCountries().subscribe((country) =>
+    //   console.log(country)
+    // );
   }
 
   ngDoCheck(): void {
@@ -58,11 +61,45 @@ export class ContactComponent implements OnInit, DoCheck {
     });
   }
 
-  send(): boolean {
-    console.log(this.form);
-
+  send(): void {
     // onsubmit
-    return !this.form.valid ? false : true;
+    if (this.form.valid) {
+      const body: IntfaceContact = {
+        submited: 'valid',
+        name: 'this.form.controls.name',
+        email: 'qwe@qwe.er.ok',
+        msg: 'qweqeqeqeqw',
+        lgpd: true,
+      };
+
+      // POST
+      this.apiService
+        .postOne(body)
+        .subscribe((user) => console.log('POST', user));
+
+      // GET
+      this.apiService
+        .getMany()
+        .subscribe((country) => console.log('GET', country));
+
+      // GET/:id
+      this.apiService
+        .getOne('2')
+        .subscribe((country) => console.log('GET/:id', country));
+
+      // PUT/:id
+      const wholeObjectBeforePUT = {
+        submited: 'valid',
+        name: 'this.form.controls.name',
+        email: 'qwe@qwe.er.ok',
+        msg: 'qweqeqeqeqw',
+        lgpd: false, // <-- updated field
+      };
+
+      this.apiService
+        .putOne('1', wholeObjectBeforePUT)
+        .subscribe((country) => console.log('PUT/:id', country));
+    }
   }
 
   // required + specific of each input

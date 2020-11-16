@@ -3,7 +3,7 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 import { ApiService } from '../../services/api.service';
-import { IntfaceContact } from '../../interfaces/contact';
+import { IntContactForm } from '../../interfaces/contact';
 
 @Component({
   selector: 'app-contact',
@@ -15,25 +15,13 @@ export class ContactComponent implements OnInit, DoCheck {
   contact = store.getContact as object | any;
   form: FormGroup;
 
-  constructor(
-    // Don't use name "ApiService" as prop / it shadows ApiService class"
-    private fb: FormBuilder,
-    private apiService: ApiService
-  ) {}
+  constructor(private fb: FormBuilder, private apiService: ApiService) {}
 
   // hooks
   ngOnInit(): void {
     Shared.pageToTop(); // <- shared
     store.setScrollShow = false; // scroller -> state false
     this.createForm(); // reactive forms
-
-    // this.apiService.postContacts().subscribe((user) =>
-    //   console.log('lol', user)
-    // );
-
-    // this.apiService.getSpanishCountries().subscribe((country) =>
-    //   console.log(country)
-    // );
   }
 
   ngDoCheck(): void {
@@ -64,71 +52,54 @@ export class ContactComponent implements OnInit, DoCheck {
   send(): void {
     // onsubmit
     if (this.form.valid) {
-      const body: IntfaceContact = {
-        submited: 'valid',
-        name: 'this.form.controls.name',
-        email: 'qwe@qwe.er.ok',
-        msg: 'qweqeqeqeqw',
-        lgpd: true,
-      };
+      console.log('SUBMITING VALID FORM: ', this.form);
 
-      // POST
-      this.apiService
-        .postOne(body)
-        .subscribe((user) => console.log('POST', user));
+      // const body: IntContactForm = {
+      //   submited: this.form.get('submited'),
+      //   name: this.form.get('name'),
+      //   email: this.form.get('email'),
+      //   msg: this.form.get('msg'),
+      //   lgpd: this.form.get('lgpd'),
+      // };
 
-      // GET
-      this.apiService
-        .getMany()
-        .subscribe((countries) => console.log('GET', countries));
-
-      // GET/:id
-      this.apiService
-        .getOne('2')
-        .subscribe((country) => console.log('GET/:id', country));
-
-      // PUT/:id
-      const wholeObjectBeforePUT = {
-        submited: 'valid',
-        name: 'this.form.controls.name',
-        email: 'qwe@qwe.er.ok',
-        msg: 'qweqeqeqeqw',
-        lgpd: false, // <-- updated field
-      };
-
-      this.apiService
-        .putOne('1', wholeObjectBeforePUT)
-        .subscribe((country) => console.log('PUT/:id', country));
-
-      // DELETE/:id
-      this.apiService
-        .deleteOne('1')
-        .subscribe((country) => console.log('DELETE/:id', country));
+      // // POST
+      // this.apiService
+      //   .postOne(body)
+      //   .subscribe((user) => console.log('POST', user));
     }
   }
 
   // required + specific of each input
-  validate(name: string): number {
-    const requiredName =
-      // invalid-feedback
-      this.form.get(name).invalid && this.form.get(name).touched;
+  validate(ref: any): any {
+    let errorType = 0;
 
-    let errors = 0; // valid
+    const alias = ref.getAttribute('formControlName');
 
-    // invalid-feedback
-    if (name === 'name') {
-      if (requiredName) {
-        errors += 1;
+    // formControlName === 'name'
+    if (ref.getAttribute('formControlName') === 'name') {
+      console.log('->', alias);
+
+      // conditions
+      const required: boolean =
+        this.form.get(alias).invalid && this.form.get(alias).touched;
+
+      const minlength: boolean =
+        this.form.get(alias).hasError('minlength') &&
+        this.form.get(alias).touched;
+
+      // contact.required1
+      if (required) {
+        errorType += 1; // errorType 1
       }
-      if (
-        this.form.get(name).hasError('minlength') &&
-        this.form.get(name).touched
-      ) {
-        errors += 1;
+
+      // contact.match1
+      if (minlength) {
+        errorType += 1; // errorType 2
       }
     }
 
-    return errors;
+    console.log('errorType', errorType);
+    return errorType;
   }
   //
 }

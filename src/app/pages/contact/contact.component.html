@@ -14,11 +14,7 @@
     <div class="row">
       <div class="col-lg-8 mx-auto">
         <!-- FORMULAR -->
-        <form
-          [formGroup]="form"
-          (ngSubmit)="send()"
-          autocomplete="off"
-        >
+        <form [formGroup]="form" ñ (ngSubmit)="send()" autocomplete="off">
           <!-- Name -->
           <div class="control-group">
             <div
@@ -26,20 +22,18 @@
             >
               <label>Name</label>
               <input
+                #ref1
                 class="form-control"
                 type="text"
                 placeholder="Name"
                 formControlName="name"
-                [class.is-invalid]="validate('name') > 0"
+                [class.is-invalid]="validate(ref1) > 0"
               />
-              <!-- CSS validation -->
-              <small
-                class="invalid-feedback"
-                *ngIf="validate('name') === 1"
-              >
+              <!-- invalid-feedback -->
+              <small class="invalid-feedback" *ngIf="validate(ref1) === 1">
                 {{ contact.required1 }}
               </small>
-              <small class="invalid-feedback" *ngIf="validate('name') === 2">
+              <small class="invalid-feedback" *ngIf="validate(ref1) === 2">
                 {{ contact.match1 }}
               </small>
             </div>
@@ -58,7 +52,7 @@
                 formControlName="email"
               />
               <!-- [class.is-invalid]="validate('email') > 0" -->
-              <!-- CSS validation -->
+              <!-- invalid-feedback -->
               <!-- <small class="invalid-feedback" *ngIf="validate('email') === 1">
                 {{ contact.required2 }}
               </small>
@@ -81,7 +75,7 @@
                 formControlName="msg"
               ></textarea>
               <!-- [class.is-invalid]="validate('msg') > 0" -->
-              <!-- CSS validation -->
+              <!-- invalid-feedback -->
               <!-- <small class="invalid-feedback" *ngIf="validate('msg') === 1">
                 {{ contact.required3 }}
               </small>
@@ -109,7 +103,7 @@
                 >{{ contact.text }}</a
               >
               {{ contact.warn2 }}
-              <!-- CSS validation -->
+              <!-- invalid-feedback -->
               <!-- <small class="invalid-feedback" *ngIf="validate('lgpd') === 1">
                 {{ contact.required4 }}
               </small> -->

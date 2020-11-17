@@ -1,9 +1,13 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import {
+  FormGroup,
+  FormBuilder,
+  Validators,
+  FormControl,
+} from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 import { ApiService } from '../../services/api.service';
-import { IntContactForm } from '../../interfaces/contact';
 
 @Component({
   selector: 'app-contact',
@@ -12,10 +16,16 @@ import { IntContactForm } from '../../interfaces/contact';
 })
 export class ContactComponent implements OnInit, DoCheck {
   divider = 'divider-dark'; // prop -> to <app-divider> Input()
+  submitable = false;
+  disabled = false;
   contact = store.getContact as object | any;
   form: FormGroup;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) {}
+  constructor(
+    // dependency injection
+    private fb: FormBuilder,
+    private apiService: ApiService
+  ) {}
 
   // hooks
   ngOnInit(): void {
@@ -25,6 +35,10 @@ export class ContactComponent implements OnInit, DoCheck {
   }
 
   ngDoCheck(): void {
+    // btn submit
+    this.submitable = this.form.valid ? true : false;
+
+    // scroller JQuery Easing update
     const scroller = document.getElementById('scroller') as HTMLDivElement;
 
     // dissable scroller view
@@ -41,7 +55,7 @@ export class ContactComponent implements OnInit, DoCheck {
       '[a-z0-9]+([._-]?[a-z0-9]+)*.[a-z]{2,4}';
 
     this.form = this.fb.group({
-      // def value, sync, async (e.g. login)
+      // [def, sync, async]
       name: ['', [Validators.required, Validators.minLength(2)]],
       email: ['', [Validators.required, Validators.pattern(regex)]],
       msg: ['', [Validators.required, Validators.minLength(10)]],
@@ -52,54 +66,106 @@ export class ContactComponent implements OnInit, DoCheck {
   send(): void {
     // onsubmit
     if (this.form.valid) {
-      console.log('SUBMITING VALID FORM: ', this.form);
+      console.log('SUBMITING...', this.form);
+      // return true;
+      const body: any = new Object({
+        submited: this.form.get('submited'),
+        name: this.form.get('name'),
+        email: this.form.get('email'),
+        msg: this.form.get('msg'),
+        lgpd: this.form.get('lgpd'),
+      });
 
-      // const body: IntContactForm = {
-      //   submited: this.form.get('submited'),
-      //   name: this.form.get('name'),
-      //   email: this.form.get('email'),
-      //   msg: this.form.get('msg'),
-      //   lgpd: this.form.get('lgpd'),
-      // };
+      // https://github.com/moll/json-stringify-safe
 
-      // // POST
-      // this.apiService
-      //   .postOne(body)
-      //   .subscribe((user) => console.log('POST', user));
+      // POST
+      this.apiService
+        .postOne(JSON.stringify(body))
+        .subscribe((user) => console.log('POST', user));
+
+      // clean
+      setTimeout(() => this.form.reset(), 300);
+    } else {
+      this.disabled = true; // .btn-danger
+      this.validateAllOnSubmit(this.form);
     }
   }
 
-  // required + specific of each input
-  validate(ref: any): any {
-    let errorType = 0;
+  validateAllOnSubmit(form: FormGroup): void {
+    const forControls = Object.keys(form.controls); // 'name', 'email', 'msg', 'lgpg'
 
+    for (const key of forControls) {
+      //
+      const control = form.get(key);
+
+      if (control instanceof FormControl) {
+        control.markAsTouched({ onlySelf: true });
+      } else if (control instanceof FormGroup) {
+        this.validateAllOnSubmit(control); // recursion
+      }
+    }
+  }
+
+  validateOnTouched(ref: HTMLElement): number {
+    let errorType = 0; // counter
     const alias = ref.getAttribute('formControlName');
 
-    // formControlName === 'name'
-    if (ref.getAttribute('formControlName') === 'name') {
-      console.log('->', alias);
+    // condition repertoire
+    const controlRequired: boolean =
+      this.form.get(alias).invalid && this.form.get(alias).touched;
 
-      // conditions
-      const required: boolean =
-        this.form.get(alias).invalid && this.form.get(alias).touched;
+    const controlMinLength: boolean =
+      this.form.get(alias).hasError('minlength') &&
+      this.form.get(alias).touched;
 
-      const minlength: boolean =
-        this.form.get(alias).hasError('minlength') &&
-        this.form.get(alias).touched;
+    const controlPattern: boolean =
+      this.form.get(alias).hasError('pattern') && this.form.get(alias).touched;
 
-      // contact.required1
-      if (required) {
+    // const min: boolean = ... // OTHER. etc.
+
+    // NAME
+    if (alias === 'name') {
+      if (controlRequired) {
         errorType += 1; // errorType 1
       }
 
-      // contact.match1
-      if (minlength) {
+      if (controlMinLength) {
         errorType += 1; // errorType 2
       }
     }
 
-    console.log('errorType', errorType);
+    // EMAIL
+    if (alias === 'email') {
+      if (controlRequired) {
+        errorType += 1; // errorType 1
+      }
+
+      if (controlPattern) {
+        errorType += 1; // errorType 2
+      }
+    }
+
+    // MSG
+    if (alias === 'msg') {
+      if (controlRequired) {
+        errorType += 1; // errorType 1
+      }
+
+      if (controlMinLength) {
+        errorType += 1; // errorType 2
+      }
+    }
+
+    // lGPD
+    if (alias === 'lgpd') {
+      if (controlRequired) {
+        errorType += 1; // errorType 1
+      }
+    }
+
+    // OTHER
+    //  if (alias === 'number') { ... } etc.
+
     return errorType;
   }
-  //
 }

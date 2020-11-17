@@ -9,13 +9,12 @@ import { IntContactForm } from '../interfaces/contact';
 })
 export class ApiService {
   api1 = 'https://jsonplaceholder.typicode.com'; // no-cors, Open Database
-  api2 = 'http://localhost/portfolio/api'; // entrypoint is index.php
-  api3 = 'https://restcountries.eu/rest/v2/lang/es';
+  // api2 = 'http://localhost/portfolio/api'; // entrypoint is index.php
 
   constructor(private http: HttpClient) {}
 
   // POST
-  postOne(body: IntContactForm): Observable<object> {
+  postOne(body: any): Observable<any> {
     // const httpOptions = {
     //   headers: new HttpHeaders({
     //     'Access-Control-Allow-Origin': '*',
@@ -30,9 +29,9 @@ export class ApiService {
     //   'my-new-auth-token'
     // );
 
-    return this.http.post<IntContactForm>(
-      `${this.api2}/post`,
-      body
+    return this.http.post(
+      `${this.api1}/posts`,
+      body,
       // { responseType: 'json' }
       // httpOptions
     );

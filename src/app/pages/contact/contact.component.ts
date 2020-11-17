@@ -67,8 +67,10 @@ export class ContactComponent implements OnInit, DoCheck {
     // onsubmit
     if (this.form.valid) {
       console.log('SUBMITING...', this.form);
-      // return true;
-      const body: any = new Object({
+
+      // DISABLE CIRCULAR FORM OBJECT before HttpClient methods!
+      // just by reseting the FormGroup instance, aka form
+      const body: any = this.form.reset({
         submited: this.form.get('submited'),
         name: this.form.get('name'),
         email: this.form.get('email'),
@@ -76,33 +78,19 @@ export class ContactComponent implements OnInit, DoCheck {
         lgpd: this.form.get('lgpd'),
       });
 
-      // https://github.com/moll/json-stringify-safe
-
       // POST
       this.apiService
         .postOne(JSON.stringify(body))
         .subscribe((user) => console.log('POST', user));
 
-      // clean
-      setTimeout(() => this.form.reset(), 300);
+      // clean form
+      this.form.reset();
     } else {
       this.disabled = true; // .btn-danger
-      this.validateAllOnSubmit(this.form);
-    }
-  }
-
-  validateAllOnSubmit(form: FormGroup): void {
-    const forControls = Object.keys(form.controls); // 'name', 'email', 'msg', 'lgpg'
-
-    for (const key of forControls) {
-      //
-      const control = form.get(key);
-
-      if (control instanceof FormControl) {
-        control.markAsTouched({ onlySelf: true });
-      } else if (control instanceof FormGroup) {
-        this.validateAllOnSubmit(control); // recursion
-      }
+      // this.validateAllOnSubmit(this.form);
+      return Object.values(this.form.controls).forEach((control) =>
+        control.markAsTouched()
+      );
     }
   }
 
@@ -168,4 +156,19 @@ export class ContactComponent implements OnInit, DoCheck {
 
     return errorType;
   }
+  // validateAllOnSubmit(form: FormGroup): void {
+  // const forControls = Object.keys(form.controls); // 'name', 'email', 'msg', 'lgpg'
+
+  // for (const key of forControls) {
+  //   //
+  //   const control = form.get(key);
+
+  //   if (control instanceof FormControl) {
+  //     control.markAsTouched({ onlySelf: true });
+  //   } else if (control instanceof FormGroup) {
+  //     this.validateAllOnSubmit(control); // recursion
+  //   }
+  // }
+
+  // }
 }

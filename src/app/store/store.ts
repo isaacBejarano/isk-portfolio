@@ -5,7 +5,7 @@ export let store = {
   // navbar
   navbar: {
     home: 'home',
-    src: './assets/img/portfolio/codhex-logo.png',
+    src: 'assets/img/portfolio/codhex-logo.png',
     alt: 'codhex logo',
     hamburger: 'menu',
     page1: 'new',

@@ -1,6 +1,6 @@
 <!-- PORTFOLIO -->
 
-<section class="page-section portfolio bg-primary"> 
+<section class="page-section portfolio bg-primary">
   <div class="container">
     <!-- Portfolio Section Heading-->
     <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
@@ -57,8 +57,8 @@
 
 <!-- MODALS -->
 
-<!-- A Portfolio Modal 1 -->
 <app-portfolio-modal [modal]="portfolio.modal1">
+  <!-- type A - Portfolio Modal 1 - Text -->
   <p class="mb-5 text-justify">
     {{ portfolio.modal1.p1 }} {{ portfolio.common.visit }}
     <a
@@ -82,11 +82,167 @@
 </app-portfolio-modal>
 
 <app-portfolio-modal [modal]="portfolio.modal2">
+  <!-- type B - Portfolio Modal 2 - Text -->
   <p class="mb-5 text-justify">
     {{ portfolio.modal2.p1 }}
     {{ portfolio.common.visit }}
     <a
       href="{{ portfolio.modal2.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo1 }}
+    </a>
+    {{ portfolio.common.star }}
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal3">
+  <!-- type B - Portfolio Modal 3 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.modal3.p1 }}
+    {{ portfolio.common.visit }}
+    <a
+      href="{{ portfolio.modal3.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo1 }}
+    </a>
+    {{ portfolio.common.star }}
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal4">
+  <!-- type A - Portfolio Modal 4 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.modal4.p1 }} {{ portfolio.common.visit }}
+    <a
+      href="{{ portfolio.modal4.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo1 }}
+    </a>
+    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
+    <a
+      href="{{ portfolio.modal4.link2 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo3 }}.
+    </a>
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal5">
+  <!-- type B - Portfolio Modal 5 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.modal5.p1 }}
+    {{ portfolio.common.visit }}
+    <a
+      href="{{ portfolio.modal5.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo1 }}
+    </a>
+    {{ portfolio.common.star }}
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal6">
+  <!-- type C - Portfolio Modal 6 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.common.list }}
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js1 }}</a
+    >,
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link2 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js2 }}</a
+    >,
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link3 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js3 }}</a
+    >,
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link4 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js4 }}</a
+    >,
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link5 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js5 }}</a
+    >,
+    <a
+      class="d-a"
+      href="{{ portfolio.modal6.link6 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+      >{{ portfolio.modal6.js6 }}</a
+    >
+    {{ portfolio.common.stars }}
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal7">
+  <!-- type A - Portfolio Modal 7 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.modal7.p1 }} {{ portfolio.common.visit }}
+    <a
+      href="{{ portfolio.modal7.link1 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo1 }}
+    </a>
+    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
+    <a
+      href="{{ portfolio.modal7.link2 }}"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolio.common.repo3 }}.
+    </a>
+  </p>
+</app-portfolio-modal>
+
+<app-portfolio-modal [modal]="portfolio.modal8">
+  <!-- type B - Portfolio Modal 8 - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolio.modal8.p1 }}
+    {{ portfolio.common.visit }}
+    <a
+      href="{{ portfolio.modal8.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"

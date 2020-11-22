@@ -3,3 +3,10 @@
 .portfolio-modal button.close:focus {
   outline: 0;
 }
+
+// Portfolio Modal
+.modal-body {
+  img {
+    border-width: 4px !important;
+  }
+}

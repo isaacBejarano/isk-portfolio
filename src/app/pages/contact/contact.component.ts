@@ -66,22 +66,20 @@ export class ContactComponent implements OnInit, DoCheck {
   send(): void {
     // onsubmit
     if (this.form.valid) {
-      console.log('SUBMITING...', this.form);
-
       // DISABLE CIRCULAR FORM OBJECT before HttpClient methods!
       // just by reseting the FormGroup instance, aka form
-      const body: any = this.form.reset({
+      const body: any = {
         submited: this.form.get('submited'),
         name: this.form.get('name'),
         email: this.form.get('email'),
         msg: this.form.get('msg'),
         lgpd: this.form.get('lgpd'),
-      });
+      };
+
+      console.log('SUBMITING...', this.form);
 
       // POST
-      this.apiService
-        .postOne(JSON.stringify(body))
-        .subscribe((user) => console.log('POST', user));
+      this.apiService.postOne(body).subscribe((user) => console.log('POSTED'));
 
       // clean form
       this.form.reset();

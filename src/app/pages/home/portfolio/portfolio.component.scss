@@ -3,3 +3,8 @@
 a:not(.nav-link):hover {
   color: $custom-bg;
 }
+
+ul {
+  padding-left: 0;
+  list-style-type: none;
+}

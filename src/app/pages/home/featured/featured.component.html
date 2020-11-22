@@ -11,10 +11,10 @@
       <h3
         class="page-section-heading text-center text-uppercase text-secondary mb-3"
       >
-        {{ portfolio.modal10.title }}
+        {{ portfolioItems[9].title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
-        {{ new.subtitle }}
+        {{ new }}
       </h4>
     </section>
 
@@ -39,10 +39,9 @@
             </div>
           </div>
           <img
-            [id]="new.imgId"
             class="border border-secondary img-fluid border rounded-lg"
-            src="assets/img/{{ portfolio.modal10.src }}"
-            [alt]="portfolio.modal10.alt"
+            src="assets/img/{{ portfolioItems[9].src }}"
+            [alt]="portfolioItems[9].alt"
           />
         </div>
       </div>
@@ -76,7 +75,7 @@
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                     id="featuredModal"
                   >
-                    {{ portfolio.modal10.title }}
+                    {{ portfolioItems[9].title }}
                   </h2>
 
                   <!-- Icon Divider-->
@@ -85,22 +84,22 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border border-secondary rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ portfolio.modal10.src }}"
-                    [alt]="portfolio.modal10.alt"
+                    src="assets/img/{{ portfolioItems[9].src }}"
+                    [alt]="portfolioItems[9].alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ portfolio.modal10.p1 }} {{ portfolio.common.visit }}
+                    {{ portfolioItems[9].p1 }} {{ portfolioCommon.visit }}
                     <a
-                      [href]="portfolio.modal10.link1"
+                      [href]="portfolioItems[9].link1"
                       rel="nofollow"
                       target="_blank"
                       (click)="openLink()"
                     >
-                      {{ portfolio.common.repo1 }}
+                      {{ portfolioItems[9].repo }}
                     </a>
-                    {{ portfolio.common.star }}
-                    <span class="text-gray">{{ portfolio.modal10.p2 }} </span>
+                    {{ portfolioCommon.star }}
+                    <span class="text-gray">{{ portfolioItems[9].p2 }} </span>
                   </p>
                   <button class="btn btn-outline-dark" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

@@ -11,7 +11,8 @@ export class PortfolioComponent {
   // prop -> to <app-divider> Input()
   divider = 'divider-light';
 
-  portfolio = store.getPortfolio as object | any;
+  portfolioCommon = store.getPortfolioCommon as object | any;
+  portfolioItems = store.getPortfolioItems as object | any;
 
   // <- shared methods
   openLink = Shared.openLink;

@@ -42,161 +42,191 @@ export let store = {
     title: 'Web Developer - Full Stack - MEAN - LAMP',
   },
   // featured ~new
-  new: {
-    imgId: 'culex-pic',
-    subtitle: 'ES5 library to make HTTP requests',
-  },
+  new: 'ES5 library to make HTTP requests',
   // portfolio
   portfolio: {
     // common
     common: {
       star: 'and give it a "star".',
       stars: 'and give them a "star".',
-      repo1: 'Github',
-      repo2: 'Github Pages',
-      repo3: 'Codepen',
       list: 'Visit these repositories:',
       visit: 'Visit this repository at',
       visits: 'Visit these repositories at',
       dontforget: `Don't forget to see it live at`,
     },
-    // modal 1
-    modal1: {
-      title: 'Wordpress blog',
-      target: '#portfolioModal1',
-      id: 'portfolioModal1',
-      label: 'portfolioModal1Lbabel',
-      src: 'portfolio/LFA.jpg',
-      alt: 'Wordpress Candidature project',
-      p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency.`,
-      link1: 'https://lluisfernandezala.cat/',
-      host: 'https://lluisfernandezala.cat',
-    },
-    // modal 2
-    modal2: {
-      title: 'Responsive Bootstrap',
-      target: '#portfolioModal2',
-      id: 'portfolioModal2',
-      label: 'portfolioModal2Lbabel',
-      src: 'portfolio/papiro.png',
-      alt: 'Responsive Bootstrap project',
-      p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
-      link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
-      link2: 'https://isaacbejarano.github.io/',
-    },
-    // modal 3
-    modal3: {
-      title: 'Typescript',
-      target: '#portfolioModal3',
-      id: 'portfolioModal3',
-      label: 'portfolioModal3Lbabel',
-      src: 'portfolio/rockets.png',
-      alt: 'Typescript project',
-      p1:
-        'UI made with Typescript to create rockets and thrusters.\
+    items: [
+      // modal 1
+      {
+        title: 'Wordpress blog',
+        target: '#portfolioModal1',
+        id: 'portfolioModal1',
+        label: 'portfolioModal1Lbabel',
+        src: 'portfolio/LFA.jpg',
+        alt: 'Wordpress Candidature project',
+        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency.`,
+        link1: 'https://lluisfernandezala.cat/',
+        type: 'A',
+        host: 'https://lluisfernandezala.cat',
+      },
+      // modal 2
+      {
+        title: 'Responsive Bootstrap',
+        target: '#portfolioModal2',
+        id: 'portfolioModal2',
+        label: 'portfolioModal2Lbabel',
+        src: 'portfolio/papiro.png',
+        alt: 'Responsive Bootstrap project',
+        p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
+        link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
+        link2: 'https://isaacbejarano.github.io/',
+        type: 'B',
+        repo: 'Github',
+        host: 'Github Pages',
+      },
+      // modal 3
+      {
+        title: 'Typescript',
+        target: '#portfolioModal3',
+        id: 'portfolioModal3',
+        label: 'portfolioModal3Lbabel',
+        src: 'portfolio/rockets.png',
+        alt: 'Typescript project',
+        p1:
+          'UI made with Typescript to create rockets and thrusters.\
         Object Oriented Programmmig (OOP).',
-      link1: 'https://github.com/isaacBejarano/ts-rockets',
-    },
-    // modal 4
-    modal4: {
-      title: 'JQuery + AJAX',
-      target: '#portfolioModal4',
-      id: 'portfolioModal4',
-      label: 'portfolioModal4Lbabel',
-      src: 'portfolio/joker.png',
-      alt: 'AJAX + JQuery project',
-      p1:
-        'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
+        link1: 'https://github.com/isaacBejarano/ts-rockets',
+        type: 'C',
+        repo: 'Github',
+      },
+      // modal 4
+      {
+        title: 'JQuery + AJAX',
+        target: '#portfolioModal4',
+        id: 'portfolioModal4',
+        label: 'portfolioModal4Lbabel',
+        src: 'portfolio/joker.png',
+        alt: 'AJAX + JQuery project',
+        p1:
+          'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
         Made with JQuery.',
-      link1: 'https://github.com/isaacBejarano/joker',
-    },
-    // modal 5
-    modal5: {
-      title: 'Javascript',
-      target: '#portfolioModal5',
-      id: 'portfolioModal5',
-      label: 'portfolioModal5Lbabel',
-      src: 'portfolio/beers.png',
-      alt: 'Javascript project',
-      p1:
-        'UI for rating. It uses SASS and scalable algorithms to persist\
+        link1: 'https://github.com/isaacBejarano/joker',
+        type: 'C',
+        repo: 'Github',
+      },
+      // modal 5
+      {
+        title: 'Javascript',
+        target: '#portfolioModal5',
+        id: 'portfolioModal5',
+        label: 'portfolioModal5Lbabel',
+        src: 'portfolio/beers.png',
+        alt: 'Javascript project',
+        p1:
+          'UI for rating. It uses SASS and scalable algorithms to persist\
         ":hover" and ":active" pseudo-classes.',
-      link1: 'https://github.com/isaacBejarano/rating-beers',
-      link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
-    },
-    // modal 6
-    modal6: {
-      title: 'Leaflet + AJAX',
-      target: '#portfolioModal6',
-      id: 'portfolioModal6',
-      label: 'portfolioModal6Lbabel',
-      src: 'portfolio/restopolitan.png',
-      alt: 'Leaflet project',
-      p1:
-        'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
+        link1: 'https://github.com/isaacBejarano/rating-beers',
+        link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
+        type: 'B',
+        repo: 'Github',
+        host: 'Codepen',
+      },
+      // modal 6
+      {
+        title: 'Leaflet + AJAX',
+        target: '#portfolioModal6',
+        id: 'portfolioModal6',
+        label: 'portfolioModal6Lbabel',
+        src: 'portfolio/restopolitan.png',
+        alt: 'Leaflet project',
+        p1:
+          'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
         Made with JQuery.',
-      link1: 'https://github.com/isaacBejarano/leaflet_filtres',
-    },
-    // modal 7
-    modal7: {
-      title: 'JavaScript Algorithms',
-      target: '#portfolioModal7',
-      id: 'portfolioModal7',
-      label: 'portfolioModal7Lbabel',
-      src: 'portfolio/algorithms.png',
-      alt: 'JavaScript Algorithms project',
-      link1: 'https://github.com/isaacBejarano/price-down-breaker',
-      link2: 'https://github.com/isaacBejarano/binary-search',
-      link3: 'https://github.com/isaacBejarano/quicksort',
-      link4: 'https://github.com/isaacBejarano/is-int',
-      link5: 'https://github.com/isaacBejarano/string-mirror',
-      link6: 'https://github.com/isaacBejarano/fibonacci-sequencer',
-      js1: 'Down Breaker',
-      js2: 'Binary Search',
-      js3: 'Quick Sort',
-      js4: 'Is Int',
-      js5: 'String Mirror',
-      js6: 'Fibonacci Sequencer',
-    },
-    // modal 8
-    modal8: {
-      title: 'SASS',
-      target: '#portfolioModal8',
-      id: 'portfolioModal8',
-      label: 'portfolioModal8Lbabel',
-      src: 'portfolio/stripes.png',
-      alt: 'SASS project',
-      p1:
-        'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
-      link1: 'https://github.com/isaacBejarano/sass-stripes',
-      link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
-    },
-    // modal 9
-    modal9: {
-      title: 'Wordpress Page',
-      target: '#portfolioModal9',
-      id: 'portfolioModal9',
-      label: 'portfolioModal9Lbabel',
-      src: 'portfolio/amatller.jpg',
-      alt: 'casa museu amatller page',
-      p1: 'Worked on Casa Museu Amatller webpage made with Wordpress.',
-      link1: 'https://amatller.org/',
-      host: 'Casa Museu Amatller',
-    },
-    // modal 10 ~new
-    modal10: {
-      title: 'Culex',
-      target: '#portfolioModal10',
-      id: 'portfolioModal10',
-      label: 'portfolioModal10Lbabel',
-      src: 'portfolio/culex.png',
-      alt: 'culex github repo',
-      p1:
-        'Culex.js is an easy-to-use and lightweight ES5 library \
+        link1: 'https://github.com/isaacBejarano/leaflet_filtres',
+        type: 'C',
+        repo: 'Github',
+      },
+      // modal 7
+      {
+        title: 'JavaScript Algorithms',
+        target: '#portfolioModal7',
+        id: 'portfolioModal7',
+        label: 'portfolioModal7Lbabel',
+        src: 'portfolio/algorithms.png',
+        alt: 'JavaScript Algorithms project',
+        algorithms: [
+          {
+            link: 'https://github.com/isaacBejarano/price-down-breaker',
+            js: 'Down Breaker',
+          },
+          {
+            link: 'https://github.com/isaacBejarano/binary-search',
+            js: 'Binary Search',
+          },
+          {
+            link: 'https://github.com/isaacBejarano/quicksort',
+            js: 'Quick Sort',
+          },
+          {
+            link: 'https://github.com/isaacBejarano/is-int',
+            js: 'Is Int',
+          },
+          {
+            link: 'https://github.com/isaacBejarano/string-mirror',
+            js: 'String Mirror',
+          },
+          {
+            link: 'https://github.com/isaacBejarano/fibonacci-sequencer',
+            js: 'Fibonacci Sequencer',
+          },
+        ],
+        type: 'D',
+      },
+      // modal 8
+      {
+        title: 'SASS',
+        target: '#portfolioModal8',
+        id: 'portfolioModal8',
+        label: 'portfolioModal8Lbabel',
+        src: 'portfolio/stripes.png',
+        alt: 'SASS project',
+        p1:
+          'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
+        link1: 'https://github.com/isaacBejarano/sass-stripes',
+        link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
+        type: 'B',
+        repo: 'Github',
+        host: 'Codepen',
+      },
+      // modal 9
+      {
+        title: 'Wordpress Page',
+        target: '#portfolioModal9',
+        id: 'portfolioModal9',
+        label: 'portfolioModal9Lbabel',
+        src: 'portfolio/amatller.jpg',
+        alt: 'casa museu amatller page',
+        p1: 'Worked on Casa Museu Amatller webpage made with Wordpress.',
+        link1: 'https://amatller.org/',
+        host: 'Casa Museu Amatller',
+        type: 'A',
+      },
+      // modal 10 ~new
+      {
+        title: 'Culex',
+        target: '#portfolioModal10',
+        id: 'portfolioModal10',
+        label: 'portfolioModal10Lbabel',
+        src: 'portfolio/culex.png',
+        alt: 'culex github repo',
+        p1:
+          'Culex.js is an easy-to-use and lightweight ES5 library \
       to fetch JSON data from RESTful APIs.',
-      p2: 'Disclaimer: the library is still in beta phase.',
-      link1: 'https://github.com/isaacBejarano/culex.js',
-    },
+        p2: 'Disclaimer: the library is still in beta phase.',
+        link1: 'https://github.com/isaacBejarano/culex.js',
+        type: 'C',
+        repo: 'Github',
+      },
+    ],
   },
   // about
   about: {
@@ -385,6 +415,12 @@ export let store = {
   },
   get getPortfolio(): object {
     return this.portfolio;
+  },
+  get getPortfolioItems(): object[] {
+    return this.portfolio.items;
+  },
+  get getPortfolioCommon(): object[] {
+    return this.portfolio.common;
   },
   get getAbout(): object {
     return this.about;

@@ -1,4 +1,4 @@
-<!-- PORTFOLIO -->
+<!-- ITEMS -->
 
 <section class="page-section portfolio bg-primary">
   <div class="container">
@@ -12,84 +12,8 @@
 
     <!-- Portfolio Grid Items -->
     <div class="row">
-      <!-- Portfolio Item 1 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-1"
-          [item]="portfolio.modal1"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 2 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-2"
-          [item]="portfolio.modal2"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 3 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-3"
-          [item]="portfolio.modal3"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 4 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-4"
-          [item]="portfolio.modal4"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 5 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-5"
-          [item]="portfolio.modal5"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 6 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-6"
-          [item]="portfolio.modal6"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 7 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-7"
-          [item]="portfolio.modal7"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 8 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-8"
-          [item]="portfolio.modal8"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 9 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-9"
-          [item]="portfolio.modal9"
-        ></app-portfolio-item>
-      </div>
-
-      <!-- Portfolio Item 10 -->
-      <div class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item
-          id="transcluded-portfolio-10"
-          [item]="portfolio.modal10"
-        ></app-portfolio-item>
+      <div *ngFor="let item of portfolioItems" class="col-md-6 col-lg-4 mb-5">
+        <app-portfolio-item [item]="item"></app-portfolio-item>
       </div>
     </div>
   </div>
@@ -97,228 +21,78 @@
 
 <!-- MODALS -->
 
-<app-portfolio-modal [modal]="portfolio.modal1">
-  <!-- type A - Portfolio Modal 1 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal1.p1 }} {{ portfolio.common.dontforget }}
+<app-portfolio-modal
+  *ngFor="let item of portfolioItems"
+  [modal]="item"
+  [ngSwitch]="item.type.toUpperCase()"
+>
+  <!-- transclusion - type A -->
+  <p *ngSwitchCase="'A'" class="mb-5 text-justify">
+    {{ item.p1 }} {{ portfolioCommon.dontforget }}
     <a
-      href="{{ portfolio.modal1.link1 }}"
+      href="{{ item.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ portfolio.modal1.host }}.
+      {{ item.host }}.
     </a>
   </p>
-</app-portfolio-modal>
 
-<app-portfolio-modal [modal]="portfolio.modal2">
-  <!-- type B - Portfolio Modal 2 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal2.p1 }} {{ portfolio.common.visit }}
+  <!-- transclusion - type B -->
+  <p *ngSwitchCase="'B'" class="mb-5 text-justify">
+    {{ item.p1 }} {{ portfolioCommon.visit }}
     <a
-      href="{{ portfolio.modal2.link1 }}"
+      href="{{ item.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ portfolio.common.repo1 }}
+      {{ item.repo }}
     </a>
-    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
+    {{ portfolioCommon.star }} {{ portfolioCommon.dontforget }}
     <a
-      href="{{ portfolio.modal2.link2 }}"
+      href="{{ item.link2 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ portfolio.common.repo2 }}.
+      {{ item.host }}.
     </a>
   </p>
-</app-portfolio-modal>
 
-<app-portfolio-modal [modal]="portfolio.modal3">
-  <!-- type C - Portfolio Modal 2 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal3.p1 }}
-    {{ portfolio.common.visit }}
+  <!-- transclusion - type C -->
+  <p *ngSwitchCase="'C'" class="mb-5 text-justify">
+    {{ item.p1 }}
+    {{ portfolioCommon.visit }}
     <a
-      href="{{ portfolio.modal3.link1 }}"
+      href="{{ item.link1 }}"
       rel="nofollow"
       target="_blank"
       (click)="openLink()"
     >
-      {{ portfolio.common.repo1 }}
+      {{ item.repo }}
     </a>
-    {{ portfolio.common.star }}
+    {{ portfolioCommon.star }}
   </p>
-</app-portfolio-modal>
 
-<app-portfolio-modal [modal]="portfolio.modal4">
-  <!-- type C - Portfolio Modal 3 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal4.p1 }}
-    {{ portfolio.common.visit }}
-    <a
-      href="{{ portfolio.modal4.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo1 }}
-    </a>
-    {{ portfolio.common.star }}
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal5">
-  <!-- type B - Portfolio Modal 4 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal5.p1 }} {{ portfolio.common.visit }}
-    <a
-      href="{{ portfolio.modal5.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo1 }}
-    </a>
-    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
-    <a
-      href="{{ portfolio.modal5.link2 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo3 }}.
-    </a>
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal6">
-  <!-- type C - Portfolio Modal 5 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal6.p1 }}
-    {{ portfolio.common.visit }}
-    <a
-      href="{{ portfolio.modal6.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo1 }}
-    </a>
-    {{ portfolio.common.star }}
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal7">
-  <!-- type D - Portfolio Modal 6 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.common.list }}
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js1 }}</a
-    >,
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link2 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js2 }}</a
-    >,
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link3 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js3 }}</a
-    >,
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link4 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js4 }}</a
-    >,
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link5 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js5 }}</a
-    >,
-    <a
-      class="d-a"
-      href="{{ portfolio.modal7.link6 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-      >{{ portfolio.modal7.js6 }}</a
-    >
-    {{ portfolio.common.stars }}
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal8">
-  <!-- type B - Portfolio Modal 7 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal8.p1 }} {{ portfolio.common.visit }}
-    <a
-      href="{{ portfolio.modal8.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo1 }}
-    </a>
-    {{ portfolio.common.star }} {{ portfolio.common.dontforget }}
-    <a
-      href="{{ portfolio.modal8.link2 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo3 }}.
-    </a>
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal9">
-  <!-- type A - Portfolio Modal 9 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal9.p1 }} {{ portfolio.common.dontforget }}
-    <a
-      href="{{ portfolio.modal9.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.modal9.host }}.
-    </a>
-  </p>
-</app-portfolio-modal>
-
-<app-portfolio-modal [modal]="portfolio.modal10">
-  <!-- type C - Portfolio Modal 10 - Text -->
-  <p class="mb-5 text-justify">
-    {{ portfolio.modal10.p1 }}
-    {{ portfolio.common.visit }}
-    <a
-      href="{{ portfolio.modal10.link1 }}"
-      rel="nofollow"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolio.common.repo1 }}
-    </a>
-    {{ portfolio.common.star }}
-  </p>
+  <!-- transclusion - type D -->
+  <ul *ngSwitchCase="'D'" class="mb-5 text-justify">
+    {{
+      portfolioCommon.list
+    }}
+    <li *ngFor="let algor of item.algorithms">
+      <a
+        href="{{ algor.link }}"
+        rel="nofollow"
+        target="_blank"
+        (click)="openLink()"
+      >
+        {{ algor.js }} </a
+      >,
+    </li>
+    {{
+      portfolioCommon.stars
+    }}
+  </ul>
 </app-portfolio-modal>

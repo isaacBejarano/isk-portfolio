@@ -1,5 +1,5 @@
 <!-- Featured Section-->
-<section class="page-section featured" >
+<section class="page-section featured">
   <div class="container">
     <!-- Featured Section Heading-->
     <h2
@@ -11,7 +11,7 @@
       <h3
         class="page-section-heading text-center text-uppercase text-secondary mb-3"
       >
-        {{ portfolio.modal8.title }}
+        {{ portfolio.modal10.title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
         {{ new.subtitle }}
@@ -41,8 +41,8 @@
           <img
             [id]="new.imgId"
             class="border border-secondary img-fluid border rounded-lg"
-            src="assets/img/{{ portfolio.modal8.src }}"
-            [alt]="portfolio.modal8.alt"
+            src="assets/img/{{ portfolio.modal10.src }}"
+            [alt]="portfolio.modal10.alt"
           />
         </div>
       </div>
@@ -76,7 +76,7 @@
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                     id="featuredModal"
                   >
-                    {{ portfolio.modal8.title }}
+                    {{ portfolio.modal10.title }}
                   </h2>
 
                   <!-- Icon Divider-->
@@ -85,23 +85,22 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border border-secondary rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ portfolio.modal8.src }}"
-                    [alt]="portfolio.modal8.alt"
+                    src="assets/img/{{ portfolio.modal10.src }}"
+                    [alt]="portfolio.modal10.alt"
                   />
                   <!-- Portfolio Modal - Text-->
                   <p class="mb-5 text-justify">
-                    {{ portfolio.modal8.p1 }} {{ portfolio.common.visit }}
+                    {{ portfolio.modal10.p1 }} {{ portfolio.common.visit }}
                     <a
-                      [href]="portfolio.modal8.link1"
+                      [href]="portfolio.modal10.link1"
                       rel="nofollow"
                       target="_blank"
                       (click)="openLink()"
-                      
                     >
                       {{ portfolio.common.repo1 }}
                     </a>
                     {{ portfolio.common.star }}
-                    <span class="text-gray">{{ portfolio.modal8.p2 }} </span>
+                    <span class="text-gray">{{ portfolio.modal10.p2 }} </span>
                   </p>
                   <button class="btn btn-outline-dark" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

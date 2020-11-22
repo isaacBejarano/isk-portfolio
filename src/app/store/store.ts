@@ -62,22 +62,34 @@ export let store = {
     },
     // modal 1
     modal1: {
-      title: 'Responsive Bootstrap',
+      title: 'Wordpress blog',
       target: '#portfolioModal1',
       id: 'portfolioModal1',
       label: 'portfolioModal1Lbabel',
+      src: 'portfolio/LFA.jpg',
+      alt: 'Wordpress Candidature project',
+      p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency.`,
+      link1: 'https://lluisfernandezala.cat/',
+      host: 'https://lluisfernandezala.cat',
+    },
+    // modal 2
+    modal2: {
+      title: 'Responsive Bootstrap',
+      target: '#portfolioModal2',
+      id: 'portfolioModal2',
+      label: 'portfolioModal2Lbabel',
       src: 'portfolio/papiro.png',
       alt: 'Responsive Bootstrap project',
       p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
       link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
       link2: 'https://isaacbejarano.github.io/',
     },
-    // modal 2
-    modal2: {
+    // modal 3
+    modal3: {
       title: 'Typescript',
-      target: '#portfolioModal2',
-      id: 'portfolioModal2',
-      label: 'portfolioModal2Lbabel',
+      target: '#portfolioModal3',
+      id: 'portfolioModal3',
+      label: 'portfolioModal3Lbabel',
       src: 'portfolio/rockets.png',
       alt: 'Typescript project',
       p1:
@@ -85,12 +97,12 @@ export let store = {
         Object Oriented Programmmig (OOP).',
       link1: 'https://github.com/isaacBejarano/ts-rockets',
     },
-    // modal 3
-    modal3: {
+    // modal 4
+    modal4: {
       title: 'JQuery + AJAX',
-      target: '#portfolioModal3',
-      id: 'portfolioModal3',
-      label: 'portfolioModal3Lbabel',
+      target: '#portfolioModal4',
+      id: 'portfolioModal4',
+      label: 'portfolioModal4Lbabel',
       src: 'portfolio/joker.png',
       alt: 'AJAX + JQuery project',
       p1:
@@ -98,12 +110,12 @@ export let store = {
         Made with JQuery.',
       link1: 'https://github.com/isaacBejarano/joker',
     },
-    // modal 4
-    modal4: {
+    // modal 5
+    modal5: {
       title: 'Javascript',
-      target: '#portfolioModal4',
-      id: 'portfolioModal4',
-      label: 'portfolioModal4Lbabel',
+      target: '#portfolioModal5',
+      id: 'portfolioModal5',
+      label: 'portfolioModal5Lbabel',
       src: 'portfolio/beers.png',
       alt: 'Javascript project',
       p1:
@@ -112,12 +124,12 @@ export let store = {
       link1: 'https://github.com/isaacBejarano/rating-beers',
       link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
     },
-    // modal 5
-    modal5: {
+    // modal 6
+    modal6: {
       title: 'Leaflet + AJAX',
-      target: '#portfolioModal5',
-      id: 'portfolioModal5',
-      label: 'portfolioModal5Lbabel',
+      target: '#portfolioModal6',
+      id: 'portfolioModal6',
+      label: 'portfolioModal6Lbabel',
       src: 'portfolio/restopolitan.png',
       alt: 'Leaflet project',
       p1:
@@ -125,12 +137,12 @@ export let store = {
         Made with JQuery.',
       link1: 'https://github.com/isaacBejarano/leaflet_filtres',
     },
-    // modal 6
-    modal6: {
+    // modal 7
+    modal7: {
       title: 'JavaScript Algorithms',
-      target: '#portfolioModal6',
-      id: 'portfolioModal6',
-      label: 'portfolioModal6Lbabel',
+      target: '#portfolioModal7',
+      id: 'portfolioModal7',
+      label: 'portfolioModal7Lbabel',
       src: 'portfolio/algorithms.png',
       alt: 'JavaScript Algorithms project',
       link1: 'https://github.com/isaacBejarano/price-down-breaker',
@@ -146,12 +158,12 @@ export let store = {
       js5: 'String Mirror',
       js6: 'Fibonacci Sequencer',
     },
-    // modal 7
-    modal7: {
+    // modal 8
+    modal8: {
       title: 'SASS',
-      target: '#portfolioModal7',
-      id: 'portfolioModal7',
-      label: 'portfolioModal7Lbabel',
+      target: '#portfolioModal8',
+      id: 'portfolioModal8',
+      label: 'portfolioModal8Lbabel',
       src: 'portfolio/stripes.png',
       alt: 'SASS project',
       p1:
@@ -159,12 +171,24 @@ export let store = {
       link1: 'https://github.com/isaacBejarano/sass-stripes',
       link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
     },
-    // modal 8 ~new
-    modal8: {
+    // modal 9
+    modal9: {
+      title: 'Wordpress Page',
+      target: '#portfolioModal9',
+      id: 'portfolioModal9',
+      label: 'portfolioModal9Lbabel',
+      src: 'portfolio/amatller.jpg',
+      alt: 'casa museu amatller page',
+      p1: 'Worked on Casa Museu Amatller webpage made with Wordpress.',
+      link1: 'https://amatller.org/',
+      host: 'Casa Museu Amatller',
+    },
+    // modal 10 ~new
+    modal10: {
       title: 'Culex',
-      target: '#portfolioModal8',
-      id: 'portfolioModal8',
-      label: 'portfolioModal8Lbabel',
+      target: '#portfolioModal10',
+      id: 'portfolioModal10',
+      label: 'portfolioModal10Lbabel',
       src: 'portfolio/culex.png',
       alt: 'culex github repo',
       p1:
@@ -219,7 +243,8 @@ export let store = {
     required3: 'Please leave a message',
     required4: 'Please tick the checkbox above',
     match1: 'Your name must have more than 1 letter',
-    match2: 'Your email must comply with the structure "account@some-email.domain"',
+    match2:
+      'Your email must comply with the structure "account@some-email.domain"',
     match3: 'Your message must have mimimum 10 letters',
   },
   // lgpd

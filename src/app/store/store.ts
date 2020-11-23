@@ -63,11 +63,11 @@ export let store = {
         label: 'portfolioModal1Lbabel',
         src: 'portfolio/LFA.jpg',
         alt: 'Wordpress Candidature project',
-        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency.`,
+        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency. Made with Eementor and Yoast.`,
         link1: 'https://lluisfernandezala.cat/',
         type: 'A',
         host: 'https://lluisfernandezala.cat',
-        tech: ['wordpress'],
+        tech: ['wordpress', 'elementor', 'yoast', 'html', 'css', 'mariadb'],
       },
       // modal 2
       {
@@ -83,7 +83,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Github Pages',
-        tech: ['javascript', 'bootstrap', 'LESS'],
+        tech: ['javascript', 'html', 'LESS', 'bootstrap'],
       },
       // modal 3
       {
@@ -99,7 +99,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/ts-rockets',
         type: 'C',
         repo: 'Github',
-        tech: ['typescript'],
+        tech: ['typescript', 'html', 'css'],
       },
       // modal 4
       {
@@ -115,7 +115,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/joker',
         type: 'C',
         repo: 'Github',
-        tech: ['jquery', 'bootstrap', 'AJAX'],
+        tech: ['jquery', 'html', 'bootstrap', 'AJAX'],
       },
       // modal 5
       {
@@ -133,7 +133,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['javascript', 'SASS'],
+        tech: ['javascript', 'html', 'SASS'],
       },
       // modal 6
       {
@@ -151,11 +151,13 @@ export let store = {
         repo: 'Github',
         tech: [
           'typescript',
+          'html',
+          'SASS',
           'bootstrap',
           'AJAX',
           'leaflet',
-          'mariadb',
           'mysql',
+          'php',
         ],
       },
       // modal 7
@@ -193,7 +195,7 @@ export let store = {
           },
         ],
         type: 'D',
-        tech: ['javascript'],
+        tech: ['javascript', 'html', 'css'],
       },
       // modal 8
       {
@@ -210,7 +212,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['SASS'],
+        tech: ['html', 'SASS'],
       },
       // modal 9
       {
@@ -220,11 +222,12 @@ export let store = {
         label: 'portfolioModal9Lbabel',
         src: 'portfolio/amatller.jpg',
         alt: 'casa museu amatller page',
-        p1: 'Worked on Casa Museu Amatller webpage made with Wordpress.',
+        p1:
+          'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
         link1: 'https://amatller.org/',
         host: 'Casa Museu Amatller',
         type: 'A',
-        tech: ['wordpress'],
+        tech: ['wordpress', 'wp-backery', 'yoast', 'mariadb'],
       },
       // modal 10 ~new
       {
@@ -241,7 +244,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/culex.js',
         type: 'C',
         repo: 'Github',
-        tech: ['javascript', 'AJAX'],
+        tech: ['typescript', 'javascript', 'AJAX'],
       },
     ],
   },

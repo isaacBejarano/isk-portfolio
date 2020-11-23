@@ -25,7 +25,7 @@ export class ContactComponent implements OnInit, DoCheck {
   // hooks
   ngOnInit(): void {
     Shared.pageToTop(); // <- shared
-    store.setScrollShow = false; // scroller -> state false
+    store.setScrollShow = false; // scroller -> state:false
     this.createForm(); // reactive forms
   }
 

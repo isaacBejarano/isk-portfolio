@@ -1,10 +1,5 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import {
-  FormGroup,
-  FormBuilder,
-  Validators,
-  FormControl,
-} from '@angular/forms';
+import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 import { ApiService } from '../../services/api.service';
@@ -66,26 +61,24 @@ export class ContactComponent implements OnInit, DoCheck {
   send(): void {
     // onsubmit
     if (this.form.valid) {
-      // DISABLE CIRCULAR FORM OBJECT before HttpClient methods!
-      // just by reseting the FormGroup instance, aka form
-      const body: any = {
-        submited: this.form.get('submited'),
-        name: this.form.get('name'),
-        email: this.form.get('email'),
-        msg: this.form.get('msg'),
-        lgpd: this.form.get('lgpd'),
-      };
-
-      console.log('SUBMITING...', this.form);
+      console.log(
+        '[disable.console.log in production] -> SUBMITING ...',
+        this.form.value
+      );
 
       // POST
-      this.apiService.postOne(body).subscribe((user) => console.log('POSTED'));
+      this.apiService
+        .postOne(this.form.value)
+        .subscribe((user) =>
+          console.log('[disable.console.log in production] -> POSTED: ', user)
+        );
+      // this.apiService.postOne(this.form.value).subscribe((user) => user);
 
       // clean form
       this.form.reset();
+      this.disabled = false; // .btn-danger
     } else {
       this.disabled = true; // .btn-danger
-      // this.validateAllOnSubmit(this.form);
       return Object.values(this.form.controls).forEach((control) =>
         control.markAsTouched()
       );
@@ -154,19 +147,4 @@ export class ContactComponent implements OnInit, DoCheck {
 
     return errorType;
   }
-  // validateAllOnSubmit(form: FormGroup): void {
-  // const forControls = Object.keys(form.controls); // 'name', 'email', 'msg', 'lgpg'
-
-  // for (const key of forControls) {
-  //   //
-  //   const control = form.get(key);
-
-  //   if (control instanceof FormControl) {
-  //     control.markAsTouched({ onlySelf: true });
-  //   } else if (control instanceof FormGroup) {
-  //     this.validateAllOnSubmit(control); // recursion
-  //   }
-  // }
-
-  // }
 }

@@ -11,6 +11,7 @@ export class PortfolioItemComponent {
     target: string;
     src: string;
     alt: string;
+    tech: string[];
     // ...
   };
 

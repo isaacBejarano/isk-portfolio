@@ -67,6 +67,7 @@ export let store = {
         link1: 'https://lluisfernandezala.cat/',
         type: 'A',
         host: 'https://lluisfernandezala.cat',
+        tech: ['wordpress'],
       },
       // modal 2
       {
@@ -82,6 +83,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Github Pages',
+        tech: ['javascript', 'bootstrap', 'LESS'],
       },
       // modal 3
       {
@@ -97,6 +99,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/ts-rockets',
         type: 'C',
         repo: 'Github',
+        tech: ['typescript'],
       },
       // modal 4
       {
@@ -112,6 +115,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/joker',
         type: 'C',
         repo: 'Github',
+        tech: ['jquery', 'bootstrap', 'AJAX'],
       },
       // modal 5
       {
@@ -129,6 +133,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
+        tech: ['javascript', 'SASS'],
       },
       // modal 6
       {
@@ -144,6 +149,14 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/leaflet_filtres',
         type: 'C',
         repo: 'Github',
+        tech: [
+          'typescript',
+          'bootstrap',
+          'AJAX',
+          'leaflet',
+          'mariadb',
+          'mysql',
+        ],
       },
       // modal 7
       {
@@ -180,6 +193,7 @@ export let store = {
           },
         ],
         type: 'D',
+        tech: ['javascript'],
       },
       // modal 8
       {
@@ -196,6 +210,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
+        tech: ['SASS'],
       },
       // modal 9
       {
@@ -209,6 +224,7 @@ export let store = {
         link1: 'https://amatller.org/',
         host: 'Casa Museu Amatller',
         type: 'A',
+        tech: ['wordpress'],
       },
       // modal 10 ~new
       {
@@ -225,6 +241,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/culex.js',
         type: 'C',
         repo: 'Github',
+        tech: ['javascript', 'AJAX'],
       },
     ],
   },

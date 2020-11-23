@@ -11,4 +11,16 @@
     </div>
   </div>
   <img class="img-fluid" src="assets/img/{{ item.src }}" [alt]="item.alt" />
+
+  <!-- web tech icons -->
+  <div class="tech-icons border border-secondary border-top bg-light">
+    <img
+      *ngFor="let tech of item.tech"
+      src="../../../../assets/img/portfolio/{{ tech }}.png"
+      alt="web tech"
+      width="auto"
+      height="30"
+      class="border border-light bg-light p-1 rounded"
+    />
+  </div>
 </div>

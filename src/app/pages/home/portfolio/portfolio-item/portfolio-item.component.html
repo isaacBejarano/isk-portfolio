@@ -1,5 +1,5 @@
 <div
-  class="portfolio-item border border-dark mx-auto"
+  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
   data-toggle="modal"
   [attr.data-target]="item.target"
 >
@@ -13,7 +13,7 @@
   <img class="img-fluid" src="assets/img/{{ item.src }}" [alt]="item.alt" />
 
   <!-- web tech icons -->
-  <div class="tech-icons border border-secondary border-top bg-light">
+  <div class="tech-icons bg-light">
     <img
       *ngFor="let tech of item.tech"
       src="../../../../assets/img/portfolio/{{ tech }}.png"

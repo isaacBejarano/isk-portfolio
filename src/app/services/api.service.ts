@@ -7,7 +7,7 @@ import { IntContactForm } from '../interfaces/contact';
   providedIn: 'root',
 })
 export class ApiService {
-  api = 'https://jsonplaceholder.typicode.com'; // no headers, Open Database
+  api = 'https://jsonplaceholder.typicode.com'; // Open Database
   endpont = '/posts';
 
   constructor(private http: HttpClient) {}

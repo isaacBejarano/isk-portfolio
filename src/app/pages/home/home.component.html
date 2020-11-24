@@ -2,7 +2,25 @@
 <app-masterhead id="home"></app-masterhead>
 
 <!-- * Featured ~New * -->
-<app-featured id="new"></app-featured>
+<app-featured id="new" [new]="propNew">
+  <!-- CUSTOM - Portfolio Modal - Text -->
+  <p class="mb-5 text-justify">
+    {{ portfolioItems[portfolioItems.length - 1].p1 }}
+    {{ portfolioCommon.visit }}
+    <a
+      [href]="portfolioItems[portfolioItems.length - 1].link1"
+      rel="nofollow"
+      target="_blank"
+      (click)="openLink()"
+    >
+      {{ portfolioItems[portfolioItems.length - 1].repo }}
+    </a>
+    {{ portfolioCommon.star }}
+    <span class="text-gray"
+      >{{ portfolioItems[portfolioItems.length - 1].p2 }}
+    </span>
+  </p>
+</app-featured>
 
 <!-- * Potfolio * -->
 <app-portfolio id="portfolio"></app-portfolio>

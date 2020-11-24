@@ -11,7 +11,7 @@
       <h3
         class="page-section-heading text-center text-uppercase text-secondary mb-3"
       >
-        {{ portfolioItems[9].title }}
+        {{ portfolioItems[portfolioItems.length - 1].title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
         {{ new }}
@@ -40,8 +40,8 @@
           </div>
           <img
             class="border border-secondary img-fluid border rounded-lg"
-            src="assets/img/{{ portfolioItems[9].src }}"
-            [alt]="portfolioItems[9].alt"
+            src="assets/img/{{ portfolioItems[portfolioItems.length - 1].src }}"
+            [alt]="portfolioItems[portfolioItems.length - 1].alt"
           />
         </div>
       </div>
@@ -75,8 +75,9 @@
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
                     id="featuredModal"
                   >
-                    {{ portfolioItems[9].title }}
+                    {{ portfolioItems[portfolioItems.length - 1].title }}
                   </h2>
+                  
 
                   <!-- Icon Divider-->
                   <app-divider [color]="divider"></app-divider>
@@ -84,23 +85,15 @@
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border border-secondary rounded-sm img-fluid rounded mb-5"
-                    src="assets/img/{{ portfolioItems[9].src }}"
-                    [alt]="portfolioItems[9].alt"
+                    src="assets/img/{{
+                      portfolioItems[portfolioItems.length - 1].src
+                    }}"
+                    [alt]="portfolioItems[portfolioItems.length - 1].alt"
                   />
-                  <!-- Portfolio Modal - Text-->
-                  <p class="mb-5 text-justify">
-                    {{ portfolioItems[9].p1 }} {{ portfolioCommon.visit }}
-                    <a
-                      [href]="portfolioItems[9].link1"
-                      rel="nofollow"
-                      target="_blank"
-                      (click)="openLink()"
-                    >
-                      {{ portfolioItems[9].repo }}
-                    </a>
-                    {{ portfolioCommon.star }}
-                    <span class="text-gray">{{ portfolioItems[9].p2 }} </span>
-                  </p>
+
+                  <!-- CUSTOM - Portfolio Modal - Text -->
+                 <ng-content></ng-content>
+
                   <button class="btn btn-outline-dark" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>
                     Close

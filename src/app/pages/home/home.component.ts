@@ -6,6 +6,7 @@ import {
   OnDestroy,
 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
+import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 
 declare let jQuery: any; // ~jQuery Easing
@@ -16,13 +17,18 @@ declare let jQuery: any; // ~jQuery Easing
 })
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
-  portfolio = store.getPortfolio as object | any;
+  propNew = store.getNew as object | any; // featured ~new
+  portfolioItems = store.getPortfolioItems as object | any; // common + modal8
+  portfolioCommon = store.getPortfolioCommon as object | any; // common + modal8
 
   constructor(
     //
     private activatedRoute: ActivatedRoute,
     private router: Router
   ) {}
+
+  // <- shared methods
+  openLink = Shared.openLink;
 
   // I) SCROLL Animation - JQuery plugin - Easing
   ngOnInit(): void {

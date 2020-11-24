@@ -229,7 +229,7 @@ export let store = {
         type: 'A',
         tech: ['wordpress', 'wp-backery', 'yoast', 'mariadb'],
       },
-      // modal 10 ~new
+      // modal 10 ~new === items[items.length-1]
       {
         title: 'Culex',
         target: '#portfolioModal10',
@@ -242,7 +242,7 @@ export let store = {
       to fetch JSON data from RESTful APIs.',
         p2: 'Disclaimer: the library is still in beta phase.',
         link1: 'https://github.com/isaacBejarano/culex.js',
-        type: 'C',
+        type: 'E',
         repo: 'Github',
         tech: ['typescript', 'javascript', 'AJAX'],
       },

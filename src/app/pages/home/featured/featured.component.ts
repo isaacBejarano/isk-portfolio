@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Shared } from '../../../utils/shared';
+import { Component, Input } from '@angular/core';
 import { store } from '../../../store/store';
 
 @Component({
@@ -10,13 +9,10 @@ import { store } from '../../../store/store';
 export class FeaturedComponent {
   // props to Input()
   divider = 'divider-dark';
+  @Input() new: string;
 
-  new = store.getNew as object | any; // featured ~new
   portfolioItems = store.getPortfolioItems as object | any; // common + modal8
   portfolioCommon = store.getPortfolioCommon as object | any; // common + modal8
-
-  // <- shared methods
-  openLink = Shared.openLink;
 
   constructor() {}
 }

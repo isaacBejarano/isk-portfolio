@@ -10,8 +10,9 @@ export let store = {
     hamburger: 'menu',
     page1: 'new',
     page2: 'portfolio',
-    page3: 'about',
-    page4: 'contact',
+    page3: 'skill set',
+    page4: 'about',
+    page5: 'contact',
   },
   // follow
   follow: {

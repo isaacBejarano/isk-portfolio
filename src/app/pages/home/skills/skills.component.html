@@ -11,17 +11,21 @@
     <app-divider [color]="divider"></app-divider>
 
     <!-- Tech Grid -->
-    <div id="skills-grid" class="p-3 mt-4 border text-left text-gray">
+    <div id="skills-grid" class="p-3 mt-4 text-left text-gray">
       <!-- JS -->
-      <div>
-        <h3 class="h4">JavaScript frameworks</h3>
+      <div class="mb-4">
+        <h3 class="h4">
+          <span class="text-custom-dark"> JavaScript </span>
+          frameworks
+        </h3>
         <ul class="p-2 pic-grid d-flex">
           <li class="p-1">
             <ng-template ngFor let-skill [ngForOf]="skillsJS">
               <img
+                class="m-2"
                 [src]="skill[1]"
                 data-toggle="tooltip"
-                data-placement="top"
+                data-placement="bottom"
                 [title]="skill[0]"
                 alt="skill[0]"
               />
@@ -31,15 +35,19 @@
       </div>
 
       <!-- CSS -->
-      <div>
-        <h3 class="h4">CSS frameworks and preprocessors</h3>
+      <div class="mb-4">
+        <h3 class="h4">
+          <span class="text-custom-dark"> CSS </span>
+          frameworks and preprocessors
+        </h3>
         <ul class="p-2 pic-grid d-flex">
           <li class="p-1">
             <ng-template ngFor let-skill [ngForOf]="skillsCSS">
               <img
+                class="m-2"
                 [src]="skill[1]"
                 data-toggle="tooltip"
-                data-placement="top"
+                data-placement="bottom"
                 [title]="skill[0]"
                 alt="skill[0]"
               />
@@ -48,16 +56,20 @@
         </ul>
       </div>
 
-	  <!-- DB -->
-      <div>
-        <h3 class="h4">Database Management Systems</h3>
+      <!-- DB -->
+      <div class="mb-4">
+        <h3 class="h4">
+          <span class="text-custom-dark"> Database </span>
+          Management Systems
+        </h3>
         <ul class="p-2 pic-grid d-flex">
           <li class="p-1">
             <ng-template ngFor let-skill [ngForOf]="skillsDB">
               <img
+                class="m-2"
                 [src]="skill[1]"
                 data-toggle="tooltip"
-                data-placement="top"
+                data-placement="bottom"
                 [title]="skill[0]"
                 alt="skill[0]"
               />

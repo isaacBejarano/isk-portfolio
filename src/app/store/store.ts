@@ -251,19 +251,26 @@ export let store = {
   },
   // skill set
   skills: {
+    lang: [
+      ['JavaScript - ES6', './assets/img/skills/angular.png'],
+      ['Node.js', './assets/img/skills/vue.png'],
+      ['PHP', './assets/img/skills/express.png'],
+      ['SQL', './assets/img/skills/express.png'],
+    ],
     JS: [
-      ['angular', './assets/img/skills/angular.png'],
-      ['vue', './assets/img/skills/vue.png'],
+      ['Angular', './assets/img/skills/angular.png'],
+      ['Vue', './assets/img/skills/vue.png'],
+      ['Express', './assets/img/skills/express.png'],
     ],
     CSS: [
       ['SASS', './assets/img/skills/SASS.png'],
       ['LESS', './assets/img/skills/LESS.png'],
-      ['bootstrap', './assets/img/skills/bootstrap.png'],
+      ['Bootstrap', './assets/img/skills/bootstrap.png'],
     ],
     DB: [
-      ['maria', './assets/img/skills/mariadb.png'],
-      ['mysql', './assets/img/skills/mysql.png']
-      // ['mongo', './assets/img/skills/mongo.png'],
+      ['Maria DB', './assets/img/skills/mariadb.png'],
+      ['MySQL', './assets/img/skills/mysql.png'],
+      ['Mongo DB', './assets/img/skills/mongodb.png']
     ],
   },
   // about

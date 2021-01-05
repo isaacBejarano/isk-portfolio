@@ -39,6 +39,10 @@ a:not(.nav-link) {
   color: $custom !important;
 }
 
+.text-custom-dark {
+  color: $custom-bg !important;
+}
+
 body .bg-primary {
   background-color: desaturate($custom, 30) !important;
 }

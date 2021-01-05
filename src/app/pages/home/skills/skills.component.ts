@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { store } from '../../../store/store';
 
-// declare var $: JQuery;
+declare let $: any; // fixes B4 tooltip() type conflict
 
 @Component({
   selector: 'app-skills',

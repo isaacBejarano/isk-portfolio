@@ -63,7 +63,7 @@ export let store = {
         label: 'portfolioModal1Lbabel',
         src: 'portfolio/LFA.jpg',
         alt: 'Wordpress Candidature project',
-        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency. Made with Eementor and Yoast.`,
+        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency. Made with Elementor and Yoast.`,
         link1: 'https://lluisfernandezala.cat/',
         type: 'A',
         host: 'https://lluisfernandezala.cat',

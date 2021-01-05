@@ -25,6 +25,7 @@ import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/
 import { DividerComponent } from './shared/divider/divider.component';
 // services
 import { HttpClientModule } from '@angular/common/http';
+import { SkillsComponent } from './pages/home/skills/skills.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     PortfolioItemComponent,
     PortfolioModalComponent,
     DividerComponent,
+    SkillsComponent,
   ],
   imports: [
     BrowserModule,

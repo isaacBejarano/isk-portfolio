@@ -1,0 +1,15 @@
+// @import "../../../../sass/globals";
+
+.pic-grid {
+  // outline: 1px solid red;
+  list-style-type: none;
+  li {
+    img {
+      width: 80px;
+      &:hover {
+        cursor: pointer;
+        // background-color: darken($white, 10%);
+      }
+    }
+  }
+}

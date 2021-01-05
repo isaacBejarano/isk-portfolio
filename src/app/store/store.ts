@@ -10,7 +10,7 @@ export let store = {
     hamburger: 'menu',
     page1: 'new',
     page2: 'portfolio',
-    page3: 'skill set',
+    page3: 'skills',
     page4: 'about',
     page5: 'contact',
   },
@@ -249,6 +249,23 @@ export let store = {
       },
     ],
   },
+  // skill set
+  skills: {
+    JS: [
+      ['angular', './assets/img/skills/angular.png'],
+      ['vue', './assets/img/skills/vue.png'],
+    ],
+    CSS: [
+      ['SASS', './assets/img/skills/SASS.png'],
+      ['LESS', './assets/img/skills/LESS.png'],
+      ['bootstrap', './assets/img/skills/bootstrap.png'],
+    ],
+    DB: [
+      ['maria', './assets/img/skills/mariadb.png'],
+      ['mysql', './assets/img/skills/mysql.png']
+      // ['mongo', './assets/img/skills/mongo.png'],
+    ],
+  },
   // about
   about: {
     title: 'about me',
@@ -442,6 +459,15 @@ export let store = {
   },
   get getPortfolioCommon(): object[] {
     return this.portfolio.common;
+  },
+  get getSkillsJS(): object {
+    return this.skills.JS;
+  },
+  get getSkillsCSS(): object {
+    return this.skills.CSS;
+  },
+  get getSkillsDB(): object {
+    return this.skills.DB;
   },
   get getAbout(): object {
     return this.about;

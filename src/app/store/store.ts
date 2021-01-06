@@ -252,26 +252,69 @@ export let store = {
   // skill set
   skills: {
     lang: [
-      ['JavaScript - ES6', './assets/img/skills/angular.png'],
-      ['Node.js', './assets/img/skills/vue.png'],
-      ['PHP', './assets/img/skills/express.png'],
-      ['SQL', './assets/img/skills/express.png'],
+      ['HTML', './assets/img/skills/html.png'],
+      ['CSS', './assets/img/skills/css.png'],
+      ['JavaScript / ES6', './assets/img/skills/javascript.png'],
+      ['TypeScript', './assets/img/skills/typescript.png'],
+      ['Node.js', './assets/img/skills/node.png'],
+      ['PHP', './assets/img/skills/php.png'],
     ],
     JS: [
       ['Angular', './assets/img/skills/angular.png'],
       ['Vue', './assets/img/skills/vue.png'],
       ['Express', './assets/img/skills/express.png'],
+      ['jQuery', './assets/img/skills/jquery.png'],
+      ['Leaflet', './assets/img/skills/leaflet.png'],
     ],
+    PHP: [['Laravel', './assets/img/skills/laravel.png']],
     CSS: [
+      ['Bootstrap', './assets/img/skills/bootstrap.png'],
+      ['Bulma', './assets/img/skills/bulma.png'],
+      ['PureCSS', './assets/img/skills/pureCSS.png'],
       ['SASS', './assets/img/skills/SASS.png'],
       ['LESS', './assets/img/skills/LESS.png'],
-      ['Bootstrap', './assets/img/skills/bootstrap.png'],
     ],
     DB: [
       ['Maria DB', './assets/img/skills/mariadb.png'],
       ['MySQL', './assets/img/skills/mysql.png'],
-      ['Mongo DB', './assets/img/skills/mongodb.png']
+      ['Mongo DB', './assets/img/skills/mongodb.png'],
     ],
+    techniques: [
+      ['AJAX', './assets/img/skills/AJAX.png'],
+      ['REST', './assets/img/skills/REST.png'],
+      ['JSON', './assets/img/skills/JSON.png'],
+    ],
+    packages: [
+      ['Composer', './assets/img/skills/composer.png'],
+      ['Node Package Manager', './assets/img/skills/npm.png'],
+    ],
+    wp: [
+      ['Wordpress', './assets/img/skills/wordpress.png'],
+      ['WooCommerce', './assets/img/skills/woocommerce.png'],
+      ['Yoast', './assets/img/skills/yoast.png'],
+      ['Wordfence', './assets/img/skills/wordfence.png'],
+      ['Elementror', './assets/img/skills/elementor.png'],
+      ['Wp Backery', './assets/img/skills/wp-backery.png'],
+    ],
+    XaaS: [
+      ['Firebase', './assets/img/skills/firebase.png'],
+      ['Heroku', './assets/img/skills/heroku.png'],
+      ['Wordpress API REST', './assets/img/skills/wp-api-rest.png'],
+    ],
+    version: [
+      ['git', './assets/img/skills/git.png'],
+      ['GitHub', './assets/img/skills/github.png'],
+    ],
+    TDD: [
+      ['Karma', './assets/img/skills/karma.png'],
+      ['Jasmine', './assets/img/skills/jasmine.png'],
+      ['Jest', './assets/img/skills/jest.png'],
+    ],
+    state: [
+      ['ngRx', './assets/img/skills/ngRx.png'],
+      ['Vuex', './assets/img/skills/vuex.png'],
+    ],
+    webpack: [['Webpack', './assets/img/skills/webpack.png']],
   },
   // about
   about: {
@@ -467,14 +510,44 @@ export let store = {
   get getPortfolioCommon(): object[] {
     return this.portfolio.common;
   },
+  get getSkillsLang(): object {
+    return this.skills.lang;
+  },
   get getSkillsJS(): object {
     return this.skills.JS;
+  },
+  get getSkillsPHP(): object {
+    return this.skills.PHP;
   },
   get getSkillsCSS(): object {
     return this.skills.CSS;
   },
   get getSkillsDB(): object {
     return this.skills.DB;
+  },
+  get getTechniques(): object {
+    return this.skills.techniques;
+  },
+  get getPackages(): object {
+    return this.skills.packages;
+  },
+  get getWordpress(): object {
+    return this.skills.wp;
+  },
+  get getXaaS(): object {
+    return this.skills.XaaS;
+  },
+  get getGit(): object {
+    return this.skills.version;
+  },
+  get getTDD(): object {
+    return this.skills.TDD;
+  },
+  get getState(): object {
+    return this.skills.state;
+  },
+  get getWebpack(): object {
+    return this.skills.webpack;
   },
   get getAbout(): object {
     return this.about;

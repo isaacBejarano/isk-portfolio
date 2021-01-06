@@ -11,9 +11,19 @@ declare let $: any; // fixes B4 tooltip() type conflict
 export class SkillsComponent implements OnInit {
   divider = 'divider-dark'; // -> <app-divider> Input()
 
-  skillsJS = store.getSkillsJS as any;
-  skillsCSS = store.getSkillsCSS as any;
-  skillsDB = store.getSkillsDB as any;
+  skillsLang = store.getSkillsLang as object;
+  skillsJS = store.getSkillsJS as object;
+  skillsCSS = store.getSkillsCSS as object;
+  skillsPHP = store.getSkillsPHP as object;
+  skillsDB = store.getSkillsDB as object;
+  techniques = store.getTechniques as object;
+  packages = store.getPackages as object;
+  wordpress = store.getWordpress as object;
+  XaaS = store.getXaaS as object;
+  git = store.getGit as object;
+  TDD = store.getTDD as object;
+  state = store.getState as object;
+  webpack = store.getWebpack as object;
 
   constructor() {}
 

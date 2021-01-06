@@ -44,9 +44,9 @@ a:not(.nav-link) {
   color: $custom-bg !important;
 }
 
-// body .bg-primary {
-//   background-color: desaturate($custom, 30) !important;
-// }
+body .bg-primary {
+  background-color: desaturate($custom, 30) !important;
+}
 
 // B4 extra threming
 .bg-custom-dark {

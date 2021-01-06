@@ -291,7 +291,7 @@ export let store = {
     wp: [
       ['Wordpress', './assets/img/skills/wordpress.png'],
       ['WooCommerce', './assets/img/skills/woocommerce.png'],
-      ['Yoast', './assets/img/skills/yoast.png'],
+      ['Yoast SEO', './assets/img/skills/yoast.png'],
       ['Wordfence', './assets/img/skills/wordfence.png'],
       ['Elementror', './assets/img/skills/elementor.png'],
       ['Wp Backery', './assets/img/skills/wp-backery.png'],

@@ -1,7 +1,4 @@
-// @import "../../../../sass/globals";
-
 .pic-grid {
-  // outline: 1px solid red;
   list-style-type: none;
   li {
     img {
@@ -11,4 +8,8 @@
       }
     }
   }
+}
+
+.max-width-lg {
+  max-width: 568px;
 }

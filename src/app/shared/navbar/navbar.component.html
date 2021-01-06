@@ -3,7 +3,11 @@
   <div class="container">
     <!-- We dont' use routerLink here so JQuery Animation can work in home.component -->
     <!-- <a class="navbar-brand js-scroll-trigger" [routerLink]="/"> -->
-    <a class="navbar-brand js-scroll-trigger" [href]="hashIt(navbar.home)">
+    <a
+      class="navbar-brand js-scroll-trigger"
+      [href]="hashIt(navbar.home)"
+      rel="nofollow noreferrer"
+    >
       <img [src]="navbar.src" [alt]="navbar.alt" />
       <span> {{ capitalLetter(navbar.home) }} </span>
     </a>
@@ -25,6 +29,7 @@
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page1)"
+            rel="nofollow noreferrer"
             >{{ navbar.page1 }}
           </a>
         </li>
@@ -32,6 +37,7 @@
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page2)"
+            rel="nofollow noreferrer"
             >{{ navbar.page2 }}</a
           >
         </li>
@@ -39,6 +45,7 @@
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page3)"
+            rel="nofollow noreferrer"
             >{{ navbar.page3 }}</a
           >
         </li>
@@ -47,6 +54,7 @@
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [routerLink]="navbar.page4"
             routerLinkActive="active"
+            rel="nofollow noreferrer"
             >{{ navbar.page4 }}</a
           >
         </li>
@@ -55,6 +63,7 @@
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [routerLink]="navbar.page5"
             routerLinkActive="active"
+            rel="nofollow noreferrer"
             >{{ navbar.page5 }}</a
           >
         </li>

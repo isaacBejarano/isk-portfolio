@@ -224,6 +224,7 @@ export let store = {
         type: 'A',
         tech: ['wordpress', 'wp-backery', 'yoast', 'mariadb'],
       },
+      // modal 10
       {
         title: 'Culex',
         target: '#portfolioModal10',
@@ -239,12 +240,58 @@ export let store = {
         repo: 'Github',
         tech: ['typescript', 'javascript', 'AJAX'],
       },
-      // modal 11 ~new === items[items.length-1]
+      // modal 11
       {
-        title: 'Vue 3.0 + VueX',
+        title: 'MontPicolis',
         target: '#portfolioModal11',
         id: 'portfolioModal11',
         label: 'portfolioModal11Lbabel',
+        src: 'portfolio/montpicolis.png',
+        alt: 'montpicolis wine cellars page',
+        p1: 'Winary eCommerce made with Angular and the WordPress REST API [under construction].',
+        link1: 'http://www.montpicolis.cat/',
+        host: 'MontPicolis',
+        type: 'A',
+        tech: [
+          'angular',
+          'SASS',
+          'REST',
+          'wordpress',
+          'wp-rest-api',
+          'yoast',
+          'wordfence',
+          'mariadb',
+        ],
+      },
+      // modal 12
+      {
+        title: 'DeVerdi',
+        target: '#portfolioModal12',
+        id: 'portfolioModal12',
+        label: 'portfolioModal12Lbabel',
+        src: 'portfolio/deverdi.png',
+        alt: 'casa museu amatller page',
+        p1: 'Refactoring and Redesigning a fashion clothing dropshipping webapp made with Angular and the WordPress REST API [under construction].',
+        link1: 'https://www.de-verdi.com/',
+        host: 'DeVerdi',
+        type: 'A',
+        tech: [
+          'angular',
+          'SASS',
+          'REST',
+          'wordpress',
+          'wp-rest-api',
+          'yoast',
+          'wordfence',
+          'mariadb',
+        ],
+      },
+      // modal 13 ~new === items[items.length-1]
+      {
+        title: 'Vue 3.0 + VueX',
+        target: '#portfolioModal13',
+        id: 'portfolioModal13',
+        label: 'portfolioModal13Lbabel',
         src: 'portfolio/vue_vuex.png',
         alt: 'vue 3.0 and vuex github repo',
         p1: 'Practice on Vue 3.0 component state management with Vuex. \
@@ -256,7 +303,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'my Portfolio',
-        tech: ['vue', 'typescript', 'SASS'],
+        tech: ['vue', 'vuex', 'typescript', 'SASS'],
       },
     ],
   },
@@ -310,7 +357,7 @@ export let store = {
     XaaS: [
       ['Firebase', './assets/img/skills/firebase.png'],
       ['Heroku', './assets/img/skills/heroku.png'],
-      ['Wordpress API REST', './assets/img/skills/wp-api-rest.png'],
+      ['Wordpress API REST', './assets/img/skills/wp-rest-api.png'],
     ],
     version: [
       ['git', './assets/img/skills/git.png'],

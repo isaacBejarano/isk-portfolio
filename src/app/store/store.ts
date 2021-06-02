@@ -28,7 +28,7 @@ export let store = {
     link1: 'https://angular.io',
     link2: 'https://startbootstrap.com/previews/freelancer/',
     license: 'MIT',
-    copyright: 'Isaac Bejarano 2020',
+    copyright: 'Isaac Bejarano 2021',
   },
   // scroll
   scroll: {

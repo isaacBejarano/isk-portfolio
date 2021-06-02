@@ -20,10 +20,10 @@ export class ContactComponent implements OnInit, DoCheck {
 
   // hooks
   ngOnInit(): void {
-    // FIXME: remove alert when email in server enabled
-    alert(
-      'this contact form is still NOT IMPLEMENTED. It will NOT send any message to Isaac Bejarano. That functionality will be available soon.'
-    );
+    // FIXME: remove alert when email in server enabled + implement API service for email
+    // alert(
+    //   'this contact form is still NOT IMPLEMENTED. It will NOT send any message to Isaac Bejarano. That functionality will be available soon.'
+    // );
 
     Shared.pageToTop(); // <- shared
     store.setScrollShow = false; // scroller -> state:false

@@ -26,6 +26,7 @@ import { DividerComponent } from './shared/divider/divider.component';
 // services
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './pages/home/skills/skills.component';
+import { ReversePipe } from './pipes/reverse.pipe';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { SkillsComponent } from './pages/home/skills/skills.component';
     PortfolioModalComponent,
     DividerComponent,
     SkillsComponent,
+    ReversePipe,
   ],
   imports: [
     BrowserModule,

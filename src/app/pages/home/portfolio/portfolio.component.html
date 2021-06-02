@@ -10,9 +10,16 @@
     <!-- Icon Divider -->
     <app-divider [color]="divider"></app-divider>
 
+    <h3 class="text-white text-center font-weight-lighter mb-5">
+      newest first
+    </h3>
+
     <!-- Portfolio Grid Items -->
     <div class="row">
-      <div *ngFor="let item of portfolioItems" class="col-md-6 col-lg-4 mb-5">
+      <div
+        *ngFor="let item of portfolioItems | reverse"
+        class="col-md-6 col-lg-4 mb-5"
+      >
         <app-portfolio-item [item]="item"></app-portfolio-item>
       </div>
     </div>

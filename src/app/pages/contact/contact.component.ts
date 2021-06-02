@@ -16,11 +16,7 @@ export class ContactComponent implements OnInit, DoCheck {
   contact = store.getContact as object | any;
   form: FormGroup;
 
-  constructor(
-    // dependency injection
-    private fb: FormBuilder,
-    private apiService: ApiService
-  ) {}
+  constructor(private fb: FormBuilder, private apiService: ApiService) {}
 
   // hooks
   ngOnInit(): void {

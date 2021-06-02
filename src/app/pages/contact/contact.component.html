@@ -145,9 +145,9 @@
                 type="submit"
                 name="submited"
                 value="valid"
-                [disabled]="disabled && !submitable"
                 [class.btn-outline-dark]="!disabled || submitable"
                 [class.btn-danger]="disabled && !submitable"
+                [disabled]="disabled && !submitable"
               >
                 Send
               </button>

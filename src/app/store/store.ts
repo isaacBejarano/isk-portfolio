@@ -40,10 +40,10 @@ export let store = {
     src: './assets/img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
-    title: 'Web Developer - Full Stack - MEAN - LAMP',
+    title: 'Web Developer - Frontend',
   },
   // featured ~new
-  new: 'ES5 library to make HTTP requests',
+  new: "Vue 3.0 component's state management with Vuex",
   // portfolio
   portfolio: {
     // common
@@ -94,8 +94,7 @@ export let store = {
         label: 'portfolioModal3Lbabel',
         src: 'portfolio/rockets.png',
         alt: 'Typescript project',
-        p1:
-          'UI made with Typescript to create rockets and thrusters.\
+        p1: 'UI made with Typescript to create rockets and thrusters.\
         Object Oriented Programmmig (OOP).',
         link1: 'https://github.com/isaacBejarano/ts-rockets',
         type: 'C',
@@ -110,8 +109,7 @@ export let store = {
         label: 'portfolioModal4Lbabel',
         src: 'portfolio/joker.png',
         alt: 'AJAX + JQuery project',
-        p1:
-          'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
+        p1: 'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
         Made with JQuery.',
         link1: 'https://github.com/isaacBejarano/joker',
         type: 'C',
@@ -126,8 +124,7 @@ export let store = {
         label: 'portfolioModal5Lbabel',
         src: 'portfolio/beers.png',
         alt: 'Javascript project',
-        p1:
-          'UI for rating. It uses SASS and scalable algorithms to persist\
+        p1: 'UI for rating. It uses SASS and scalable algorithms to persist\
         ":hover" and ":active" pseudo-classes.',
         link1: 'https://github.com/isaacBejarano/rating-beers',
         link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
@@ -144,8 +141,7 @@ export let store = {
         label: 'portfolioModal6Lbabel',
         src: 'portfolio/restopolitan.png',
         alt: 'Leaflet project',
-        p1:
-          'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
+        p1: 'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
         Made with JQuery.',
         link1: 'https://github.com/isaacBejarano/leaflet_filtres',
         type: 'C',
@@ -206,8 +202,7 @@ export let store = {
         label: 'portfolioModal8Lbabel',
         src: 'portfolio/stripes.png',
         alt: 'SASS project',
-        p1:
-          'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
+        p1: 'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
         link1: 'https://github.com/isaacBejarano/sass-stripes',
         link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
         type: 'B',
@@ -223,14 +218,12 @@ export let store = {
         label: 'portfolioModal9Lbabel',
         src: 'portfolio/amatller.jpg',
         alt: 'casa museu amatller page',
-        p1:
-          'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
+        p1: 'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
         link1: 'https://amatller.org/',
         host: 'Casa Museu Amatller',
         type: 'A',
         tech: ['wordpress', 'wp-backery', 'yoast', 'mariadb'],
       },
-      // modal 10 ~new === items[items.length-1]
       {
         title: 'Culex',
         target: '#portfolioModal10',
@@ -238,14 +231,32 @@ export let store = {
         label: 'portfolioModal10Lbabel',
         src: 'portfolio/culex.png',
         alt: 'culex github repo',
-        p1:
-          'Culex.js is an easy-to-use and lightweight ES5 library \
+        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
       to fetch JSON data from RESTful APIs.',
         p2: 'Disclaimer: the library is still in beta phase.',
         link1: 'https://github.com/isaacBejarano/culex.js',
         type: 'E',
         repo: 'Github',
         tech: ['typescript', 'javascript', 'AJAX'],
+      },
+      // modal 11 ~new === items[items.length-1]
+      {
+        title: 'Vue 3.0 + VueX',
+        target: '#portfolioModal11',
+        id: 'portfolioModal11',
+        label: 'portfolioModal11Lbabel',
+        src: 'portfolio/vue_vuex.png',
+        alt: 'vue 3.0 and vuex github repo',
+        p1: 'Practice on Vue 3.0 component state management with Vuex. \
+          Example on how state-driven communication with Vuex \
+          can replace props-and-event-driven communication. \
+          ',
+        link1: 'https://github.com/isaacBejarano/vuex-counter-example',
+        link2: './vuex-counter/',
+        type: 'B',
+        repo: 'Github',
+        host: 'my Portfolio',
+        tech: ['vue', 'typescript', 'SASS'],
       },
     ],
   },
@@ -320,24 +331,19 @@ export let store = {
   about: {
     title: 'about me',
     hello: `Hi, I'm Isaac.`,
-    p1a:
-      'I used to work in audiovisual postproduction and\
+    p1a: 'I used to work in audiovisual postproduction and\
     I was pretty dexterous at image manipulation with',
     p1b: 'Photoshop',
-    p1c:
-      'but I felt it would be useful to boost my designer skills.\
+    p1c: 'but I felt it would be useful to boost my designer skills.\
     Taking into account that the majority of media design we consume today is on screen,\
     I decided to join the neverending exciting web developement world.',
-    p2a:
-      'I easily fell in love with HTML and CSS, and programming quickly got my attention.\
+    p2a: 'I easily fell in love with HTML and CSS, and programming quickly got my attention.\
     I suddenly remembered those days when',
     p2b: 'I was 12 year old and I was coding Pascal',
-    p2c:
-      'extracurricularwise, making humble text editors in Delphi.\
+    p2c: 'extracurricularwise, making humble text editors in Delphi.\
     Thus I reconnected to my inner-coder and my need of deepening in JavaScript and\
     Object Oriented Programming quickly became addictive.',
-    p3a:
-      'Having gained specialized training after completing the Frontend bootcamp at',
+    p3a: 'Having gained specialized training after completing the Frontend bootcamp at',
     p3link:
       'https://cibernarium.barcelonactiva.cat/es/ficha-actividad?activityId=1002836',
     p3linkText: 'IT Academy Barcelona',

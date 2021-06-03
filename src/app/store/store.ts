@@ -68,23 +68,7 @@ export let store = {
         link1: 'https://amatller.org/',
         host: 'Casa Museu Amatller',
         type: 'A',
-        tech: ['wordpress', 'wp-backery', 'yoast', 'mariadb'],
-      },
-      // modal 10
-      {
-        title: 'Culex',
-        target: '#portfolioModal10',
-        id: 'portfolioModal10',
-        label: 'portfolioModal10Lbabel',
-        src: 'portfolio/culex.png',
-        alt: 'culex github repo',
-        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
-      to fetch JSON data from RESTful APIs.',
-        p2: 'Disclaimer: the library is still in beta phase.',
-        link1: 'https://github.com/isaacBejarano/culex.js',
-        type: 'E',
-        repo: 'Github',
-        tech: ['javascript', 'AJAX'],
+        tech: ['wordpress'],
       },
       // modal 7
       {
@@ -121,7 +105,23 @@ export let store = {
           },
         ],
         type: 'D',
-        tech: ['javascript', 'html', 'css'],
+        tech: ['javascript', 'html'],
+      },
+      // modal 10
+      {
+        title: 'Culex',
+        target: '#portfolioModal10',
+        id: 'portfolioModal10',
+        label: 'portfolioModal10Lbabel',
+        src: 'portfolio/culex.png',
+        alt: 'culex github repo',
+        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
+      to fetch JSON data from RESTful APIs.',
+        p2: 'Disclaimer: the library is still in beta phase.',
+        link1: 'https://github.com/isaacBejarano/culex.js',
+        type: 'E',
+        repo: 'Github',
+        tech: ['javascript', 'AJAX'],
       },
       // modal 4
       {
@@ -151,7 +151,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/leaflet_filtres',
         type: 'C',
         repo: 'Github',
-        tech: ['typescript', 'bootstrap', 'leaflet', 'php', 'mysql'],
+        tech: ['typescript', 'leaflet', 'php', 'mariadb'],
       },
       // modal 8
       {
@@ -167,7 +167,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['html', 'SASS'],
+        tech: ['SASS'],
       },
       // modal 5
       {
@@ -184,7 +184,7 @@ export let store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['javascript', 'html', 'SASS'],
+        tech: ['javascript', 'css'],
       },
       // modal 2
       {
@@ -215,7 +215,7 @@ export let store = {
         link1: 'https://github.com/isaacBejarano/ts-rockets',
         type: 'C',
         repo: 'Github',
-        tech: ['typescript', 'html', 'css'],
+        tech: ['typescript', 'css'],
       },
       // modal 1
       {
@@ -229,7 +229,7 @@ export let store = {
         link1: 'https://lluisfernandezala.cat/',
         type: 'A',
         host: 'https://lluisfernandezala.cat',
-        tech: ['wordpress', 'elementor', 'html', 'css'],
+        tech: ['wordpress'],
       },
       // modal 11
       {
@@ -246,7 +246,6 @@ export let store = {
         tech: [
           'angular',
           'SASS',
-          'REST',
           'wordpress',
           'wp-rest-api',
           'woocommerce',
@@ -267,7 +266,6 @@ export let store = {
         tech: [
           'angular',
           'SASS',
-          'REST',
           'wordpress',
           'wp-rest-api',
           'woocommerce',

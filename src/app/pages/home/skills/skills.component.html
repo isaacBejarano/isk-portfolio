@@ -106,6 +106,91 @@
         </ul>
       </div>
 
+      <!-- State Management -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark"> State Management </span>
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="state">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Version Control -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark"> Version Control </span>
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="git">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <!-- PaaS / BaaS -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark">BaaS</span>
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="XaaS">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <!-- CMS -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark"> CMS: </span>
+          Wordpress Ecosystem
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="wordpress">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
       <!-- DB -->
       <div class="mb-5">
         <h3 class="h4">
@@ -127,27 +212,6 @@
           </li>
         </ul>
       </div>
-
-      <!-- PaaS / BaaS / CaaS -->
-      <!-- <div class="mb-5">
-        <h3 class="h4">
-          <span class="text-custom-dark">BaaS / PaaS / CaaS</span>
-        </h3>
-        <ul class="p-0 mt-3 pic-grid d-flex">
-          <li>
-            <ng-template ngFor let-skill [ngForOf]="XaaS">
-              <img
-                class="mr-3 mb-3"
-                [src]="skill[1]"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                [title]="skill[0]"
-                [alt]="skill[0]"
-              />
-            </ng-template>
-          </li>
-        </ul>
-      </div> -->
 
       <!-- REST -->
       <div class="mb-5">
@@ -191,49 +255,6 @@
         </ul>
       </div>
 
-      <!-- CMS -->
-      <div class="mb-5">
-        <h3 class="h4">
-          <span class="text-custom-dark"> CMS: </span>
-          Wordpress Ecosystem
-        </h3>
-        <ul class="p-0 mt-3 pic-grid d-flex">
-          <li>
-            <ng-template ngFor let-skill [ngForOf]="wordpress">
-              <img
-                class="mr-3 mb-3"
-                [src]="skill[1]"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                [title]="skill[0]"
-                [alt]="skill[0]"
-              />
-            </ng-template>
-          </li>
-        </ul>
-      </div>
-
-      <!-- Version Control -->
-      <div class="mb-5">
-        <h3 class="h4">
-          <span class="text-custom-dark"> Version Control </span>
-        </h3>
-        <ul class="p-0 mt-3 pic-grid d-flex">
-          <li>
-            <ng-template ngFor let-skill [ngForOf]="git">
-              <img
-                class="mr-3 mb-3"
-                [src]="skill[1]"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                [title]="skill[0]"
-                [alt]="skill[0]"
-              />
-            </ng-template>
-          </li>
-        </ul>
-      </div>
-
       <!-- TDD / BDD -->
       <!-- <div class="mb-5">
         <h3 class="h4">
@@ -255,27 +276,6 @@
           </li>
         </ul>
       </div> -->
-
-      <!-- State Management -->
-      <div class="mb-5">
-        <h3 class="h4">
-          <span class="text-custom-dark"> State Management </span>
-        </h3>
-        <ul class="p-0 mt-3 pic-grid d-flex">
-          <li>
-            <ng-template ngFor let-skill [ngForOf]="state">
-              <img
-                class="mr-3 mb-3"
-                [src]="skill[1]"
-                data-toggle="tooltip"
-                data-placement="bottom"
-                [title]="skill[0]"
-                [alt]="skill[0]"
-              />
-            </ng-template>
-          </li>
-        </ul>
-      </div>
 
       <!-- Module Bundlers -->
       <!-- <div class="mb-5">
@@ -304,7 +304,8 @@
       class="
         page-section-heading
         text-center text-uppercase text-secondary
-        mt-5 pt-5
+        mt-5
+        pt-5
       "
     >
       BASIC SKILLS
@@ -430,7 +431,7 @@
       <!-- PaaS / BaaS -->
       <div class="mb-5">
         <h3 class="h4">
-          <span class="text-custom-dark">BaaS / PaaS</span>
+          <span class="text-custom-dark">PaaS</span>
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -556,7 +557,7 @@
       </div>
 
       <!-- State Management -->
-      <div class="mb-5">
+      <!-- <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> State Management </span>
         </h3>
@@ -574,7 +575,7 @@
             </ng-template>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- Module Bundlers -->
       <div class="mb-5">

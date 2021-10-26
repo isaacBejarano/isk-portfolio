@@ -1,5 +1,11 @@
 @import "../../../sass/globals";
 
+@media screen and (min-width: 768px) {
+  #contact {
+    height: 100vh;
+  }
+}
+
 .page-section .container {
   padding-top: 5rem;
 }

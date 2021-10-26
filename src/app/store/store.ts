@@ -43,7 +43,7 @@ export let store = {
     title: 'Web Developer - Frontend',
   },
   // featured ~new
-  new: "Vue 3.0 component's state management with Vuex",
+  new: 'Winary web app made with Angular',
   // portfolio
   portfolio: {
     // common
@@ -56,21 +56,23 @@ export let store = {
       dontforget: `Don't forget to see it live at`,
     },
     items: [
-      // modal 9
+      // modal 1
       {
-        title: 'Wordpress Page',
-        target: '#portfolioModal9',
-        id: 'portfolioModal9',
-        label: 'portfolioModal9Lbabel',
-        src: 'portfolio/amatller.jpg',
-        alt: 'casa museu amatller page',
-        p1: 'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
-        link1: 'https://amatller.org/',
-        host: 'Casa Museu Amatller',
-        type: 'A',
-        tech: ['wordpress'],
+        title: 'Culex',
+        target: '#portfolioModal10',
+        id: 'portfolioModal10',
+        label: 'portfolioModal10Lbabel',
+        src: 'portfolio/culex.png',
+        alt: 'culex github repo',
+        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
+      to fetch JSON data from RESTful APIs.',
+        p2: 'Disclaimer: the library is still in beta phase.',
+        link1: 'https://github.com/isaacBejarano/culex.js',
+        type: 'E',
+        repo: 'Github',
+        tech: ['javascript', 'AJAX'],
       },
-      // modal 7
+      // modal 2
       {
         title: 'JavaScript Algorithms',
         target: '#portfolioModal7',
@@ -107,22 +109,6 @@ export let store = {
         type: 'D',
         tech: ['javascript', 'html'],
       },
-      // modal 10
-      {
-        title: 'Culex',
-        target: '#portfolioModal10',
-        id: 'portfolioModal10',
-        label: 'portfolioModal10Lbabel',
-        src: 'portfolio/culex.png',
-        alt: 'culex github repo',
-        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
-      to fetch JSON data from RESTful APIs.',
-        p2: 'Disclaimer: the library is still in beta phase.',
-        link1: 'https://github.com/isaacBejarano/culex.js',
-        type: 'E',
-        repo: 'Github',
-        tech: ['javascript', 'AJAX'],
-      },
       // modal 4
       {
         title: 'JQuery + AJAX',
@@ -138,7 +124,7 @@ export let store = {
         repo: 'Github',
         tech: ['bootstrap', 'jquery', 'AJAX'],
       },
-      // modal 6
+      // modal 5
       {
         title: 'Leaflet + AJAX',
         target: '#portfolioModal6',
@@ -153,7 +139,7 @@ export let store = {
         repo: 'Github',
         tech: ['typescript', 'leaflet', 'php', 'mariadb'],
       },
-      // modal 8
+      // modal 6
       {
         title: 'SASS',
         target: '#portfolioModal8',
@@ -169,7 +155,7 @@ export let store = {
         host: 'Codepen',
         tech: ['SASS'],
       },
-      // modal 5
+      // modal 7
       {
         title: 'Javascript',
         target: '#portfolioModal5',
@@ -186,7 +172,7 @@ export let store = {
         host: 'Codepen',
         tech: ['javascript', 'css'],
       },
-      // modal 2
+      // modal 8
       {
         title: 'Responsive Bootstrap',
         target: '#portfolioModal2',
@@ -202,7 +188,8 @@ export let store = {
         host: 'Github Pages',
         tech: ['javascript', 'bootstrap', 'LESS'],
       },
-      // modal 3
+
+      // modal 9
       {
         title: 'Typescript',
         target: '#portfolioModal3',
@@ -217,7 +204,21 @@ export let store = {
         repo: 'Github',
         tech: ['typescript', 'css'],
       },
-      // modal 1
+      // modal 3
+      {
+        title: 'Wordpress Page',
+        target: '#portfolioModal9',
+        id: 'portfolioModal9',
+        label: 'portfolioModal9Lbabel',
+        src: 'portfolio/amatller.jpg',
+        alt: 'casa museu amatller page',
+        p1: 'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
+        link1: 'https://amatller.org/',
+        host: 'Casa Museu Amatller',
+        type: 'A',
+        tech: ['wordpress'],
+      },
+      // modal 10
       {
         title: 'Wordpress blog',
         target: '#portfolioModal1',
@@ -233,62 +234,45 @@ export let store = {
       },
       // modal 11
       {
-        title: 'MontPicolis',
-        target: '#portfolioModal11',
-        id: 'portfolioModal11',
-        label: 'portfolioModal11Lbabel',
-        src: 'portfolio/montpicolis.png',
-        alt: 'montpicolis wine cellars page',
-        p1: 'Winary eCommerce made with Angular and the WordPress REST API [under construction].',
-        link1: 'http://www.montpicolis.cat/',
-        host: 'MontPicolis',
-        type: 'A',
-        tech: [
-          'angular',
-          'SASS',
-          'wordpress',
-          'wp-rest-api',
-          'woocommerce',
-        ],
-      },
-      // modal 12
-      {
-        title: 'DeVerdi',
-        target: '#portfolioModal12',
-        id: 'portfolioModal12',
-        label: 'portfolioModal12Lbabel',
-        src: 'portfolio/deverdi.png',
-        alt: 'casa museu amatller page',
-        p1: 'Refactoring and Redesigning a fashion clothing dropshipping webapp made with Angular and the WordPress REST API [under construction].',
-        link1: 'https://www.de-verdi.com/',
-        host: 'DeVerdi',
-        type: 'A',
-        tech: [
-          'angular',
-          'SASS',
-          'wordpress',
-          'wp-rest-api',
-          'woocommerce',
-        ],
-      },
-      // modal 13 ~new === items[items.length-1]
-      {
         title: 'Vue 3.0 + VueX',
         target: '#portfolioModal13',
         id: 'portfolioModal13',
         label: 'portfolioModal13Lbabel',
         src: 'portfolio/vue_vuex.png',
         alt: 'vue 3.0 and vuex github repo',
-        p1: 'Practice on Vue 3.0 component state management with Vuex. \
-          Example on how state-driven communication with Vuex \
-          can replace props-and-event-driven communication. \
-          ',
-        link1: 'https://github.com/isaacBejarano/vuex-counter-example',
-        link2: './vuex-counter/',
+        p1: 'Live example of Vue 3.0 new features and classic cool ones,\
+        including VueX for state management, route guards, form validations and many more.',
+        link1: 'https://github.com/isaacBejarano/vue-spa',
+        link2: 'https://vue3-vuex-spa-app.netlify.app/',
         type: 'B',
         repo: 'Github',
-        host: 'my Portfolio',
-        tech: ['vue', 'vuex', 'typescript', 'SASS'],
+        host: 'Netlify',
+        tech: ['vue', 'vuex', 'typescript', 'SASS', 'netlify'],
+      },
+      // modal 12 ~new === items[items.length-1]
+      {
+        title: 'MontPicolis',
+        target: '#portfolioModal11',
+        id: 'portfolioModal11',
+        label: 'portfolioModal11Lbabel',
+        src: 'portfolio/montpicolis.png',
+        alt: 'montpicolis wine cellars page',
+        p1: 'SPA for a winary made with Angular, using a custom RxJS store for state management,\
+        with prerendered views made with Scully and consuming the WordPress REST API.\
+        It complies with the Jamstack architecture.',
+        link1: 'http://www.montpicolis.cat/',
+        link2: 'http://www.montpicolis.cat/',
+        host: 'MontPicolis',
+        type: 'A',
+        tech: [
+          'angular',
+          'rxjs',
+          'scully',
+          'SASS',
+          'wordpress',
+          'wp-rest-api',
+          'woocommerce',
+        ],
       },
     ],
   },
@@ -301,9 +285,10 @@ export let store = {
       ['TypeScript', './assets/img/skills/typescript.png'],
     ],
     JS: [
-      ['Angular', './assets/img/skills/angular.png'],
       ['Vue', './assets/img/skills/vue.png'],
-      ['Leaflet', './assets/img/skills/leaflet.png'],
+      ['Angular', './assets/img/skills/angular.png'],
+      ['RxJS', './assets/img/skills/rxjs.png'],
+      ['Scully', './assets/img/skills/scully.png'],
     ],
     CSS: [
       ['SASS', './assets/img/skills/SASS.png'],
@@ -325,18 +310,24 @@ export let store = {
       ['Wordpress', './assets/img/skills/wordpress.png'],
       ['Wordpress REST API', './assets/img/skills/wp-rest-api.png'],
       ['WooCommerce', './assets/img/skills/woocommerce.png'],
-      ['Yoast SEO', './assets/img/skills/yoast.png'],
-      ['Wordfence Security', './assets/img/skills/wordfence.png'],
-      ['Elementror Page  Builder', './assets/img/skills/elementor.png'],
-      ['Wp Backery Page  Builder', './assets/img/skills/wp-backery.png'],
+      // ['Yoast SEO', './assets/img/skills/yoast.png'],
+      // ['Wordfence Security', './assets/img/skills/wordfence.png'],
+      // ['Elementror Page  Builder', './assets/img/skills/elementor.png'],
+      // ['Wp Backery Page  Builder', './assets/img/skills/wp-backery.png'],
     ],
-    XaaS: [],
+    XaaS: [
+      ['Netlify', './assets/img/skills/netlify.png'],
+      ['Firebase', './assets/img/skills/firebase.png'],
+    ],
     version: [
       ['git', './assets/img/skills/git.png'],
       ['GitHub', './assets/img/skills/github.png'],
     ],
     TDD: [],
-    state: [['Vuex', './assets/img/skills/vuex.png']],
+    state: [
+      ['Vuex', './assets/img/skills/vuex.png'],
+      ['RxJS', './assets/img/skills/rxjs.png'],
+    ],
     webpack: [],
   },
   // basic skills
@@ -346,6 +337,7 @@ export let store = {
       ['PHP', './assets/img/skills/php.png'],
     ],
     JS: [
+      ['Leaflet', './assets/img/skills/leaflet.png'],
       ['Express', './assets/img/skills/express.png'],
       ['jQuery', './assets/img/skills/jquery.png'],
     ],
@@ -359,17 +351,14 @@ export let store = {
       // ['Composer', './assets/img/skills/composer.png'],
     ],
     wp: [],
-    XaaS: [
-      ['Firebase', './assets/img/skills/firebase.png'],
-      ['Heroku', './assets/img/skills/heroku.png'],
-    ],
+    XaaS: [['Heroku', './assets/img/skills/heroku.png']],
     version: [],
     TDD: [
       ['Karma', './assets/img/skills/karma.png'],
       ['Jasmine', './assets/img/skills/jasmine.png'],
       ['Jest', './assets/img/skills/jest.png'],
     ],
-    state: [['ngRx', './assets/img/skills/ngRx.png']],
+    // state: [['ngRx', './assets/img/skills/ngRx.png']],
     webpack: [['Webpack', './assets/img/skills/webpack.png']],
   },
   // about
@@ -384,21 +373,20 @@ export let store = {
     I decided to join the neverending exciting web developement world.',
     p2a: 'I easily fell in love with HTML and CSS, and programming quickly got my attention.\
     I suddenly remembered those days when',
-    p2b: 'I was 12 year old and I was coding Pascal',
-    p2c: 'extracurricularwise, making humble text editors in Delphi.\
-    Thus I reconnected to my inner-coder and my need of deepening in JavaScript and\
-    Object Oriented Programming quickly became addictive.',
-    p3a: 'Having gained specialized training after completing the Frontend bootcamp at',
-    p3link:
-      'https://cibernarium.barcelonactiva.cat/es/ficha-actividad?activityId=1002836',
-    p3linkText: 'IT Academy Barcelona',
-    p3b: `I've proudly become a pretty educated web developer today.\
-    And although I excell in Frontend, which blends my creative background\
-    with my innate analytic mind, I also feel comfortable in both`,
-    stak1: 'MEAN',
-    stak2: 'LAMP',
-    p3c: 'Full Stack.',
-    and: 'and',
+    p2b: 'I was 12 year old and I was coding',
+    p2c: 'Pascal extracurricularwise, making humble text editors in Delphi.',
+    p3a1: ' Since I entered the web development world, around 2017,\
+    I’ve fallen in love with the',
+    p3a2: 'Frontend',
+    p3a3: 'which I consider is my strength,\
+    but somedays I also think I am a Fullstack defacto,\
+    because I deal with everything in my projects:\
+    from the Frontend, to making simple REST APIs for the Backend and adminsitrating the databases when needed.',
+    p3b: 'I’m dexterous enough in the Angular and Vue ecosystems, and I have recently discovered the prerendering\
+    and Backend as a Service compliance with the',
+    p3link: 'https://jamstack.org/',
+    p3linkText: 'Jamstack',
+    p3c: 'arquitecture for modern web developement.',
     bye: 'May the code be with you! ;)',
   },
   // contact

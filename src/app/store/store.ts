@@ -188,7 +188,6 @@ export let store = {
         host: 'Github Pages',
         tech: ['javascript', 'bootstrap', 'LESS'],
       },
-
       // modal 9
       {
         title: 'Typescript',
@@ -242,7 +241,7 @@ export let store = {
         alt: 'vue 3.0 and vuex github repo',
         p1: 'Live example of Vue 3.0 new features and classic cool ones,\
         including VueX for state management, route guards, form validations and many more.',
-        link1: 'https://github.com/isaacBejarano/vue-spa',
+        link1: 'https://github.com/isaacBejarano/vue-3-typescript-app',
         link2: 'https://vue3-vuex-spa-app.netlify.app/',
         type: 'B',
         repo: 'Github',

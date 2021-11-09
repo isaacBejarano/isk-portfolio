@@ -12,7 +12,11 @@
       <span> {{ capitalLetter(navbar.home) }} </span>
     </a>
     <button
-      class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold"
+      class="
+        navbar-toggler navbar-toggler-right
+        text-uppercase
+        font-weight-bold
+      "
       type="button"
       data-toggle="collapse"
       data-target="#navbarResponsive"
@@ -27,7 +31,14 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="
+              nav-link
+              py-3
+              px-0 px-lg-3
+              rounded
+              text-uppercase
+              js-scroll-trigger
+            "
             [href]="hashIt(navbar.page1)"
             rel="nofollow noreferrer"
             >{{ navbar.page1 }}
@@ -35,7 +46,14 @@
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="
+              nav-link
+              py-3
+              px-0 px-lg-3
+              rounded
+              text-uppercase
+              js-scroll-trigger
+            "
             [href]="hashIt(navbar.page2)"
             rel="nofollow noreferrer"
             >{{ navbar.page2 }}</a
@@ -43,7 +61,14 @@
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="
+              nav-link
+              py-3
+              px-0 px-lg-3
+              rounded
+              text-uppercase
+              js-scroll-trigger
+            "
             [href]="hashIt(navbar.page3)"
             rel="nofollow noreferrer"
             >{{ navbar.page3 }}</a
@@ -51,14 +76,21 @@
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="
+              nav-link
+              py-3
+              px-0 px-lg-3
+              rounded
+              text-uppercase
+              js-scroll-trigger
+            "
             [routerLink]="navbar.page4"
             routerLinkActive="active"
             rel="nofollow noreferrer"
             >{{ navbar.page4 }}</a
           >
         </li>
-        <li class="nav-item mx-0 mx-lg-1">
+        <!-- <li class="nav-item mx-0 mx-lg-1">
           <a
             class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
             [routerLink]="navbar.page5"
@@ -66,7 +98,7 @@
             rel="nofollow noreferrer"
             >{{ navbar.page5 }}</a
           >
-        </li>
+        </li> -->
       </ul>
     </div>
   </div>

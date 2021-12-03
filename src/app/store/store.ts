@@ -341,13 +341,13 @@ export let store = {
       ['jQuery', './assets/img/skills/jquery.png'],
     ],
     PHP: [
-      // ['Laravel', './assets/img/skills/laravel.png']
+      ['Laravel', './assets/img/skills/laravel.png']
     ],
     CSS: [['LESS', './assets/img/skills/LESS.png']],
     DB: [['Mongo DB', './assets/img/skills/mongodb.png']],
     techniques: [],
     packages: [
-      // ['Composer', './assets/img/skills/composer.png'],
+      ['Composer', './assets/img/skills/composer.png'],
     ],
     wp: [],
     XaaS: [['Heroku', './assets/img/skills/heroku.png']],

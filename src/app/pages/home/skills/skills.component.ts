@@ -29,7 +29,7 @@ export class SkillsComponent implements OnInit {
   // BASIC SKILLS
   skillsLang_basic = store.getSkillsLang_basic as object;
   skillsJS_basic = store.getSkillsJS_basic as object;
-  // skillsPHP_basic = store.getSkillsPHP_basic as object;
+  skillsPHP_basic = store.getSkillsPHP_basic as object;
   skillsCSS_basic = store.getSkillsCSS_basic as object;
   skillsDB_basic = store.getSkillsDB_basic as object;
   XaaS_basic = store.getSkillsXaaS_basic as object;

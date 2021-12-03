@@ -257,7 +257,7 @@ export let store = {
         src: 'portfolio/montpicolis.png',
         alt: 'montpicolis wine cellars page',
         p1: 'SPA for a winary made with Angular, using a custom RxJS store for state management,\
-        with prerendered views made with Scully and consuming the WordPress REST API.\
+        with prerendered views made with Scully and consuming a custom RESTful API made with PHP consuming WordPress REST API and WooCommerce SDK.\
         It complies with the Jamstack architecture.',
         link1: 'http://www.montpicolis.cat/',
         link2: 'http://www.montpicolis.cat/',
@@ -268,6 +268,7 @@ export let store = {
           'rxjs',
           'scully',
           'SASS',
+          'php',
           'wordpress',
           'wp-rest-api',
           'woocommerce',

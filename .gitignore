@@ -50,3 +50,6 @@ debug.log
 
 # Environments
 /src/environments
+
+# Angular cache folder
+.angular

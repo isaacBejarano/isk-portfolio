@@ -1,5 +1,5 @@
 import { Component, OnInit, DoCheck } from '@angular/core';
-import { FormGroup, FormBuilder, Validators } from '@angular/forms';
+import { UntypedFormGroup, UntypedFormBuilder, Validators } from '@angular/forms';
 import { Shared } from '../../utils/shared';
 import { store } from '../../store/store';
 import { ApiService } from '../../services/api.service';
@@ -14,9 +14,9 @@ export class ContactComponent implements OnInit, DoCheck {
   submitable = false;
   disabled = false;
   contact = store.getContact as object | any;
-  form: FormGroup;
+  form: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder, private apiService: ApiService) {}
+  constructor(private fb: UntypedFormBuilder, private apiService: ApiService) {}
 
   // hooks
   ngOnInit(): void {

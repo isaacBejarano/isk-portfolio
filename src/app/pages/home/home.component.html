@@ -4,18 +4,11 @@
 <!-- * Featured ~New * -->
 <app-featured id="new" [new]="propNew">
   <!-- CUSTOM - Portfolio Modal - Text -->
-  <p class="mb-5 text-justify">
+  <p class="text-justify">
     {{ portfolioItems[portfolioItems.length - 1].p1 }}
-    <!-- {{ portfolioCommon.visit }} -->
-    <!-- <a
-      [href]="portfolioItems[portfolioItems.length - 1].link1"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolioItems[portfolioItems.length - 1].repo }}
-    </a>
-    {{ portfolioCommon.star }} -->
+  </p>
+
+  <p class="mb-4">
     {{ portfolioCommon.dontforget }}
     <a
       [href]="portfolioItems[portfolioItems.length - 1].link2"
@@ -25,11 +18,11 @@
     >
       {{ portfolioItems[portfolioItems.length - 1].host }}
     </a>
+
     <!-- AUX -->
     <span class="text-gray"
       >{{ portfolioItems[portfolioItems.length - 1].p2 }}
     </span>
-    .
   </p>
 </app-featured>
 

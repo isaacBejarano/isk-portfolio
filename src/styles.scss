@@ -1,10 +1,14 @@
-// FIXME: refactor project to Bootstrap 5 (no theme). neumorphism or neonmorphism
-
 // CUSTOM STYLES
 @import "./sass/globals"; // globals
 @import "./sass/bootstrap"; // Bootstrap
 
-//
+// OVERRIDE
+.img-fluid-override {
+  max-width: 50%;
+  height: auto;
+}
+
+// OTHER
 body > * {
   user-select: none;
 }

@@ -16,7 +16,8 @@ declare let jQuery: any; // ~jQuery Easing
   templateUrl: './home.component.html',
 })
 export class HomeComponent
-  implements OnInit, AfterViewChecked, DoCheck, OnDestroy {
+  implements OnInit, AfterViewChecked, DoCheck, OnDestroy
+{
   propNew = store.getNew as object | any; // featured ~new
   portfolioItems = store.getPortfolioItems as object | any; // common + modal8
   portfolioCommon = store.getPortfolioCommon as object | any; // common + modal8
@@ -165,14 +166,13 @@ export class HomeComponent
     }
   }
 
-  // IV) "home.component" navbar style ".active" remove when in "about.component" and "contact.component"
+  // IV) "home.component" navbar style ".active" remove when in "contact.component"
   ngOnDestroy(): void {
-    const scrollable: HTMLAnchorElement = document.querySelector(
-      '.js-scroll-trigger.active'
-    );
-
-    if (scrollable) {
-      scrollable.classList.remove('active');
-    }
+    // const scrollable: HTMLAnchorElement = document.querySelector(
+    //   '.js-scroll-trigger.active'
+    // );
+    // if (scrollable) {
+    //   scrollable.classList.remove('active');
+    // }
   }
 }

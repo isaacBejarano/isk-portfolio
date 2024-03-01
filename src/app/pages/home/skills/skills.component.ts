@@ -26,7 +26,7 @@ export class SkillsComponent implements OnInit {
   state = store.getSkillsState as object;
   webpack = store.getSkillsWebpack as object;
 
-  // BASIC SKILLS
+  // SKILLS
   skillsLang_basic = store.getSkillsLang_basic as object;
   skillsJS_basic = store.getSkillsJS_basic as object;
   skillsPHP_basic = store.getSkillsPHP_basic as object;

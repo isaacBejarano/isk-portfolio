@@ -5,9 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // pages - routes
 import { HomeComponent } from './pages/home/home.component';
-import { AboutComponent } from './pages/about/about.component';
-import { ContactComponent } from './pages/contact/contact.component';
-import { LgpdComponent } from './pages/lgpd/lgpd.component';
 import { ErrorComponent } from './pages/error/error.component';
 // shared components
 import { NavbarComponent } from './shared/navbar/navbar.component';
@@ -18,8 +15,6 @@ import { ScrollComponent } from './shared/scroll/scroll.component';
 import { MasterheadComponent } from './pages/home/masterhead/masterhead.component';
 import { FeaturedComponent } from './pages/home/featured/featured.component';
 import { PortfolioComponent } from './pages/home/portfolio/portfolio.component';
-import { PrivacyEsComponent } from './pages/lgpd/privacy-es/privacy-es.component';
-import { PrivacyEnComponent } from './pages/lgpd/privacy-en/privacy-en.component';
 import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/portfolio-item.component';
 import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/portfolio-modal.component';
 import { DividerComponent } from './shared/divider/divider.component';
@@ -32,9 +27,6 @@ import { ReversePipe } from './pipes/reverse.pipe';
   declarations: [
     AppComponent,
     HomeComponent,
-    AboutComponent,
-    ContactComponent,
-    LgpdComponent,
     ErrorComponent,
     NavbarComponent,
     FooterComponent,
@@ -43,8 +35,6 @@ import { ReversePipe } from './pipes/reverse.pipe';
     FeaturedComponent,
     PortfolioComponent,
     FollowComponent,
-    PrivacyEsComponent,
-    PrivacyEnComponent,
     PortfolioItemComponent,
     PortfolioModalComponent,
     DividerComponent,

@@ -23,7 +23,7 @@
 
     <!-- Featured Box -->
     <div class="row">
-      <!-- link - Culex -->
+      <!-- link -->
       <div class="col d-flex justify-content-center">
         <div
           id="featured-pic"
@@ -35,7 +35,8 @@
             class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
           >
             <div class="portfolio-item-caption-content text-center text-white">
-              <i class="fas fa-plus fa-3x"></i>
+              <!-- <i class="fas fa-plus fa-3x"></i> -->
+              <span class="material-symbols-outlined"> open_in_new </span>
             </div>
           </div>
           <img
@@ -77,14 +78,13 @@
                   >
                     {{ portfolioItems[portfolioItems.length - 1].title }}
                   </h2>
-                  
 
                   <!-- Icon Divider-->
                   <app-divider [color]="divider"></app-divider>
 
                   <!-- Portfolio Modal - Image-->
                   <img
-                    class="border border-secondary rounded-sm img-fluid rounded mb-5"
+                    class="border border-secondary rounded-sm img-fluid-override rounded mb-5"
                     src="assets/img/{{
                       portfolioItems[portfolioItems.length - 1].src
                     }}"
@@ -92,7 +92,7 @@
                   />
 
                   <!-- CUSTOM - Portfolio Modal - Text -->
-                 <ng-content></ng-content>
+                  <ng-content></ng-content>
 
                   <button class="btn btn-outline-dark" data-dismiss="modal">
                     <i class="fas fa-times fa-fw"></i>

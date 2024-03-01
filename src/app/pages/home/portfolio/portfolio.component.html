@@ -4,7 +4,7 @@
   <div class="container">
     <!-- Portfolio Section Heading-->
     <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
-      My Portfolio
+      Public Portfolio
     </h2>
 
     <!-- Icon Divider -->
@@ -47,7 +47,7 @@
   </p>
 
   <!-- transclusion - type B -->
-  <p *ngSwitchCase="'B'" class="mb-5 text-justify">
+  <p *ngSwitchCase="'B'" class="text-justify">
     {{ item.p1 }} {{ portfolioCommon.visit }}
     <a
       href="{{ item.link1 }}"
@@ -57,14 +57,18 @@
     >
       {{ item.repo }}
     </a>
-    {{ portfolioCommon.star }} {{ portfolioCommon.dontforget }}
+    {{ portfolioCommon.star }}
+  </p>
+
+  <p class="mb-4">
+    {{ portfolioCommon.dontforget }}
     <a
       href="{{ item.link2 }}"
       rel="nofollow noreferrer"
       target="_blank"
       (click)="openLink()"
     >
-      {{ item.host }}.
+      {{ item.host }}
     </a>
   </p>
 

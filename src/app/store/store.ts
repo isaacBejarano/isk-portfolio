@@ -1,6 +1,6 @@
 /* Single Source of Truth */
 
-export let store = {
+export const store = {
   // --> props
   // navbar
   navbar: {
@@ -11,7 +11,6 @@ export let store = {
     page1: 'new',
     page2: 'portfolio',
     page3: 'skills',
-    page4: 'about',
     page5: 'contact',
   },
   // follow
@@ -40,7 +39,7 @@ export let store = {
     src: './assets/img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
-    title: 'Web Developer - Frontend',
+    title: 'Full Stack Web Developer',
   },
   // featured ~new
   new: 'Winary web app made with Angular',
@@ -57,22 +56,6 @@ export let store = {
     },
     items: [
       // modal 1
-      {
-        title: 'Culex',
-        target: '#portfolioModal10',
-        id: 'portfolioModal10',
-        label: 'portfolioModal10Lbabel',
-        src: 'portfolio/culex.png',
-        alt: 'culex github repo',
-        p1: 'Culex.js is an easy-to-use and lightweight ES5 library \
-      to fetch JSON data from RESTful APIs.',
-        p2: 'Disclaimer: the library is still in beta phase.',
-        link1: 'https://github.com/isaacBejarano/culex.js',
-        type: 'E',
-        repo: 'Github',
-        tech: ['javascript', 'AJAX'],
-      },
-      // modal 2
       {
         title: 'JavaScript Algorithms',
         target: '#portfolioModal7',
@@ -109,37 +92,7 @@ export let store = {
         type: 'D',
         tech: ['javascript', 'html'],
       },
-      // modal 4
-      {
-        title: 'JQuery + AJAX',
-        target: '#portfolioModal4',
-        id: 'portfolioModal4',
-        label: 'portfolioModal4Lbabel',
-        src: 'portfolio/joker.png',
-        alt: 'AJAX + JQuery project',
-        p1: 'Web app using AJAX to fetch Chuck Norris jokes from open REST API. \
-        Made with JQuery.',
-        link1: 'https://github.com/isaacBejarano/joker',
-        type: 'C',
-        repo: 'Github',
-        tech: ['bootstrap', 'jquery', 'AJAX'],
-      },
-      // modal 5
-      {
-        title: 'Leaflet + AJAX',
-        target: '#portfolioModal6',
-        id: 'portfolioModal6',
-        label: 'portfolioModal6Lbabel',
-        src: 'portfolio/restopolitan.png',
-        alt: 'Leaflet project',
-        p1: 'UI using AJAX to fetch and filter API REST response in Leaflet maps.\
-        Made with JQuery.',
-        link1: 'https://github.com/isaacBejarano/leaflet_filtres',
-        type: 'C',
-        repo: 'Github',
-        tech: ['typescript', 'leaflet', 'php', 'mariadb'],
-      },
-      // modal 6
+      // modal 2
       {
         title: 'SASS',
         target: '#portfolioModal8',
@@ -155,9 +108,9 @@ export let store = {
         host: 'Codepen',
         tech: ['SASS'],
       },
-      // modal 7
+      // modal 3
       {
-        title: 'Javascript',
+        title: 'JavaScript Beer Rating Component',
         target: '#portfolioModal5',
         id: 'portfolioModal5',
         label: 'portfolioModal5Lbabel',
@@ -172,38 +125,7 @@ export let store = {
         host: 'Codepen',
         tech: ['javascript', 'css'],
       },
-      // modal 8
-      {
-        title: 'Responsive Bootstrap',
-        target: '#portfolioModal2',
-        id: 'portfolioModal2',
-        label: 'portfolioModal2Lbabel',
-        src: 'portfolio/papiro.png',
-        alt: 'Responsive Bootstrap project',
-        p1: 'Responsive mobile-first web app made with Bootstrap and LESS.',
-        link1: 'https://github.com/isaacBejarano/isaacbejarano.github.io',
-        link2: 'https://isaacbejarano.github.io/',
-        type: 'B',
-        repo: 'Github',
-        host: 'Github Pages',
-        tech: ['javascript', 'bootstrap', 'LESS'],
-      },
-      // modal 9
-      {
-        title: 'Typescript',
-        target: '#portfolioModal3',
-        id: 'portfolioModal3',
-        label: 'portfolioModal3Lbabel',
-        src: 'portfolio/rockets.png',
-        alt: 'Typescript project',
-        p1: 'UI made with Typescript to create rockets and thrusters.\
-        Object Oriented Programmmig (OOP).',
-        link1: 'https://github.com/isaacBejarano/ts-rockets',
-        type: 'C',
-        repo: 'Github',
-        tech: ['typescript', 'css'],
-      },
-      // modal 3
+      // modal 4
       {
         title: 'Wordpress Page',
         target: '#portfolioModal9',
@@ -217,38 +139,7 @@ export let store = {
         type: 'A',
         tech: ['wordpress'],
       },
-      // modal 10
-      {
-        title: 'Wordpress blog',
-        target: '#portfolioModal1',
-        id: 'portfolioModal1',
-        label: 'portfolioModal1Lbabel',
-        src: 'portfolio/LFA.jpg',
-        alt: 'Wordpress Candidature project',
-        p1: `Worked on the Wordpress blog of candiate for Fútbol Club Barcelona's presidency. Made with Elementor and Yoast.`,
-        link1: 'https://lluisfernandezala.cat/',
-        type: 'A',
-        host: 'https://lluisfernandezala.cat',
-        tech: ['wordpress'],
-      },
-      // modal 11
-      {
-        title: 'Vue 3.0 + VueX',
-        target: '#portfolioModal13',
-        id: 'portfolioModal13',
-        label: 'portfolioModal13Lbabel',
-        src: 'portfolio/vue_vuex.png',
-        alt: 'vue 3.0 and vuex github repo',
-        p1: 'Live example of Vue 3.0 new features and classic cool ones,\
-        including VueX for state management, route guards, form validations and many more.',
-        link1: 'https://github.com/isaacBejarano/vue-3-typescript-app',
-        link2: 'https://vue3-vuex-spa-app.netlify.app/',
-        type: 'B',
-        repo: 'Github',
-        host: 'Netlify',
-        tech: ['vue', 'vuex', 'typescript', 'SASS', 'netlify'],
-      },
-      // modal 12 ~new === items[items.length-1]
+      // modal ~new is teh last!
       {
         title: 'MontPicolis',
         target: '#portfolioModal11',
@@ -257,8 +148,8 @@ export let store = {
         src: 'portfolio/montpicolis.png',
         alt: 'montpicolis wine cellars page',
         p1: 'SPA for a winary made with Angular, using a custom RxJS store for state management,\
-        with prerendered views made with Scully and consuming a custom RESTful proxy API made with Laravel which consumes WordPress REST API and WooCommerce SDK.\
-        It complies with the Jamstack architecture.',
+            with prerendered views made with Scully and consuming a custom RESTful proxy API made with Laravel which consumes WordPress REST API and WooCommerce SDK.\
+            It complies with the Jamstack architecture.',
         link1: 'http://www.montpicolis.cat/',
         link2: 'http://www.montpicolis.cat/',
         host: 'MontPicolis',
@@ -330,7 +221,7 @@ export let store = {
     ],
     webpack: [],
   },
-  // basic skills
+  // skills
   skills_basic: {
     lang: [
       ['Node.js', './assets/img/skills/node.png'],
@@ -341,15 +232,11 @@ export let store = {
       ['Express', './assets/img/skills/express.png'],
       ['jQuery', './assets/img/skills/jquery.png'],
     ],
-    PHP: [
-      ['Laravel', './assets/img/skills/laravel.png']
-    ],
+    PHP: [['Laravel', './assets/img/skills/laravel.png']],
     CSS: [['LESS', './assets/img/skills/LESS.png']],
     DB: [['Mongo DB', './assets/img/skills/mongodb.png']],
     techniques: [],
-    packages: [
-      ['Composer', './assets/img/skills/composer.png'],
-    ],
+    packages: [['Composer', './assets/img/skills/composer.png']],
     wp: [],
     XaaS: [['Heroku', './assets/img/skills/heroku.png']],
     version: [],
@@ -360,34 +247,6 @@ export let store = {
     ],
     // state: [['ngRx', './assets/img/skills/ngRx.png']],
     webpack: [['Webpack', './assets/img/skills/webpack.png']],
-  },
-  // about
-  about: {
-    title: 'about me',
-    hello: `Hi, I'm Isaac.`,
-    p1a: 'I used to work in audiovisual postproduction and\
-    I was pretty dexterous at image manipulation with',
-    p1b: 'Photoshop',
-    p1c: 'but I felt it would be useful to boost my designer skills.\
-    Taking into account that the majority of media design we consume today is on screen,\
-    I decided to join the neverending exciting web developement world.',
-    p2a: 'I easily fell in love with HTML and CSS, and programming quickly got my attention.\
-    I suddenly remembered those days when',
-    p2b: 'I was 12 year old and I was coding',
-    p2c: 'Pascal extracurricularwise, making humble text editors in Delphi.',
-    p3a1: ' Since I entered the web development world, around 2017,\
-    I’ve fallen in love with the',
-    p3a2: 'Frontend',
-    p3a3: 'which I consider is my strength,\
-    but somedays I also think I am a Fullstack defacto,\
-    because I deal with everything in my projects:\
-    from the Frontend, to making simple REST APIs for the Backend and adminsitrating the databases when needed.',
-    p3b: 'I’m dexterous enough in the Angular and Vue ecosystems, and I have recently discovered the prerendering\
-    and Backend as a Service compliance with the',
-    p3link: 'https://jamstack.org/',
-    p3linkText: 'Jamstack',
-    p3c: 'arquitecture for modern web developement.',
-    bye: 'May the code be with you! ;)',
   },
   // contact
   contact: {
@@ -589,7 +448,7 @@ export let store = {
   get getSkillsWebpack(): object {
     return this.skills.webpack;
   },
-  // BASIC SKILLS
+  // SKILLS
   get getSkillsLang_basic(): object {
     return this.skills_basic.lang;
   },
@@ -628,10 +487,6 @@ export let store = {
   },
   get getSkillsWebpack_basic(): object {
     return this.skills_basic.webpack;
-  },
-  //
-  get getAbout(): object {
-    return this.about;
   },
   get getContact(): object {
     return this.contact;

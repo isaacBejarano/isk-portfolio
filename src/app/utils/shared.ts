@@ -10,10 +10,6 @@ export class Shared {
     return '#' + str;
   }
 
-  public static capitalLetter(str: string): string {
-    return str.substring(0, 1).toUpperCase() + str.substring(1, str.length);
-  }
-
   public static pageToTop(): void {
     window.scrollTo(0, 0);
   }

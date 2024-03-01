@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Shared } from '../../../utils/shared';
-import { store } from '../../../store/store';
+import { store } from '@app/data/store';
 
 @Component({
   selector: 'app-portfolio',
@@ -11,8 +11,8 @@ export class PortfolioComponent {
   // prop -> to <app-divider> Input()
   divider = 'divider-light';
 
-  portfolioCommon = store.getPortfolioCommon as object;
-  portfolioItems = store.getPortfolioItems as object;
+  portfolioCommon = store.getPortfolioCommon;
+  portfolioItems = store.getPortfolioItems;
 
   openLink = Shared.openLink;
 

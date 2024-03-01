@@ -75,17 +75,10 @@
 // theme override
 .navbar-brand {
   img {
-    width: 50px;
+    width: 65px;
   }
   span {
     color: $custom;
-  }
-  &:hover {
-    mix-blend-mode: luminosity;
-  }
-  &:active {
-    mix-blend-mode: color-burn;
-    opacity: 0.2;
   }
 }
 
@@ -106,6 +99,6 @@
   }
   &:active {
     border-radius: 0 !important;
-    transition: border-radius .2s;
+    transition: border-radius 0.2s;
   }
 }

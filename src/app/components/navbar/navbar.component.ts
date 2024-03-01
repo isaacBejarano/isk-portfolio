@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Shared } from '../../utils/shared';
-import { store } from '../../store/store';
+import { store } from '@app/data/store';
 
 @Component({
   selector: 'app-navbar',
@@ -11,5 +11,4 @@ export class NavbarComponent {
   navbar = store.getNavbar;
 
   hashIt = Shared.hashIt;
-  capitalLetter = Shared.capitalLetter;
 }

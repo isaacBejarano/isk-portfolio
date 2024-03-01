@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { store } from '../../../store/store';
+import { store } from '@app/data/store';
 
 declare let $: any; // fixes B4 tooltip() type conflict
 

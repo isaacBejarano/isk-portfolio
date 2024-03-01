@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { store } from '../../../store/store';
+import { store } from '@app/data/store';
 
 @Component({
   selector: 'app-featured',
@@ -11,8 +11,8 @@ export class FeaturedComponent {
   divider = 'divider-dark';
   @Input() new: string;
 
-  portfolioItems = store.getPortfolioItems as object | any; // common + modal8
-  portfolioCommon = store.getPortfolioCommon as object | any; // common + modal8
+  portfolioItems = store.getPortfolioItems; // common + modal8
+  portfolioCommon = store.getPortfolioCommon; // common + modal8
 
   constructor() {}
 }

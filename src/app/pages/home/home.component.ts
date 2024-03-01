@@ -7,7 +7,7 @@ import {
 } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Shared } from '../../utils/shared';
-import { store } from '../../store/store';
+import { store } from '@app/data/store';
 
 declare let jQuery: any; // ~jQuery Easing
 

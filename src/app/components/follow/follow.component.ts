@@ -7,10 +7,7 @@ import { store } from '../../store/store';
   templateUrl: './follow.component.html',
 })
 export class FollowComponent {
-  follow = store.getFollow as object | any;
+  follow = store.getFollow;
 
-  // <- shared methods
   openLink = Shared.openLink;
-
-  constructor() {}
 }

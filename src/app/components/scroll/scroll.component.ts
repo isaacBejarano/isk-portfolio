@@ -8,11 +8,8 @@ import { store } from '../../store/store';
   styleUrls: ['./scroll.component.scss'],
 })
 export class ScrollComponent {
-  scroll = store.getScroll as object | any;
-  navbar = store.getNavbar as object | any;
+  scroll = store.getScroll;
+  navbar = store.getNavbar;
 
-  // <- shared methods
   hashIt = Shared.hashIt;
-
-  constructor() {}
 }

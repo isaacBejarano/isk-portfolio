@@ -8,10 +8,7 @@ import { store } from '../../store/store';
   styleUrls: ['./footer.component.scss'],
 })
 export class FooterComponent {
-  footer = store.getFooter as object | any;
+  footer = store.getFooter;
 
-  // <- shared methods
   openLink = Shared.openLink;
-
-  constructor() {}
 }

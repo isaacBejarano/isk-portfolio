@@ -15,9 +15,9 @@ export const store = {
   },
   // follow
   follow: {
-    icon1: 'fab fa-fw fa-linkedin-in',
-    icon2: 'fab fa-github',
-    link1: 'https://www.linkedin.com/in/isaac-bejarano',
+    // icon1: 'fab fa-fw fa-linkedin-in',
+    // icon2: 'fab fa-github',
+    // link1: 'https://www.linkedin.com/in/isaac-bejarano',
     link2: 'https://github.com/isaacBejarano',
   },
   // footer
@@ -31,7 +31,7 @@ export const store = {
   },
   // scroll
   scroll: {
-    icon: 'fa fa-chevron-up',
+    // icon: 'fa fa-chevron-up',
     show: false, // dafault
   },
   // masterhead
@@ -381,117 +381,117 @@ export const store = {
   },
 
   // getters
-  get getNavbar(): object {
+  get getNavbar(): any {
     return this.navbar;
   },
-  get getFollow(): object {
+  get getFollow() {
     return this.follow;
   },
-  get getFooter(): object {
+  get getFooter() {
     return this.footer;
   },
-  get getScroll(): object {
+  get getScroll(): any {
     return this.scroll;
   },
-  get getMasterhead(): object {
+  get getMasterhead(): any {
     return this.masterhead;
   },
-  get getNew(): object {
+  get getNew(): any {
     return this.new;
   },
-  get getPortfolio(): object {
+  get getPortfolio(): any {
     return this.portfolio;
   },
-  get getPortfolioItems(): object[] {
+  get getPortfolioItems(): any[] {
     return this.portfolio.items;
   },
-  get getPortfolioCommon(): object[] {
+  get getPortfolioCommon(): any {
     return this.portfolio.common;
   },
   // TOP SKILLS
-  get getSkillsLang(): object {
+  get getSkillsLang(): any {
     return this.skills.lang;
   },
-  get getSkillsJS(): object {
+  get getSkillsJS(): any {
     return this.skills.JS;
   },
-  get getSkillsPHP(): object {
+  get getSkillsPHP(): any {
     return this.skills.PHP;
   },
-  get getSkillsCSS(): object {
+  get getSkillsCSS(): any {
     return this.skills.CSS;
   },
-  get getSkillsDB(): object {
+  get getSkillsDB(): any {
     return this.skills.DB;
   },
-  get getSkillsTechniques(): object {
+  get getSkillsTechniques(): any {
     return this.skills.techniques;
   },
-  get getSkillsPackages(): object {
+  get getSkillsPackages(): any {
     return this.skills.packages;
   },
-  get getSkillsWordpress(): object {
+  get getSkillsWordpress(): any {
     return this.skills.wp;
   },
-  get getSkillsXaaS(): object {
+  get getSkillsXaaS(): any {
     return this.skills.XaaS;
   },
-  get getSkillsGit(): object {
+  get getSkillsGit(): any {
     return this.skills.version;
   },
-  get getSkillsTDD(): object {
+  get getSkillsTDD(): any {
     return this.skills.TDD;
   },
-  get getSkillsState(): object {
+  get getSkillsState(): any {
     return this.skills.state;
   },
-  get getSkillsWebpack(): object {
+  get getSkillsWebpack(): any {
     return this.skills.webpack;
   },
   // SKILLS
-  get getSkillsLang_basic(): object {
+  get getSkillsLang_basic(): any {
     return this.skills_basic.lang;
   },
-  get getSkillsJS_basic(): object {
+  get getSkillsJS_basic(): any {
     return this.skills_basic.JS;
   },
-  get getSkillsPHP_basic(): object {
+  get getSkillsPHP_basic(): any {
     return this.skills_basic.PHP;
   },
-  get getSkillsCSS_basic(): object {
+  get getSkillsCSS_basic(): any {
     return this.skills_basic.CSS;
   },
-  get getSkillsDB_basic(): object {
+  get getSkillsDB_basic(): any {
     return this.skills_basic.DB;
   },
-  get getSkillsTechniques_basic(): object {
+  get getSkillsTechniques_basic(): any {
     return this.skills_basic.techniques;
   },
-  get getSkillsPackages_basic(): object {
+  get getSkillsPackages_basic(): any {
     return this.skills_basic.packages;
   },
-  get getSkillsWordpress_basic(): object {
+  get getSkillsWordpress_basic(): any {
     return this.skills_basic.wp;
   },
-  get getSkillsXaaS_basic(): object {
+  get getSkillsXaaS_basic(): any {
     return this.skills_basic.XaaS;
   },
-  get getSkillsGit_basic(): object {
+  get getSkillsGit_basic(): any {
     return this.skills_basic.version;
   },
-  get getSkillsTDD_basic(): object {
+  get getSkillsTDD_basic(): any {
     return this.skills_basic.TDD;
   },
-  get getSkillsState_basic(): object {
+  get getSkillsState_basic(): any {
     return this.skills_basic.state;
   },
-  get getSkillsWebpack_basic(): object {
+  get getSkillsWebpack_basic(): any {
     return this.skills_basic.webpack;
   },
-  get getContact(): object {
+  get getContact(): any {
     return this.contact;
   },
-  get getLgpd(): object {
+  get getLgpd(): any {
     return this.lgpd;
   },
 

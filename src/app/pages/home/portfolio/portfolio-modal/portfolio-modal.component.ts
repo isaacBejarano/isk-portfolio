@@ -20,8 +20,5 @@ export class PortfolioModalComponent {
     // ...
   };
 
-  // <- shared methods
   openLink = Shared.openLink;
-
-  constructor() {}
 }

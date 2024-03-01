@@ -8,11 +8,8 @@ import { store } from '../../store/store';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  navbar = store.getNavbar as object | any;
+  navbar = store.getNavbar;
 
-  // <- shared methods
   hashIt = Shared.hashIt;
   capitalLetter = Shared.capitalLetter;
-
-  constructor() {}
 }

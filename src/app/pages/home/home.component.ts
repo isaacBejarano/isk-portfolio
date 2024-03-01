@@ -18,9 +18,9 @@ declare let jQuery: any; // ~jQuery Easing
 export class HomeComponent
   implements OnInit, AfterViewChecked, DoCheck, OnDestroy
 {
-  propNew = store.getNew as object | any; // featured ~new
-  portfolioItems = store.getPortfolioItems as object | any; // common + modal8
-  portfolioCommon = store.getPortfolioCommon as object | any; // common + modal8
+  propNew = store.getNew; // featured ~new
+  portfolioItems = store.getPortfolioItems; // common + modal8
+  portfolioCommon = store.getPortfolioCommon; // common + modal8
 
   constructor(
     //
@@ -28,7 +28,6 @@ export class HomeComponent
     private router: Router
   ) {}
 
-  // <- shared methods
   openLink = Shared.openLink;
 
   // I) SCROLL Animation - JQuery plugin - Easing
@@ -89,11 +88,11 @@ export class HomeComponent
 
       // Closes responsive menu when a scroll trigger link is clicked
       $('.js-scroll-trigger').on('click', () => {
-        ($('.navbar-collapse') as any).collapse('hide');
+        $('.navbar-collapse').collapse('hide');
       });
 
       // Activate scrollspy to add active class to navbar items on scroll
-      ($('body') as any).scrollspy({
+      $('body').scrollspy({
         target: '#mainNav',
         offset: 80,
       });
@@ -166,13 +165,13 @@ export class HomeComponent
     }
   }
 
-  // IV) "home.component" navbar style ".active" remove when in "contact.component"
+  // IV) "home.component" navbar style ".active" remove when in "contact.component" FIXME:
   ngOnDestroy(): void {
-    // const scrollable: HTMLAnchorElement = document.querySelector(
-    //   '.js-scroll-trigger.active'
-    // );
-    // if (scrollable) {
-    //   scrollable.classList.remove('active');
-    // }
+    const scrollable: HTMLAnchorElement = document.querySelector(
+      '.js-scroll-trigger.active'
+    );
+    if (scrollable) {
+      scrollable.classList.remove('active');
+    }
   }
 }

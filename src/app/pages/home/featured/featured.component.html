@@ -35,8 +35,7 @@
             class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100"
           >
             <div class="portfolio-item-caption-content text-center text-white">
-              <!-- <i class="fas fa-plus fa-3x"></i> -->
-              <span class="material-symbols-outlined"> open_in_new </span>
+              <fa-icon [icon]="faPlus"></fa-icon>
             </div>
           </div>
           <img
@@ -66,7 +65,7 @@
             aria-label="Close"
           >
             <span aria-hidden="true">
-              <!-- <i class="fas fa-times"></i> -->
+              <fa-icon [icon]="faTimes"></fa-icon>
             </span>
           </button>
           <div class="modal-body text-center">
@@ -97,7 +96,7 @@
                   <ng-content></ng-content>
 
                   <button class="btn btn-outline-dark" data-dismiss="modal">
-                    <!-- <i class="fas fa-times fa-fw"></i> -->
+                    <fa-icon [icon]="faTimes"></fa-icon>
                     Close
                   </button>
                 </div>

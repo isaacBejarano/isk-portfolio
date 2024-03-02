@@ -1,10 +1,4 @@
-import {
-  Component,
-  OnInit,
-  AfterViewChecked,
-  DoCheck,
-  OnDestroy,
-} from '@angular/core';
+import { Component, OnInit, AfterViewChecked, DoCheck } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
@@ -15,9 +9,7 @@ declare let jQuery: any; // ~jQuery Easing
   selector: 'app-home',
   templateUrl: './home.component.html',
 })
-export class HomeComponent
-  implements OnInit, AfterViewChecked, DoCheck, OnDestroy
-{
+export class HomeComponent implements OnInit, AfterViewChecked, DoCheck {
   propNew = store.getNew; // featured ~new
   portfolioItems = store.getPortfolioItems; // common + modal8
   portfolioCommon = store.getPortfolioCommon; // common + modal8
@@ -112,38 +104,6 @@ export class HomeComponent
       // Collapse the navbar when page is scrolled
       $(window).on('scroll', navbarCollapse);
 
-      // Floating label headings for the contact form
-      $(() => {
-        $('body')
-          .on(
-            'input propertychange',
-            '.floating-label-form-group',
-            // prettier-ignore
-            function(e): void {
-              $(this).toggleClass(
-                'floating-label-form-group-with-value',
-                !!$(e.target).val()
-              );
-            }
-          )
-          .on(
-            'focus',
-            '.floating-label-form-group',
-            // prettier-ignore
-            function(): void {
-              $(this).addClass('floating-label-form-group-with-focus');
-            }
-          )
-          .on(
-            'blur',
-            '.floating-label-form-group',
-            // prettier-ignore
-            function(): void {
-              $(this).removeClass('floating-label-form-group-with-focus');
-            }
-          );
-      });
-
       /* 2. RESET URL FRAGMENT FROM OTHER ROUTES:VIEWS */
       const anchor = `/#${activatedRoute.snapshot.fragment}`;
 
@@ -162,16 +122,6 @@ export class HomeComponent
   ngDoCheck(): void {
     if (store.scroll.show) {
       document.getElementById('scroller').classList.remove('d-none');
-    }
-  }
-
-  // IV) "home.component" navbar style ".active" remove when in "contact.component" FIXME:
-  ngOnDestroy(): void {
-    const scrollable: HTMLAnchorElement = document.querySelector(
-      '.js-scroll-trigger.active'
-    );
-    if (scrollable) {
-      scrollable.classList.remove('active');
     }
   }
 }

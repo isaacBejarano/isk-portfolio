@@ -19,7 +19,7 @@
       aria-label="Toggle navigation"
     >
       {{ navbar.hamburger }}
-      <!-- <i class="fas fa-bars"></i> -->
+      <fa-icon [icon]="faBars"></fa-icon>
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
@@ -29,7 +29,6 @@
             [href]="hashIt(navbar.home)"
             rel="nofollow noreferrer"
           >
-            <!-- <img [src]="navbar.src" [alt]="navbar.alt" /> -->
             <span> {{ navbar.home }} </span>
           </a>
         </li>
@@ -66,15 +65,6 @@
             >{{ navbar.page4 }}</a
           >
         </li>
-        <!-- <li class="nav-item mx-0 mx-lg-1">
-          <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
-            [routerLink]="navbar.page5"
-            routerLinkActive="active"
-            rel="nofollow noreferrer"
-            >{{ navbar.page5 }}</a
-          >
-        </li> -->
       </ul>
     </div>
   </div>

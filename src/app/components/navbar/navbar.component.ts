@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-navbar',
@@ -9,6 +10,7 @@ import { store } from '@app/data/store';
 })
 export class NavbarComponent {
   navbar = store.getNavbar;
+  faBars = faBars;
 
   hashIt = Shared.hashIt;
 }

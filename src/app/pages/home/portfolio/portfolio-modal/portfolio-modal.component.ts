@@ -1,5 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { Shared } from '../../../../utils/shared';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-portfolio-modal',
@@ -20,5 +21,6 @@ export class PortfolioModalComponent {
     // ...
   };
 
+  faTimes = faTimes;
   openLink = Shared.openLink;
 }

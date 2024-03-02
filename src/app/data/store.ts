@@ -1,5 +1,3 @@
-/* Single Source of Truth */
-
 export const store = {
   // --> props
   // navbar
@@ -11,27 +9,23 @@ export const store = {
     page1: 'new',
     page2: 'portfolio',
     page3: 'skills',
-    page5: 'contact',
   },
   // follow
   follow: {
-    // icon1: 'fab fa-fw fa-linkedin-in',
-    // icon2: 'fab fa-github',
-    // link1: 'https://www.linkedin.com/in/isaac-bejarano',
+    link1: 'https://www.linkedin.com/in/isaac-bejarano',
     link2: 'https://github.com/isaacBejarano',
   },
   // footer
   footer: {
     tool: 'Angular',
     theme: 'Start Bootstrap Theme',
-    link1: 'https://angular.io',
+    link1: 'https://angular.dev',
     link2: 'https://startbootstrap.com/previews/freelancer/',
     license: 'MIT',
     copyright: 'Isaac Bejarano 2021',
   },
   // scroll
   scroll: {
-    // icon: 'fa fa-chevron-up',
     show: false, // dafault
   },
   // masterhead
@@ -167,217 +161,74 @@ export const store = {
       },
     ],
   },
-  // top skills
+  // technologies
   skills: {
     lang: [
       ['HTML', './assets/img/skills/html.png'],
       ['CSS', './assets/img/skills/css.png'],
       ['JavaScript / ES6', './assets/img/skills/javascript.png'],
       ['TypeScript', './assets/img/skills/typescript.png'],
+      ['C#', './assets/img/skills/c-sharp-logo.png'],
+      ['F#', './assets/img/skills/fsharp.png'],
+      ['PHP', './assets/img/skills/php.png'],
     ],
-    JS: [
-      ['Vue', './assets/img/skills/vue.png'],
+    frontend: [
       ['Angular', './assets/img/skills/angular.png'],
+      ['Vue', './assets/img/skills/vue.png'],
       ['RxJS', './assets/img/skills/rxjs.png'],
       ['Scully', './assets/img/skills/scully.png'],
+      ['jQuery', './assets/img/skills/jquery.png'],
+      ['Leaflet', './assets/img/skills/leaflet.png'],
+    ],
+    backend: [
+      ['.NET', './assets/img/skills/dotnet.png'],
+      ['Entity Framework Core', './assets/img/skills/dotnetef.png'],
+      ['Node.js', './assets/img/skills/node.png'],
+      ['Express', './assets/img/skills/express.png'],
+      ['Koa', './assets/img/skills/koa.png'],
+      ['Laravel', './assets/img/skills/laravel.png'],
     ],
     CSS: [
       ['SASS', './assets/img/skills/SASS.png'],
+      ['Angular Material', './assets/img/skills/material.png'],
       ['Bootstrap', './assets/img/skills/bootstrap.png'],
       ['Bulma', './assets/img/skills/bulma.png'],
       ['PureCSS', './assets/img/skills/pureCSS.png'],
+      ['LESS', './assets/img/skills/less.png'],
     ],
     DB: [
+      ['Postgre SQL', './assets/img/skills/postgres.png'],
+      ['SQL Server', './assets/img/skills/sqlserver.png'],
       ['Maria DB', './assets/img/skills/mariadb.png'],
+      ['Mongo DB', './assets/img/skills/mongodb.png'],
       ['MySQL', './assets/img/skills/mysql.png'],
     ],
     techniques: [
       ['REST', './assets/img/skills/REST.png'],
-      ['JSON', './assets/img/skills/JSON.png'],
       ['AJAX', './assets/img/skills/AJAX.png'],
     ],
-    packages: [['Node Package Manager', './assets/img/skills/npm.png']],
+    packages: [
+      ['Node Package Manager', './assets/img/skills/npm.png'],
+      ['Composer', './assets/img/skills/composer.png'],
+    ],
     wp: [
       ['Wordpress', './assets/img/skills/wordpress.png'],
       ['Wordpress REST API', './assets/img/skills/wp-rest-api.png'],
-      ['WooCommerce', './assets/img/skills/woocommerce.png'],
-      // ['Yoast SEO', './assets/img/skills/yoast.png'],
-      // ['Wordfence Security', './assets/img/skills/wordfence.png'],
-      // ['Elementror Page  Builder', './assets/img/skills/elementor.png'],
-      // ['Wp Backery Page  Builder', './assets/img/skills/wp-backery.png'],
     ],
     XaaS: [
-      ['Netlify', './assets/img/skills/netlify.png'],
+      ['Azure', './assets/img/skills/azure.png'],
       ['Firebase', './assets/img/skills/firebase.png'],
+      ['Netlify', './assets/img/skills/netlify.png'],
     ],
     version: [
       ['git', './assets/img/skills/git.png'],
       ['GitHub', './assets/img/skills/github.png'],
     ],
-    TDD: [],
-    state: [
-      ['Vuex', './assets/img/skills/vuex.png'],
-      ['RxJS', './assets/img/skills/rxjs.png'],
+    testing: [
+      ['Testing Library', './assets/img/skills/testing-library.png'],
+      ['Cypress', './assets/img/skills/cypress.png'],
     ],
     webpack: [],
-  },
-  // skills
-  skills_basic: {
-    lang: [
-      ['Node.js', './assets/img/skills/node.png'],
-      ['PHP', './assets/img/skills/php.png'],
-    ],
-    JS: [
-      ['Leaflet', './assets/img/skills/leaflet.png'],
-      ['Express', './assets/img/skills/express.png'],
-      ['jQuery', './assets/img/skills/jquery.png'],
-    ],
-    PHP: [['Laravel', './assets/img/skills/laravel.png']],
-    CSS: [['LESS', './assets/img/skills/LESS.png']],
-    DB: [['Mongo DB', './assets/img/skills/mongodb.png']],
-    techniques: [],
-    packages: [['Composer', './assets/img/skills/composer.png']],
-    wp: [],
-    XaaS: [['Heroku', './assets/img/skills/heroku.png']],
-    version: [],
-    TDD: [
-      ['Karma', './assets/img/skills/karma.png'],
-      ['Jasmine', './assets/img/skills/jasmine.png'],
-      ['Jest', './assets/img/skills/jest.png'],
-    ],
-    // state: [['ngRx', './assets/img/skills/ngRx.png']],
-    webpack: [['Webpack', './assets/img/skills/webpack.png']],
-  },
-  // contact
-  contact: {
-    link: '/contact/lgpd',
-    text: 'Privacy Policy',
-    warn1: 'Please read and accept the',
-    warn2: 'of this site.',
-    required1: 'Please enter your name',
-    required2: 'Please enter your email adress',
-    required3: 'Please leave a message',
-    required4: 'Please tick the checkbox above',
-    match1: 'Your name must have more than 1 letter',
-    match2:
-      'Your email must comply with the structure "account@some-email.domain"',
-    match3: 'Your message must have mimimum 10 letters',
-  },
-  // lgpd
-  lgpd: {
-    close: '/contact',
-    es: {
-      title: 'Política de Privacidad',
-      // declaración
-      heading1: 'Declaración',
-      titular: 'Isaac Bejarano',
-      website: 'isaacbejarano.site',
-      // identidad del responsable
-      heading2: 'Identidad del responsable',
-      email: 'isaacbejaranopro@gmail.com',
-      // principios tratamiento de datos
-      heading3: 'Principios aplicados en el tratamiento de datos',
-      principle1: 'Principio de licitud, lealtad y transparencia',
-      principle2: 'Principio de minimización de datos',
-      principle3: 'Principio de limitación del plazo de conservación',
-      principle4: 'Principio de integridad y confidencialidad',
-      // obtención de datos
-      heading4: 'Obtención de datos personales',
-      // tus derechos
-      heading5: 'Tus derechos',
-      // finalidad
-      heading6: 'Finalidad del tratamiento de datos personales',
-      tratamiento: 'Formularios de contacto',
-      socialLink1: 'https://es.linkedin.com/legal/privacy-policy',
-      socialLink2:
-        'https://docs.github.com/es/free-pro-team@latest/github/site-policy/github-privacy-statement',
-      socialTitle1: 'Linked In',
-      socialTitle2: 'Github',
-      // Seguridad de los datos personales
-      heading7: 'Seguridad de los datos personales',
-      hostingLink: 'https://www.cdmon.com/es/',
-      hostingTitle: 'cdmon',
-      // contenido
-      heading8: 'Contenido de otros sitios web',
-      // cookies
-      heading9: 'Política de Cookies',
-      // legitimación
-      heading10: 'Legitimación para el tratamiento de datos',
-      // categoria datos
-      heading11: 'Categorías de datos personales',
-      // conservación datos
-      heading12: 'Conservación de datos personales',
-      // destinatarios datos
-      heading13: 'Destinatarios de datos personales',
-      thirdPartyLink: 'https://analytics.google.com',
-      thirdPartyTitle: 'Google Analytics',
-      // navegación web
-      heading14: 'Navegación Web',
-      // veracidad de datos
-      heading15: 'Exactitud y veracidad de los datos personales',
-      // aceptación
-      heading16: 'Aceptación y consentimiento',
-      // revocabilidad
-      heading17: 'Revocabilidad',
-      // cambios en la política
-      heading18: 'Cambios en la Política de Privacidad',
-    },
-    en: {
-      title: 'Privacy Policy',
-      // declaración
-      heading1: 'Statement',
-      titular: 'Isaac Bejarano',
-      website: 'isaacbejarano.site',
-      // identidad del responsable
-      heading2: 'Responsible identity',
-      email: 'isaacbejaranopro@gmail.com',
-      // principios tratamiento de datos
-      heading3: 'Principles applied in data processing',
-      principle1: 'Principle of legality, loyalty and transparency',
-      principle2: 'Data minimization principle',
-      principle3: 'Principle of limitation of the conservation period',
-      principle4: 'Principle of integrity and confidentiality',
-      // obtención de datos
-      heading4: 'Obtaining personal data',
-      // tus derechos
-      heading5: 'Your rights',
-      // finalidad
-      heading6: 'Purpose of the processing of personal data',
-      tratamiento: 'Contact forms',
-      socialLink1: 'https://es.linkedin.com/legal/privacy-policy',
-      socialLink2:
-        'https://docs.github.com/es/free-pro-team@latest/github/site-policy/github-privacy-statement',
-      socialTitle1: 'Linked In',
-      socialTitle2: 'Github',
-      // Seguridad de los datos personales
-      heading7: 'Personal data security',
-      hostingLink: 'https://www.cdmon.com/es/',
-      hostingTitle: 'cdmon',
-      // contenido
-      heading8: 'Content from other websites',
-      // cookies
-      heading9: 'Cookies policy',
-      // legitimación
-      heading10: 'Legitimation for data processing',
-      // categoria datos
-      heading11: 'Categories of personal data',
-      // conservación datos
-      heading12: 'Preservation of personal data',
-      // destinatarios datos
-      heading13: 'Recipients of personal data',
-      thirdPartyLink: 'https://analytics.google.com',
-      thirdPartyTitle: 'Google Analytics',
-      // navegación web
-      heading14: 'Web navegation',
-      // veracidad de datos
-      heading15: 'Accuracy and veracity of personal data',
-      // aceptación
-      heading16: 'Acceptance and consent',
-      // revocabilidad
-      heading17: 'Revocability',
-      // cambios en la política
-      heading18: 'Changes to the Privacy Policy',
-    },
   },
 
   // getters
@@ -408,12 +259,15 @@ export const store = {
   get getPortfolioCommon(): any {
     return this.portfolio.common;
   },
-  // TOP SKILLS
+  // TECH
   get getSkillsLang(): any {
     return this.skills.lang;
   },
-  get getSkillsJS(): any {
-    return this.skills.JS;
+  get getSkillsFrontend(): any {
+    return this.skills.frontend;
+  },
+  get getSkillsBackend(): any {
+    return this.skills.backend;
   },
   get getSkillsPHP(): any {
     return this.skills.PHP;
@@ -440,59 +294,13 @@ export const store = {
     return this.skills.version;
   },
   get getSkillsTDD(): any {
-    return this.skills.TDD;
+    return this.skills.testing;
   },
   get getSkillsState(): any {
     return this.skills.state;
   },
   get getSkillsWebpack(): any {
     return this.skills.webpack;
-  },
-  // SKILLS
-  get getSkillsLang_basic(): any {
-    return this.skills_basic.lang;
-  },
-  get getSkillsJS_basic(): any {
-    return this.skills_basic.JS;
-  },
-  get getSkillsPHP_basic(): any {
-    return this.skills_basic.PHP;
-  },
-  get getSkillsCSS_basic(): any {
-    return this.skills_basic.CSS;
-  },
-  get getSkillsDB_basic(): any {
-    return this.skills_basic.DB;
-  },
-  get getSkillsTechniques_basic(): any {
-    return this.skills_basic.techniques;
-  },
-  get getSkillsPackages_basic(): any {
-    return this.skills_basic.packages;
-  },
-  get getSkillsWordpress_basic(): any {
-    return this.skills_basic.wp;
-  },
-  get getSkillsXaaS_basic(): any {
-    return this.skills_basic.XaaS;
-  },
-  get getSkillsGit_basic(): any {
-    return this.skills_basic.version;
-  },
-  get getSkillsTDD_basic(): any {
-    return this.skills_basic.TDD;
-  },
-  get getSkillsState_basic(): any {
-    return this.skills_basic.state;
-  },
-  get getSkillsWebpack_basic(): any {
-    return this.skills_basic.webpack;
-  },
-  get getContact(): any {
-    return this.contact;
-  },
-  get getLgpd(): any {
-    return this.lgpd;
   },
 
   // setters

@@ -22,6 +22,7 @@ import { DividerComponent } from './components/divider/divider.component';
 import { HttpClientModule } from '@angular/common/http';
 import { SkillsComponent } from './pages/home/skills/skills.component';
 import { ReversePipe } from './pipes/reverse.pipe';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -47,6 +48,7 @@ import { ReversePipe } from './pipes/reverse.pipe';
     ReactiveFormsModule,
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

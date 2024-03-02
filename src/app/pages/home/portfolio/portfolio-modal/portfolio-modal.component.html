@@ -16,7 +16,7 @@
         aria-label="Close"
       >
         <span aria-hidden="true">
-          <!-- <i class="fas fa-times"></i> -->
+          <fa-icon [icon]="faTimes"></fa-icon>
         </span>
       </button>
       <div class="modal-body text-center">
@@ -43,7 +43,7 @@
               <ng-content></ng-content>
 
               <button class="btn btn-outline-dark" data-dismiss="modal">
-                <!-- <i class="fas fa-times fa-fw"></i> -->
+                <fa-icon [icon]="faTimes"></fa-icon>
                 Close
               </button>
             </div>

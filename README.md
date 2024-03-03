@@ -1,3 +1,4 @@
 # Portfolio
 
-Isaac Bejarano Portfolio, deployed on GitHub Pages.
+Isaac Bejarano's Portfolio.
+Made with Angular 17. Deployed on GitHub Pages.

@@ -8,7 +8,7 @@ export const store = {
     hamburger: 'menu',
     page1: 'new',
     page2: 'portfolio',
-    page3: 'skills',
+    page3: 'technologies',
   },
   // follow
   follow: {
@@ -22,7 +22,7 @@ export const store = {
     link1: 'https://angular.dev',
     link2: 'https://startbootstrap.com/previews/freelancer/',
     license: 'MIT',
-    copyright: 'Isaac Bejarano 2021',
+    copyright: 'Isaac Bejarano',
   },
   // scroll
   scroll: {

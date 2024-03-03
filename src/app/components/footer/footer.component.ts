@@ -9,6 +9,7 @@ import { store } from '@app/data/store';
 })
 export class FooterComponent {
   footer = store.getFooter;
+  year = new Date().getFullYear();
 
   openLink = Shared.openLink;
 }

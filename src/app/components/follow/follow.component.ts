@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
@@ -9,6 +9,8 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 })
 export class FollowComponent {
   follow = store.getFollow;
+  @Input() showFollow = true;
+  @Input() css = '';
 
   openLink = Shared.openLink;
 

@@ -1,5 +1,7 @@
-<div class="p-5">
+<div [class]="css">
+  @if(showFollow){
   <h4 class="text-uppercase mb-4">follow me</h4>
+  }
 
   <!-- linked in -->
   <a
@@ -7,9 +9,15 @@
     [href]="follow.link1"
     target="_blank"
     (click)="openLink()"
-    class="btn btn-outline-light btn-social mx-1"
+    class="btn btn-outline-light btn-social"
   >
-    <fa-icon [icon]="faLinkedin"></fa-icon>
+    <fa-icon
+      [icon]="faLinkedin"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="LinkedIn"
+    >
+    </fa-icon>
     <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 
@@ -19,9 +27,15 @@
     [href]="follow.link2"
     target="_blank"
     (click)="openLink()"
-    class="btn btn-outline-light btn-social mx-1"
+    class="btn btn-outline-light btn-social ml-4"
   >
-    <fa-icon [icon]="faGithub"></fa-icon>
+    <fa-icon
+      [icon]="faGithub"
+      data-toggle="tooltip"
+      data-placement="bottom"
+      title="GitHub"
+    >
+    </fa-icon>
     <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 </div>

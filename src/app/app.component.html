@@ -1,12 +1,18 @@
 <!-- * Navigation - UI * -->
-<app-navbar></app-navbar>
+<app-navbar>
+  <app-follow
+    id="transcluded-follow"
+    css="d-none d-sm-block"
+    [showFollow]="false"
+  ></app-follow>
+</app-navbar>
 
 <!-- ^^ ROUTER - pages ^^ -->
 <router-outlet></router-outlet>
 
 <!-- * Footer - UI * -->
 <app-footer>
-  <app-follow id="transcluded-follow"></app-follow>
+  <app-follow id="transcluded-follow" css="p-5 d-sm-none"> </app-follow>
 </app-footer>
 
 <!-- * Scroll - UI * -->

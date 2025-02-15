@@ -26,8 +26,15 @@
   color: $custom;
 }
 
-#mainNav .navbar-nav li.nav-item a.nav-link:active,
-#mainNav .navbar-nav li.nav-item a.nav-link:focus {
+#mainNav .navbar-nav li.nav-item a.nav-link:not(.active):focus:not(:hover) {
+  color: #fff;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link.active:focus:not(:hover) {
+  border-color: $custom;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:active {
   color: #fff;
   color: $custom-bg;
 }
@@ -68,15 +75,16 @@
     border-width: 0 0 2px 0;
   }
 
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
     border-color: $custom-bg;
   }
 
-  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:focus,
   #mainNav .navbar-nav > li.nav-item > a.nav-link.active:active {
     color: #fff;
     color: inherit;
     color: $custom;
+    color: $custom-bg;
     background: #1abc9c;
     background: $custom;
     background: transparent;

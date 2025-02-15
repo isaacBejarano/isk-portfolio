@@ -51,5 +51,6 @@ debug.log
 # Environments
 /src/environments
 
-# Angular cache folder
+# Cache folders
 .angular
+.firebase

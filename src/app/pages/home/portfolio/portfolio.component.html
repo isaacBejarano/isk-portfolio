@@ -3,9 +3,7 @@
 <section class="page-section-top portfolio bg-custom-dark">
   <div class="container">
     <!-- Portfolio Section Heading-->
-    <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
-      Public Portfolio
-    </h2>
+    <h2 class="page-section-heading text-center text-uppercase text-white mb-0"> Portfolio </h2>
 
     <!-- Icon Divider -->
     <app-divider [color]="divider"></app-divider>
@@ -14,8 +12,7 @@
     <div class="row">
       <div
         *ngFor="let item of portfolioItems | reverse"
-        class="col-md-6 col-lg-4 mb-5"
-      >
+        class="col-md-6 col-lg-4 mb-5">
         <app-portfolio-item [item]="item"></app-portfolio-item>
       </div>
     </div>
@@ -27,8 +24,7 @@
 <app-portfolio-modal
   *ngFor="let item of portfolioItems"
   [modal]="item"
-  [ngSwitch]="item.type.toUpperCase()"
->
+  [ngSwitch]="item.type.toUpperCase()">
   <!-- transclusion - type A -->
   <p *ngSwitchCase="'A'" class="mb-5 text-justify">
     {{ item.p1 }} {{ portfolioCommon.dontforget }}
@@ -36,8 +32,7 @@
       href="{{ item.link1 }}"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()"
-    >
+      (click)="openLink()">
       {{ item.host }}.
     </a>
   </p>
@@ -49,8 +44,7 @@
       href="{{ item.link1 }}"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()"
-    >
+      (click)="openLink()">
       {{ item.repo }}
     </a>
     {{ portfolioCommon.star }}
@@ -62,8 +56,7 @@
       href="{{ item.link2 }}"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()"
-    >
+      (click)="openLink()">
       {{ item.host }}
     </a>
   </p>
@@ -76,8 +69,7 @@
       href="{{ item.link1 }}"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()"
-    >
+      (click)="openLink()">
       {{ item.repo }}
     </a>
     {{ portfolioCommon.star }}
@@ -86,20 +78,18 @@
   <!-- transclusion - type D -->
   <ul *ngSwitchCase="'D'" class="mb-5 text-justify">
     {{
-      portfolioCommon.list
+    portfolioCommon.list
     }}
     <li *ngFor="let algor of item.algorithms">
       <a
         href="{{ algor.link }}"
         rel="nofollow noreferrer"
         target="_blank"
-        (click)="openLink()"
-      >
-        {{ algor.js }} </a
-      >,
+        (click)="openLink()">
+        {{ algor.js }} </a>,
     </li>
     {{
-      portfolioCommon.stars
+    portfolioCommon.stars
     }}
   </ul>
 
@@ -111,14 +101,12 @@
       href="{{ item.link1 }}"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()"
-    >
+      (click)="openLink()">
       {{ item.repo }}
     </a>
     {{ portfolioCommon.star }}
 
-    <span class="text-gray"
-      >{{ portfolioItems[portfolioItems.length - 1].p2 }}
+    <span class="text-gray">{{ portfolioItems[portfolioItems.length - 1].p2 }}
     </span>
   </p>
 </app-portfolio-modal>

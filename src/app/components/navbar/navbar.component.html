@@ -1,15 +1,13 @@
 <!-- Navigation-->
-<nav
-  class="navbar navbar-expand-lg bg-secondary fixed-top px-5 justify-content-between"
-  id="mainNav"
->
+<nav id="mainNav"
+  class="navbar navbar-expand-lg bg-secondary fixed-top px-5 justify-content-between">
+
   <div class="container-fluid justify-content-start">
     <!-- We dont' use routerLink here so JQuery Animation can work in home.component -->
     <a
       class="navbar-brand js-scroll-trigger"
       [href]=""
-      rel="nofollow noreferrer"
-    >
+      rel="nofollow noreferrer">
       <img [src]="navbar.src" [alt]="navbar.alt" />
     </a>
     <button
@@ -19,8 +17,7 @@
       data-target="#navbarResponsive"
       aria-controls="navbarResponsive"
       aria-expanded="false"
-      aria-label="Toggle navigation"
-    >
+      aria-label="Toggle navigation">
       {{ navbar.hamburger }}
       <fa-icon [icon]="faBars"></fa-icon>
     </button>
@@ -28,35 +25,31 @@
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="nav-link py-1 px-0 mx-lg-2 text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.home)"
-            rel="nofollow noreferrer"
-          >
+            rel="nofollow noreferrer">
             <span> {{ navbar.home }} </span>
           </a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="nav-link py-1 px-0 mx-lg-2 text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page1)"
-            rel="nofollow noreferrer"
-            >{{ navbar.page1 }}
+            rel="nofollow noreferrer">{{ navbar.page1 }}
           </a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="nav-link py-1 px-0 mx-lg-2 text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page2)"
-            rel="nofollow noreferrer"
-            >{{ navbar.page2 }}
+            rel="nofollow noreferrer">{{ navbar.page2 }}
           </a>
         </li>
         <li class="nav-item mx-0 mx-lg-1">
           <a
-            class="nav-link py-3 px-0 px-lg-3 rounded text-uppercase js-scroll-trigger"
+            class="nav-link py-1 px-0 mx-lg-2 text-uppercase js-scroll-trigger"
             [href]="hashIt(navbar.page3)"
-            rel="nofollow noreferrer"
-            >{{ navbar.page3 }}
+            rel="nofollow noreferrer">{{ navbar.page3 }}
           </a>
         </li>
       </ul>

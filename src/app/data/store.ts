@@ -20,7 +20,7 @@ export const store = {
     tool: 'Angular',
     theme: 'Start Bootstrap Theme',
     link1: 'https://angular.dev',
-    link2: 'https://startbootstrap.com/previews/freelancer/',
+    link2: 'https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE',
     license: 'MIT',
     copyright: 'Isaac Bejarano',
   },
@@ -117,7 +117,7 @@ export const store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['css','javascript'],
+        tech: ['css', 'javascript'],
       },
       // modal 4
       {
@@ -162,24 +162,34 @@ export const store = {
       ['PHP', './assets/img/skills/php.png'],
       // ['F#', './assets/img/skills/fsharp.png'],
     ],
+    getStack: [
+      ['Docker', './assets/img/skills/docker.png'],
+      ['IIS', './assets/img/skills/iis.png'],
+      ['Apache', './assets/img/skills/apache.png'],
+      ['Nginx', './assets/img/skills/nginx.png'],
+      // ['LAMP', './assets/img/skills/lamp.png'],
+      // ['MEAN', './assets/img/skills/mean.png'],
+    ],
     frontend: [
       ['Angular', './assets/img/skills/angular.png'],
       ['Angular Material', './assets/img/skills/material.png'],
+      ['SASS', './assets/img/skills/SASS.png'],
       ['RxJS', './assets/img/skills/rxjs.png'],
+      ['Vue', './assets/img/skills/vue.png'],
+      ['Bootstrap', './assets/img/skills/bootstrap.png'],
       // ['Scully', './assets/img/skills/scully.png'],
       // ['jQuery', './assets/img/skills/jquery.png'],
       // ['Leaflet', './assets/img/skills/leaflet.png'],
-      ['Vue', './assets/img/skills/vue.png'],
-      ['SASS', './assets/img/skills/SASS.png'],
-      // ['Bootstrap', './assets/img/skills/bootstrap.png'],
     ],
     backend: [
       ['.NET', './assets/img/skills/dotnet.png'],
-      // ['Entity Framework Core', './assets/img/skills/dotnetef.png'],
       ['Laravel', './assets/img/skills/laravel.png'],
       ['Node.js', './assets/img/skills/node.png'],
+      // ['REST', './assets/img/skills/REST.png'],
+      // ['Entity Framework Core', './assets/img/skills/dotnetef.png'],
       // ['Express', './assets/img/skills/express.png'],
       // ['Koa', './assets/img/skills/koa.png'],
+
     ],
     CSS: [
       ['Bulma', './assets/img/skills/bulma.png'],
@@ -218,8 +228,8 @@ export const store = {
     ],
     testing: [
       ['Playwright', './assets/img/skills/playwright.png'],
-      ['Testing Library', './assets/img/skills/testing-library.png'],
       ['Cypress', './assets/img/skills/cypress.png'],
+      ['Testing Library', './assets/img/skills/testing-library.png'],
     ],
     bundlers: [
       ['Parcel', './assets/img/skills/parcel.png'],
@@ -261,6 +271,9 @@ export const store = {
   // TECH
   get getSkillsLang(): any {
     return this.skills.lang;
+  },
+  get getSkillsStack(): any {
+    return this.skills.getStack;
   },
   get getSkillsFrontend(): any {
     return this.skills.frontend;

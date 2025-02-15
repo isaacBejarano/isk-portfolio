@@ -25,10 +25,11 @@ export class SkillsComponent implements OnInit {
   testing = store.getSkillsTDD;
   state = store.getSkillsState;
   skillsBundlers = store.getSkillsBundlers;
-  sillsGameEngines = store.getSkillsGameEngines;
+  skillsGameEngines = store.getSkillsGameEngines;
+  skillsStack = store.getSkillsStack;
 
   ngOnInit(): void {
-    $(function () {
+    $(function() {
       $('[data-toggle="tooltip"]').tooltip();
     });
   }

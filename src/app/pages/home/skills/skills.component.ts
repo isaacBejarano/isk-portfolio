@@ -24,7 +24,8 @@ export class SkillsComponent implements OnInit {
   git = store.getSkillsGit;
   testing = store.getSkillsTDD;
   state = store.getSkillsState;
-  webpack = store.getSkillsWebpack;
+  skillsBundlers = store.getSkillsBundlers;
+  sillsGameEngines = store.getSkillsGameEngines;
 
   ngOnInit(): void {
     $(function () {

@@ -33,10 +33,10 @@ export const store = {
     src: './assets/img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
-    title: 'Full Stack Web Developer',
+    title: 'Full Stack Developer',
   },
   // featured ~new
-  new: 'Winary web app made with Angular',
+  new: 'Responsive prototype with only HTML and CSS',
   // portfolio
   portfolio: {
     // common
@@ -46,7 +46,7 @@ export const store = {
       list: 'Visit these repositories:',
       visit: 'Visit this repository at',
       visits: 'Visit these repositories at',
-      dontforget: `Don't forget to see it live at`,
+      dontforget: `Don't forget to see it live on`,
     },
     items: [
       // modal 1
@@ -84,7 +84,7 @@ export const store = {
           },
         ],
         type: 'D',
-        tech: ['javascript', 'html'],
+        tech: ['javascript'],
       },
       // modal 2
       {
@@ -117,7 +117,7 @@ export const store = {
         type: 'B',
         repo: 'Github',
         host: 'Codepen',
-        tech: ['javascript', 'css'],
+        tech: ['css','javascript'],
       },
       // modal 4
       {
@@ -133,31 +133,21 @@ export const store = {
         type: 'A',
         tech: ['wordpress'],
       },
-      // modal ~new is teh last!
+      // modal ~new is the last!
       {
-        title: 'MontPicolis',
+        title: 'Responsive Website',
         target: '#portfolioModal11',
         id: 'portfolioModal11',
         label: 'portfolioModal11Lbabel',
-        src: 'portfolio/montpicolis.png',
-        alt: 'montpicolis wine cellars page',
-        p1: 'SPA for a winary made with Angular, using a custom RxJS store for state management,\
-            with prerendered views made with Scully and consuming a custom RESTful proxy API made with Laravel which consumes WordPress REST API and WooCommerce SDK.\
-            It complies with the Jamstack architecture.',
-        link1: 'http://www.montpicolis.cat/',
-        link2: 'http://www.montpicolis.cat/',
-        host: 'MontPicolis',
-        type: 'A',
-        tech: [
-          'angular',
-          'rxjs',
-          'scully',
-          'SASS',
-          'laravel',
-          'wordpress',
-          'wp-rest-api',
-          'woocommerce',
-        ],
+        src: 'portfolio/uoc.png',
+        alt: 'Naturae Hub',
+        p1: 'Responsive prototype with only HTML and CSS. Made for the UOC Master on Web App Development.',
+        link1: 'https://github.com/isaacBejarano/uoc-html-css-p3.github.io',
+        link2: 'https://isaacbejarano.github.io/uoc-html-css-p3.github.io',
+        type: 'B',
+        repo: 'GitHub',
+        host: 'GitHub Pages',
+        tech: ['html', 'css'],
       },
     ],
   },
@@ -169,39 +159,40 @@ export const store = {
       ['JavaScript / ES6', './assets/img/skills/javascript.png'],
       ['TypeScript', './assets/img/skills/typescript.png'],
       ['C#', './assets/img/skills/c-sharp-logo.png'],
-      ['F#', './assets/img/skills/fsharp.png'],
       ['PHP', './assets/img/skills/php.png'],
+      // ['F#', './assets/img/skills/fsharp.png'],
     ],
     frontend: [
       ['Angular', './assets/img/skills/angular.png'],
-      ['Vue', './assets/img/skills/vue.png'],
+      ['Angular Material', './assets/img/skills/material.png'],
       ['RxJS', './assets/img/skills/rxjs.png'],
-      ['Scully', './assets/img/skills/scully.png'],
-      ['jQuery', './assets/img/skills/jquery.png'],
-      ['Leaflet', './assets/img/skills/leaflet.png'],
+      // ['Scully', './assets/img/skills/scully.png'],
+      // ['jQuery', './assets/img/skills/jquery.png'],
+      // ['Leaflet', './assets/img/skills/leaflet.png'],
+      ['Vue', './assets/img/skills/vue.png'],
+      ['SASS', './assets/img/skills/SASS.png'],
+      // ['Bootstrap', './assets/img/skills/bootstrap.png'],
     ],
     backend: [
       ['.NET', './assets/img/skills/dotnet.png'],
-      ['Entity Framework Core', './assets/img/skills/dotnetef.png'],
-      ['Node.js', './assets/img/skills/node.png'],
-      ['Express', './assets/img/skills/express.png'],
-      ['Koa', './assets/img/skills/koa.png'],
+      // ['Entity Framework Core', './assets/img/skills/dotnetef.png'],
       ['Laravel', './assets/img/skills/laravel.png'],
+      ['Node.js', './assets/img/skills/node.png'],
+      // ['Express', './assets/img/skills/express.png'],
+      // ['Koa', './assets/img/skills/koa.png'],
     ],
     CSS: [
-      ['SASS', './assets/img/skills/SASS.png'],
-      ['Angular Material', './assets/img/skills/material.png'],
-      ['Bootstrap', './assets/img/skills/bootstrap.png'],
       ['Bulma', './assets/img/skills/bulma.png'],
-      ['PureCSS', './assets/img/skills/pureCSS.png'],
-      ['LESS', './assets/img/skills/less.png'],
+      // ['PureCSS', './assets/img/skills/pureCSS.png'],
+      // ['LESS', './assets/img/skills/less.png'],
     ],
     DB: [
       ['Postgre SQL', './assets/img/skills/postgres.png'],
-      ['SQL Server', './assets/img/skills/sqlserver.png'],
+      ['SQLite', './assets/img/skills/sqlite.png'],
       ['Maria DB', './assets/img/skills/mariadb.png'],
-      ['Mongo DB', './assets/img/skills/mongodb.png'],
-      ['MySQL', './assets/img/skills/mysql.png'],
+      // ['MySQL', './assets/img/skills/mysql.png'],
+      ['SQL Server', './assets/img/skills/sqlserver.png'],
+      // ['Mongo DB', './assets/img/skills/mongodb.png'],
     ],
     techniques: [
       ['REST', './assets/img/skills/REST.png'],
@@ -213,22 +204,30 @@ export const store = {
     ],
     wp: [
       ['Wordpress', './assets/img/skills/wordpress.png'],
-      ['Wordpress REST API', './assets/img/skills/wp-rest-api.png'],
+      // ['Wordpress REST API', './assets/img/skills/wp-rest-api.png'],
+      ['Drupal', './assets/img/skills/drupal.png'],
     ],
     XaaS: [
       ['Azure', './assets/img/skills/azure.png'],
-      ['Firebase', './assets/img/skills/firebase.png'],
       ['Netlify', './assets/img/skills/netlify.png'],
+      ['Firebase', './assets/img/skills/firebase.png'],
     ],
     version: [
       ['git', './assets/img/skills/git.png'],
       ['GitHub', './assets/img/skills/github.png'],
     ],
     testing: [
+      ['Playwright', './assets/img/skills/playwright.png'],
       ['Testing Library', './assets/img/skills/testing-library.png'],
       ['Cypress', './assets/img/skills/cypress.png'],
     ],
-    webpack: [],
+    bundlers: [
+      ['Parcel', './assets/img/skills/parcel.png'],
+      ['ESBuild', './assets/img/skills/esbuild.png'],
+    ],
+    games: [
+      ['Unity', './assets/img/skills/unity.png'],
+    ],
   },
 
   // getters
@@ -299,8 +298,11 @@ export const store = {
   get getSkillsState(): any {
     return this.skills.state;
   },
-  get getSkillsWebpack(): any {
-    return this.skills.webpack;
+  get getSkillsBundlers(): any {
+    return this.skills.bundlers;
+  },
+  get getSkillsGameEngines(): any {
+    return this.skills.games;
   },
 
   // setters

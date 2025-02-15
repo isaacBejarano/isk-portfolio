@@ -41,7 +41,7 @@
       <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> Frontend</span>
-          Frameworks & Libraries
+          <!-- Frameworks & Libraries -->
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -63,7 +63,7 @@
       <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> Backend </span>
-          Frameworks & Libraries
+          <!-- Frameworks & Libraries -->
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -73,7 +73,7 @@
                 [src]="skill[1]"
                 data-toggle="tooltip"
                 data-placement="bottom"
-                [title]="lol"
+                [title]="skill[0]"
                 [alt]="skill[0]"
               />
             </ng-template>
@@ -82,7 +82,7 @@
       </div>
 
       <!-- CSS -->
-      <div class="mb-5">
+      <!-- <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> CSS </span>
           Frameworks & Preprocessors
@@ -101,7 +101,7 @@
             </ng-template>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- Version Control -->
       <div class="mb-5">
@@ -127,9 +127,7 @@
       <!-- Testing -->
       <div class="mb-5">
         <h3 class="h4">
-          <span class="text-custom-dark">
-            Unit Testing / End-To-End Testing
-          </span>
+          <span class="text-custom-dark"> E2E/Unit Testing </span>
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -150,7 +148,7 @@
       <!-- XaaS -->
       <div class="mb-5">
         <h3 class="h4">
-          <span class="text-custom-dark">Cloud / XaaS</span>
+          <span class="text-custom-dark">Cloud</span>
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -193,7 +191,7 @@
       <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> Database </span>
-          Management Systems
+          <!-- Management Systems -->
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
@@ -212,7 +210,7 @@
       </div>
 
       <!-- REST -->
-      <div class="mb-5">
+      <!-- <div class="mb-5">
         <h3 class="h4">
           <span class="text-custom-dark"> Architectures / Techniques</span>
         </h3>
@@ -230,7 +228,7 @@
             </ng-template>
           </li>
         </ul>
-      </div>
+      </div> -->
 
       <!-- Package -->
       <div class="mb-5">
@@ -240,6 +238,48 @@
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
             <ng-template ngFor let-skill [ngForOf]="packages">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Bubdlers -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark"> Package Bundlers </span>
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="skillsBundlers">
+              <img
+                class="mr-3 mb-3"
+                [src]="skill[1]"
+                data-toggle="tooltip"
+                data-placement="bottom"
+                [title]="skill[0]"
+                [alt]="skill[0]"
+              />
+            </ng-template>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Game Engines -->
+      <div class="mb-5">
+        <h3 class="h4">
+          <span class="text-custom-dark"> Game Engines </span>
+        </h3>
+        <ul class="p-0 mt-3 pic-grid d-flex">
+          <li>
+            <ng-template ngFor let-skill [ngForOf]="sillsGameEngines">
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"

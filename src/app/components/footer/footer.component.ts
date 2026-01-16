@@ -3,10 +3,10 @@ import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-    selector: 'app-footer',
-    templateUrl: './footer.component.html',
-    styleUrls: ['./footer.component.scss'],
-    standalone: false
+  selector: 'app-footer',
+  templateUrl: './footer.component.html',
+  styleUrls: ['./footer.component.css'],
+  standalone: false,
 })
 export class FooterComponent {
   footer = store.getFooter;

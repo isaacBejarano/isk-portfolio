@@ -1,4 +1,4 @@
-@use "../../../sass/globals"; // globals
+/* @use "../../../sass/globals"; // globals */
 
 .row {
   padding: 6rem 0 2rem;
@@ -7,10 +7,10 @@
     font-weight: bold !important;
   }
   p {
-    max-width: $breakpoint-sm;
+    /* max-width: $breakpoint-sm; */
   }
 }
-@media screen and (min-width: $breakpoint-md) {
+/* @media screen and (min-width: $breakpoint-md) {
   .row {
     padding-top: 8rem;
     h2 {
@@ -25,4 +25,4 @@
       font-size: 2rem;
     }
   }
-}
+} */

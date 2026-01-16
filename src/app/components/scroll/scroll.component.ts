@@ -5,7 +5,7 @@ import { store } from '@app/data/store';
 @Component({
   selector: 'app-scroll',
   templateUrl: './scroll.component.html',
-  styleUrls: ['./scroll.component.scss'],
+  styleUrls: ['./scroll.component.css'],
   standalone: false,
 })
 export class ScrollComponent {

@@ -4,7 +4,7 @@ import { store } from '@app/data/store';
 @Component({
   selector: 'app-featured',
   templateUrl: './featured.component.html',
-  styleUrls: ['./featured.component.scss'],
+  styleUrls: ['./featured.component.css'],
   standalone: false,
 })
 export class FeaturedComponent {

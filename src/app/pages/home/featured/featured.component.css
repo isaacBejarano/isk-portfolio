@@ -1,4 +1,4 @@
-@use "../../../../sass/globals"; // globals
+/* @use "../../../../sass/globals"; // globals */
 
 .portfolio-modal button.close:focus {
   outline: 0;
@@ -9,9 +9,9 @@
     font-size: 1.5rem;
   }
 
-  // Featured Box
+  /* // Featured Box */
   .col {
-    // Theme override
+    /* // Theme override */
     .portfolio-item {
       position: relative !important;
 
@@ -21,7 +21,7 @@
         left: 0 !important;
         transition: all 0.2s ease-in-out !important;
         opacity: 0 !important;
-        background-color: $custom !important;
+        /* background-color: $custom !important; */
         &:hover {
           cursor: pointer;
           opacity: 1 !important;
@@ -34,7 +34,7 @@
     }
   }
 
-  // Featured Modal
+  /* // Featured Modal */
   .modal-body {
     img {
       border-width: 4px !important;
@@ -48,8 +48,8 @@
     max-width: 272 !important;
   }
 }
-@media (min-width: $breakpoint-sm) {
+/* @media (min-width: $breakpoint-sm) {
   #featured-pic {
     max-width: 400px !important;
   }
-}
+} */

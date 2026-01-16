@@ -1,4 +1,4 @@
-@use "../../../sass/globals"; // globals
+/* @use "../../../sass/globals"; // globals */
 
 .footer {
   padding-top: 5rem;
@@ -6,7 +6,7 @@
   background: linear-gradient(0deg, rgb(26 37 47) 80%, rgb(26 37 47 / 67%));
   color: #fff;
 
-  //
+  /* // */
   @media screen and (min-width: 1024px) and (orientation: portrait) {
     position: fixed;
     bottom: 0;

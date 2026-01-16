@@ -4,10 +4,10 @@ import { store } from '@app/data/store';
 declare let $: any; // fixes B4 tooltip() type conflict
 
 @Component({
-    selector: 'app-skills',
-    templateUrl: './skills.component.html',
-    styleUrls: ['./skills.component.scss'],
-    standalone: false
+  selector: 'app-skills',
+  templateUrl: './skills.component.html',
+  styleUrls: ['./skills.component.css'],
+  standalone: false,
 })
 export class SkillsComponent implements OnInit {
   divider = 'divider-dark'; // -> <app-divider> Input()
@@ -30,7 +30,7 @@ export class SkillsComponent implements OnInit {
   skillsStack = store.getSkillsStack;
 
   ngOnInit(): void {
-    $(function() {
+    $(function () {
       $('[data-toggle="tooltip"]').tooltip();
     });
   }

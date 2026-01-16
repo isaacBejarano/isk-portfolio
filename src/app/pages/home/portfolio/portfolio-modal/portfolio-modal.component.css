@@ -1,10 +1,10 @@
-@use "../../../../../sass/globals"; // globals
+/* @use "../../../../../sass/globals"; // globals */
 
 .portfolio-modal button.close:focus {
   outline: 0;
 }
 
-// Portfolio Modal
+/* // Portfolio Modal */
 .modal-body {
   img {
     border-width: 4px !important;

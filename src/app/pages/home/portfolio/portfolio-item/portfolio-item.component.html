@@ -12,12 +12,13 @@
 
   <!-- web tech icons -->
   <div class="tech-icons bg-light">
-    <img
-      *ngFor="let tech of item.tech"
-      src="assets/img/portfolio/{{ tech }}.png"
-      alt="web tech"
-      width="auto"
-      height="30"
-      class="border border-light bg-light p-1 rounded" />
+    @for (tech of item.tech; track tech) {
+      <img
+        src="assets/img/portfolio/{{ tech }}.png"
+        alt="web tech"
+        width="auto"
+        height="30"
+        class="border border-light bg-light p-1 rounded" />
+    }
   </div>
 </div>

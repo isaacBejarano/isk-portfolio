@@ -4,25 +4,46 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/app/*"],
-      "@components/*": ["src/app/components/*"],
-      "@pages/*": ["src/app/pages/*"],
-      "@guards/*": ["src/app/guards/*"],
-      "@models/*": ["src/app/models/*"],
-      "@pipes/*": ["src/app/pipes/*"],
-      "@services/*": ["src/app/services/*"],
-      "@assets/*": ["src/assets/*"],
-      "@env/*": ["src/environments/*"]
+      "@app/*": [
+        "src/app/*"
+      ],
+      "@components/*": [
+        "src/app/components/*"
+      ],
+      "@pages/*": [
+        "src/app/pages/*"
+      ],
+      "@guards/*": [
+        "src/app/guards/*"
+      ],
+      "@models/*": [
+        "src/app/models/*"
+      ],
+      "@pipes/*": [
+        "src/app/pipes/*"
+      ],
+      "@services/*": [
+        "src/app/services/*"
+      ],
+      "@assets/*": [
+        "src/assets/*"
+      ],
+      "@env/*": [
+        "src/environments/*"
+      ]
     },
     "outDir": "./dist/out-tsc",
     "esModuleInterop": true,
     "sourceMap": true,
     "declaration": false,
     "experimentalDecorators": true,
-    "moduleResolution": "node",
+    "moduleResolution": "bundler",
     "importHelpers": true,
     "target": "ES2022",
     "module": "ES2022",
-    "lib": ["es2018", "dom"]
+    "lib": [
+      "es2018",
+      "dom"
+    ]
   }
 }

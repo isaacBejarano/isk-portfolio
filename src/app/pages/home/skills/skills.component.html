@@ -21,7 +21,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsLang">
+            @for (skill of skillsLang; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -29,7 +29,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -41,7 +41,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsStack">
+            @for (skill of skillsStack; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -49,7 +49,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -61,7 +61,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsFrontend">
+            @for (skill of skillsFrontend; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -69,7 +69,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -81,7 +81,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsBackend">
+            @for (skill of skillsBackend; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -89,7 +89,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -101,7 +101,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsDB">
+            @for (skill of skillsDB; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -109,7 +109,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -121,7 +121,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="git">
+            @for (skill of git; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -129,7 +129,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -141,7 +141,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="testing">
+            @for (skill of testing; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -149,7 +149,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -161,7 +161,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="packages">
+            @for (skill of packages; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -169,7 +169,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -181,7 +181,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsBundlers">
+            @for (skill of skillsBundlers; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -189,7 +189,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -201,7 +201,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="XaaS">
+            @for (skill of XaaS; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -209,7 +209,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -221,7 +221,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="wordpress">
+            @for (skill of wordpress; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -229,7 +229,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>
@@ -241,7 +241,7 @@
         </h3>
         <ul class="p-0 mt-3 pic-grid d-flex">
           <li>
-            <ng-template ngFor let-skill [ngForOf]="skillsGameEngines">
+            @for (skill of skillsGameEngines; track skill) {
               <img
                 class="mr-3 mb-3"
                 [src]="skill[1]"
@@ -249,7 +249,7 @@
                 data-placement="bottom"
                 [title]="skill[0]"
                 [alt]="skill[0]" />
-            </ng-template>
+            }
           </li>
         </ul>
       </div>

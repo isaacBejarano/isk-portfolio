@@ -1,11 +1,10 @@
 import { Component, Input } from '@angular/core';
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-    selector: 'app-portfolio-item',
-    templateUrl: './portfolio-item.component.html',
-    styleUrls: ['./portfolio-item.component.scss'],
-    standalone: false
+  selector: 'app-portfolio-item',
+  templateUrl: './portfolio-item.component.html',
+  styleUrls: ['./portfolio-item.component.scss'],
+  standalone: false,
 })
 export class PortfolioItemComponent {
   // props  <- from <app-home>
@@ -17,5 +16,5 @@ export class PortfolioItemComponent {
     // ...
   };
 
-  faPlus = faPlus;
+  // faPlus = faPlus; FIXME:
 }

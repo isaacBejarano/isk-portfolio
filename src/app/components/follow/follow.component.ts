@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
-    selector: 'app-follow',
-    templateUrl: './follow.component.html',
-    standalone: false
+  selector: 'app-follow',
+  templateUrl: './follow.component.html',
+  standalone: false,
 })
 export class FollowComponent {
   follow = store.getFollow;
@@ -15,6 +14,6 @@ export class FollowComponent {
 
   openLink = Shared.openLink;
 
-  faLinkedin = faLinkedin;
-  faGithub = faGithub;
+  // faLinkedin = faLinkedin; FIXME:
+  // faGithub = faGithub; FIXME:
 }

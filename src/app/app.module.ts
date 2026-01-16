@@ -1,6 +1,5 @@
-import { NgModule } from '@angular/core';
+import { NgModule, provideZoneChangeDetection } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 // pages - routes
@@ -19,30 +18,36 @@ import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/po
 import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/portfolio-modal.component';
 import { DividerComponent } from './components/divider/divider.component';
 // services
-import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+import {
+  provideHttpClient,
+  withInterceptorsFromDi,
+} from '@angular/common/http';
 import { SkillsComponent } from './pages/home/skills/skills.component';
 import { ReversePipe } from './pipes/reverse.pipe';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-@NgModule({ declarations: [
-        AppComponent,
-        HomeComponent,
-        ErrorComponent,
-        NavbarComponent,
-        FooterComponent,
-        ScrollComponent,
-        MasterheadComponent,
-        FeaturedComponent,
-        PortfolioComponent,
-        FollowComponent,
-        PortfolioItemComponent,
-        PortfolioModalComponent,
-        DividerComponent,
-        SkillsComponent,
-        ReversePipe,
-    ],
-    bootstrap: [AppComponent], imports: [BrowserModule,
-        AppRoutingModule,
-        ReactiveFormsModule,
-        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
+@NgModule({
+  declarations: [
+    AppComponent,
+    HomeComponent,
+    ErrorComponent,
+    NavbarComponent,
+    FooterComponent,
+    ScrollComponent,
+    MasterheadComponent,
+    FeaturedComponent,
+    PortfolioComponent,
+    FollowComponent,
+    PortfolioItemComponent,
+    PortfolioModalComponent,
+    DividerComponent,
+    SkillsComponent,
+    ReversePipe,
+  ],
+  bootstrap: [AppComponent],
+  imports: [BrowserModule, AppRoutingModule],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+    provideZoneChangeDetection(),
+  ],
+})
 export class AppModule {}

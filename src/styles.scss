@@ -1,6 +1,6 @@
 // CUSTOM STYLES
-@import "./sass/globals"; // globals
-@import "./sass/bootstrap"; // Bootstrap
+@use "./sass/globals"; // globals
+@use "./sass/bootstrap"; // Bootstrap
 
 // OVERRIDE
 .img-fluid-override {

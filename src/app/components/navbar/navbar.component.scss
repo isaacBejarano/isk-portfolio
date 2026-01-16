@@ -1,11 +1,22 @@
-@import "../../../sass/globals"; // globals
+@use "../../../sass/globals"; // globals
 
 #mainNav {
   padding-top: 1rem;
   padding-bottom: 1rem;
-  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    "Montserrat",
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   font-weight: 700;
   background: linear-gradient(180deg, rgb(26 37 47) 46%, rgb(26 37 47 / 67%));
 }
@@ -54,7 +65,9 @@
   #mainNav {
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
-    transition: padding-top 0.3s, padding-bottom 0.3s;
+    transition:
+      padding-top 0.3s,
+      padding-bottom 0.3s;
   }
 
   #mainNav .navbar-brand {

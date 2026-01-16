@@ -1,12 +1,11 @@
 import { Component, Input } from '@angular/core';
 import { store } from '@app/data/store';
-import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-    selector: 'app-featured',
-    templateUrl: './featured.component.html',
-    styleUrls: ['./featured.component.scss'],
-    standalone: false
+  selector: 'app-featured',
+  templateUrl: './featured.component.html',
+  styleUrls: ['./featured.component.scss'],
+  standalone: false,
 })
 export class FeaturedComponent {
   // props to Input()
@@ -16,6 +15,6 @@ export class FeaturedComponent {
   portfolioItems = store.getPortfolioItems; // common + modal8
   portfolioCommon = store.getPortfolioCommon; // common + modal8
 
-  faPlus = faPlus;
-  faTimes = faTimes;
+  // faPlus = faPlus; FIXME:
+  // faTimes = faTimes; FIXME:
 }

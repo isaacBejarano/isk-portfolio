@@ -1,4 +1,4 @@
-@import "../../../../sass/globals"; // globals
+@use "../../../../sass/globals"; // globals
 
 a:not(.nav-link):hover {
   color: $custom-bg;

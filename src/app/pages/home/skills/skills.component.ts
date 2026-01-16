@@ -4,9 +4,10 @@ import { store } from '@app/data/store';
 declare let $: any; // fixes B4 tooltip() type conflict
 
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss'],
+    selector: 'app-skills',
+    templateUrl: './skills.component.html',
+    styleUrls: ['./skills.component.scss'],
+    standalone: false
 })
 export class SkillsComponent implements OnInit {
   divider = 'divider-dark'; // -> <app-divider> Input()

@@ -3,9 +3,10 @@ import { Shared } from '../../../../utils/shared';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-portfolio-modal',
-  templateUrl: './portfolio-modal.component.html',
-  styleUrls: ['./portfolio-modal.component.scss'],
+    selector: 'app-portfolio-modal',
+    templateUrl: './portfolio-modal.component.html',
+    styleUrls: ['./portfolio-modal.component.scss'],
+    standalone: false
 })
 export class PortfolioModalComponent {
   // prop -> to <app-divider> Input()

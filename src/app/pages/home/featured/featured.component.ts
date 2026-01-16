@@ -3,9 +3,10 @@ import { store } from '@app/data/store';
 import { faPlus, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-featured',
-  templateUrl: './featured.component.html',
-  styleUrls: ['./featured.component.scss'],
+    selector: 'app-featured',
+    templateUrl: './featured.component.html',
+    styleUrls: ['./featured.component.scss'],
+    standalone: false
 })
 export class FeaturedComponent {
   // props to Input()

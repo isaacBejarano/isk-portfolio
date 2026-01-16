@@ -3,9 +3,10 @@ import { Shared } from '../../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-portfolio',
-  templateUrl: './portfolio.component.html',
-  styleUrls: ['./portfolio.component.scss'],
+    selector: 'app-portfolio',
+    templateUrl: './portfolio.component.html',
+    styleUrls: ['./portfolio.component.scss'],
+    standalone: false
 })
 export class PortfolioComponent {
   // prop -> to <app-divider> Input()

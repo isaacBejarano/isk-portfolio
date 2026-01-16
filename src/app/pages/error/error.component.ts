@@ -3,9 +3,10 @@ import { Component, OnInit } from '@angular/core';
 declare let gsap: any; // page 404 animation plugin
 
 @Component({
-  selector: 'app-error',
-  templateUrl: './error.component.html',
-  styleUrls: ['./error.component.scss'],
+    selector: 'app-error',
+    templateUrl: './error.component.html',
+    styleUrls: ['./error.component.scss'],
+    standalone: false
 })
 export class ErrorComponent implements OnInit {
   constructor() {}

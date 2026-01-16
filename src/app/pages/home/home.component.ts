@@ -6,8 +6,9 @@ import { store } from '@app/data/store';
 declare let jQuery: any; // ~jQuery Easing
 
 @Component({
-  selector: 'app-home',
-  templateUrl: './home.component.html',
+    selector: 'app-home',
+    templateUrl: './home.component.html',
+    standalone: false
 })
 export class HomeComponent implements OnInit, AfterViewChecked, DoCheck {
   propNew = store.getNew; // featured ~new

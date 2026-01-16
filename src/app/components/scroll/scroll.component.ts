@@ -4,9 +4,10 @@ import { store } from '@app/data/store';
 import { faChevronUp } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-scroll',
-  templateUrl: './scroll.component.html',
-  styleUrls: ['./scroll.component.scss'],
+    selector: 'app-scroll',
+    templateUrl: './scroll.component.html',
+    styleUrls: ['./scroll.component.scss'],
+    standalone: false
 })
 export class ScrollComponent {
   scroll = store.getScroll;

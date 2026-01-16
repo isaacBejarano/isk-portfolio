@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-masterhead',
-  templateUrl: './masterhead.component.html',
-  styleUrls: ['./masterhead.component.scss'],
+    selector: 'app-masterhead',
+    templateUrl: './masterhead.component.html',
+    styleUrls: ['./masterhead.component.scss'],
+    standalone: false
 })
 export class MasterheadComponent {
   // prop -> to <app-divider> Input()

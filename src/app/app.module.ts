@@ -19,38 +19,30 @@ import { PortfolioItemComponent } from './pages/home/portfolio/portfolio-item/po
 import { PortfolioModalComponent } from './pages/home/portfolio/portfolio-modal/portfolio-modal.component';
 import { DividerComponent } from './components/divider/divider.component';
 // services
-import { HttpClientModule } from '@angular/common/http';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { SkillsComponent } from './pages/home/skills/skills.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-@NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    ErrorComponent,
-    NavbarComponent,
-    FooterComponent,
-    ScrollComponent,
-    MasterheadComponent,
-    FeaturedComponent,
-    PortfolioComponent,
-    FollowComponent,
-    PortfolioItemComponent,
-    PortfolioModalComponent,
-    DividerComponent,
-    SkillsComponent,
-    ReversePipe,
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    ReactiveFormsModule,
-    // import HttpClientModule after BrowserModule.
-    HttpClientModule,
-    FontAwesomeModule,
-  ],
-  providers: [],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [
+        AppComponent,
+        HomeComponent,
+        ErrorComponent,
+        NavbarComponent,
+        FooterComponent,
+        ScrollComponent,
+        MasterheadComponent,
+        FeaturedComponent,
+        PortfolioComponent,
+        FollowComponent,
+        PortfolioItemComponent,
+        PortfolioModalComponent,
+        DividerComponent,
+        SkillsComponent,
+        ReversePipe,
+    ],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        AppRoutingModule,
+        ReactiveFormsModule,
+        FontAwesomeModule], providers: [provideHttpClient(withInterceptorsFromDi())] })
 export class AppModule {}

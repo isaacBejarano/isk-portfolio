@@ -1,0 +1,34 @@
+/* thiner weights asimilate to 'normal' */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 100 400;
+  src: url("/fonts/Lato-Regular.woff2") format("font/woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: Lato;
+  font-style: italic;
+  font-weight: 100 400;
+  src: url("/fonts/Lato-Italic.woff2") format("font/woff2");
+  font-display: swap;
+}
+
+/* medium to bold asimilate to 'bold' */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 500 700;
+  src: url("/fonts/Lato-Bold.woff2") format("font/woff2");
+  font-display: swap;
+}
+
+/* extra weights asimilate to 'black' */
+@font-face {
+  font-family: Lato;
+  font-style: normal;
+  font-weight: 800 900;
+  src: url("/fonts/Lato-Black.woff2") format("font/woff2");
+  font-display: swap;
+}

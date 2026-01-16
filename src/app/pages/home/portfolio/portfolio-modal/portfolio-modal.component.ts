@@ -8,10 +8,10 @@ import { Shared } from '../../../../utils/shared';
   standalone: false,
 })
 export class PortfolioModalComponent {
-  // prop -> to <app-divider> Input()
+  // prop -> to <isk-divider> Input()
   divider = 'divider-dark';
 
-  // prop <- from <app-portfolio>
+  // prop <- from <isk-portfolio>
   @Input() modal: {
     title: string;
     id: string;

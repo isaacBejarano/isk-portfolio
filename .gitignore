@@ -7,8 +7,10 @@
 # Only exists if Bazel was run
 /bazel-out
 
-# dependencies
+# Node
 /node_modules
+npm-debug.log
+yarn-error.log
 
 # profiling files
 chrome-profiler-events*.json
@@ -25,11 +27,6 @@ speed-measure-plugin*.json
 
 # IDE - VSCode
 /.vscode
-# .vscode/*
-# !.vscode/settings.json
-# !.vscode/tasks.json
-# !.vscode/launch.json
-# !.vscode/extensions.json
 .history/*
 
 # misc
@@ -37,8 +34,6 @@ speed-measure-plugin*.json
 /connect.lock
 /coverage
 /libpeerconnection.log
-npm-debug.log
-yarn-error.log
 testem.log
 /typings
 
@@ -55,3 +50,11 @@ debug.log
 # Cache folders
 /.angular
 /.firebase
+
+# Unit Testing
+/coverage
+
+# Playwright
+/test-results/
+/playwright-report/
+/playwright/.cache/

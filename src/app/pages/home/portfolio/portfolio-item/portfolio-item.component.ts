@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
   standalone: false,
 })
 export class PortfolioItemComponent {
-  // props  <- from <app-home>
+  // props  <- from <isk-home>
   @Input() item: {
     target: string;
     src: string;

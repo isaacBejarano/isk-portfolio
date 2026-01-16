@@ -10,7 +10,7 @@ declare let $: any; // fixes B4 tooltip() type conflict
   standalone: false,
 })
 export class SkillsComponent implements OnInit {
-  divider = 'divider-dark'; // -> <app-divider> Input()
+  divider = 'divider-dark'; // -> <isk-divider> Input()
 
   // TOP SKILLS
   skillsLang = store.getSkillsLang;

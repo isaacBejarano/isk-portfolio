@@ -9,7 +9,7 @@ import { store } from '@app/data/store';
   standalone: false,
 })
 export class PortfolioComponent {
-  // prop -> to <app-divider> Input()
+  // prop -> to <isk-divider> Input()
   divider = 'divider-light';
 
   portfolioCommon = store.getPortfolioCommon;

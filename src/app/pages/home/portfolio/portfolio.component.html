@@ -6,14 +6,14 @@
     <h2 class="page-section-heading text-center text-uppercase text-white mb-0"> Portfolio </h2>
 
     <!-- Icon Divider -->
-    <app-divider [color]="divider"></app-divider>
+    <isk-divider [color]="divider"></app-divider>
 
     <!-- Portfolio Grid Items -->
     <div class="row">
       <div
         *ngFor="let item of portfolioItems | reverse"
         class="col-md-6 col-lg-4 mb-5">
-        <app-portfolio-item [item]="item"></app-portfolio-item>
+        <isk-portfolio-item [item]="item"></app-portfolio-item>
       </div>
     </div>
   </div>
@@ -21,7 +21,7 @@
 
 <!-- MODALS -->
 
-<app-portfolio-modal
+<isk-portfolio-modal
   *ngFor="let item of portfolioItems"
   [modal]="item"
   [ngSwitch]="item.type.toUpperCase()">

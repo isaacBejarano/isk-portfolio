@@ -1,1 +1,29 @@
+/* 1. Fonts
+*/
+
+@import "./css/fonts.css";
+
+/* 2. Tailwind Config
+/* (Layer order -> properties > [theme] > [base] (globals) > [components] > [utilities] (atomics)
+*/
+
+/* 2.1 Imports */
 @import "tailwindcss";
+
+/* 2.2 Plugins */
+/* @plugin "@tailwindcss/typography"; */
+
+/* 2.3 Overrides */
+@theme {
+  /* Fonts */
+  --default-font-family: lato, var(--font-sans);
+  --default-mono-font-family: monospace, var(--font-mono);
+}
+
+/* Responsive -> 'md' | '2xl' are enough */
+
+/** LAYOUTS
+/* mobile -> 390px  -> full/2-col     -> max-w-[195px]
+/* w-md   -> 768px  -> full/3-col     -> max-w-[256px]
+/* w-2xl  -> 1536px -> full/(5+1)-col -> max-w-[256px]
+*/

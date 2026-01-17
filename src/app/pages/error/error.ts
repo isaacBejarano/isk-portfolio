@@ -4,11 +4,11 @@ declare let gsap: any; // page 404 animation plugin
 
 @Component({
   selector: 'isk-error',
-  templateUrl: './error.component.html',
-  styleUrls: ['./error.component.css'],
+  templateUrl: './error.html',
+  styleUrls: ['./error.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ErrorComponent implements OnInit {
+export class Error implements OnInit {
   constructor() {}
 
   // Animate page 404 - Gsap.js

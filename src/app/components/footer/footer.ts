@@ -4,11 +4,11 @@ import { store } from '@app/data/store';
 
 @Component({
   selector: 'isk-footer',
-  templateUrl: './footer.component.html',
-  styleUrls: ['./footer.component.css'],
+  templateUrl: './footer.html',
+  styleUrls: ['./footer.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FooterComponent {
+export class Footer {
   footer = store.getFooter;
   year = new Date().getFullYear();
 

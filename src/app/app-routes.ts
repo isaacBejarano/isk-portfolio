@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
-import { HomeComponent } from './pages/home/home.component';
-import { ErrorComponent } from './pages/error/error.component';
+import { Home } from './pages/home/home';
+import { Error } from './pages/error/error';
 
 const Brand = 'Isaac Bejarano';
 export const routes: Routes = [
@@ -11,15 +11,14 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   }, // redirect
-  { title: `${Brand} | Home`, path: 'home', component: HomeComponent }, // eager
+  { title: `${Brand} | Home`, path: 'home', component: Home }, // eager
   {
     title: `${Brand} | Page Not Found`,
     path: '**',
-    loadComponent: () =>
-      import('@app/pages/error/error.component').then((m) => m.ErrorComponent), // lazy
+    loadComponent: () => import('@app/pages/error/error').then((m) => m.Error), // lazy
   },
   {
     path: '**',
-    component: ErrorComponent,
+    component: Error,
   },
 ];

@@ -8,13 +8,13 @@
       <!-- FIXME: <fa-icon [icon]="faPlus"></fa-icon> -->
     </div>
   </div>
-  <img class="img-fluid" src="assets/img/{{ item.src }}" [alt]="item.alt" />
+  <img class="img-fluid" src="/img/{{ item.src }}" [alt]="item.alt" />
 
   <!-- web tech icons -->
   <div class="tech-icons bg-light">
     @for (tech of item.tech; track tech) {
       <img
-        src="assets/img/portfolio/{{ tech }}.png"
+        src="/img/portfolio/{{ tech }}.png"
         alt="web tech"
         width="auto"
         height="30"

@@ -8,25 +8,20 @@ import {
 import { Router, ActivatedRoute } from '@angular/router';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
-import { MasterheadComponent } from './masterhead/masterhead.component';
-import { FeaturedComponent } from './featured/featured.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { SkillsComponent } from './skills/skills.component';
+import { Masterhead } from './masterhead/masterhead';
+import { Featured } from './featured/featured';
+import { Portfolio } from './portfolio/portfolio';
+import { Skills } from './skills/skills';
 
 // declare let jQuery: any; // ~jQuery Easing
 
 @Component({
   selector: 'isk-home',
-  templateUrl: './home.component.html',
-  imports: [
-    MasterheadComponent,
-    FeaturedComponent,
-    PortfolioComponent,
-    SkillsComponent,
-  ],
+  templateUrl: './home.html',
+  imports: [Masterhead, Featured, Portfolio, Skills],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HomeComponent implements OnInit, AfterViewChecked, DoCheck {
+export class Home implements OnInit, AfterViewChecked, DoCheck {
   propNew = store.getNew; // featured ~new
   portfolioItems = store.getPortfolioItems; // common + modal8
   portfolioCommon = store.getPortfolioCommon; // common + modal8

@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { DividerComponent } from '@app/components/divider/divider.component';
+import { Divider } from '@app/components/divider/divider';
 import { store } from '@app/data/store';
 
 @Component({
   selector: 'isk-featured',
-  templateUrl: './featured.component.html',
-  styleUrls: ['./featured.component.css'],
-  imports: [DividerComponent],
+  templateUrl: './featured.html',
+  styleUrls: ['./featured.css'],
+  imports: [Divider],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FeaturedComponent {
+export class Featured {
   // props to Input()
   divider = 'divider-dark';
   @Input() new: string;

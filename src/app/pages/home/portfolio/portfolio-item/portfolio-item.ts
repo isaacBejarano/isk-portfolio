@@ -2,11 +2,11 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
   selector: 'isk-portfolio-item',
-  templateUrl: './portfolio-item.component.html',
-  styleUrls: ['./portfolio-item.component.css'],
+  templateUrl: './portfolio-item.html',
+  styleUrls: ['./portfolio-item.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PortfolioItemComponent {
+export class PortfolioItem {
   // props  <- from <isk-home>
   @Input() item: {
     target: string;

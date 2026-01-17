@@ -1,5 +1,5 @@
 import { bootstrapApplication } from '@angular/platform-browser';
-import { App } from '@app/app.component';
+import { App } from '@app/app';
 import { appConfig } from '@app/app-config';
 
 // if (environment.production) {
@@ -12,5 +12,4 @@ import { appConfig } from '@app/app-config';
 //   })
 //   .catch((err) => console.error(err));
 
-// FIXME: use standalone bootstraping
 bootstrapApplication(App, appConfig).catch((err) => console.error(err));

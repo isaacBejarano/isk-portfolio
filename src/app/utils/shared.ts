@@ -1,5 +1,7 @@
 import { Router } from '@angular/router';
 
+// FIXME: Refactor and place in folder style guided
+
 export class Shared {
   // static methods
   public static openLink(): boolean {

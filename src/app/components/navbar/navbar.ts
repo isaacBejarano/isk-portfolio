@@ -3,15 +3,14 @@ import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'isk-scroll',
-  templateUrl: './scroll.component.html',
-  styleUrls: ['./scroll.component.css'],
+  selector: 'isk-navbar',
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.css'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class ScrollComponent {
-  scroll = store.getScroll;
+export class Navbar {
   navbar = store.getNavbar;
+  // faBars = faBars; FIXME:
 
-  // faChevronUp = faChevronUp; FIXME:
   hashIt = Shared.hashIt;
 }

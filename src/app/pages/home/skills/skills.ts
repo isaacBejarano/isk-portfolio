@@ -1,15 +1,15 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { DividerComponent } from '@app/components/divider/divider.component';
+import { Divider } from '@app/components/divider/divider';
 import { store } from '@app/data/store';
 
 @Component({
   selector: 'isk-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css'],
-  imports: [DividerComponent],
+  templateUrl: './skills.html',
+  styleUrls: ['./skills.css'],
+  imports: [Divider],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SkillsComponent implements OnInit {
+export class Skills implements OnInit {
   divider = 'divider-dark'; // -> <isk-divider> Input()
 
   // TOP SKILLS

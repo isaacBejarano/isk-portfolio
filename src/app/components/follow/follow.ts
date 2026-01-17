@@ -4,10 +4,10 @@ import { store } from '@app/data/store';
 
 @Component({
   selector: 'isk-follow',
-  templateUrl: './follow.component.html',
+  templateUrl: './follow.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class FollowComponent {
+export class Follow {
   follow = store.getFollow;
   @Input() showFollow = true;
   @Input() css = '';

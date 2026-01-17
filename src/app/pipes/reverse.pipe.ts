@@ -8,3 +8,5 @@ export class ReversePipe implements PipeTransform {
     return value.slice().reverse();
   }
 }
+
+// FIXME: mak eit functional

@@ -7,9 +7,7 @@ import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
 	templateUrl: "./error.html",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Error implements OnInit {
-	constructor() {}
-
+export class IskError implements OnInit {
 	// Animate page 404 - Gsap.js
 	ngOnInit(): void {
 		// gsap.set("svg", { visibility: "visible" });

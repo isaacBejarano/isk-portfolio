@@ -1,33 +1,30 @@
 <!-- * Masthead * -->
-<isk-masterhead id="home"/>
+<isk-masterhead id="home" />
 
 <!-- * Featured ~New * -->
 <isk-featured id="new" [new]="propNew">
   <!-- CUSTOM - Portfolio Modal - Text -->
   <p class="text-justify">
-    {{ portfolioItems[portfolioItems.length - 1].p1 }}
+    {{ lastWork.p1 }}
   </p>
 
   <p class="mb-4 text-justify">
     {{ portfolioCommon.dontforget }}
-    <a
-      [href]="portfolioItems[portfolioItems.length - 1].link2"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()"
-    >
-      {{ portfolioItems[portfolioItems.length - 1].host }}
+    <a [href]="lastWork.link2" rel="nofollow noreferrer" target="_blank" (click)="openLink()">
+      {{ lastWork.host }}
     </a>
 
     <!-- AUX -->
     <span class="text-gray">
-      {{ portfolioItems[portfolioItems.length - 1].p2 }}
+            {{ lastWork.p2 }}
     </span>
   </p>
-</isk-featured>
+ </isk-featured>
 
 <!-- * Potfolio * -->
-<isk-portfolio id="portfolio"/>
+<isk-portfolio id="portfolio" />
 
 <!-- * Skills * -->
-<isk-skills id="technologies"/>
+<isk-skills id="technologies" />
+
+<img src=""  sizes="" srcset="">

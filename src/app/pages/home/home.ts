@@ -5,6 +5,7 @@ import {
 	type DoCheck,
 	type OnInit,
 } from "@angular/core";
+
 import { store } from "@app/app-store";
 import { openLink } from "../../utils/nav-utils";
 import { Featured } from "./featured/featured";
@@ -22,14 +23,17 @@ import { Skills } from "./skills/skills";
 })
 export class Home implements OnInit, AfterViewChecked, DoCheck {
 	propNew = store.getNew; // featured ~new
-	portfolioItems = store.getPortfolioItems; // common + modal8
+	portfolioItems = store.getPortfolioItems; // featured ~new
+
+	get lastWork() {
+		return this.portfolioItems[this.portfolioItems.length - 1]; // common + modal8
+	}
 	portfolioCommon = store.getPortfolioCommon; // common + modal8
 
-	constructor(
-		//
-		// private activatedRoute: ActivatedRoute,
-		// private router: Router,
-	) {}
+	// constructor() {}
+	//
+	// private activatedRoute: ActivatedRoute,
+	// private router: Router,
 
 	openLink = openLink;
 

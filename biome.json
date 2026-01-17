@@ -3,7 +3,8 @@
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
-		"useIgnoreFile": true
+		"useIgnoreFile": true,
+		"defaultBranch": "master"
 	},
 	"files": {
 		"ignoreUnknown": false
@@ -15,12 +16,10 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "double"
+			"recommended": true,
+			"a11y": {
+				"useAltText": "error"
+			}
 		}
 	},
 	"assist": {
@@ -29,6 +28,21 @@
 			"source": {
 				"organizeImports": "on"
 			}
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"html": {
+		"parser": {
+			"interpolation": true
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
 		}
 	}
 }

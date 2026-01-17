@@ -13,6 +13,4 @@ export class Masterhead {
 	divider = "divider-light";
 
 	masterhead = store.getMasterhead;
-
-	constructor() {}
 }

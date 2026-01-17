@@ -17,6 +17,4 @@ export class Portfolio {
 	portfolioItems = store.getPortfolioItems;
 
 	openLink = openLink;
-
-	constructor() {}
 }

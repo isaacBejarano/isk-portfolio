@@ -15,6 +15,7 @@ export const routes: Routes = [
 	{
 		title: `${Brand} | Page Not Found`,
 		path: "**",
-		loadComponent: () => import("@app/pages/error/error").then((m) => m.Error), // lazy
+		loadComponent: () =>
+			import("@app/pages/error/error").then((m) => m.IskError), // lazy
 	},
 ];

@@ -1,19 +1,19 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
-import { Shared } from '../../utils/shared';
-import { store } from '@app/data/store';
+import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { store } from "@app/app-store";
+import { openLink } from "../../utils/nav-utils";
 
 @Component({
-  selector: 'isk-follow',
-  templateUrl: './follow.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: "isk-follow",
+	templateUrl: "./follow.html",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Follow {
-  follow = store.getFollow;
-  @Input() showFollow = true;
-  @Input() css = '';
+	follow = store.getFollow;
+	@Input() showFollow = true;
+	@Input() css = "";
 
-  openLink = Shared.openLink;
+	openLink = openLink;
 
-  // faLinkedin = faLinkedin; FIXME:
-  // faGithub = faGithub; FIXME:
+	// faLinkedin = faLinkedin; FIXME:
+	// faGithub = faGithub; FIXME:
 }

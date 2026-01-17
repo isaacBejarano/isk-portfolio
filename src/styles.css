@@ -16,8 +16,8 @@
 /* 2.3 Overrides */
 @theme {
   /* Fonts */
-  --default-font-family: lato, var(--font-sans);
   --default-mono-font-family: monospace, var(--font-mono);
+  --default-font-family: lato, var(--font-sans);
 }
 
 /* Responsive -> 'md' | '2xl' are enough */

@@ -1,19 +1,18 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Divider } from '@app/components/divider/divider';
-import { store } from '@app/data/store';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { store } from "@app/app-store";
+import { Divider } from "@app/components/divider/divider";
 
 @Component({
-  selector: 'isk-masterhead',
-  templateUrl: './masterhead.html',
-  styleUrls: ['./masterhead.css'],
-  imports: [Divider],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: "isk-masterhead",
+	templateUrl: "./masterhead.html",
+	imports: [Divider],
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Masterhead {
-  // prop -> to <isk-divider> Input()
-  divider = 'divider-light';
+	// prop -> to <isk-divider> Input()
+	divider = "divider-light";
 
-  masterhead = store.getMasterhead;
+	masterhead = store.getMasterhead;
 
-  constructor() {}
+	constructor() {}
 }

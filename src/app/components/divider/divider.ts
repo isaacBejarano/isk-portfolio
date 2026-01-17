@@ -1,12 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 
 @Component({
-  selector: 'isk-divider',
-  templateUrl: './divider.html',
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: "isk-divider",
+	templateUrl: "./divider.html",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Divider {
-  @Input() color: string;
+	@Input() color: string;
 
-  // faStar = faStar; FIXME:
+	// faStar = faStar; FIXME:
 }

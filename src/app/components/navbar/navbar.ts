@@ -1,16 +1,15 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
-import { Shared } from '../../utils/shared';
-import { store } from '@app/data/store';
+import { ChangeDetectionStrategy, Component } from "@angular/core";
+import { store } from "@app/app-store";
+import { hashIt } from "@app/utils/string-utils";
 
 @Component({
-  selector: 'isk-navbar',
-  templateUrl: './navbar.html',
-  styleUrls: ['./navbar.css'],
-  changeDetection: ChangeDetectionStrategy.OnPush,
+	selector: "isk-navbar",
+	templateUrl: "./navbar.html",
+	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Navbar {
-  navbar = store.getNavbar;
-  // faBars = faBars; FIXME:
+	navbar: Record<string, string> = store.getNavbar;
+	// faBars = faBars; FIXME:
 
-  hashIt = Shared.hashIt;
+	hashIt = hashIt;
 }

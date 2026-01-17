@@ -1,9 +1,9 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-divider',
+  selector: 'isk-divider',
   templateUrl: './divider.component.html',
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DividerComponent {
   @Input() color: string;

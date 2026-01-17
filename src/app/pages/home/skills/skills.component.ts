@@ -1,13 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { DividerComponent } from '@app/components/divider/divider.component';
 import { store } from '@app/data/store';
 
-declare let $: any; // fixes B4 tooltip() type conflict
-
 @Component({
-  selector: 'app-skills',
+  selector: 'isk-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.css'],
-  standalone: false,
+  imports: [DividerComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SkillsComponent implements OnInit {
   divider = 'divider-dark'; // -> <isk-divider> Input()
@@ -30,8 +30,8 @@ export class SkillsComponent implements OnInit {
   skillsStack = store.getSkillsStack;
 
   ngOnInit(): void {
-    $(function () {
-      $('[data-toggle="tooltip"]').tooltip();
-    });
+    // $(function () {
+    //   $('[data-toggle="tooltip"]').tooltip();
+    // });
   }
 }

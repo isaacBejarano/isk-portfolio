@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'isk-footer',
   templateUrl: './footer.component.html',
   styleUrls: ['./footer.component.css'],
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FooterComponent {
   footer = store.getFooter;

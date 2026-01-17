@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-follow',
+  selector: 'isk-follow',
   templateUrl: './follow.component.html',
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class FollowComponent {
   follow = store.getFollow;

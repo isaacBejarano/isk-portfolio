@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-navbar',
+  selector: 'isk-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css'],
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class NavbarComponent {
   navbar = store.getNavbar;

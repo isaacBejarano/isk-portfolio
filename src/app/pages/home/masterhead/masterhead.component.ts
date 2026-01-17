@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { DividerComponent } from '@app/components/divider/divider.component';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-masterhead',
+  selector: 'isk-masterhead',
   templateUrl: './masterhead.component.html',
   styleUrls: ['./masterhead.component.css'],
-  standalone: false,
+  imports: [DividerComponent],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class MasterheadComponent {
   // prop -> to <isk-divider> Input()

@@ -1,9 +1,24 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { FollowComponent } from './components/follow/follow.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { ScrollComponent } from './components/scroll/scroll.component';
+import { RouterOutlet } from '@angular/router';
 
 @Component({
-  selector: 'app-root',
+  selector: 'isk-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
-  standalone: false,
+  imports: [
+    NavbarComponent,
+    FollowComponent,
+    // PortfolioItemComponent,
+    // PortfolioModalComponent,
+    // ReversePipe,
+    FooterComponent,
+    ScrollComponent,
+    RouterOutlet,
+  ],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class AppComponent {}
+export class App {}

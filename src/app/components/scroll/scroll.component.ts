@@ -1,12 +1,12 @@
-import { Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 import { Shared } from '../../utils/shared';
 import { store } from '@app/data/store';
 
 @Component({
-  selector: 'app-scroll',
+  selector: 'isk-scroll',
   templateUrl: './scroll.component.html',
   styleUrls: ['./scroll.component.css'],
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ScrollComponent {
   scroll = store.getScroll;

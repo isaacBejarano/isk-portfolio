@@ -6,14 +6,14 @@
     <h2 class="page-section-heading text-center text-uppercase text-white mb-0"> Portfolio </h2>
 
     <!-- Icon Divider -->
-    <isk-divider [color]="divider"></app-divider>
+    <isk-divider [color]="divider"/>
 
     <!-- Portfolio Grid Items -->
     <div class="row">
       <div
         *ngFor="let item of portfolioItems | reverse"
         class="col-md-6 col-lg-4 mb-5">
-        <isk-portfolio-item [item]="item"></app-portfolio-item>
+        <isk-portfolio-item [item]="item"/>
       </div>
     </div>
   </div>
@@ -109,4 +109,4 @@
     <span class="text-gray">{{ portfolioItems[portfolioItems.length - 1].p2 }}
     </span>
   </p>
-</app-portfolio-modal>
+</isk-portfolio-modal>

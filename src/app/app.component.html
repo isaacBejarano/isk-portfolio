@@ -1,19 +1,17 @@
 <!-- * Navigation - UI * -->
 <isk-navbar>
-  <isk-follow
-    id="transcluded-follow"
+  <isk-follow    id="transcluded-follow"
     css="d-none d-sm-block"
-    [showFollow]="false">
-  </app-follow>
-</app-navbar>
+    [showFollow]="false"/>
+</isk-navbar>
 
-<!-- ^^ ROUTER - pages ^^ -->
+<!-- ^^ ROUTER - pages ^^ FIXME: self closing-->
 <router-outlet></router-outlet>
 
 <!-- * Footer - UI * -->
 <isk-footer>
-  <isk-follow id="transcluded-follow" css="p-5 d-sm-none"> </app-follow>
-</app-footer>
+  <isk-follow id="transcluded-follow" css="p-5 d-sm-none"> </isk-follow>
+</isk-footer>
 
 <!-- * Scroll - UI * -->
-<isk-scroll></app-scroll>
+<isk-scroll/>

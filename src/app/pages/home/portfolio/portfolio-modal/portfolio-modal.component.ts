@@ -1,11 +1,11 @@
-import { Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 import { Shared } from '../../../../utils/shared';
 
 @Component({
-  selector: 'app-portfolio-modal',
+  selector: 'isk-portfolio-modal',
   templateUrl: './portfolio-modal.component.html',
   styleUrls: ['./portfolio-modal.component.css'],
-  standalone: false,
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioModalComponent {
   // prop -> to <isk-divider> Input()

@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
 import { store } from "@app/app-store";
-import { Divider } from "@app/components/divider/divider";
+import { Divider } from "@app/divider/divider";
 
 @Component({
 	selector: "isk-skills",

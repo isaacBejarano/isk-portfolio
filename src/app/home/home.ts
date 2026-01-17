@@ -7,11 +7,11 @@ import {
 } from "@angular/core";
 
 import { store } from "@app/app-store";
-import { openLink } from "../../utils/nav-utils";
-import { Featured } from "./featured/featured";
-import { Masterhead } from "./masterhead/masterhead";
-import { Portfolio } from "./portfolio/portfolio";
-import { Skills } from "./skills/skills";
+import { Featured } from "@app/featured/featured";
+import { Masterhead } from "@app/masterhead/masterhead";
+import { Portfolio } from "@app/portfolio/portfolio";
+import { Skills } from "@app/skills/skills";
+import { openLink } from "@app/utils/nav-utils";
 
 // declare let jQuery: any; // ~jQuery Easing
 

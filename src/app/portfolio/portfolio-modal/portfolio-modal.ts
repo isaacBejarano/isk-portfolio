@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { Divider } from "@app/components/divider/divider";
-import { openLink } from "../../../../utils/nav-utils";
+import { Divider } from "@app/divider/divider";
+import { openLink } from "../../utils/nav-utils";
 
 // FIXME: Se está usando realmente?
 

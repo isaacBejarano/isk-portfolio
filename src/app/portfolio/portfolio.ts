@@ -1,7 +1,7 @@
 import { ChangeDetectionStrategy, Component } from "@angular/core";
 import { store } from "@app/app-store";
-import { Divider } from "@app/components/divider/divider";
-import { openLink } from "../../../utils/nav-utils";
+import { Divider } from "@app/divider/divider";
+import { openLink } from "../utils/nav-utils";
 
 @Component({
 	selector: "isk-portfolio",

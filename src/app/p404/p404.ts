@@ -4,10 +4,10 @@ import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
 
 @Component({
 	selector: "isk-error",
-	templateUrl: "./error.html",
+	templateUrl: "./p404.html",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class IskError implements OnInit {
+export class Page404 implements OnInit {
 	// Animate page 404 - Gsap.js
 	ngOnInit(): void {
 		// gsap.set("svg", { visibility: "visible" });

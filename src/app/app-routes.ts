@@ -1,6 +1,5 @@
 import type { Routes } from "@angular/router";
-
-import { Home } from "./pages/home/home";
+import { Home } from "@app/home/home";
 
 const Brand = "Isaac Bejarano";
 export const routes: Routes = [
@@ -15,7 +14,6 @@ export const routes: Routes = [
 	{
 		title: `${Brand} | Page Not Found`,
 		path: "**",
-		loadComponent: () =>
-			import("@app/pages/error/error").then((m) => m.IskError), // lazy
+		loadComponent: () => import("@app/p404/p404").then((m) => m.Page404), // lazy
 	},
 ];

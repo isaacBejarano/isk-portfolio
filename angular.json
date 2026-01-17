@@ -17,12 +17,8 @@
 				"build": {
 					"builder": "@angular/build:application",
 					"options": {
-						"outputPath": "dist/portfolio",
-						"index": "src/index.html",
 						"browser": "src/main.ts",
-						"polyfills": ["zone.js"],
 						"tsConfig": "tsconfig.app.json",
-						"aot": true,
 						"assets": [
 							{
 								"glob": "**/*",
@@ -30,56 +26,52 @@
 							}
 						],
 						"styles": ["src/styles.css"],
-						"scripts": []
+						"polyfills": []
 					},
 					"configurations": {
 						"production": {
-							"fileReplacements": [
+							"budgets": [
 								{
-									"replace": "src/environments/environment.ts",
-									"with": "src/environments/environment.prod.ts"
+									"type": "initial",
+									"maximumWarning": "500kB",
+									"maximumError": "1MB"
+								},
+								{
+									"type": "anyComponentStyle",
+									"maximumWarning": "4kB",
+									"maximumError": "8kB"
 								}
 							],
+							"outputHashing": "all",
 							"optimization": {
 								"styles": {
 									"inlineCritical": true
 								}
 							},
-							"outputHashing": "all",
-							"sourceMap": false,
-							"namedChunks": false,
 							"extractLicenses": true,
-							"budgets": [
-								{
-									"type": "initial",
-									"maximumWarning": "2mb",
-									"maximumError": "5mb"
-								},
-								{
-									"type": "anyComponentStyle",
-									"maximumWarning": "6kb",
-									"maximumError": "10kb"
-								}
-							]
+							"sourceMap": false,
+							"namedChunks": false
+						},
+						"development": {
+							"optimization": false,
+							"extractLicenses": false,
+							"sourceMap": true,
+							"namedChunks": true
 						}
-					}
+					},
+					"defaultConfiguration": "production"
 				},
 				"serve": {
 					"builder": "@angular/build:dev-server",
-					"options": {
-						"buildTarget": "portfolio:build"
-					},
 					"configurations": {
 						"production": {
 							"buildTarget": "portfolio:build:production"
+						},
+						"development": {
+							"buildTarget": "portfolio:build:development"
 						}
-					}
-				},
-				"extract-i18n": {
-					"builder": "@angular/build:extract-i18n",
-					"options": {
-						"buildTarget": "portfolio:build"
-					}
+					},
+					"defaultConfiguration": "development"
 				}
 			}
 		}

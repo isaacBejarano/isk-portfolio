@@ -10,23 +10,25 @@
 
     <!-- Portfolio Grid Items -->
     <div class="row">
-      <div
-        *ngFor="let item of portfolioItems | reverse"
-        class="col-md-6 col-lg-4 mb-5">
+    @for(item of portfolioItems | reverse; track item) {
+      <div        class="col-md-6 col-lg-4 mb-5">
         <isk-portfolio-item [item]="item"/>
       </div>
+    }
+
+
     </div>
   </div>
 </section>
 
 <!-- MODALS -->
+    @for(item of portfolioItems; track item) {
 
-<isk-portfolio-modal
-  *ngFor="let item of portfolioItems"
-  [modal]="item"
-  [ngSwitch]="item.type.toUpperCase()">
-  <!-- transclusion - type A -->
-  <p *ngSwitchCase="'A'" class="mb-5 text-justify">
+<isk-portfolio-modal  [modal]="item">
+@switch (item.type.toUpperCase()) {
+    <!-- transclusion - type A -->
+      @case ('A') {
+  <p  class="mb-5 text-justify">
     {{ item.p1 }} {{ portfolioCommon.dontforget }}
     <a
       href="{{ item.link1 }}"
@@ -36,9 +38,12 @@
       {{ item.host }}.
     </a>
   </p>
+      }
 
+
+      @case ('B') {
   <!-- transclusion - type B -->
-  <p *ngSwitchCase="'B'" class="text-justify">
+  <p class="text-justify">
     {{ item.p1 }} {{ portfolioCommon.visit }}
     <a
       href="{{ item.link1 }}"
@@ -60,9 +65,11 @@
       {{ item.host }}
     </a>
   </p>
+            }
 
+                  @case ('C') {
   <!-- transclusion - type C -->
-  <p *ngSwitchCase="'C'" class="mb-5 text-justify">
+  <p  class="mb-5 text-justify">
     {{ item.p1 }}
     {{ portfolioCommon.visit }}
     <a
@@ -74,27 +81,36 @@
     </a>
     {{ portfolioCommon.star }}
   </p>
+                  }
 
+                        @case ('D') {
   <!-- transclusion - type D -->
-  <ul *ngSwitchCase="'D'" class="mb-5 text-justify">
+  <ul class="mb-5 text-justify">
     {{
     portfolioCommon.list
     }}
-    <li *ngFor="let algor of item.algorithms">
+
+    @for(algor of item.algorithms; track item) {
+
+    <li>
       <a
         href="{{ algor.link }}"
         rel="nofollow noreferrer"
         target="_blank"
         (click)="openLink()">
-        {{ algor.js }} </a>,
+        {{ algor.js }}
+        </a>,
     </li>
-    {{
-    portfolioCommon.stars
-    }}
-  </ul>
+    }
 
+
+    {{    portfolioCommon.stars    }}
+  </ul>
+                        }
+
+                              @case ('E') {
   <!-- transclusion - type E -->
-  <p *ngSwitchCase="'E'" class="mb-5 text-justify">
+  <p  class="mb-5 text-justify">
     {{ item.p1 }}
     {{ portfolioCommon.visit }}
     <a
@@ -109,4 +125,10 @@
     <span class="text-gray">{{ portfolioItems[portfolioItems.length - 1].p2 }}
     </span>
   </p>
+                              }
+
+    }
 </isk-portfolio-modal>
+
+
+    }

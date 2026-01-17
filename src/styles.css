@@ -3,6 +3,8 @@
 
 @import "./css/fonts.css";
 
+/* TODO: Check fonts load */
+
 /* 2. Tailwind Config
 /* (Layer order -> properties > [theme] > [base] (globals) > [components] > [utilities] (atomics)
 */
@@ -13,7 +15,13 @@
 /* 2.2 Plugins */
 /* @plugin "@tailwindcss/typography"; */
 
-/* 2.3 Overrides */
+/* 2.3 TW Color Modes */
+/* DARK First */
+@custom-variant light (&:where(.light, .light *));
+/* LIGHT First */
+/* @custom-variant dark (&:where(.dark, .dark *)); */
+
+/* 2.4 Overrides */
 @theme {
 	/* Fonts */
 	--default-mono-font-family: monospace, var(--font-mono);

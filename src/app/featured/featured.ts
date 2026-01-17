@@ -1,16 +1,16 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { store } from "@app/app-store";
-import { Divider } from "@app/divider/divider";
+import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { store } from '@app/app-store';
+import { Divider } from '@app/divider/divider';
 
 @Component({
-	selector: "isk-featured",
-	templateUrl: "./featured.html",
+	selector: 'isk-featured',
+	templateUrl: './featured.html',
 	imports: [Divider],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Featured {
 	// props to Input()
-	divider = "divider-dark";
+	divider = 'divider-dark';
 	@Input() new: string;
 
 	portfolioItems = store.getPortfolioItems; // common + modal8

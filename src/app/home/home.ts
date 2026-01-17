@@ -4,20 +4,20 @@ import {
 	Component,
 	type DoCheck,
 	type OnInit,
-} from "@angular/core";
+} from '@angular/core';
 
-import { store } from "@app/app-store";
-import { Featured } from "@app/featured/featured";
-import { Masterhead } from "@app/masterhead/masterhead";
-import { Portfolio } from "@app/portfolio/portfolio";
-import { Skills } from "@app/skills/skills";
-import { openLink } from "@app/utils/nav-utils";
+import { store } from '@app/app-store';
+import { Featured } from '@app/featured/featured';
+import { Masterhead } from '@app/masterhead/masterhead';
+import { Portfolio } from '@app/portfolio/portfolio';
+import { Skills } from '@app/skills/skills';
+import { openLink } from '@app/utils/nav-utils';
 
 // declare let jQuery: any; // ~jQuery Easing
 
 @Component({
-	selector: "isk-home",
-	templateUrl: "./home.html",
+	selector: 'isk-home',
+	templateUrl: './home.html',
 	imports: [Masterhead, Featured, Portfolio, Skills],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
@@ -122,7 +122,7 @@ export class Home implements OnInit, AfterViewChecked, DoCheck {
 	// III) SCROLL Animation - enable scroller view
 	ngDoCheck(): void {
 		if (store.scroll.show) {
-			document.getElementById("scroller").classList.remove("d-none");
+			document.getElementById('scroller').classList.remove('d-none');
 		}
 	}
 }

@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { store } from "@app/app-store";
-import { hashIt } from "@app/utils/string-utils";
+import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { store } from '@app/app-store';
+import { hashIt } from '@app/utils/string-utils';
 
 @Component({
-	selector: "isk-navbar",
-	templateUrl: "./navbar.html",
+	selector: 'isk-navbar',
+	templateUrl: './navbar.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Navbar {

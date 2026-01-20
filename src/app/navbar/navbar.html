@@ -1,15 +1,14 @@
 <!-- Navigation-->
-<nav class="w-full lg:w-5xl lg:mx-auto flex flex-wrap justify-between p-2 bg-neutral-900 border border-amber-400">
-
-  <div class="w-100 border border-pink-400 bg-emerald-900" >
+<nav class="lg:w-5xl lg:mx-auto flex flex-wrap justify-between p-2 bg-neutral-900 border border-amber-400">
+  <div class="felx-1 border border-pink-400 bg-emerald-900" >
     <a class="block border border-amber-400"
-      [href]=""
+      routerLink=""
       rel="nofollow noreferrer">
       <img [src]="navbar.src" [alt]="navbar.alt" />
     </a>
 
     <button
-      class="uppercase italic  ml-4"
+      class="uppercase italic border border-cyan-500 p-2"
       type="button"
       data-toggle="collapse"
       data-target="#navbarResponsive"
@@ -23,7 +22,7 @@
       </svg>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarResponsive">
+    <div class="border border-pink-400 p-2" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
           <a
@@ -58,6 +57,6 @@
     </div>
   </div>
 
-  <!-- Transclusion -->
+  <!-- Projection -->
   <ng-content/>
 </nav>

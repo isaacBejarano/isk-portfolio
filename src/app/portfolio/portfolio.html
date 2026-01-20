@@ -6,7 +6,7 @@
     <h2 class="page-section-heading text-center text-uppercase text-white mb-0"> Portfolio </h2>
 
     <!-- Icon Divider -->
-    <isk-divider [color]="divider"/>
+                <isk-divider [color]="divider"/>
 
     <!-- Portfolio Grid Items -->
     <div class="row">
@@ -15,8 +15,6 @@
         <isk-portfolio-item [item]="item"/>
       </div>
     }
-
-
     </div>
   </div>
 </section>
@@ -90,7 +88,7 @@
     portfolioCommon.list
     }}
 
-    @for(algor of item.algorithms; track item) {
+    @for(algor of item.algorithms; track algor) {
 
     <li>
       <a

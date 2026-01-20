@@ -1,18 +1,17 @@
-<div
-  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
+<div  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
   data-toggle="modal"
-  [attr.data-target]="item.target">
+  [attr.data-target]="item().target">
   <div
-    class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 w-100 bg-white text-custom">
+    class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 bg-gray-800 text-custom">
     <div class="portfolio-item-caption-content text-center">
       <!-- FIXME: <fa-icon [icon]="faPlus"></fa-icon> -->
     </div>
   </div>
-  <img class="img-fluid" src="/img/{{ item.src }}" [alt]="item.alt" />
+  <img class="img-fluid" src="/img/{{ item().src }}" [alt]="item().alt" />
 
   <!-- web tech icons -->
   <div class="tech-icons bg-light">
-    @for (tech of item.tech; track tech) {
+    @for (tech of item().tech; track tech) {
       <img
         src="/img/portfolio/{{ tech }}.png"
         alt="web tech"

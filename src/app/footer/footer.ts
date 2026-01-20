@@ -8,8 +8,7 @@ import { openLink } from '../utils/nav-utils';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
-	footer = store.getFooter;
-	year = new Date().getFullYear();
-
+	protected readonly footer = store.getFooter;
+	protected readonly year = new Date().getFullYear();
 	openLink = openLink;
 }

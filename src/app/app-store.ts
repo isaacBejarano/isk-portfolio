@@ -1,4 +1,4 @@
-type Indexed = Record<string, string>;
+export type Indexed = Record<string, string>;
 type Scroll = { show: boolean };
 type PortfolioItems = Array<Record<string, string | string[] | Indexed[]>>;
 type Portfolio = { common: Indexed; items: PortfolioItems };

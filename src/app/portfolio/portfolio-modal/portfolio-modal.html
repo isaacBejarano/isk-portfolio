@@ -1,10 +1,10 @@
 <!-- Portfolio Modal 1 -->
 <div
   class="portfolio-modal modal fade"
-  [id]="modal.id"
+  [id]="modal().id"
   tabindex="-1"
   role="dialog"
-  [attr.aria-labelledby]="modal.label"
+  [attr.aria-labelledby]="modal().label"
   aria-hidden="true"
 >
   <div class="modal-dialog modal-xl" role="document">
@@ -26,9 +26,9 @@
               <!-- Portfolio Modal - Title-->
               <h2
                 class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                [id]="modal.label"
+                [id]="modal().label"
               >
-                {{ modal.title }}
+                {{ modal().title }}
               </h2>
               <!-- Icon Divider-->
               <isk-divider [color]="divider"/>
@@ -36,8 +36,8 @@
               <!-- Portfolio Modal - Image-->
               <img
                 class="border border-secondary img-fluid-override rounded mb-5"
-                src="/img/{{ modal.src }}"
-                [alt]="modal.alt"
+                src="/img/{{ modal().src }}"
+                [alt]="modal().alt"
               />
               <!-- type ABCDE - Portfolio Modal - Text-->
               <ng-content></ng-content>

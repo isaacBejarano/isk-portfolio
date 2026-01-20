@@ -1,17 +1,15 @@
 <!-- Navigation-->
-<nav id="mainNav"
-  class="navbar navbar-expand-lg fixed-top px-5 justify-content-between">
+<nav class="w-full lg:w-5xl lg:mx-auto flex flex-wrap justify-between p-2 bg-neutral-900 border border-amber-400">
 
-  <div class="container-fluid justify-content-start">
-    <!-- We dont' use routerLink here so JQuery Animation can work in home.component -->
-    <a
-      class="navbar-brand js-scroll-trigger"
+  <div class="w-100 border border-pink-400 bg-emerald-900" >
+    <a class="block border border-amber-400"
       [href]=""
       rel="nofollow noreferrer">
       <img [src]="navbar.src" [alt]="navbar.alt" />
     </a>
+
     <button
-      class="navbar-toggler navbar-toggler-right text-uppercase font-weight-bold ml-4"
+      class="uppercase italic  ml-4"
       type="button"
       data-toggle="collapse"
       data-target="#navbarResponsive"
@@ -19,8 +17,12 @@
       aria-expanded="false"
       aria-label="Toggle navigation">
       {{ navbar.hamburger }}
-      <!-- <fa-icon [icon]="faBars"></fa-icon> FIXME: -->
+          <!-- FIXME: faBars -->
+      <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
+        <use href="./svg/icon-sprite.xml#icon-plus"/>
+      </svg>
     </button>
+
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item mx-0 mx-lg-1">
@@ -57,5 +59,5 @@
   </div>
 
   <!-- Transclusion -->
-  <ng-content select="#transcluded-follow"></ng-content>
+  <ng-content/>
 </nav>

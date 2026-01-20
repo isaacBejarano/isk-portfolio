@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
 @Component({
 	selector: 'isk-portfolio-item',
@@ -7,13 +7,13 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
 })
 export class PortfolioItem {
 	// props  <- from <isk-home>
-	@Input() item: {
-		target: string;
-		src: string;
-		alt: string;
-		tech: string[];
-		// ...
-	};
+	//  {
+	//     target: string;
+	//     src: string;
+	//     alt: string;
+	//     tech: string[];
+	//   }
+	item = input<any>();
 
 	// faPlus = faPlus; FIXME:
 }

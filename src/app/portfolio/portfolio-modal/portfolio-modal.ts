@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 import { Divider } from '@app/divider/divider';
 import { openLink } from '../../utils/nav-utils';
 
@@ -15,14 +15,15 @@ export class PortfolioModal {
 	divider = 'divider-dark';
 
 	// prop <- from <isk-portfolio>
-	@Input() modal: {
-		title: string;
-		id: string;
-		label: string;
-		src: string;
-		alt: string;
-		// ...
-	};
+	modal = input<any>();
+
+	// {
+	// 	title: string;
+	// 	id: string;
+	// 	label: string;
+	// 	src: string;
+	// 	alt: string;
+	// };
 
 	// faTimes = faTimes; FIXME:
 	openLink = openLink;

@@ -1,17 +1,17 @@
 <!-- * Navigation - UI * -->
 <isk-navbar>
-  <isk-follow    id="transcluded-follow"
-    css="d-none d-sm-block"
-    [showFollow]="false"/>
+  <isk-follow css="flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm" [showFollow]="false"/>
 </isk-navbar>
 
-<!-- ^^ ROUTER - pages ^^ FIXME: self closing-->
+<!-- ^^ ROUTER - pages ^^ -->
 <router-outlet/>
 
 <!-- * Footer - UI * -->
 <isk-footer>
-  <isk-follow id="transcluded-follow" css="p-5 d-sm-none"> </isk-follow>
+                      <isk-follow id="transcluded-follow" css="p-5 bg-neutral-800"> </isk-follow>
 </isk-footer>
 
 <!-- * Scroll - UI * -->
 <isk-scroll/>
+
+<!-- TODO: review img size and webP them all: use DI -->

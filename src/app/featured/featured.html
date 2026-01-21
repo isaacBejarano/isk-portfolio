@@ -3,23 +3,21 @@
   <div class="container">
     <!-- Featured Section Heading-->
     <h2
-      class="page-section-heading text-center text-custom-dark font-weight-lighter mb-5"
-    >
+      class="page-section-heading text-center text-custom-dark font-weight-lighter mb-5">
       new
     </h2>
     <section class="featured-heading">
       <h3
-        class="page-section-heading text-center text-uppercase text-secondary mb-3"
-      >
-        {{ portfolioItems[portfolioItems.length - 1].title }}
+        class="page-section-heading text-center text-uppercase text-secondary mb-3">
+        {{ getLast(items()).title }}
       </h3>
       <h4 class="page-section-heading text-center text-gray mb-0">
-        {{ new }}
+        {{ recent() }}
       </h4>
     </section>
 
     <!-- Icon Divider-->
-    <isk-divider [color]="divider"/>
+    <isk-divider css="bg-gray-800" />
 
     <!-- Featured Box -->
     <div class="row">
@@ -29,18 +27,21 @@
           id="featured-pic"
           class="portfolio-item mx-auto"
           data-toggle="modal"
-          data-target="#featuredModal"
-        >
-          <div  class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100  bg-gray-800"          >
+          data-target="#featuredModal">
+          <div
+            class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100  bg-gray-800">
             <div class="portfolio-item-caption-content text-center text-white">
-              <!-- <fa-icon [icon]="faPlus"></fa-icon> FIXME: -->
+              <svg
+                class="size-10 p-2 stroke-current stroke-2"
+                viewBox="0 0 100 100">
+                <use href="./svg/icon-sprite.xml#icon-plus" />
+              </svg>
             </div>
           </div>
           <img
             class="border border-secondary img-fluid border rounded-lg"
-            src="/img/{{ portfolioItems[portfolioItems.length - 1].src }}"
-            [alt]="portfolioItems[portfolioItems.length - 1].alt"
-          />
+            [src]="[`/img/${getLast(items()).src}`]"
+            [alt]="getLast(items()).alt" />
         </div>
       </div>
     </div>
@@ -52,18 +53,21 @@
       tabindex="-1"
       role="dialog"
       aria-labelledby="featuredModal"
-      aria-hidden="true"
-    >
+      aria-hidden="true">
       <div class="modal-dialog modal-xl" role="document">
         <div class="modal-content">
           <button
             class="close text-custom"
             type="button"
             data-dismiss="modal"
-            aria-label="Close"
-          >
+            aria-label="Close">
             <span aria-hidden="true">
-              <!-- <fa-icon [icon]="faTimes"></fa-icon> FIXME: -->
+              <!-- faTimes FIXME: -->
+              <svg
+                class="size-10 p-2 stroke-current stroke-2"
+                viewBox="0 0 100 100">
+                <use href="./svg/icon-sprite.xml#icon-plus" />
+              </svg>
             </span>
           </button>
           <div class="modal-body text-center">
@@ -73,28 +77,28 @@
                   <!-- Portfolio Modal - Title-->
                   <h2
                     class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                    id="featuredModalNew"
-                  >
-                    {{ portfolioItems[portfolioItems.length - 1].title }}
+                    id="featuredModalNew">
+                    {{ getLast(items()).title }}
                   </h2>
 
-                  <!-- Icon Divider-->
-                  <isk-divider [color]="divider"/>
+                  <isk-divider css="bg-gray-800" />
 
                   <!-- Portfolio Modal - Image-->
                   <img
                     class="border border-secondary rounded-sm img-fluid-override rounded mb-5"
-                    src="/img/{{
-                      portfolioItems[portfolioItems.length - 1].src
-                    }}"
-                    [alt]="portfolioItems[portfolioItems.length - 1].alt"
-                  />
+                    [src]="[`/img/${getLast(items()).src}`]"
+                    [alt]="getLast(items()).alt" />
 
-                  <!-- CUSTOM - Portfolio Modal - Text -->
+                  <!-- PRJECTED CONTENT -->
                   <ng-content></ng-content>
 
                   <button class="btn btn-outline-dark" data-dismiss="modal">
-                    <!-- <fa-icon [icon]="faTimes"></fa-icon> FIXME: -->
+                    <!-- faTimes FIXME: -->
+                    <svg
+                      class="size-10 p-2 stroke-current stroke-2"
+                      viewBox="0 0 100 100">
+                      <use href="./svg/icon-sprite.xml#icon-plus" />
+                    </svg>
                     Close
                   </button>
                 </div>

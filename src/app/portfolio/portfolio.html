@@ -1,133 +1,65 @@
 <!-- ITEMS -->
-<!-- TODO: añade App de Angular + copia la API en Laravel y la despliegas en Firebase? -->
 
 <section class="page-section-top portfolio bg-custom-dark">
   <div class="container">
-    <!-- Portfolio Section Heading-->
-    <h2 class="page-section-heading text-center text-uppercase text-white mb-0"> Portfolio </h2>
+    <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
+      Portfolio
+    </h2>
 
-    <!-- Icon Divider -->
-                <isk-divider [color]="divider"/>
+    <isk-divider [color]="divider" />
 
-    <!-- Portfolio Grid Items -->
+    <!-- GRID -->
     <div class="row">
-    @for(item of portfolioItems | reverse; track item) {
-      <div        class="col-md-6 col-lg-4 mb-5">
-        <isk-portfolio-item [item]="item"/>
+      @for(item of portfolio().items | listReverse; track item) {
+      <div class="col-md-6 col-lg-4 mb-5">
+        <isk-portfolio-item [item]="item" />
       </div>
-    }
+      } @empty {<p class="text-rose-700">No projects to display yet</p>}
     </div>
   </div>
 </section>
-
 <!-- MODALS -->
-    @for(item of portfolioItems; track item) {
 
-<isk-portfolio-modal  [modal]="item">
-@switch (item.type.toUpperCase()) {
-    <!-- transclusion - type A -->
-      @case ('A') {
-  <p  class="mb-5 text-justify">
-    {{ item.p1 }} {{ portfolioCommon.dontforget }}
-    <a
-      href="{{ item.link1 }}"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()">
-      {{ item.host }}.
-    </a>
-  </p>
-      }
-
-
-      @case ('B') {
-  <!-- transclusion - type B -->
-  <p class="text-justify">
-    {{ item.p1 }} {{ portfolioCommon.visit }}
-    <a
-      href="{{ item.link1 }}"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()">
-      {{ item.repo }}
-    </a>
-    {{ portfolioCommon.star }}
-  </p>
-
-  <p class="mb-4">
-    {{ portfolioCommon.dontforget }}
-    <a
-      href="{{ item.link2 }}"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()">
-      {{ item.host }}
-    </a>
-  </p>
-            }
-
-                  @case ('C') {
-  <!-- transclusion - type C -->
-  <p  class="mb-5 text-justify">
+@for(item of portfolio().items; track item) {
+<isk-portfolio-modal [modal]="item">
+  <div class="mb-5 text-justify">
+    {{ item.title }}
+    {{ item.target }}
+    {{ item.label }}
+    {{ item.src }}
+    {{ item.alt }}
+    {{ item.type }}
+    <!-- // -->
     {{ item.p1 }}
-    {{ portfolioCommon.visit }}
-    <a
-      href="{{ item.link1 }}"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()">
-      {{ item.repo }}
-    </a>
-    {{ portfolioCommon.star }}
-  </p>
-                  }
-
-                        @case ('D') {
-  <!-- transclusion - type D -->
-  <ul class="mb-5 text-justify">
-    {{
-    portfolioCommon.list
-    }}
-
-    @for(algor of item.algorithms; track algor) {
-
-    <li>
+    {{ portfolio().common.visit }}
+    <!-- {{ portfolio().common.visits }} -->
+    {{ portfolio().common.dontforget }}
+    <p>
       <a
-        href="{{ algor.link }}"
+        [href]="item.link1"
         rel="nofollow noreferrer"
         target="_blank"
         (click)="openLink()">
-        {{ algor.js }}
-        </a>,
-    </li>
-    }
-
-
-    {{    portfolioCommon.stars    }}
-  </ul>
-                        }
-
-                              @case ('E') {
-  <!-- transclusion - type E -->
-  <p  class="mb-5 text-justify">
-    {{ item.p1 }}
-    {{ portfolioCommon.visit }}
-    <a
-      href="{{ item.link1 }}"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="openLink()">
-      {{ item.repo }}
-    </a>
-    {{ portfolioCommon.star }}
-
-    <span class="text-gray">{{ portfolioItems[portfolioItems.length - 1].p2 }}
-    </span>
-  </p>
-                              }
-
-    }
+        {{ item.host }}
+      </a>
+    </p>
+    <p>
+      <a
+        [href]="item.link2"
+        rel="nofollow noreferrer"
+        target="_blank"
+        (click)="openLink()">
+        {{ portfolio().common.star }}
+        {{ portfolio().common.stars }}
+      </a>
+    </p>
+    <ul>
+      @for(tech of item.tech; track tech) {
+      <li>
+        <p>{{ tech }} </p>
+      </li>
+      }
+    </ul>
+  </div>
 </isk-portfolio-modal>
-
-
-    }
+}

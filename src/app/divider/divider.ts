@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 
 @Component({
 	selector: "isk-divider",
@@ -6,7 +6,5 @@ import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Divider {
-	@Input() color: string;
-
-	// faStar = faStar; FIXME:
+	readonly css = input.required<string>();
 }

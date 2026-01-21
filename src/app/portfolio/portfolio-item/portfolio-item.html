@@ -5,7 +5,9 @@
   <div
     class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 bg-gray-800 text-custom">
     <div class="portfolio-item-caption-content text-center">
-      <!-- FIXME: <fa-icon [icon]="faPlus"></fa-icon> -->
+      <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
+        <use href="./svg/icon-sprite.xml#icon-plus" />
+      </svg>
     </div>
   </div>
   <img class="img-fluid" src="/img/{{ item().src }}" [alt]="item().alt" />
@@ -14,11 +16,11 @@
   <div class="tech-icons bg-light">
     @for (tech of item().tech; track tech) {
     <img
+      class="border border-light bg-light p-1 rounded"
       src="/img/portfolio/{{ tech }}.png"
       alt="web tech"
       width="auto"
-      height="30"
-      class="border border-light bg-light p-1 rounded" />
+      height="30" />
     }
   </div>
 </div>

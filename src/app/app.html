@@ -2,7 +2,8 @@
 <isk-header>
   <isk-follow
     css="flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm"
-    [showFollow]="false" />
+    [showFollow]="false"
+    [follow]="follow()" />
 </isk-header>
 
 <!-- ^^ ROUTER - pages ^^ -->
@@ -14,7 +15,8 @@
 <isk-footer class="relative">
   <isk-follow
     css="absolute z-5 bottom-0 right-0 xl:right-1/20 2xl:right-1/8 flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm m-2"
-    [showFollow]="false" />
+    [showFollow]="false"
+    [follow]="follow()" />
 </isk-footer>
 
 <!-- TODO: review img size and webP them all: use DI -->

@@ -1,6 +1,12 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { store } from "@app/app-store";
+import {
+	ChangeDetectionStrategy,
+	Component,
+	inject,
+	input,
+	signal,
+} from "@angular/core";
 import { Divider } from "@app/divider/divider";
+import { StoreService } from "@app/store-service";
 
 @Component({
 	selector: "isk-featured",
@@ -9,13 +15,19 @@ import { Divider } from "@app/divider/divider";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Featured {
-	// props to Input()
-	divider = "divider-dark";
-	@Input() new: string;
+	// DI
+	private readonly _storeSrv = inject(StoreService);
 
-	portfolioItems = store.getPortfolioItems; // common + modal8
-	portfolioCommon = store.getPortfolioCommon; // common + modal8
+	// CTRL
+	protected readonly items = signal(this._storeSrv.get("portfolio").items);
+	readonly recent = input.required<string>();
+
+	// portfolioItems = store.getPortfolioItems; // common + modal8
+	// portfolioCommon = store.getPortfolioCommon; // common + modal8
 
 	// faPlus = faPlus; FIXME:
 	// faTimes = faTimes; FIXME:
+	getLast<T>(items: T[]): T {
+		return items[items.length - 1];
+	}
 }

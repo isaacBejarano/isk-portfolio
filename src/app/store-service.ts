@@ -1,51 +1,13 @@
-export type Indexed = Record<string, string>;
-type Scroll = { show: boolean };
-type PortfolioItems = Array<Record<string, string | string[] | Indexed[]>>;
-type Portfolio = { common: Indexed; items: PortfolioItems };
-type Skills = Record<string, string[][]>;
-type Store = {
-	// props
-	navbar: Indexed;
-	follow: Indexed;
-	footer: Indexed;
-	scroll: Scroll;
-	masterhead: Indexed;
-	new: string;
-	portfolio: Portfolio;
-	skills: Skills;
-	// getters
-	getNavbar: Indexed;
-	getFollow: Indexed;
-	getFooter: Indexed;
-	getScroll: Scroll;
-	getMasterhead: Indexed;
-	getNew: string;
-	getPortfolio: Portfolio;
-	getPortfolioCommon: Indexed;
-	getPortfolioItems: PortfolioItems;
-	getSkillsLang: string[][];
-	getSkillsStack: string[][];
-	getSkillsFrontend: string[][];
-	getSkillsBackend: string[][];
-	getSkillsPHP: string[][];
-	getSkillsCSS: string[][];
-	getSkillsDB: string[][];
-	getSkillsTechniques: string[][];
-	getSkillsPackages: string[][];
-	getSkillsWordpress: string[][];
-	getSkillsXaaS: string[][];
-	getSkillsGit: string[][];
-	getSkillsTDD: string[][];
-	getSkillsState: string[][];
-	getSkillsBundlers: string[][];
-	getSkillsGameEngines: string[][];
-	setScrollShow: boolean;
-};
+import { Injectable } from "@angular/core";
+import type { Portfolied } from "./types";
 
-export const store: Store = {
+@Injectable({
+	providedIn: "root",
+})
+export class StoreService {
 	// --> props
 	// navbar
-	navbar: {
+	readonly navbar = {
 		home: "home",
 		src: "/img/portfolio/isaac-logo.png",
 		alt: "isaac logo",
@@ -53,14 +15,16 @@ export const store: Store = {
 		page1: "new",
 		page2: "portfolio",
 		page3: "technologies",
-	},
+	};
+
 	// follow
-	follow: {
+	readonly follow = {
 		link1: "https://www.linkedin.com/in/isaac-bejarano",
 		link2: "https://github.com/isaacBejarano",
-	},
+	};
+
 	// footer
-	footer: {
+	readonly footer = {
 		tool: "Angular",
 		theme: "Start Bootstrap Theme",
 		link1: "https://angular.dev",
@@ -68,33 +32,37 @@ export const store: Store = {
 			"https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE",
 		license: "MIT",
 		copyright: "Isaac Bejarano",
-	},
+	};
+
 	// scroll
-	scroll: {
+	readonly scroll = {
 		show: false, // dafault
-	},
+	};
+
 	// masterhead
-	masterhead: {
+	readonly masterhead = {
 		src: "./img/portfolio/Isaac-bejarano-s4.jpg",
 		alt: "Isaac Bejarano photo",
 		name: "Isaac Bejarano",
 		title: "Full Stack Developer",
-	},
+	};
+
 	// featured ~new
-	new: "Responsive prototype with only HTML and CSS",
+	readonly new = "Responsive prototype with only HTML and CSS";
+
 	// portfolio
-	portfolio: {
+	readonly portfolio: Portfolied = {
 		// common
 		common: {
-			star: 'and give it a "star".',
-			stars: 'and give them a "star".',
-			list: "Visit these repositories:",
+			// list: "Visit these repositories:",
+			// visits: "Visit these repositories at",
 			visit: "Visit this repository at",
-			visits: "Visit these repositories at",
 			dontforget: `Don't forget to see it live on`,
+			star: 'and give it a "star"',
+			stars: 'and give them a "star"',
 		},
 		items: [
-			// modal 1
+			// modal 1 D
 			{
 				title: "JavaScript Algorithms",
 				target: "#portfolioModal7",
@@ -102,36 +70,36 @@ export const store: Store = {
 				label: "portfolioModal7Lbabel",
 				src: "portfolio/algorithms.png",
 				alt: "JavaScript Algorithms project",
-				algorithms: [
-					{
-						link: "https://github.com/isaacBejarano/price-down-breaker",
-						js: "Down Breaker",
-					},
-					{
-						link: "https://github.com/isaacBejarano/binary-search",
-						js: "Binary Search",
-					},
-					{
-						link: "https://github.com/isaacBejarano/quicksort",
-						js: "Quick Sort",
-					},
-					{
-						link: "https://github.com/isaacBejarano/is-int",
-						js: "Is Int",
-					},
-					{
-						link: "https://github.com/isaacBejarano/string-mirror",
-						js: "String Mirror",
-					},
-					{
-						link: "https://github.com/isaacBejarano/fibonacci-sequencer",
-						js: "Fibonacci Sequencer",
-					},
-				],
+				// algorithms: [
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/price-down-breaker",
+				// 		js: "Down Breaker",
+				// 	},
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/binary-search",
+				// 		js: "Binary Search",
+				// 	},
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/quicksort",
+				// 		js: "Quick Sort",
+				// 	},
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/is-int",
+				// 		js: "Is Int",
+				// 	},
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/string-mirror",
+				// 		js: "String Mirror",
+				// 	},
+				// 	{
+				// 		link: "https://github.com/isaacBejarano/fibonacci-sequencer",
+				// 		js: "Fibonacci Sequencer",
+				// 	},
+				// ],
 				type: "D",
 				tech: ["javascript"],
 			},
-			// modal 2
+			// modal 2 B
 			{
 				title: "SASS",
 				target: "#portfolioModal8",
@@ -147,7 +115,7 @@ export const store: Store = {
 				host: "Codepen",
 				tech: ["SASS"],
 			},
-			// modal 3
+			// modal 3 B
 			{
 				title: "JavaScript Beer Rating Component",
 				target: "#portfolioModal5",
@@ -156,7 +124,7 @@ export const store: Store = {
 				src: "portfolio/beers.png",
 				alt: "Javascript project",
 				p1: 'UI for rating. It uses SASS and scalable algorithms to persist\
-			  ":hover" and ":active" pseudo-classes.',
+        ":hover" and ":active" pseudo-classes.',
 				link1: "https://github.com/isaacBejarano/rating-beers",
 				link2: "https://codepen.io/eRoboto/pen/bGpKwgM",
 				type: "B",
@@ -164,7 +132,7 @@ export const store: Store = {
 				host: "Codepen",
 				tech: ["css", "javascript"],
 			},
-			// modal 4
+			// modal 4 A
 			{
 				title: "Wordpress Page",
 				target: "#portfolioModal9",
@@ -195,9 +163,10 @@ export const store: Store = {
 				tech: ["html", "css"],
 			},
 		],
-	},
+	};
+
 	// technologies
-	skills: {
+	readonly skills = {
 		lang: [
 			["HTML", "./img/skills/html.png"],
 			["CSS", "./img/skills/css.png"],
@@ -284,88 +253,9 @@ export const store: Store = {
 		games: [
 			// ['Unity', './img/skills/unity.png']
 		],
-	},
+	};
 
-	// getters
-	get getNavbar() {
-		return this.navbar;
-	},
-	get getFollow() {
-		return this.follow;
-	},
-	get getFooter() {
-		return this.footer;
-	},
-	get getScroll() {
-		return this.scroll;
-	},
-	get getMasterhead() {
-		return this.masterhead;
-	},
-	get getNew() {
-		return this.new;
-	},
-	get getPortfolio() {
-		return this.portfolio;
-	},
-	get getPortfolioCommon() {
-		return this.portfolio.common;
-	},
-	get getPortfolioItems() {
-		return this.portfolio.items;
-	},
-	// TECH
-	get getSkillsLang() {
-		return this.skills.lang;
-	},
-	get getSkillsStack() {
-		return this.skills.getStack;
-	},
-	get getSkillsFrontend() {
-		return this.skills.frontend;
-	},
-	get getSkillsBackend() {
-		return this.skills.backend;
-	},
-	get getSkillsPHP() {
-		return this.skills.PHP;
-	},
-	get getSkillsCSS() {
-		return this.skills.CSS;
-	},
-	get getSkillsDB() {
-		return this.skills.DB;
-	},
-	get getSkillsTechniques() {
-		return this.skills.techniques;
-	},
-	get getSkillsPackages() {
-		return this.skills.packages;
-	},
-	get getSkillsWordpress() {
-		return this.skills.wp;
-	},
-	get getSkillsXaaS() {
-		return this.skills.XaaS;
-	},
-	get getSkillsGit() {
-		return this.skills.version;
-	},
-	get getSkillsTDD() {
-		return this.skills.testing;
-	},
-	get getSkillsState() {
-		return this.skills.state;
-	},
-	get getSkillsBundlers() {
-		return this.skills.bundlers;
-	},
-	get getSkillsGameEngines() {
-		return this.skills.games;
-	},
-
-	// setters
-	set setScrollShow(x: boolean) {
-		this.scroll.show = x;
-	},
-};
+	get<U extends keyof StoreService>(key: U) {
+		return this[key];
+	}
+}

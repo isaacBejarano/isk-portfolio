@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, Input } from "@angular/core";
-import { store } from "@app/app-store";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+
 import { openLink } from "@app/utils/nav-utils";
 
 @Component({
@@ -8,12 +8,9 @@ import { openLink } from "@app/utils/nav-utils";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Follow {
-	follow = store.getFollow;
-	@Input() showFollow = true;
-	@Input() css = "";
-
+	// DUMMY
+	readonly showFollow = input.required<boolean>();
+	readonly css = input.required<string>();
+	readonly follow = input.required<{ link1: string; link2: string }>();
 	openLink = openLink;
-
-	// faLinkedin = faLinkedin; FIXME:
-	// faGithub = faGithub; FIXME:
 }

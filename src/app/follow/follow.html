@@ -1,11 +1,11 @@
-<div [class]="css">
-  @if(showFollow) {<h4 class="uppercase mb-4">follow me</h4>}
+<div [class]="css()">
+  @if(showFollow()) {<h4 class="uppercase mb-4">follow me</h4>}
 
   <!-- linked in -->
   <a
     class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
-    [href]="follow.link1"
+    [href]="follow().link1"
     target="_blank"
     (click)="openLink()">
     <!-- LinkedIn FIXME: -->
@@ -19,7 +19,7 @@
   <a
     class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
-    [href]="follow.link2"
+    [href]="follow().link2"
     target="_blank"
     (click)="openLink()">
     <!-- faGithub FIXME: -->

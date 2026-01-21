@@ -210,25 +210,27 @@ export const store: Store = {
 		getStack: [
 			['Docker', './img/skills/docker.png'],
 			['IIS', './img/skills/iis.png'],
-			['Apache', './img/skills/apache.png'],
 			['Nginx', './img/skills/nginx.png'],
+			['Apache', './img/skills/apache.png'],
 			// ['LAMP', './img/skills/lamp.png'],
 			// ['MEAN', './img/skills/mean.png'],
 		],
 		frontend: [
 			['Angular', './img/skills/angular.png'],
-			['Angular Material', './img/skills/material.png'],
-			['SASS', './img/skills/SASS.png'],
 			['RxJS', './img/skills/rxjs.png'],
-			['Vue', './img/skills/vue.png'],
+			['Tailwind', ''], // FIXME:
 			['Bootstrap', './img/skills/bootstrap.png'],
+			// ['Bulma', './img/skills/bulma.png'],
+			// ['Angular Material', './img/skills/material.png'],
+			// ['SASS', './img/skills/SASS.png'],
+			// ['Vue', './img/skills/vue.png'],
 			// ['Scully', './img/skills/scully.png'],
 			// ['jQuery', './img/skills/jquery.png'],
 			// ['Leaflet', './img/skills/leaflet.png'],
 		],
 		backend: [
-			['.NET', './img/skills/dotnet.png'],
 			['Laravel', './img/skills/laravel.png'],
+			['.NET', './img/skills/dotnet.png'],
 			['Node.js', './img/skills/node.png'],
 			// ['REST', './img/skills/REST.png'],
 			// ['Entity Framework Core', './img/skills/dotnetef.png'],
@@ -236,21 +238,20 @@ export const store: Store = {
 			// ['Koa', './img/skills/koa.png'],
 		],
 		CSS: [
-			['Bulma', './img/skills/bulma.png'],
 			// ['PureCSS', './img/skills/pureCSS.png'],
 			// ['LESS', './img/skills/less.png'],
 		],
 		DB: [
 			['Postgre SQL', './img/skills/postgres.png'],
-			['SQLite', './img/skills/sqlite.png'],
 			['Maria DB', './img/skills/mariadb.png'],
-			// ['MySQL', './img/skills/mysql.png'],
 			['SQL Server', './img/skills/sqlserver.png'],
+			['SQLite', './img/skills/sqlite.png'],
+			// ['MySQL', './img/skills/mysql.png'],
 			// ['Mongo DB', './img/skills/mongodb.png'],
 		],
 		techniques: [
-			['REST', './img/skills/REST.png'],
-			['AJAX', './img/skills/AJAX.png'],
+			// ['REST', './img/skills/REST.png'],
+			// ['AJAX', './img/skills/AJAX.png'],
 		],
 		packages: [
 			['Node Package Manager', './img/skills/npm.png'],
@@ -258,28 +259,31 @@ export const store: Store = {
 		],
 		wp: [
 			['Wordpress', './img/skills/wordpress.png'],
-			// ['Wordpress REST API', './img/skills/wp-rest-api.png'],
 			['Drupal', './img/skills/drupal.png'],
+			// ['Wordpress REST API', './img/skills/wp-rest-api.png'],
 		],
 		XaaS: [
-			['Azure', './img/skills/azure.png'],
-			['Netlify', './img/skills/netlify.png'],
 			['Firebase', './img/skills/firebase.png'],
+			['Netlify', './img/skills/netlify.png'],
+			['Azure', './img/skills/azure.png'],
 		],
 		version: [
 			['git', './img/skills/git.png'],
-			['GitHub', './img/skills/github.png'],
+			// ['GitHub', './img/skills/github.png'],
 		],
 		testing: [
+			['Vitest', ''], // FIXME:
 			['Playwright', './img/skills/playwright.png'],
-			['Cypress', './img/skills/cypress.png'],
-			['Testing Library', './img/skills/testing-library.png'],
+			// ['Cypress', './img/skills/cypress.png'],
+			// ['Testing Library', './img/skills/testing-library.png'],
 		],
 		bundlers: [
+			['Vite', ''], // FIXME:
 			['Parcel', './img/skills/parcel.png'],
-			['ESBuild', './img/skills/esbuild.png'],
 		],
-		games: [['Unity', './img/skills/unity.png']],
+		games: [
+			// ['Unity', './img/skills/unity.png']
+		],
 	},
 
 	// getters

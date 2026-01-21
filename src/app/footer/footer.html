@@ -5,13 +5,12 @@
 
   <!-- Copyright Section-->
   <div class="copyright py-4 text-center text-white">
-    <span class="d-block">Made with ❤️ in
-      <a
+    <span class="block">Made with ❤️ in
+      <a class="block"
         [href]="footer.link1"
         rel="nofollow noreferrer"
         target="_blank"
-        (click)="openLink()"
-        class="block border">
+        (click)="openLink()" >
         {{ footer.tool }}
         <!-- <img src="./img/portfolio/angular.png" alt="" /> -->
         <svg
@@ -19,7 +18,7 @@
           fill="none"
           viewBox="0 0 223 236"
           width="24"
-          class="w-15 md:w-20 mx-auto">
+          class="w-15 pt-2 md:w-20 mx-auto">
           <g _ngcontent-ng-c778437052="" clip-path="url(#a)">
             <path
               _ngcontent-ng-c778437052=""
@@ -88,7 +87,7 @@
         </svg>
       </a>
     </span>
-    <small>{{ footer.copyright }} {{ year }} </small>
+    <small class="text-white/75"> @ {{ footer.copyright }}, {{ year }} </small>
   </div>
 </footer>
 

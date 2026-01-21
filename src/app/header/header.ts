@@ -5,15 +5,15 @@ import {
 	inject,
 	type OnInit,
 	signal,
-} from '@angular/core';
-import { RouterLink } from '@angular/router';
-import { store } from '@app/app-store';
-import { Scroller } from '@app/scroll/scroll';
-import { hashIt } from '@app/utils/string-utils';
+} from "@angular/core";
+import { RouterLink } from "@angular/router";
+import { store } from "@app/app-store";
+import { Scroller } from "@app/scroll/scroll";
+import { hashIt } from "@app/utils/string-utils";
 
 @Component({
-	selector: 'isk-header',
-	templateUrl: './header.html',
+	selector: "isk-header",
+	templateUrl: "./header.html",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [RouterLink, Scroller],
 })

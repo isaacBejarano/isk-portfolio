@@ -1,34 +1,31 @@
 <div [class]="css">
-  @if(showFollow){
-  <h4 class="uppercase mb-4">follow me</h4>
-  }
+  @if(showFollow) {<h4 class="uppercase mb-4">follow me</h4>}
 
   <!-- linked in -->
-  <a      class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
+  <a
+    class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
     [href]="follow.link1"
     target="_blank"
-    (click)="openLink()"
-  >
-
+    (click)="openLink()">
     <!-- LinkedIn FIXME: -->
-          <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-        <use href="./svg/icon-sprite.xml#icon-plus"/>
-      </svg>
-          <span class="sr-only"> Clik to Scroll to the top page </span>
+    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-plus" />
+    </svg>
+    <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 
   <!-- github -->
-  <a    class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
+  <a
+    class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
     [href]="follow.link2"
     target="_blank"
-    (click)="openLink()"
-      >
+    (click)="openLink()">
     <!-- faGithub FIXME: -->
-          <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-        <use href="./svg/icon-sprite.xml#icon-plus"/>
-      </svg>
+    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-plus" />
+    </svg>
     <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 </div>

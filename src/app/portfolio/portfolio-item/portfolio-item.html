@@ -1,4 +1,5 @@
-<div  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
+<div
+  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
   data-toggle="modal"
   [attr.data-target]="item().target">
   <div
@@ -12,12 +13,12 @@
   <!-- web tech icons -->
   <div class="tech-icons bg-light">
     @for (tech of item().tech; track tech) {
-      <img
-        src="/img/portfolio/{{ tech }}.png"
-        alt="web tech"
-        width="auto"
-        height="30"
-        class="border border-light bg-light p-1 rounded" />
+    <img
+      src="/img/portfolio/{{ tech }}.png"
+      alt="web tech"
+      width="auto"
+      height="30"
+      class="border border-light bg-light p-1 rounded" />
     }
   </div>
 </div>

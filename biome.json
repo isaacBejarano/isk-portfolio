@@ -3,8 +3,7 @@
 	"vcs": {
 		"enabled": true,
 		"clientKind": "git",
-		"useIgnoreFile": true,
-		"defaultBranch": "master"
+		"useIgnoreFile": true
 	},
 	"files": {
 		"ignoreUnknown": false
@@ -16,10 +15,33 @@
 	"linter": {
 		"enabled": true,
 		"rules": {
-			"recommended": true,
-			"a11y": {
-				"useAltText": "error"
-			}
+			"recommended": true
+		}
+	},
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "double"
+		}
+	},
+	"html": {
+		"formatter": {
+			"enabled": true,
+			"selfCloseVoidElements": "always",
+			"indentStyle": "space",
+			"bracketSameLine": true
+		},
+		"linter": { "enabled": true },
+		"experimentalFullSupportEnabled": true,
+		"parser": {
+			"interpolation": true
+		},
+		"assist": {
+			"enabled": true
+		}
+	},
+	"css": {
+		"parser": {
+			"tailwindDirectives": true
 		}
 	},
 	"assist": {
@@ -28,21 +50,6 @@
 			"source": {
 				"organizeImports": "on"
 			}
-		}
-	},
-	"javascript": {
-		"formatter": {
-			"quoteStyle": "single"
-		}
-	},
-	"html": {
-		"parser": {
-			"interpolation": true
-		}
-	},
-	"css": {
-		"parser": {
-			"tailwindDirectives": true
 		}
 	}
 }

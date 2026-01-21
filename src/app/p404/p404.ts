@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, type OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, type OnInit } from "@angular/core";
 
 // declare let gsap: any; // page 404 animation plugin
 
 @Component({
-	selector: 'isk-error',
-	templateUrl: './p404.html',
+	selector: "isk-error",
+	templateUrl: "./p404.html",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Page404 implements OnInit {

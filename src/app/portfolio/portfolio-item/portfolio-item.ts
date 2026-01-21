@@ -1,8 +1,8 @@
-import { ChangeDetectionStrategy, Component, input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 
 @Component({
-	selector: 'isk-portfolio-item',
-	templateUrl: './portfolio-item.html',
+	selector: "isk-portfolio-item",
+	templateUrl: "./portfolio-item.html",
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PortfolioItem {
@@ -13,7 +13,7 @@ export class PortfolioItem {
 	//     alt: string;
 	//     tech: string[];
 	//   }
-	item = input<any>();
+	item = input<unknown>();
 
 	// faPlus = faPlus; FIXME:
 }

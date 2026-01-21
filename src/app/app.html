@@ -4,14 +4,14 @@
 </isk-header>
 
 <!-- ^^ ROUTER - pages ^^ -->
-<router-outlet/>
+<main class="max-w-5xl mx-auto">
+  <router-outlet/>
+</main>
 
 <!-- * Footer - UI * -->
-<isk-footer>
-                      <isk-follow id="transcluded-follow" css="p-5 bg-neutral-800"> </isk-follow>
+<isk-footer class="relative">
+  <isk-follow css="absolute z-5 bottom-0 right-0 xl:right-1/20 2xl:right-1/8 flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm m-2" [showFollow]="false"/>
 </isk-footer>
 
-<!-- * Scroll - UI * -->
-<isk-scroll/>
 
 <!-- TODO: review img size and webP them all: use DI -->

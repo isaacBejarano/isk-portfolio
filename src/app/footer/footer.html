@@ -1,7 +1,7 @@
 <!-- Footer-->
 <footer class="footer text-center m-0 p-0 bg-stone-900">
   <!-- Social Media - transclusion -->
-  <ng-content select="#transcluded-follow"></ng-content>
+  <ng-content></ng-content>
 
   <!-- Copyright Section-->
   <div class="copyright py-4 text-center text-white">
@@ -11,7 +11,7 @@
         rel="nofollow noreferrer"
         target="_blank"
         (click)="openLink()"
-        class="ml-1">
+        class="block border">
         {{ footer.tool }}
         <!-- <img src="./img/portfolio/angular.png" alt="" /> -->
         <svg
@@ -19,7 +19,7 @@
           fill="none"
           viewBox="0 0 223 236"
           width="24"
-          class="ml-1">
+          class="w-15 md:w-20 mx-auto">
           <g _ngcontent-ng-c778437052="" clip-path="url(#a)">
             <path
               _ngcontent-ng-c778437052=""

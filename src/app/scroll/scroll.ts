@@ -7,7 +7,7 @@ import { hashIt } from '@app/utils/string-utils';
 	templateUrl: './scroll.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Scroll {
+export class Scroller {
 	scroll = store.getScroll;
 	navbar = store.getNavbar;
 

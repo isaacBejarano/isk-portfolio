@@ -1,16 +1,24 @@
 <!-- Navigation-->
   <header class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2 bg-neutral-900 border border-amber-400/30">
-
-    <div class="flex-1 flex justify-between align-middle gap-2 p-2 border border-pink-400/30 bg-neutral-800/30 ">
-      <a class="w-20 block border border-amber-400/30 self-center md:cursor-auto"
+    <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
+      <a class=" block self-center md:cursor-auto md:hidden"
       routerLink=""
       rel="nofollow noreferrer"
-      (click)="toggle(false)"
-      >
-        <img [src]="navbar.src" [alt]="navbar.alt"/>
+      (click)="toggle(false)"      >
+      <!-- FIXME: hamburger -->
+      <div class="border border-amber-400/30 text-amber-500 rounded-sm">
+        <svg class="size-10 p-2 stroke-current stroke-2 mx-auto" viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-plus"/>
+        </svg>
+      </div>
+        <!-- <img [src]="navbar.src" [alt]="navbar.alt"/> -->
       </a>
 
-      <nav class="w-full relative z-5 p-2" >
+      <nav class="w-full relative z-5 md:flex md:gap-4">
+        <div class="w-12 mx-auto md:mx-0">
+          <img [src]="navbar.src" [alt]="navbar.alt" class=""/>
+        </div>
+
         <ol class="absolute w-full top-0 left-0 flex-wrap justify-end text-amber-400/80 md:relative md:flex md:gap-4 md:justify-start"
         [class.hidden]="collapsed()"
         >
@@ -40,5 +48,8 @@
     <div>
       <ng-content></ng-content>
     </div>
-
+      <!-- * Scroll - UI * -->
+  <isk-scroll class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"/>
   </header>
+
+

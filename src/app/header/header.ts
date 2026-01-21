@@ -8,13 +8,14 @@ import {
 } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { store } from '@app/app-store';
+import { Scroller } from '@app/scroll/scroll';
 import { hashIt } from '@app/utils/string-utils';
 
 @Component({
 	selector: 'isk-header',
 	templateUrl: './header.html',
 	changeDetection: ChangeDetectionStrategy.OnPush,
-	imports: [RouterLink],
+	imports: [RouterLink, Scroller],
 })
 export class Navbar implements OnInit {
 	navbar: Record<string, string> = store.getNavbar;

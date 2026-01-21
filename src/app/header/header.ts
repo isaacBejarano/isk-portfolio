@@ -3,12 +3,13 @@ import {
 	Component,
 	DOCUMENT,
 	inject,
+	input,
 	type OnInit,
 	signal,
 } from "@angular/core";
 import { RouterLink } from "@angular/router";
-import { store } from "@app/app-store";
 import { Scroller } from "@app/scroll/scroll";
+import type { StoreNav } from "@app/types";
 import { hashIt } from "@app/utils/string-utils";
 
 @Component({
@@ -18,16 +19,15 @@ import { hashIt } from "@app/utils/string-utils";
 	imports: [RouterLink, Scroller],
 })
 export class Navbar implements OnInit {
-	navbar: Record<string, string> = store.getNavbar;
-	// faBars = faBars; FIXME:
-	hashIt = hashIt;
-
 	// DI
 	private readonly _doc = inject(DOCUMENT).defaultView;
-	protected readonly collapsed = signal(true);
 
-	// CTRL
+	// DUMMY
 	////
+
+	readonly navbar = input.required<StoreNav>();
+	protected readonly collapsed = signal(true);
+	hashIt = hashIt;
 
 	ngOnInit(): void {
 		this.toggle(true);

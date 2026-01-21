@@ -22,7 +22,7 @@ import { openLink } from "@app/utils/nav-utils";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home implements OnInit, AfterViewChecked, DoCheck {
-	propNew = store.getNew; // featured ~new
+	recent = store.getNew; // featured ~new
 	portfolioItems = store.getPortfolioItems; // featured ~new
 
 	get lastWork() {
@@ -120,6 +120,7 @@ export class Home implements OnInit, AfterViewChecked, DoCheck {
 	}
 
 	// III) SCROLL Animation - enable scroller view
+	// FIXME: puedes petarte esto?
 	ngDoCheck(): void {
 		if (store.scroll.show) {
 			document.getElementById("scroller").classList.remove("d-none");

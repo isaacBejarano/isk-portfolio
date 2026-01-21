@@ -1,5 +1,6 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { store } from "@app/app-store";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+
+import type { StoreFooter } from "@app/types";
 import { openLink } from "../utils/nav-utils";
 
 @Component({
@@ -8,7 +9,8 @@ import { openLink } from "../utils/nav-utils";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {
-	protected readonly footer = store.getFooter;
+	// DUMMY
+	readonly footer = input.required<StoreFooter>();
 	protected readonly year = new Date().getFullYear();
 	openLink = openLink;
 }

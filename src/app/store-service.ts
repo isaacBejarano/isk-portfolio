@@ -1,11 +1,10 @@
 import { Injectable } from "@angular/core";
-import type { Portfolied } from "./types";
+import type { Stored } from "./types";
 
 @Injectable({
 	providedIn: "root",
 })
-export class StoreService {
-	// --> props
+export class StoreService implements Stored {
 	// navbar
 	readonly navbar = {
 		home: "home",
@@ -48,10 +47,10 @@ export class StoreService {
 	};
 
 	// featured ~new
-	readonly new = "Responsive prototype with only HTML and CSS";
+	readonly recent = "Responsive prototype with only HTML and CSS";
 
 	// portfolio
-	readonly portfolio: Portfolied = {
+	readonly portfolio = {
 		// common
 		common: {
 			// list: "Visit these repositories:",
@@ -174,84 +173,55 @@ export class StoreService {
 			["TypeScript", "./img/skills/typescript.png"],
 			["C#", "./img/skills/c-sharp-logo.png"],
 			["PHP", "./img/skills/php.png"],
-			// ['F#', './img/skills/fsharp.png'],
 		],
-		getStack: [
+		environment: [
+			["WSL (Windows Subsystem for Linux)", ""],
 			["Docker", "./img/skills/docker.png"],
 			["IIS", "./img/skills/iis.png"],
 			["Nginx", "./img/skills/nginx.png"],
 			["Apache", "./img/skills/apache.png"],
-			// ['LAMP', './img/skills/lamp.png'],
-			// ['MEAN', './img/skills/mean.png'],
 		],
 		frontend: [
 			["Angular", "./img/skills/angular.png"],
 			["RxJS", "./img/skills/rxjs.png"],
 			["Tailwind", ""], // FIXME:
 			["Bootstrap", "./img/skills/bootstrap.png"],
-			// ['Bulma', './img/skills/bulma.png'],
-			// ['Angular Material', './img/skills/material.png'],
-			// ['SASS', './img/skills/SASS.png'],
-			// ['Vue', './img/skills/vue.png'],
-			// ['Scully', './img/skills/scully.png'],
-			// ['jQuery', './img/skills/jquery.png'],
-			// ['Leaflet', './img/skills/leaflet.png'],
+			["Vite", ""], // FIXME:
+			["Parcel", "./img/skills/parcel.png"],
+			["Node Package Manager", "./img/skills/npm.png"],
+			["SASS", "./img/skills/SASS.png"],
+			["Vue", "./img/skills/vue.png"],
+			["Angular Material", "./img/skills/material.png"],
 		],
 		backend: [
 			["Laravel", "./img/skills/laravel.png"],
 			[".NET", "./img/skills/dotnet.png"],
 			["Node.js", "./img/skills/node.png"],
-			// ['REST', './img/skills/REST.png'],
-			// ['Entity Framework Core', './img/skills/dotnetef.png'],
-			// ['Express', './img/skills/express.png'],
-			// ['Koa', './img/skills/koa.png'],
-		],
-		CSS: [
-			// ['PureCSS', './img/skills/pureCSS.png'],
-			// ['LESS', './img/skills/less.png'],
-		],
-		DB: [
-			["Postgre SQL", "./img/skills/postgres.png"],
-			["Maria DB", "./img/skills/mariadb.png"],
-			["SQL Server", "./img/skills/sqlserver.png"],
-			["SQLite", "./img/skills/sqlite.png"],
-			// ['MySQL', './img/skills/mysql.png'],
-			// ['Mongo DB', './img/skills/mongodb.png'],
-		],
-		techniques: [
-			// ['REST', './img/skills/REST.png'],
-			// ['AJAX', './img/skills/AJAX.png'],
-		],
-		packages: [
-			["Node Package Manager", "./img/skills/npm.png"],
 			["Composer", "./img/skills/composer.png"],
-		],
-		wp: [
-			["Wordpress", "./img/skills/wordpress.png"],
-			["Drupal", "./img/skills/drupal.png"],
-			// ['Wordpress REST API', './img/skills/wp-rest-api.png'],
-		],
-		XaaS: [
-			["Firebase", "./img/skills/firebase.png"],
-			["Netlify", "./img/skills/netlify.png"],
-			["Azure", "./img/skills/azure.png"],
-		],
-		version: [
-			["git", "./img/skills/git.png"],
-			// ['GitHub', './img/skills/github.png'],
+			["REST", "./img/skills/REST.png"],
 		],
 		testing: [
 			["Vitest", ""], // FIXME:
 			["Playwright", "./img/skills/playwright.png"],
-			// ['Cypress', './img/skills/cypress.png'],
-			// ['Testing Library', './img/skills/testing-library.png'],
+			["Cypress", "./img/skills/cypress.png"],
+			["Testing Library", "./img/skills/testing-library.png"],
 		],
-		bundlers: [
-			["Vite", ""], // FIXME:
-			["Parcel", "./img/skills/parcel.png"],
+		vcs: [["git", "./img/skills/git.png"]],
+		db: [
+			["Postgre SQL", "./img/skills/postgres.png"],
+			["Maria DB", "./img/skills/mariadb.png"],
+			["SQL Server", "./img/skills/sqlserver.png"],
+			["SQLite", "./img/skills/sqlite.png"],
+			["Mongo DB", "./img/skills/mongodb.png"],
 		],
-		games: [
-			// ['Unity', './img/skills/unity.png']
+		cms: [
+			["Wordpress", "./img/skills/wordpress.png"],
+			["Drupal", "./img/skills/drupal.png"],
+		],
+		cloud: [
+			["Firebase", "./img/skills/firebase.png"],
+			["Netlify", "./img/skills/netlify.png"],
+			["Azure", "./img/skills/azure.png"],
 		],
 	};
 

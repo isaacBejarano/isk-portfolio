@@ -1,55 +1,67 @@
 <!-- Navigation-->
-  <header class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2 bg-neutral-900 border border-amber-400/30">
-    <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
-      <a class=" block self-center md:cursor-auto md:hidden"
+<header
+  class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2 bg-neutral-900 border border-amber-400/30">
+  <!-- MENU -->
+  <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
+    <a
+      class=" block self-center md:cursor-auto md:hidden"
       routerLink=""
       rel="nofollow noreferrer"
-      (click)="toggle(false)"      >
-      <!-- FIXME: hamburger -->
+      (click)="toggle(false)">
       <div class="border border-amber-400/30 text-amber-500 rounded-sm">
-        <svg class="size-10 p-2 stroke-current stroke-2 mx-auto" viewBox="0 0 100 100">
-          <use href="./svg/icon-sprite.xml#icon-plus"/>
+        <!-- FIXME: faBars -->
+        <svg
+          class="size-10 p-2 stroke-current stroke-2 mx-auto"
+          viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-plus" />
         </svg>
       </div>
-        <!-- <img [src]="navbar.src" [alt]="navbar.alt"/> -->
-      </a>
+    </a>
 
-      <nav class="w-full relative z-5 md:flex md:gap-4">
-        <div class="w-12 mx-auto md:mx-0">
-          <img [src]="navbar.src" [alt]="navbar.alt" class=""/>
-        </div>
+    <nav class="w-full relative z-5 md:flex md:gap-4">
+      <div class="w-12 mx-auto md:mx-0">
+        <img [src]="navbar().src" [alt]="navbar().alt" class="" />
+      </div>
 
-        <ol class="absolute w-full top-0 left-0 flex-wrap justify-end text-amber-400/80 md:relative md:flex md:gap-4 md:justify-start"
-        [class.hidden]="collapsed()"
-        >
-          <li class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0" >
-            <a class="block uppercase text-right"
-            [href]="hashIt(navbar.page1)" rel="nofollow noreferrer">
-              {{ navbar.page1 }}
-            </a>
-          </li>
-          <li class="block md:inline-block p-2 bg-gray-800/95 hover:bg-yellow-900/95 md:rounded-sm">
-            <a class="block uppercase text-right"
-            [href]="hashIt(navbar.page2)" rel="nofollow noreferrer">
-              {{ navbar.page2 }}
-            </a>
-          </li>
-          <li class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-b-sm md:rounded-sm">
-            <a class="block uppercase text-right"
-            [href]="hashIt(navbar.page3)" rel="nofollow noreferrer">
-              {{ navbar.page3 }}
-            </a>
-          </li>
-        </ol>
-      </nav>
-    </div>
+      <ol
+        class="absolute w-full top-0 left-0 flex-wrap justify-end text-amber-400/80 md:relative md:flex md:gap-4 md:justify-start"
+        [class.hidden]="collapsed()">
+        <li
+          class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0">
+          <a
+            class="block uppercase text-right"
+            [href]="hashIt(navbar().page1)"
+            rel="nofollow noreferrer">
+            {{ navbar().page1 }}
+          </a>
+        </li>
+        <li
+          class="block md:inline-block p-2 bg-gray-800/95 hover:bg-yellow-900/95 md:rounded-sm">
+          <a
+            class="block uppercase text-right"
+            [href]="hashIt(navbar().page2)"
+            rel="nofollow noreferrer">
+            {{ navbar().page2 }}
+          </a>
+        </li>
+        <li
+          class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-b-sm md:rounded-sm">
+          <a
+            class="block uppercase text-right"
+            [href]="hashIt(navbar().page3)"
+            rel="nofollow noreferrer">
+            {{ navbar().page3 }}
+          </a>
+        </li>
+      </ol>
+    </nav>
+  </div>
 
-    <!-- Projection -->
-    <div>
-      <ng-content></ng-content>
-    </div>
-      <!-- * Scroll - UI * -->
-  <isk-scroll class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"/>
-  </header>
+  <!-- POJECTED CONTENT -->
+  <div>
+    <ng-content></ng-content>
+  </div>
 
-
+  <!-- SCROLL -->
+  <isk-scroll class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8" />
+</header>

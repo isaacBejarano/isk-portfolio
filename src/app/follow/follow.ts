@@ -11,6 +11,6 @@ export class Follow {
 	// DUMMY
 	readonly showFollow = input.required<boolean>();
 	readonly css = input.required<string>();
-	readonly follow = input.required<{ link1: string; link2: string }>();
+	readonly follow = input.required<StoreFollow>();
 	openLink = openLink;
 }

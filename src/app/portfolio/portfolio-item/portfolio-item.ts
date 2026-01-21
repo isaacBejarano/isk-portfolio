@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 
-import type { PortfolioItemized } from "@app/types";
+import type { StorePortfolioItemized } from "@app/types";
 
 @Component({
 	selector: "isk-portfolio-item",
@@ -15,7 +15,7 @@ export class PortfolioItem {
 	//     alt: string;
 	//     tech: string[];
 	//   }
-	item = input.required<PortfolioItemized>();
+	item = input.required<StorePortfolioItemized>();
 
 	// faPlus = faPlus; FIXME:
 }

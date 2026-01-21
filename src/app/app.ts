@@ -21,5 +21,7 @@ export class App {
 	private readonly _storeSrv = inject(StoreService);
 
 	// CTRL
+	protected readonly footer = signal(this._storeSrv.get("footer"));
 	protected readonly follow = signal(this._storeSrv.get("follow"));
+	protected readonly navbar = signal(this._storeSrv.get("navbar"));
 }

@@ -6,5 +6,5 @@ import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Divider {
-	readonly css = input.required<string>();
+	readonly css = input.required<string>(); // DUMMY
 }

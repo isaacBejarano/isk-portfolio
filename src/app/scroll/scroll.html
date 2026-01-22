@@ -1,32 +1,22 @@
-<!-- Scroll to Top (#home) - sx, sm -->
-<!-- <div id="scroller" class="scroll-to-top fixed bottom-0 bg-emerald-900">
-  <a
-    rel="nofollow noreferrer"
-    class="js-scroll-trigger block text-center text-custom rounded-sm border-1 border-amber-400 bg-pink-300"
-    [href]="hashIt(navbar.home)"
-  >
-    <span class="sr-only"> Clik to Scroll to the top page </span>
-  </a>
-</div> -->
-
 <div
   class="flex flex-col gap-2 p-2 m-2  bg-gray-950/75 border border-rose-400/50 rounded-sm text-rose-600">
   <!-- TODO: A cada click te sube 1 nivel a 1 header -->
   <a
     class=" block border border-rose-400/30 rounded-sm  bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
     rel="nofollow noreferrer"
-    [href]="hashIt(navbar.home)">
+    [href]="hashIt(navbar().home)">
     <!-- faChevronUp FIXME: -->
     <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-plus" />
     </svg>
   </a>
-
   <!-- TODO: A cada click te baja 1 nivel a 1 header -->
+  @if(scrolling()) {<p>Scrolling...</p>}
+
   <a
     class=" border border-rose-400/30 rounded-sm  bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
     rel="nofollow noreferrer"
-    [href]="hashIt(navbar.home)">
+    [href]="hashIt(navbar().home)">
     <!-- faChevronUp FIXME: -->
     <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-minus" />

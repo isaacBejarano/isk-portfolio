@@ -19,8 +19,6 @@ type StoreFooter = {
 	copyright: string;
 };
 
-type StoreScroll = { show: boolean };
-
 type StoreMasterhead = {
 	src: string;
 	alt: string;
@@ -29,8 +27,14 @@ type StoreMasterhead = {
 };
 
 type StorePortfolio = {
-	common: Record<string, string>;
+	common: StoreCommon;
 	items: StorePortfolioItemized[];
+};
+
+type StoreCommon = {
+	star: string;
+	visit: string;
+	dontforget: string;
 };
 
 type StorePortfolioItemized = {
@@ -45,40 +49,33 @@ type StorePortfolioItemized = {
 	//
 	// algorithms?: { link: string; js: string }[]; // FIXME: remove
 	p1?: string;
+	p2?: string;
 	link1?: string;
 	link2?: string;
 	repo?: string;
 	host?: string;
 };
 
-type StoreSkills = {
-	lang: string[][];
-	environment: string[][];
-	frontend: string[][];
-	backend: string[][];
-	testing: string[][];
-	vcs: string[][];
-	db: string[][];
-	cms: string[][];
-	cloud: string[][];
-};
+type SkillNames =
+	| "languages"
+	| "environment"
+	| "frontend"
+	| "backend"
+	| "testing"
+	| "vcs"
+	| "data bases"
+	| "cms"
+	| "cloud";
+
+type StoreSkills = Record<SkillNames, string[][]>;
 
 type Stored = {
 	navbar: StoreNav;
 	follow: StoreFollow;
 	footer: StoreFooter;
-	scroll: StoreScroll;
+	scrolling: boolean;
 	masterhead: StoreMasterhead;
-	recent: string;
+	featured: string;
 	portfolio: StorePortfolio;
 	skills: StoreSkills;
-};
-
-export type {
-	Stored,
-	//
-	StoreNav,
-	StoreFollow,
-	StoreFooter,
-	StorePortfolioItemized,
 };

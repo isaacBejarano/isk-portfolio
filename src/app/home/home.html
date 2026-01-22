@@ -1,30 +1,22 @@
-<!-- * Masthead * -->
-<isk-masterhead id="home" />
+@let lastItem = getLast(portfolio().items); @let common = portfolio().common;
 
-<!-- * Featured ~New * -->
-<isk-featured id="recent" [recent]="recent">
-  <!-- CUSTOM - Portfolio Modal - Text -->
-  <p class="text-justify">{{ lastWork.p1 }}</p>
+<isk-masterhead id="masterhead" [masterhead]="masterhead" />
 
+<isk-featured id="featured" [featured]="featured()" [lastItem]="lastItem">
+  <p class="text-justify">{{ lastItem.p1 }}</p>
   <p class="mb-4 text-justify">
-    {{ portfolioCommon.dontforget }}
+    {{ common.dontforget }}
     <a
-      [href]="lastWork.link2"
+      [href]="lastItem.link2"
       rel="nofollow noreferrer"
       target="_blank"
-      (click)="openLink()">
-      {{ lastWork.host }}
+      (click)="isOpenLink()">
+      {{ lastItem.host }}
     </a>
-
-    <!-- AUX -->
-    <span class="text-gray"> {{ lastWork.p2 }} </span>
+    <span class="text-gray"> {{ lastItem.p2 }} </span>
   </p>
 </isk-featured>
 
-<!-- * Potfolio * -->
-<isk-portfolio id="portfolio" />
+<isk-portfolio id="portfolio" [portfolio]="portfolio()" />
 
-<!-- * Skills * -->
-<isk-skills id="technologies" />
-
-<img src="" sizes="" srcset="" />
+<isk-skills id="skills" [skills]="skills()" />

@@ -1,20 +1,17 @@
-<!-- Masthead-->
 <header class="masthead bg-custom-dark text-white text-center bg-neutral-500">
-  <div class="container">
-    <!-- Masthead Avatar Image-->
-    <img
-      class="border border-dark rounded masthead-avatar mb-5"
-      [src]="masterhead.src"
-      [alt]="masterhead.alt" />
-    <!-- Masthead Heading-->
-    <h1 class="masthead-heading text-uppercase mb-0">{{ masterhead.name }}</h1>
+  <!-- Avatar -->
+  <img
+    class="border border-dark rounded masthead-avatar mb-5"
+    [src]="masterhead().src"
+    [alt]="masterhead().alt" />
 
-    <!-- Icon Divider-->
-    <isk-divider [color]="divider"/>
+  <!--  Heading-->
+  <h1 class="masthead-heading text-uppercase mb-0">{{ masterhead().name }}</h1>
 
-    <!-- Masthead Subheading-->
-    <p class="masthead-subheading font-weight-light mb-0">
-      {{ masterhead.title }}
-    </p>
-  </div>
+  <isk-divider css="bg-gray-800" />
+
+  <!-- Subheading-->
+  <p class="masthead-subheading font-weight-light mb-0">
+    {{ masterhead().title }}
+  </p>
 </header>

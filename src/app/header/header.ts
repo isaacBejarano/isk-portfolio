@@ -8,8 +8,8 @@ import {
 	signal,
 } from "@angular/core";
 import { RouterLink } from "@angular/router";
+
 import { Scroller } from "@app/scroll/scroll";
-import type { StoreNav } from "@app/types";
 import { hashIt } from "@app/utils/string-utils";
 
 @Component({
@@ -18,7 +18,7 @@ import { hashIt } from "@app/utils/string-utils";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 	imports: [RouterLink, Scroller],
 })
-export class Navbar implements OnInit {
+export class Header implements OnInit {
 	// DI
 	private readonly _doc = inject(DOCUMENT).defaultView;
 
@@ -26,6 +26,7 @@ export class Navbar implements OnInit {
 	////
 
 	readonly navbar = input.required<StoreNav>();
+	readonly scrolling = input.required<boolean>();
 	protected readonly collapsed = signal(true);
 	hashIt = hashIt;
 

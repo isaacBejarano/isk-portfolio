@@ -1,10 +1,9 @@
 import { Injectable } from "@angular/core";
-import type { Stored } from "./types";
 
 @Injectable({
 	providedIn: "root",
 })
-export class StoreService implements Stored {
+export class Store implements Stored {
 	// navbar
 	readonly navbar = {
 		home: "home",
@@ -34,9 +33,7 @@ export class StoreService implements Stored {
 	};
 
 	// scroll
-	readonly scroll = {
-		show: false, // dafault
-	};
+	readonly scrolling = false; // FIXME: use it or remove it
 
 	// masterhead
 	readonly masterhead = {
@@ -47,58 +44,73 @@ export class StoreService implements Stored {
 	};
 
 	// featured ~new
-	readonly recent = "Responsive prototype with only HTML and CSS";
+	readonly featured = "Responsive prototype with only HTML and CSS";
 
 	// portfolio
 	readonly portfolio = {
 		// common
 		common: {
-			// list: "Visit these repositories:",
-			// visits: "Visit these repositories at",
+			star: 'and give it a "star"',
 			visit: "Visit this repository at",
 			dontforget: `Don't forget to see it live on`,
-			star: 'and give it a "star"',
-			stars: 'and give them a "star"',
 		},
 		items: [
-			// modal 1 D
+			// TODO: limpia keys no usadas... e.g. "type"
 			{
-				title: "JavaScript Algorithms",
-				target: "#portfolioModal7",
-				id: "portfolioModal7",
-				label: "portfolioModal7Lbabel",
+				title: "Down Breaker",
+				target: "#portfolioModal1",
+				id: "portfolioModal1",
+				label: "portfolioModal1Lbabel",
 				src: "portfolio/algorithms.png",
-				alt: "JavaScript Algorithms project",
-				// algorithms: [
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/price-down-breaker",
-				// 		js: "Down Breaker",
-				// 	},
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/binary-search",
-				// 		js: "Binary Search",
-				// 	},
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/quicksort",
-				// 		js: "Quick Sort",
-				// 	},
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/is-int",
-				// 		js: "Is Int",
-				// 	},
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/string-mirror",
-				// 		js: "String Mirror",
-				// 	},
-				// 	{
-				// 		link: "https://github.com/isaacBejarano/fibonacci-sequencer",
-				// 		js: "Fibonacci Sequencer",
-				// 	},
-				// ],
+				alt: "Down Breaker",
 				type: "D",
 				tech: ["javascript"],
+				link1: "https://github.com/isaacBejarano/price-down-breaker",
 			},
-			// modal 2 B
+			{
+				title: "Binary Search",
+				target: "#portfolioModal2",
+				id: "portfolioModal2",
+				label: "portfolioModal2Lbabel",
+				src: "portfolio/algorithms.png",
+				alt: "Binary Search",
+				type: "D",
+				tech: ["javascript"],
+				link1: "https://github.com/isaacBejarano/binary-search",
+			},
+			{
+				title: "Quick Sort",
+				target: "#portfolioModal3",
+				id: "portfolioModal3",
+				label: "portfolioModal3Lbabel",
+				src: "portfolio/algorithms.png",
+				alt: "Quick Sort",
+				type: "D",
+				tech: ["javascript"],
+				link1: "https://github.com/isaacBejarano/quicksort",
+			},
+			{
+				title: "String Mirror",
+				target: "#portfolioModal4",
+				id: "portfolioModal4",
+				label: "portfolioModal4Lbabel",
+				src: "portfolio/algorithms.png",
+				alt: "String Mirror",
+				type: "D",
+				tech: ["javascript"],
+				link1: "https://github.com/isaacBejarano/string-mirror",
+			},
+			{
+				title: "Fibonacci Sequencer",
+				target: "#portfolioModa54",
+				id: "portfolioModal5",
+				label: "portfolioModal5Lbabel",
+				src: "portfolio/algorithms.png",
+				alt: "Fibonacci Sequencer",
+				type: "D",
+				tech: ["javascript"],
+				link1: "https://github.com/isaacBejarano/fibonacci-sequencer",
+			},
 			{
 				title: "SASS",
 				target: "#portfolioModal8",
@@ -114,7 +126,6 @@ export class StoreService implements Stored {
 				host: "Codepen",
 				tech: ["SASS"],
 			},
-			// modal 3 B
 			{
 				title: "JavaScript Beer Rating Component",
 				target: "#portfolioModal5",
@@ -122,8 +133,7 @@ export class StoreService implements Stored {
 				label: "portfolioModal5Lbabel",
 				src: "portfolio/beers.png",
 				alt: "Javascript project",
-				p1: 'UI for rating. It uses SASS and scalable algorithms to persist\
-        ":hover" and ":active" pseudo-classes.',
+				p1: 'UI for rating. It uses SASS and scalable algorithms to persist ":hover" and ":active" pseudo-classes.',
 				link1: "https://github.com/isaacBejarano/rating-beers",
 				link2: "https://codepen.io/eRoboto/pen/bGpKwgM",
 				type: "B",
@@ -131,7 +141,6 @@ export class StoreService implements Stored {
 				host: "Codepen",
 				tech: ["css", "javascript"],
 			},
-			// modal 4 A
 			{
 				title: "Wordpress Page",
 				target: "#portfolioModal9",
@@ -145,7 +154,6 @@ export class StoreService implements Stored {
 				type: "A",
 				tech: ["wordpress"],
 			},
-			// modal ~new is the last!
 			{
 				title: "Responsive Website",
 				target: "#portfolioModal11",
@@ -164,9 +172,8 @@ export class StoreService implements Stored {
 		],
 	};
 
-	// technologies
 	readonly skills = {
-		lang: [
+		languages: [
 			["HTML", "./img/skills/html.png"],
 			["CSS", "./img/skills/css.png"],
 			["JavaScript / ES6", "./img/skills/javascript.png"],
@@ -207,7 +214,7 @@ export class StoreService implements Stored {
 			["Testing Library", "./img/skills/testing-library.png"],
 		],
 		vcs: [["git", "./img/skills/git.png"]],
-		db: [
+		"data bases": [
 			["Postgre SQL", "./img/skills/postgres.png"],
 			["Maria DB", "./img/skills/mariadb.png"],
 			["SQL Server", "./img/skills/sqlserver.png"],
@@ -225,7 +232,7 @@ export class StoreService implements Stored {
 		],
 	};
 
-	get<U extends keyof StoreService>(key: U) {
+	get<U extends keyof Store>(key: U) {
 		return this[key];
 	}
 }

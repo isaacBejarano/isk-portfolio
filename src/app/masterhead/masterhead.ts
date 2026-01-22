@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { store } from "@app/app-store";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+
 import { Divider } from "@app/divider/divider";
 
 @Component({
@@ -9,8 +9,6 @@ import { Divider } from "@app/divider/divider";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Masterhead {
-	// prop -> to <isk-divider> Input()
-	divider = "divider-light";
-
-	masterhead = store.getMasterhead;
+	// DUMMY
+	readonly masterhead = input.required<StoreMasterhead>();
 }

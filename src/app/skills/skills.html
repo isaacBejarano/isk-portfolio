@@ -7,235 +7,24 @@
     </h2>
 
     <!-- Icon Divider -->
-    <isk-divider [color]="divider" />
+    <isk-divider css="bg-gray-800" />
 
     <!-- TOP - Tech Grid -->
     <div
       id="skills-grid"
       class="max-width-lg mx-auto p-5 my-5 text-left text-gray border border-amber-400/30 rounded">
-      <!-- Lang -->
+      @for (skillName of skillNames; track skillName) {
       <div class="mb-5">
         <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Languages </span>
+          <span class="text-amber-400/75 uppercase"> {{ skillName }} </span>
         </h3>
         <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsLang; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
+          @for (skillset of skills()[skillName]; track skillset) {
+          <isk-skillset [skillset]="skillset" />} @empty {
+          <span> Any skills to display yet </span>}
         </ul>
       </div>
-
-      <!-- Stacks -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Servers </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsStack; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Frontend -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Frontend </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsFrontend; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Backend -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Backend </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsBackend; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- DB -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Databases </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsDB; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Version Control -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase">
-            Version Control Systems
-          </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of git; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Testing -->
-      <!-- TODO: Vitest -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> E2E/Unit Testing </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of testing; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Package Managers -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Package Managers </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of packages; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Bubdlers -->
-      <!-- TODO: Vite -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Package Bundlers </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of skillsBundlers; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- Cloud  -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> Cloud </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of XaaS; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
-
-      <!-- CMS -->
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> CMS </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skill of wordpress; track skill) {
-          <li class="flex border border-amber-400 rounded-sm bg-white p-2">
-            <img
-              class="w-15 self-center rounded-lg mix-blend-multiply"
-              [src]="skill[1]"
-              data-toggle="tooltip"
-              data-placement="bottom"
-              [title]="skill[0]"
-              [alt]="skill[0]" />
-          </li>
-          }
-        </ul>
-      </div>
+      }
     </div>
   </div>
 </section>

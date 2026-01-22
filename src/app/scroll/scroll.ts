@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component } from "@angular/core";
-import { store } from "@app/app-store";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+
 import { hashIt } from "@app/utils/string-utils";
 
 @Component({
@@ -8,9 +8,8 @@ import { hashIt } from "@app/utils/string-utils";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Scroller {
-	scroll = store.getScroll;
-	navbar = store.getNavbar;
-
-	// faChevronUp = faChevronUp; FIXME:
+	// DUMMY
+	readonly scrolling = input.required<boolean>();
+	readonly navbar = input.required<StoreNav>();
 	hashIt = hashIt;
 }

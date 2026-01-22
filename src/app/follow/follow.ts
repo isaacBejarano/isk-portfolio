@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 
-import { openLink } from "@app/utils/nav-utils";
+import { isOpenLink } from "@app/utils/nav-utils";
 
 @Component({
 	selector: "isk-follow",
@@ -12,5 +12,5 @@ export class Follow {
 	readonly showFollow = input.required<boolean>();
 	readonly css = input.required<string>();
 	readonly follow = input.required<StoreFollow>();
-	openLink = openLink;
+	isOpenLink = isOpenLink;
 }

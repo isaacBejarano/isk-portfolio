@@ -1,5 +1,5 @@
-const openLink = (): boolean => {
+function isOpenLink(): boolean {
 	return confirm("This link will open in a new window");
-};
+}
 
-export { openLink };
+export { isOpenLink };

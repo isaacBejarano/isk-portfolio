@@ -1,22 +1,24 @@
-<!-- Portfolio Modal 1 -->
 <div
   class="portfolio-modal modal fade"
-  [id]="modal().id"
+  [id]="item().id"
   tabindex="-1"
   role="dialog"
-  [attr.aria-labelledby]="modal().label"
-  aria-hidden="true"
->
+  [attr.aria-labelledby]="item().label"
+  aria-hidden="true">
   <div class="modal-dialog modal-xl" role="document">
     <div class="modal-content">
       <button
         class="close text-custom"
         type="button"
         data-dismiss="modal"
-        aria-label="Close"
-      >
+        aria-label="Close">
         <span aria-hidden="true">
-          <!-- <fa-icon [icon]="faTimes"></fa-icon> FIXME: -->
+          <!-- faTimes FIXME: -->
+          <svg
+            class="size-10 p-2 stroke-current stroke-2"
+            viewBox="0 0 100 100">
+            <use href="./svg/icon-sprite.xml#icon-plus" />
+          </svg>
         </span>
       </button>
       <div class="modal-body text-center">
@@ -26,24 +28,27 @@
               <!-- Portfolio Modal - Title-->
               <h2
                 class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                [id]="modal().label"
-              >
-                {{ modal().title }}
+                [id]="item().label">
+                {{ item().title }}
               </h2>
               <!-- Icon Divider-->
-              <isk-divider [color]="divider"/>
+              <isk-divider css="bg-gray-800" />
 
               <!-- Portfolio Modal - Image-->
               <img
                 class="border border-secondary img-fluid-override rounded mb-5"
-                src="/img/{{ modal().src }}"
-                [alt]="modal().alt"
-              />
+                [src]="[`/img/${item().src}`]"
+                [alt]="item().alt" />
               <!-- type ABCDE - Portfolio Modal - Text-->
               <ng-content></ng-content>
 
               <button class="btn btn-outline-dark" data-dismiss="modal">
-                <!-- <fa-icon [icon]="faTimes"></fa-icon> FIXME: -->
+                <!-- faTimes FIXME: -->
+                <svg
+                  class="size-10 p-2 stroke-current stroke-2"
+                  viewBox="0 0 100 100">
+                  <use href="./svg/icon-sprite.xml#icon-plus" />
+                </svg>
                 Close
               </button>
             </div>

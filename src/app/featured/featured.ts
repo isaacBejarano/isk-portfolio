@@ -1,12 +1,6 @@
-import {
-	ChangeDetectionStrategy,
-	Component,
-	inject,
-	input,
-	signal,
-} from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from "@angular/core";
 import { Divider } from "@app/divider/divider";
-import { StoreService } from "@app/store-service";
+import { getLast } from "@app/utils/array-utils";
 
 @Component({
 	selector: "isk-featured",
@@ -15,19 +9,8 @@ import { StoreService } from "@app/store-service";
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Featured {
-	// DI
-	private readonly _storeSrv = inject(StoreService);
-
-	// CTRL
-	protected readonly items = signal(this._storeSrv.get("portfolio").items);
-	readonly recent = input.required<string>();
-
-	// portfolioItems = store.getPortfolioItems; // common + modal8
-	// portfolioCommon = store.getPortfolioCommon; // common + modal8
-
-	// faPlus = faPlus; FIXME:
-	// faTimes = faTimes; FIXME:
-	getLast<T>(items: T[]): T {
-		return items[items.length - 1];
-	}
+	// DUMMY
+	readonly lastItem = input.required<StorePortfolioItemized>();
+	readonly featured = input.required<string>();
+	getLast = getLast;
 }

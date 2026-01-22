@@ -7,13 +7,13 @@ import { PortfolioModal } from "@app/portfolio/portfolio-modal/portfolio-modal";
 import { isOpenLink } from "@app/utils/nav-utils";
 
 @Component({
-	selector: "isk-portfolio",
-	templateUrl: "./portfolio.html",
-	imports: [Divider, ListReversePipe, PortfolioModal, PortfolioItem],
-	changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: "isk-portfolio",
+  templateUrl: "./portfolio.html",
+  imports: [Divider, ListReversePipe, PortfolioModal, PortfolioItem],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Portfolio {
-	// DUMMY
-	readonly portfolio = input.required<StorePortfolio>();
-	isOpenLink = isOpenLink;
+  // DUMMY
+  readonly portfolio = input.required<StorePortfolio>();
+  isOpenLink = isOpenLink;
 }

@@ -20,8 +20,9 @@
         </h3>
         <ul class="flex flex-wrap gap-4 ">
           @for (skillset of skills()[skillName]; track skillset) {
-          <isk-skillset [skillset]="skillset" />} @empty {
-          <span> Any skills to display yet </span>}
+          <isk-skillset [skillset]="skillset" />} @empty {<span>
+            Any skills to display yet
+          </span>}
         </ul>
       </div>
       }

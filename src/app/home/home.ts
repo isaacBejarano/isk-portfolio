@@ -9,27 +9,27 @@ import { getLast } from "@app/utils/array-utils";
 import { isOpenLink } from "@app/utils/nav-utils";
 
 @Component({
-	selector: "isk-home",
-	templateUrl: "./home.html",
-	imports: [Masterhead, Featured, Portfolio, Skills],
-	changeDetection: ChangeDetectionStrategy.OnPush,
+  selector: "isk-home",
+  templateUrl: "./home.html",
+  imports: [Masterhead, Featured, Portfolio, Skills],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {
-	// MODEL
-	private readonly _model = new Store();
+  // MODEL
+  private readonly _model = new Store();
 
-	// CTRL
-	////
+  // CTRL
+  ////
 
-	protected readonly featured = signal<string>(this._model.get("featured"));
-	protected readonly skills = signal<StoreSkills>(this._model.get("skills"));
-	protected readonly masterhead = signal<StoreMasterhead>(
-		this._model.get("masterhead"),
-	);
-	protected readonly portfolio = signal<StorePortfolio>(
-		this._model.get("portfolio"),
-	);
+  protected readonly featured = signal<string>(this._model.get("featured"));
+  protected readonly skills = signal<StoreSkills>(this._model.get("skills"));
+  protected readonly masterhead = signal<StoreMasterhead>(
+    this._model.get("masterhead"),
+  );
+  protected readonly portfolio = signal<StorePortfolio>(
+    this._model.get("portfolio"),
+  );
 
-	isOpenLink = isOpenLink;
-	getLast = getLast;
+  isOpenLink = isOpenLink;
+  getLast = getLast;
 }

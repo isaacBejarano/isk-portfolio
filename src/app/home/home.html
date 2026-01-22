@@ -1,6 +1,6 @@
 @let lastItem = getLast(portfolio().items); @let common = portfolio().common;
 
-<isk-masterhead id="masterhead" [masterhead]="masterhead" />
+<isk-masterhead id="masterhead" [masterhead]="masterhead()" />
 
 <isk-featured id="featured" [featured]="featured()" [lastItem]="lastItem">
   <p class="text-justify">{{ lastItem.p1 }}</p>

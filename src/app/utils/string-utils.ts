@@ -1,5 +1,5 @@
 function hashIt(str: string): string {
-	return `#${str}`;
+  return `#${str}`;
 }
 
 export { hashIt };

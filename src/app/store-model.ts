@@ -23,12 +23,10 @@ export class Store implements Stored {
 
   // footer
   readonly footer = {
-    tool: "Angular",
-    theme: "Start Bootstrap Theme",
-    link1: "https://angular.dev",
-    link2:
-      "https://github.com/StartBootstrap/startbootstrap-freelancer/blob/master/LICENSE",
-    license: "MIT",
+    tools: [
+      ["angular", "https://angular.dev"],
+      ["tailwind", "https://tailwindcss.com/"],
+    ],
     copyright: "Isaac Bejarano",
   };
 
@@ -192,7 +190,7 @@ export class Store implements Stored {
       ["Angular", "./img/skills/angular.png"],
       ["RxJS", "./img/skills/rxjs.png"],
       ["Tailwind", ""], // FIXME:
-      ["Bootstrap", "./img/skills/bootstrap.png"],
+      // ["Bootstrap", "./img/skills/bootstrap.png"],
       ["Vite", ""], // FIXME:
       ["Parcel", "./img/skills/parcel.png"],
       ["Node Package Manager", "./img/skills/npm.png"],

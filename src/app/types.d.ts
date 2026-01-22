@@ -11,11 +11,7 @@ type StoreNav = {
 type StoreFollow = { link1: string; link2: string };
 
 type StoreFooter = {
-  tool: string;
-  theme: string;
-  link1: string;
-  link2: string;
-  license: string;
+  tools: string[][];
   copyright: string;
 };
 

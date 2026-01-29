@@ -1,31 +1,27 @@
 <div [class]="css()">
   @if(showFollow()) {<h4 class="uppercase mb-4">follow me</h4>}
 
-  <!-- linked in -->
+  <!-- LinkedIn -->
   <a
     class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
     [href]="follow().link1"
     target="_blank"
-    (click)="isOpenLink()">
-    <!-- LinkedIn FIXME: -->
-    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-      <use href="./svg/icon-sprite.xml#icon-plus" />
+    (click)="isOpenLink('LinkedIn')">
+    <svg class="size-10 p-1 fill-current" viewBox="2 5 25 25">
+      <use href="./svg/icon-sprite.xml#icon-linkedin" />
     </svg>
-    <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 
-  <!-- github -->
+  <!-- GitHub -->
   <a
     class="block border border-amber-500/30 rounded-sm bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     rel="nofollow noreferrer"
     [href]="follow().link2"
     target="_blank"
-    (click)="isOpenLink()">
-    <!-- faGithub FIXME: -->
-    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-      <use href="./svg/icon-sprite.xml#icon-plus" />
+    (click)="isOpenLink('GitHub')">
+    <svg class="size-10 fill-current" viewBox="0 0 50 50">
+      <use href="./svg/icon-sprite.xml#icon-github" />
     </svg>
-    <span class="sr-only"> Clik to Scroll to the top page </span>
   </a>
 </div>

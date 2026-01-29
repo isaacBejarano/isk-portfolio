@@ -190,7 +190,7 @@ export class Store implements Stored {
       ["Angular", "./img/skills/angular.png"],
       ["RxJS", "./img/skills/rxjs.png"],
       ["Tailwind", ""], // FIXME:
-      // ["Bootstrap", "./img/skills/bootstrap.png"],
+      ["Bootstrap", "./img/skills/bootstrap.png"],
       ["Vite", ""], // FIXME:
       ["Parcel", "./img/skills/parcel.png"],
       ["Node Package Manager", "./img/skills/npm.png"],

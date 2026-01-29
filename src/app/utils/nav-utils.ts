@@ -1,5 +1,6 @@
-function isOpenLink(): boolean {
-  return confirm("This link will open in a new window");
+function isOpenLink(site?: string): boolean {
+  const name = site ? `'${site}' ` : "";
+  return confirm(`This ${name}link will open in a new window`);
 }
 
 export { isOpenLink };

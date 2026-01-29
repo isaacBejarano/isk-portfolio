@@ -2,30 +2,34 @@
   <div class="container">
     <!-- Portfolio Section Heading-->
     <h2
-      class="page-section-heading text-center text-uppercase text-secondary mb-0">
+      class="page-section-heading text-center text-white mb-0">
       TECHNOLOGIES
     </h2>
-
     <!-- Icon Divider -->
     <isk-divider css="bg-gray-800" />
-
-    <!-- TOP - Tech Grid -->
+    <!-- Tech Tiers -->
+    @for(title of tierTitles(); let idx = $index; track title) {
+    <h3 class="text-white px-5 text-lg">{{ title }}</h3>
+    @let tier = idx + 1;
     <div
       id="skills-grid"
-      class="max-width-lg mx-auto p-5 my-5 text-left text-gray border border-amber-400/30 rounded">
+      class="max-width-lg mx-auto p-5 my-5 mt-2 text-left text-gray border border-amber-400/30 rounded">
       @for (skillName of skillNames; track skillName) {
+      @if(isOnlyTier(skills()[skillName], tier)) {
       <div class="mb-5">
         <h3 class="h4 pb-3">
           <span class="text-amber-400/75 uppercase"> {{ skillName }} </span>
         </h3>
         <ul class="flex flex-wrap gap-4 ">
           @for (skillset of skills()[skillName]; track skillset) {
-          <isk-skillset [skillset]="skillset" />} @empty {<span>
+          @if(skillset[2] === tier) {
+          <isk-skillset [skillset]="skillset" />} } @empty {<span>
             Any skills to display yet
           </span>}
         </ul>
       </div>
-      }
+      } }
     </div>
+    }
   </div>
 </section>

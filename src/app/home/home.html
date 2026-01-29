@@ -1,8 +1,17 @@
 @let lastItem = getLast(portfolio().items); @let common = portfolio().common;
 
-<isk-masterhead id="masterhead" [masterhead]="masterhead()" />
+<isk-masterhead
+  iskObserveElement
+  id="about"
+  (visible)="onSectionActive($event)"
+  [masterhead]="masterhead()" />
 
-<isk-featured id="featured" [featured]="featured()" [lastItem]="lastItem">
+<isk-featured
+  iskObserveElement
+  id="new"
+  (visible)="onSectionActive($event)"
+  [featured]="featured()"
+  [lastItem]="lastItem">
   <p class="text-justify">{{ lastItem.p1 }}</p>
   <p class="mb-4 text-justify">
     {{ common.dontforget }}
@@ -17,6 +26,14 @@
   </p>
 </isk-featured>
 
-<isk-portfolio id="portfolio" [portfolio]="portfolio()" />
+<isk-portfolio
+  iskObserveElement
+  id="portfolio"
+  (visible)="onSectionActive($event)"
+  [portfolio]="portfolio()" />
 
-<isk-skills id="skills" [skills]="skills()" />
+<isk-skills
+  iskObserveElement
+  id="technologies"
+  (visible)="onSectionActive($event)"
+  [skills]="skills()" />

@@ -1,25 +1,24 @@
 <div
-  class="flex flex-col gap-2 p-2 m-2  bg-gray-950/75 border border-rose-400/50 rounded-sm text-rose-600">
-  <!-- TODO: A cada click te sube 1 nivel a 1 header -->
+  class="flex flex-col gap-2 p-2 m-2  bg-gray-950/75 border border-rose-400/50 rounded-full text-rose-600">
   <a
-    class=" block border border-rose-400/30 rounded-sm  bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
-    rel="nofollow noreferrer"
-    [href]="hashIt(navbar().home)">
-    <!-- faChevronUp FIXME: -->
-    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-      <use href="./svg/icon-sprite.xml#icon-plus" />
+    class="block border border-rose-400/30 rounded-t-full bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
+    [class]="`${isAnchor(scrollTo(-1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
+    [href]="voidAnchor(scrollTo(-1))"
+    rel="nofollow noreferrer">
+    <svg class="size-10 fill-current" viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-up" />
     </svg>
   </a>
-  <!-- TODO: A cada click te baja 1 nivel a 1 header -->
-  @if(scrolling()) {<p>Scrolling...</p>}
+
+  <p>{{ currentAnchor() }}</p>
 
   <a
-    class=" border border-rose-400/30 rounded-sm  bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
-    rel="nofollow noreferrer"
-    [href]="hashIt(navbar().home)">
-    <!-- faChevronUp FIXME: -->
-    <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-      <use href="./svg/icon-sprite.xml#icon-minus" />
+    class="border border-rose-400/30 rounded-b-full bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
+    [class]="`${isAnchor(scrollTo(1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
+    [href]="voidAnchor(scrollTo(1))"
+    rel="nofollow noreferrer">
+    <svg class="size-10 fill-current" viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-down" />
     </svg>
   </a>
 </div>

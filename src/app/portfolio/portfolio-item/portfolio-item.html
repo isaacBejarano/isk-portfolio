@@ -1,22 +1,27 @@
-<div
-  class="portfolio-item mx-auto border border-dark rounded-top bigborder"
-  data-toggle="modal"
-  [attr.data-target]="item().target">
-  <div
-    class="portfolio-item-caption d-flex align-items-center justify-content-center h-100 bg-gray-800 text-custom">
-    <div class="portfolio-item-caption-content text-center">
-      <svg class="size-10 p-2 stroke-current stroke-2" viewBox="0 0 100 100">
-        <use href="./svg/icon-sprite.xml#icon-plus" />
-      </svg>
-    </div>
-  </div>
-  <img class="img-fluid" src="/img/{{ item().src }}" [alt]="item().alt" />
+<!-- FIXME: remove component -->
+
+<div [class]="css()" data-toggle="modal" [attr.data-target]="item().target">
+  <!-- <div class="bg-gray-800 text-white">
+    <svg
+      class="size-10 p-2 stroke-current stroke-2 mx-auto"
+      viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-plus" />
+    </svg>
+  </div> -->
+  <img
+    class="w-[150px] lg:w-[500px]"
+    src="/img/{{ item().src }}"
+    [alt]="item().alt" />
+
+  <!-- PROJECTED CONTENT -->
+  <ng-content />
 
   <!-- web tech icons -->
-  <div class="tech-icons bg-light">
+  <div
+    class="clear-both p-2 flex gap-2 bg-linear-to-br from-gray-900 to-gray-700/50">
     @for (tech of item().tech; track tech) {
     <img
-      class="border border-light bg-light p-1 rounded"
+      class="p-1 border border-amber-500/50 rounded-sm bg-linear-to-br from-gray-400 to-white"
       src="/img/portfolio/{{ tech }}.png"
       alt="web tech"
       width="auto"

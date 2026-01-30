@@ -5,7 +5,6 @@ import {
   signal,
 } from '@angular/core';
 import { Masterhead } from '@app/about/about';
-import { Featured } from '@app/featured/featured';
 import { Portfolio } from '@app/portfolio/portfolio';
 import { ScrollService } from '@app/scroll/scroll-service';
 import { Skills } from '@app/skills/skills';
@@ -17,7 +16,7 @@ import { ObserveElementDirective } from '../directives/anchor-observer-directive
 @Component({
   selector: 'isk-home',
   templateUrl: './home.html',
-  imports: [Masterhead, Featured, Portfolio, Skills, ObserveElementDirective],
+  imports: [Masterhead, Portfolio, Skills, ObserveElementDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {

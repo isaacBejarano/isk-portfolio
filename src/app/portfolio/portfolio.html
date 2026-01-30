@@ -1,38 +1,87 @@
-@let _items = portfolio().items; @let _common = portfolio().common;
+@let items = portfolio().items; @let common = portfolio().common;
 
-<section class="page-section-top portfolio bg-custom-dark mb-10">
-  <div class="container">
-    <h2 class="page-section-heading text-center text-uppercase text-white mb-0">
-      Portfolio
-    </h2>
+<section class="mb-10">
+  <h2 class="text-xl text-center text-amber-500/90 mb-0">PORTFOLIO</h2>
+  <isk-divider css="mb-5" />
+  <!-- GRID -->
+  @for(item of items | listReverse; track item) {
+  <div class="mb-10 mx-5 border border-amber-400/30 rounded-sm">
+    <div class="from-gray-950 ">
+      <img
+        class="p-5 float-left mr-2 mt-2.5 w-full md:w-[40%]"
+        [src]="`img/${item.src}`"
+        [alt]="item.alt" />
 
-    <isk-divider css="bg-gray-800" />
-
-    <!-- GRID -->
-    <div class="row">
-      @for(item of _items | listReverse; track item) {
-      <div class="col-md-6 col-lg-4 mb-5">
-        <isk-portfolio-item [item]="item" />
+      <!-- FIXME:  add text -->
+      <div class="p-5 text-white text-justify">
+        <p>{{ item.title }}</p>
+        <p>{{ item.target }}</p>
+        <p>{{ item.label }}</p>
+        <p>{{ item.src }}</p>
+        <p>{{ item.alt }}</p>
+        <p>{{ item.type }}</p>
+        <p>{{ item.p1 }}</p>
+        <p>{{ common.visit }}</p>
+        <p>{{ common.dontforget }}</p>
+        <p>
+          <a
+            [href]="item.link1"
+            rel="nofollow noreferrer"
+            target="_blank"
+            (click)="isOpenLink()">
+            {{ item.host }}
+          </a>
+        </p>
+        <p>
+          <a
+            [href]="item.link2"
+            rel="nofollow noreferrer"
+            target="_blank"
+            (click)="isOpenLink()">
+            {{ common.star }}
+          </a>
+        </p>
       </div>
-      } @empty {<p class="text-rose-700">No projects to display yet</p>}
+      <ul>
+        @for(tech of item.tech; track tech) {
+        <li>
+          <p class="text-amber-400/90">{{ tech }} </p>
+        </li>
+        }
+      </ul>
+    </div>
+
+    <div
+      class="clear-both p-2 flex gap-2 bg-linear-to-br from-gray-900 to-gray-700/50">
+      <p class="text-white/75 self-center">Technologies: </p>
+      @for (tech of item.tech; track tech) {
+      <img
+        class="p-1 border border-amber-500/50 rounded-sm bg-linear-to-br from-gray-400 to-white"
+        src="/img/portfolio/{{ tech }}.png"
+        alt="web tech"
+        width="auto"
+        height="30" />
+      }
     </div>
   </div>
-</section>
-<!-- MODALS -->
+  <!-- /@ -->
 
-@for(item of _items; track item) {
+  } @empty {<p class="text-rose-700">No projects to display yet</p>}
+</section>
+
+<!-- MODALS: TODO: float -->
+<!-- @for(item of items; track item) {
 <isk-portfolio-modal [item]="item">
-  <div class="mb-5 text-justify">
+  <div class="mb-5 text-justify text-white">
     {{ item.title }}
     {{ item.target }}
     {{ item.label }}
     {{ item.src }}
     {{ item.alt }}
     {{ item.type }}
-    <!-- // -->
     {{ item.p1 }}
-    {{ _common.visit }}
-    {{ _common.dontforget }}
+    {{ common.visit }}
+    {{ common.dontforget }}
     <p>
       <a
         [href]="item.link1"
@@ -60,4 +109,4 @@
     </ul>
   </div>
 </isk-portfolio-modal>
-}
+} -->

@@ -31,10 +31,10 @@ export class Header implements OnInit {
   hashIt = hashIt;
 
   protected readonly anchors = computed(() => {
-    const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
+    const { anchor0, anchor1, anchor2, anchor3 } = {
       ...this.navbar(),
     };
-    return [anchor0, anchor1, anchor2, anchor3, anchor4];
+    return [anchor0, anchor1, anchor2, anchor3];
   });
 
   ngOnInit(): void {

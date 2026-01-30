@@ -21,7 +21,7 @@ export class Scroller {
   // CTRL
   ////
 
-  readonly anchors = input.required<Anchor[]>(); // FIXME: id="featured"
+  readonly anchors = input.required<Anchor[]>();
   private readonly _hashIt = hashIt;
 
   protected scrollTo(step: 1 | -1): string {

@@ -9,10 +9,9 @@ export class Store implements Stored {
     src: '/img/portfolio/isaac-logo.png',
     alt: 'isaac logo',
     anchor0: <Anchor>'about',
-    anchor1: <Anchor>'new',
-    anchor2: <Anchor>'portfolio',
-    anchor3: <Anchor>'technologies',
-    anchor4: <Anchor>'footer',
+    anchor1: <Anchor>'portfolio',
+    anchor2: <Anchor>'technologies',
+    anchor3: <Anchor>'footer',
   };
 
   // follow
@@ -38,8 +37,8 @@ export class Store implements Stored {
     title: 'Web Developer - Angular Specialist',
   };
 
-  // featured ~new
-  readonly featured = 'Responsive prototype with only HTML and CSS';
+  // featured ~new FIXME:
+  // readonly featured = 'Responsive prototype with only HTML and CSS';
 
   // portfolio
   readonly portfolio = {
@@ -58,7 +57,7 @@ export class Store implements Stored {
         label: 'portfolioModal1Lbabel',
         src: 'portfolio/algorithms.png',
         alt: 'Down Breaker',
-        type: 'D',
+        // type: 'D',
         tech: ['javascript'],
         link1: 'https://github.com/isaacBejarano/price-down-breaker',
       },
@@ -69,7 +68,7 @@ export class Store implements Stored {
         label: 'portfolioModal2Lbabel',
         src: 'portfolio/algorithms.png',
         alt: 'Binary Search',
-        type: 'D',
+        // type: 'D',
         tech: ['javascript'],
         link1: 'https://github.com/isaacBejarano/binary-search',
       },
@@ -80,7 +79,7 @@ export class Store implements Stored {
         label: 'portfolioModal3Lbabel',
         src: 'portfolio/algorithms.png',
         alt: 'Quick Sort',
-        type: 'D',
+        // type: 'D',
         tech: ['javascript'],
         link1: 'https://github.com/isaacBejarano/quicksort',
       },
@@ -91,7 +90,7 @@ export class Store implements Stored {
         label: 'portfolioModal4Lbabel',
         src: 'portfolio/algorithms.png',
         alt: 'String Mirror',
-        type: 'D',
+        // type: 'D',
         tech: ['javascript'],
         link1: 'https://github.com/isaacBejarano/string-mirror',
       },
@@ -102,7 +101,7 @@ export class Store implements Stored {
         label: 'portfolioModal5Lbabel',
         src: 'portfolio/algorithms.png',
         alt: 'Fibonacci Sequencer',
-        type: 'D',
+        // type: 'D',
         tech: ['javascript'],
         link1: 'https://github.com/isaacBejarano/fibonacci-sequencer',
       },
@@ -116,7 +115,7 @@ export class Store implements Stored {
         p1: 'Cool SASS hover effect using CSS animation rules and pseudo-classes.',
         link1: 'https://github.com/isaacBejarano/sass-stripes',
         link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
-        type: 'B',
+        // type: 'B',
         repo: 'Github',
         host: 'Codepen',
         tech: ['SASS'],
@@ -131,7 +130,7 @@ export class Store implements Stored {
         p1: 'UI for rating. It uses SASS and scalable algorithms to persist ":hover" and ":active" pseudo-classes.',
         link1: 'https://github.com/isaacBejarano/rating-beers',
         link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
-        type: 'B',
+        // type: 'B',
         repo: 'Github',
         host: 'Codepen',
         tech: ['css', 'javascript'],
@@ -146,7 +145,7 @@ export class Store implements Stored {
         p1: 'Worked on Casa Museu Amatller Wordpress webpage. Made with Wp-Backery and Yoast.',
         link1: 'https://amatller.org/',
         host: 'Casa Museu Amatller',
-        type: 'A',
+        // type: 'A',
         tech: ['wordpress'],
       },
       {
@@ -159,7 +158,7 @@ export class Store implements Stored {
         p1: 'Responsive prototype with only HTML and CSS. Made for the UOC Master on Web App Development.',
         link1: 'https://github.com/isaacBejarano/uoc-html-css-p3.github.io',
         link2: 'https://isaacbejarano.github.io/uoc-html-css-p3.github.io',
-        type: 'B',
+        // type: 'B',
         repo: 'GitHub',
         host: 'GitHub Pages',
         tech: ['html', 'css'],

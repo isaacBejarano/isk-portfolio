@@ -1,4 +1,4 @@
-type Anchor = 'about' | 'new' | 'portfolio' | 'technologies';
+type Anchor = 'about' | 'portfolio' | 'technologies';
 type StoreNav = {
   // home: string; // FIXME:
   src: string;
@@ -8,7 +8,6 @@ type StoreNav = {
   anchor1: Anchor;
   anchor2: Anchor;
   anchor3: Anchor;
-  anchor4: Anchor;
 };
 
 type StoreFollow = { link1: string; link2: string };
@@ -43,7 +42,7 @@ type StorePortfolioItemized = {
   label: string;
   src: string;
   alt: string;
-  type: string;
+  // type: string; FIXME:
   tech: string[];
   //
   // algorithms?: { link: string; js: string }[]; // FIXME: remove
@@ -74,7 +73,7 @@ type Stored = {
   follow: StoreFollow;
   footer: StoreFooter;
   about: StoreAbout;
-  featured: string;
+  // featured: string; // FIXME:
   portfolio: StorePortfolio;
   skills: StoreSkills;
 };

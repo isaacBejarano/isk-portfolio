@@ -29,7 +29,7 @@ export class Home {
   // CTRL
   ////
 
-  protected readonly featured = signal<string>(this._model.get('featured'));
+  // protected readonly featured = signal<string>(this._model.get('featured'));
   protected readonly skills = signal<StoreSkills>(this._model.get('skills'));
   protected readonly about = signal<StoreAbout>(this._model.get('about'));
   protected readonly portfolio = signal<StorePortfolio>(

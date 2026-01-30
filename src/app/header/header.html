@@ -1,78 +1,80 @@
 <!-- Navigation-->
-<header
-  class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2 bg-neutral-900 border border-amber-400/30">
-  <!-- MENU -->
-  <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
-    <a
-      class=" block self-center md:cursor-auto md:hidden"
-      routerLink=""
-      rel="nofollow noreferrer"
-      (click)="toggle(false)">
-      <div class="border border-amber-400/30 text-amber-500 rounded-sm">
-        <!-- FIXME: faBars -->
-        <svg
-          class="size-10 p-2 stroke-current stroke-2 mx-auto"
-          viewBox="0 0 100 100">
-          <use href="./svg/icon-sprite.xml#icon-plus" />
-        </svg>
-      </div>
-    </a>
+<header class="mb-10 bg-linear-to-t from-stone-900 to-stone-950">
+  <div
+    class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2">
+    <!-- MENU -->
+    <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
+      <a
+        class=" block self-center md:cursor-auto md:hidden"
+        routerLink=""
+        rel="nofollow noreferrer"
+        (click)="toggle(false)">
+        <div class="border border-amber-400/30 text-amber-500 rounded-sm">
+          <!-- FIXME: faBars -->
+          <svg
+            class="size-10 p-2 stroke-current stroke-2 mx-auto"
+            viewBox="0 0 100 100">
+            <use href="./svg/icon-sprite.xml#icon-plus" />
+          </svg>
+        </div>
+      </a>
 
-    <nav class="w-full relative z-5 md:flex md:gap-4">
-      <div class="w-12 mx-auto md:mx-0">
-        <img [src]="navbar().src" [alt]="navbar().alt" class="" />
-      </div>
+      <nav class="w-full relative z-5 md:flex md:gap-10">
+        <div class="w-12 mx-auto md:mx-0">
+          <img [src]="navbar().src" [alt]="navbar().alt" />
+        </div>
 
-      <ol
-        class="absolute w-full top-0 left-0 flex-wrap justify-end text-amber-400/80 md:relative md:flex md:gap-4 md:justify-start"
-        [class.hidden]="collapsed()">
-        <li
-          class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-gray-800/95">
-          <a
-            class="block uppercase text-right"
-            [href]="hashIt(navbar().anchor0)"
-            rel="nofollow noreferrer">
-            {{ navbar().anchor0 }}
-          </a>
-        </li>
-        <li
-          class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-gray-800/95">
-          <a
-            class="block uppercase text-right"
-            [href]="hashIt(navbar().anchor1)"
-            rel="nofollow noreferrer">
-            {{ navbar().anchor1 }}
-          </a>
-        </li>
-        <li
-          class="block md:inline-block p-2 bg-gray-800/95 hover:bg-yellow-900/95 md:rounded-sm">
-          <a
-            class="block uppercase text-right"
-            [href]="hashIt(navbar().anchor2)"
-            rel="nofollow noreferrer">
-            {{ navbar().anchor2 }}
-          </a>
-        </li>
-        <li
-          class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-b-sm md:rounded-sm md:bg-gray-800/95">
-          <a
-            class="block uppercase text-right"
-            [href]="hashIt(navbar().anchor3)"
-            rel="nofollow noreferrer">
-            {{ navbar().anchor3 }}
-          </a>
-        </li>
-      </ol>
-    </nav>
+        <ol
+          class="absolute w-full top-0 left-0 text-amber-400/80 md:relative md:flex gap-5"
+          [class.hidden]="collapsed()">
+          <li
+            class="block md:inline-block p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800">
+            <a
+              class="block uppercase text-right"
+              [href]="hashIt(navbar().anchor0)"
+              rel="nofollow noreferrer">
+              {{ navbar().anchor0 }}
+            </a>
+          </li>
+          <li
+            class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800">
+            <a
+              class="block uppercase text-right"
+              [href]="hashIt(navbar().anchor1)"
+              rel="nofollow noreferrer">
+              {{ navbar().anchor1 }}
+            </a>
+          </li>
+          <li
+            class="block md:inline-block p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800">
+            <a
+              class="block uppercase text-right"
+              [href]="hashIt(navbar().anchor2)"
+              rel="nofollow noreferrer">
+              {{ navbar().anchor2 }}
+            </a>
+          </li>
+          <li
+            class="block md:inline-block p-2 bg-gray-900/95 hover:bg-yellow-900/95 rounded-b-sm md:rounded-sm md:bg-linear-to-br from-gray-800/50 to-gray-800">
+            <a
+              class="block uppercase text-right"
+              [href]="hashIt(navbar().anchor3)"
+              rel="nofollow noreferrer">
+              {{ navbar().anchor3 }}
+            </a>
+          </li>
+        </ol>
+      </nav>
+    </div>
+
+    <!-- PROJECTED CONTENT -->
+    <div>
+      <ng-content />
+    </div>
+
+    <!-- SCROLL -->
+    <isk-scroll
+      class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"
+      [anchors]="anchors()" />
   </div>
-
-  <!-- POJECTED CONTENT -->
-  <div>
-    <ng-content></ng-content>
-  </div>
-
-  <!-- SCROLL -->
-  <isk-scroll
-    class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"
-    [anchors]="anchors()" />
 </header>

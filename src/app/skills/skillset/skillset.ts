@@ -6,7 +6,7 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
     @let name = skillset()[0];
     @let src = skillset()[1];
 
-    <li class="min-w-max p-2 flex flex-col items-center border border-amber-400 rounded-sm bg-white">
+    <li class="min-w-max p-2 flex flex-col items-center border border-amber-400 rounded-sm bg-linear-to-br from-gray-400 to-white">
       <img
         class="h-15 mix-blend-multiply rounded-lg"
         [src]="src"

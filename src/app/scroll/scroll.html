@@ -1,7 +1,7 @@
 <div
-  class="flex flex-col gap-2 p-2 m-2  bg-gray-950/75 border border-rose-400/50 rounded-full text-rose-600">
+  class="relative flex flex-col gap-2 p-2 m-2 bg-gray-950/75 border border-amber-500/30 rounded-full text-amber-500">
   <a
-    class="block border border-rose-400/30 rounded-t-full bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
+    class="block border border-amber-500/30 rounded-t-full bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     [class]="`${isAnchor(scrollTo(-1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
     [href]="voidAnchor(scrollTo(-1))"
     rel="nofollow noreferrer">
@@ -10,10 +10,13 @@
     </svg>
   </a>
 
-  <p>{{ currentAnchor() }}</p>
+  <p
+    class="absolute -top-11 left-0 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg">
+    {{ currentAnchor() }}
+  </p>
 
   <a
-    class="border border-rose-400/30 rounded-b-full bg-gray-800 hover:bg-gray-700 hover:border-rose-400/50"
+    class="block border border-amber-500/30 rounded-b-full bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     [class]="`${isAnchor(scrollTo(1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
     [href]="voidAnchor(scrollTo(1))"
     rel="nofollow noreferrer">

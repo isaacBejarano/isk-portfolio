@@ -1,34 +1,36 @@
-<section class="page-section-bottom-0 portfolio">
-  <div class="container">
-    <!-- Portfolio Section Heading-->
-    <h2
-      class="page-section-heading text-center text-white mb-0">
-      TECHNOLOGIES
-    </h2>
-    <!-- Icon Divider -->
-    <isk-divider css="bg-gray-800" />
-    <!-- Tech Tiers -->
+<!-- <section class="max-w-lg mx-auto"> -->
+<section>
+  <!-- Portfolio Section Heading -->
+  <h2 class="page-section-heading text-center text-white mb-0">TECHNOLOGIES</h2>
+  <!-- Icon Divider -->
+  <isk-divider css="bg-gray-800" />
+  <!-- Tech Tiers -->
+  <div
+    class="flex flex-wrap justify-center mt-5 mb-10 md:gap-6 md:px-5 lg:px-0 lg:gap-8">
     @for(title of tierTitles(); let idx = $index; track title) {
-    <h3 class="text-white px-5 text-lg">{{ title }}</h3>
-    @let tier = idx + 1;
     <div
-      id="skills-grid"
-      class="max-width-lg mx-auto p-5 my-5 mt-2 text-left text-gray border border-amber-400/30 rounded">
-      @for (skillName of skillNames; track skillName) {
-      @if(isOnlyTier(skills()[skillName], tier)) {
-      <div class="mb-5">
-        <h3 class="h4 pb-3">
-          <span class="text-amber-400/75 uppercase"> {{ skillName }} </span>
-        </h3>
-        <ul class="flex flex-wrap gap-4 ">
-          @for (skillset of skills()[skillName]; track skillset) {
-          @if(skillset[2] === tier) {
-          <isk-skillset [skillset]="skillset" />} } @empty {<span>
-            Any skills to display yet
-          </span>}
-        </ul>
+      class="min-w-xs flex-1 p-5 border border-amber-400/30 rounded-sm bg-linear-to-r from-gray-950 to-gray-800/50">
+      <h3 class="text-white text-lg text-center mb-10">{{ title }}</h3>
+      @let tier = idx + 1;
+      <div id="skills-grid" class="flex flex-wrap gap-5">
+        @for (skillName of skillNames; track skillName) {
+        @if(isOnlyTier(skills()[skillName], tier)) {
+        <div
+          class="p-3 flex-1 border border-amber-400/50 rounded-sm bg-linear-to-br from-gray-900 to-gray-700/50">
+          <h3 class="pb-5">
+            <span class="block text-center text-amber-400/75 uppercase">
+              {{ skillName }}
+            </span>
+          </h3>
+          <ul class="flex flex-wrap justify-evenly gap-4 ">
+            @for (skillset of skills()[skillName]; track skillset) {
+            @if(skillset[2] === tier) {
+            <isk-skillset [skillset]="skillset" />
+            }} @empty {<span> No skills to display yet </span>}
+          </ul>
+        </div>
+        } }
       </div>
-      } }
     </div>
     }
   </div>

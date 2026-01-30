@@ -39,8 +39,9 @@
                 class="border border-secondary img-fluid-override rounded mb-5"
                 [src]="[`/img/${item().src}`]"
                 [alt]="item().alt" />
-              <!-- type ABCDE - Portfolio Modal - Text-->
-              <ng-content></ng-content>
+
+              <!-- PROJECTED CONTENT -->
+              <ng-content />
 
               <button class="btn btn-outline-dark" data-dismiss="modal">
                 <!-- faTimes FIXME: -->

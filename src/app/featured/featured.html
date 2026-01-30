@@ -1,106 +1,102 @@
-<!-- Featured Section FIXME: CSS -->
-<section class="page-section featured">
-  <div class="container">
-    <!-- Featured Section Heading-->
-    <h2
-      class="page-section-heading text-center text-custom-dark font-weight-lighter mb-5">
-      new
-    </h2>
-    <section class="featured-heading">
-      <h3
-        class="page-section-heading text-center text-uppercase text-secondary mb-3">
-        {{ lastItem().title }}
-      </h3>
-      <h4 class="page-section-heading text-center text-gray mb-0">
-        {{ featured() }}
-      </h4>
-    </section>
+<section class="mb-10">
+  <!-- Featured Section Heading-->
+  <h2 class="text-xl text-center text-amber-500/90 mb-0">NEW</h2>
+  <isk-divider css="" />
 
-    <!-- Icon Divider-->
-    <isk-divider css="bg-gray-800" />
+  <section class="featured-heading">
+    <h3
+      class="page-section-heading text-center text-uppercase text-secondary mb-3">
+      {{ lastItem().title }}
+    </h3>
+    <h4 class="page-section-heading text-center text-gray mb-0">
+      {{ featured() }}
+    </h4>
+  </section>
 
-    <!-- Featured Box -->
-    <div class="row">
-      <!-- link -->
-      <div class="col d-flex justify-content-center">
+  <!-- Icon Divider-->
+  <isk-divider css="bg-gray-800" />
+
+  <!-- Featured Box -->
+  <div class="row">
+    <!-- link -->
+    <div class="col d-flex justify-content-center">
+      <div
+        id="featured-pic"
+        class="portfolio-item mx-auto"
+        data-toggle="modal"
+        data-target="#featuredModal">
         <div
-          id="featured-pic"
-          class="portfolio-item mx-auto"
-          data-toggle="modal"
-          data-target="#featuredModal">
-          <div
-            class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100  bg-gray-800">
-            <div class="portfolio-item-caption-content text-center text-white">
-              <svg
-                class="size-10 p-2 stroke-current stroke-2"
-                viewBox="0 0 100 100">
-                <use href="./svg/icon-sprite.xml#icon-plus" />
-              </svg>
-            </div>
+          class="rounded-lg portfolio-item-caption d-flex align-items-center justify-content-center h-100  bg-gray-800">
+          <div class="portfolio-item-caption-content text-center text-white">
+            <svg
+              class="size-10 p-2 stroke-current stroke-2"
+              viewBox="0 0 100 100">
+              <use href="./svg/icon-sprite.xml#icon-plus" />
+            </svg>
           </div>
-          <img
-            class="border border-secondary img-fluid border rounded-lg"
-            [src]="[`/img/${lastItem().src}`]"
-            [alt]="lastItem().alt" />
         </div>
+        <img
+          class="border border-secondary img-fluid border rounded-lg"
+          [src]="[`/img/${lastItem().src}`]"
+          [alt]="lastItem().alt" />
       </div>
     </div>
+  </div>
 
-    <!-- Featured Modal -->
-    <div
-      class="portfolio-modal modal fade"
-      id="featuredModal"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="featuredModal"
-      aria-hidden="true">
-      <div class="modal-dialog modal-xl" role="document">
-        <div class="modal-content">
-          <button
-            class="close text-custom"
-            type="button"
-            data-dismiss="modal"
-            aria-label="Close">
-            <span aria-hidden="true">
-              <!-- faTimes FIXME: -->
-              <svg
-                class="size-10 p-2 stroke-current stroke-2"
-                viewBox="0 0 100 100">
-                <use href="./svg/icon-sprite.xml#icon-plus" />
-              </svg>
-            </span>
-          </button>
-          <div class="modal-body text-center">
-            <div class="container">
-              <div class="row justify-content-center">
-                <div class="col-lg-8">
-                  <!-- Portfolio Modal - Title-->
-                  <h2
-                    class="portfolio-modal-title text-secondary text-uppercase mb-0"
-                    id="featuredModalNew">
-                    {{ lastItem().title }}
-                  </h2>
+  <!-- Featured Modal -->
+  <div
+    class="portfolio-modal modal fade"
+    id="featuredModal"
+    tabindex="-1"
+    role="dialog"
+    aria-labelledby="featuredModal"
+    aria-hidden="true">
+    <div class="modal-dialog modal-xl" role="document">
+      <div class="modal-content">
+        <button
+          class="close text-custom"
+          type="button"
+          data-dismiss="modal"
+          aria-label="Close">
+          <span aria-hidden="true">
+            <!-- faTimes FIXME: -->
+            <svg
+              class="size-10 p-2 stroke-current stroke-2"
+              viewBox="0 0 100 100">
+              <use href="./svg/icon-sprite.xml#icon-plus" />
+            </svg>
+          </span>
+        </button>
+        <div class="modal-body text-center">
+          <div class="container">
+            <div class="row justify-content-center">
+              <div class="col-lg-8">
+                <!-- Portfolio Modal - Title-->
+                <h2
+                  class="portfolio-modal-title text-secondary text-uppercase mb-0"
+                  id="featuredModalNew">
+                  {{ lastItem().title }}
+                </h2>
 
-                  <isk-divider css="bg-gray-800" />
+                <isk-divider css="bg-gray-800" />
 
-                  <!-- Portfolio Modal - Image-->
-                  <img
-                    class="border border-secondary rounded-sm img-fluid-override rounded mb-5"
-                    [src]="[`/img/${lastItem().src}`]"
-                    [alt]="lastItem().alt" />
+                <!-- Portfolio Modal - Image-->
+                <img
+                  class="border border-secondary rounded-sm img-fluid-override rounded mb-5"
+                  [src]="[`/img/${lastItem().src}`]"
+                  [alt]="lastItem().alt" />
 
-                  <!-- PROJECTED CONTENT -->
-                  <ng-content />
+                <!-- PROJECTED CONTENT -->
+                <ng-content />
 
-                  <button class="btn btn-outline-dark" data-dismiss="modal">
-                    <svg
-                      class="size-10 p-2 stroke-current stroke-2 rotate-45"
-                      viewBox="0 0 100 100">
-                      <use href="./svg/icon-sprite.xml#icon-plus" />
-                    </svg>
-                    Close
-                  </button>
-                </div>
+                <button class="btn btn-outline-dark" data-dismiss="modal">
+                  <svg
+                    class="size-10 p-2 stroke-current stroke-2 rotate-45"
+                    viewBox="0 0 100 100">
+                    <use href="./svg/icon-sprite.xml#icon-plus" />
+                  </svg>
+                  Close
+                </button>
               </div>
             </div>
           </div>

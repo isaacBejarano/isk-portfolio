@@ -6,10 +6,8 @@ import { Injectable } from '@angular/core';
 export class Store implements Stored {
   // navbar
   readonly navbar = {
-    // home: "home", // FIXME:
     src: '/img/portfolio/isaac-logo.png',
     alt: 'isaac logo',
-    // hamburger: "menu", // FIXME:
     anchor0: <Anchor>'about',
     anchor1: <Anchor>'new',
     anchor2: <Anchor>'portfolio',
@@ -32,12 +30,12 @@ export class Store implements Stored {
     copyright: 'Isaac Bejarano',
   };
 
-  // masterhead
-  readonly masterhead = {
+  // about
+  readonly about = {
     src: './img/portfolio/Isaac-bejarano-s4.jpg',
     alt: 'Isaac Bejarano photo',
     name: 'Isaac Bejarano',
-    title: 'Full Stack Developer',
+    title: 'Web Developer - Angular Specialist',
   };
 
   // featured ~new

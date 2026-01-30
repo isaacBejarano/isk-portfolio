@@ -18,7 +18,7 @@ type StoreFooter = {
   copyright: string;
 };
 
-type StoreMasterhead = {
+type StoreAbout = {
   src: string;
   alt: string;
   name: string;
@@ -73,7 +73,7 @@ type Stored = {
   navbar: StoreNav;
   follow: StoreFollow;
   footer: StoreFooter;
-  masterhead: StoreMasterhead;
+  about: StoreAbout;
   featured: string;
   portfolio: StorePortfolio;
   skills: StoreSkills;

@@ -4,9 +4,8 @@ import {
   inject,
   signal,
 } from '@angular/core';
-
+import { Masterhead } from '@app/about/about';
 import { Featured } from '@app/featured/featured';
-import { Masterhead } from '@app/masterhead/masterhead';
 import { Portfolio } from '@app/portfolio/portfolio';
 import { ScrollService } from '@app/scroll/scroll-service';
 import { Skills } from '@app/skills/skills';
@@ -33,9 +32,7 @@ export class Home {
 
   protected readonly featured = signal<string>(this._model.get('featured'));
   protected readonly skills = signal<StoreSkills>(this._model.get('skills'));
-  protected readonly masterhead = signal<StoreMasterhead>(
-    this._model.get('masterhead'),
-  );
+  protected readonly about = signal<StoreAbout>(this._model.get('about'));
   protected readonly portfolio = signal<StorePortfolio>(
     this._model.get('portfolio'),
   );

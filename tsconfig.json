@@ -1,34 +1,26 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
-	"compileOnSave": false,
-	"angularCompilerOptions": {
-		"enableI18nLegacyMessageIdFormat": false,
-		"strictInjectionParameters": true,
-		"strictInputAccessModifiers": true,
-		"strictTemplates": true
-	},
+  "compileOnSave": false,
+  "angularCompilerOptions": {
+    "enableI18nLegacyMessageIdFormat": false,
+    "strictInjectionParameters": true,
+    "strictInputAccessModifiers": true,
+    "strictTemplates": true
+  },
 
-	"compilerOptions": {
-		"baseUrl": "./",
-		"paths": {
-			"@app/*": ["src/app/*"],
-			"@components/*": ["src/app/components/*"],
-			"@pages/*": ["src/app/pages/*"],
-			"@guards/*": ["src/app/guards/*"],
-			"@models/*": ["src/app/models/*"],
-			"@pipes/*": ["src/app/pipes/*"],
-			"@services/*": ["src/app/services/*"],
-			"@assets/*": ["src/assets/*"],
-			"@env/*": ["src/environments/*"]
-		},
-		"outDir": "./dist/out-tsc",
-		"esModuleInterop": true,
-		"sourceMap": true,
-		"declaration": false,
-		"experimentalDecorators": true,
-		"moduleResolution": "bundler",
-		"importHelpers": true,
-		"target": "ES2022",
-		"module": "preserve"
-	}
+  "compilerOptions": {
+    "baseUrl": "./",
+    "paths": {
+      "@app/*": ["src/app/*"]
+    },
+    "outDir": "./dist/out-tsc",
+    "esModuleInterop": true,
+    "sourceMap": true,
+    "declaration": false,
+    "experimentalDecorators": true,
+    "moduleResolution": "bundler",
+    "importHelpers": true,
+    "target": "ES2022",
+    "module": "preserve"
+  }
 }

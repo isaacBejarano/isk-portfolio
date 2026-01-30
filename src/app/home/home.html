@@ -1,12 +1,13 @@
 @let lastItem = getLast(portfolio().items); @let common = portfolio().common;
 
-<isk-masterhead
+<isk-about
   iskObserveElement
   id="about"
   (visible)="onSectionActive($event)"
-  [masterhead]="masterhead()" />
+  [about]="about()" />
 
-<isk-featured
+<!-- FIXME: remove featured -->
+<!-- <isk-featured
   iskObserveElement
   id="new"
   (visible)="onSectionActive($event)"
@@ -24,7 +25,7 @@
     </a>
     <span class="text-gray"> {{ lastItem.p2 }} </span>
   </p>
-</isk-featured>
+</isk-featured> -->
 
 <isk-portfolio
   iskObserveElement

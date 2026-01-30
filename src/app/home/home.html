@@ -1,31 +1,8 @@
-<!-- @let lastItem = getLast(portfolio().items); @let common = portfolio().common; -->
-
 <isk-about
   iskObserveElement
   id="about"
   (visible)="onSectionActive($event)"
   [about]="about()" />
-
-<!-- FIXME: remove featured -->
-<!-- <isk-featured
-  iskObserveElement
-  id="new"
-  (visible)="onSectionActive($event)"
-  [featured]="featured()"
-  [lastItem]="lastItem">
-  <p class="text-justify">{{ lastItem.p1 }}</p>
-  <p class="mb-4 text-justify">
-    {{ common.live }}
-    <a
-      [href]="lastItem.link2"
-      rel="nofollow noreferrer"
-      target="_blank"
-      (click)="isOpenLink()">
-      {{ lastItem.host }}
-    </a>
-    <span class="text-gray"> {{ lastItem.p2 }} </span>
-  </p>
-</isk-featured> -->
 
 <isk-portfolio
   iskObserveElement

@@ -8,11 +8,11 @@ import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
     <ng-container >
       <img
-        class="h-15 mix-blend-multiply rounded-lg"
+        class="h-15 mx-auto mix-blend-multiply rounded-lg"
         [src]="src"
         [alt]="[title + ' logo']" />
-      <p class="pt-1.5 text-sm text-center wrap-break-word">
-        <span class="text-center"> {{ title }} </span>
+      <p class="pt-1.5 text-sm text-center">
+        {{ title }}
       </p>
     </ng-container>
   `,

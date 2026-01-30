@@ -5,15 +5,15 @@
   <isk-divider css="mb-5" />
   <!-- GRID -->
   @for(item of items | listReverse; track item) {
-  <div class="mb-10 mx-5 border border-amber-400/30 rounded-sm">
-    <div class="from-gray-950 ">
+  <div class="mb-10 mx-5 lg:mx-0 border border-amber-400/30 rounded-sm">
+    <div class="p-5 from-gray-950 ">
       <img
-        class="p-5 float-left mr-2 mt-2.5 w-full md:w-[40%]"
+        class="float-left w-full mr-5.5 mb-6 mt-2 border rounded-sm shadow-amber-500/10 shadow-xl md:mb-2.5 md:w-[40%] lg:mb-4 lg:w-[50%]"
         [src]="`img/${item.src}`"
         [alt]="item.alt" />
 
       <!-- FIXME:  add text -->
-      <div class="p-5 text-white text-justify">
+      <div class=" text-white text-justify">
         <p>{{ item.title }}</p>
         <p>{{ item.target }}</p>
         <p>{{ item.label }}</p>

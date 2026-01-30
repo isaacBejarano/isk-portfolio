@@ -17,42 +17,36 @@ type StoreFooter = {
   copyright: string;
 };
 
-type StoreAbout = {
+type Img = {
+  title: string;
   src: string;
   alt: string;
-  name: string;
-  title: string;
 };
 
+type StoreAbout = { legend: string } & Img;
+
 type StorePortfolio = {
-  common: StoreCommon;
+  common: StorePortfolioCommon;
   items: StorePortfolioItemized[];
 };
 
-type StoreCommon = {
+type StorePortfolioCommon = {
   star: string;
   visit: string;
-  dontforget: string;
+  live: string;
 };
 
 type StorePortfolioItemized = {
-  title: string;
-  target: string;
-  id: string;
-  label: string;
-  src: string;
+  id: number;
   alt: string;
-  // type: string; FIXME:
   tech: string[];
-  //
-  // algorithms?: { link: string; js: string }[]; // FIXME: remove
-  p1?: string;
-  p2?: string;
+  description: string;
+  year: number;
+  repo?: string;
   link1?: string;
   link2?: string;
-  repo?: string;
   host?: string;
-};
+} & Img;
 
 type SkillNames =
   | 'languages'
@@ -73,7 +67,6 @@ type Stored = {
   follow: StoreFollow;
   footer: StoreFooter;
   about: StoreAbout;
-  // featured: string; // FIXME:
   portfolio: StorePortfolio;
   skills: StoreSkills;
 };

@@ -4,10 +4,9 @@
     class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2">
     <!-- MENU -->
     <div class="flex-1 flex justify-between align-middle gap-2 p-2  ">
-      <a
+      <button
         class=" block self-center md:cursor-auto md:hidden"
-        routerLink=""
-        rel="nofollow noreferrer"
+        aria-label="Toggle the main navigation menu when in small devices"
         (click)="toggle(false)">
         <div class="border border-amber-400/30 text-amber-500 rounded-sm">
           <!-- FIXME: faBars -->
@@ -17,7 +16,7 @@
             <use href="./svg/icon-sprite.xml#icon-plus" />
           </svg>
         </div>
-      </a>
+      </button>
 
       <nav class="w-full relative z-5 md:flex md:gap-10">
         <div class="w-12 mx-auto md:mx-0">

@@ -8,7 +8,6 @@ import {
   type OnInit,
   signal,
 } from '@angular/core';
-import { RouterLink } from '@angular/router';
 
 import { Scroller } from '@app/scroll/scroll';
 import { hashIt } from '@app/utils/string-utils';
@@ -17,7 +16,7 @@ import { hashIt } from '@app/utils/string-utils';
   selector: 'isk-header',
   templateUrl: './header.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
-  imports: [RouterLink, Scroller],
+  imports: [Scroller],
 })
 export class Header implements OnInit {
   // DI

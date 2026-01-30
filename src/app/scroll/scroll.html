@@ -4,6 +4,7 @@
     class="block border border-amber-500/30 rounded-t-full bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     [class]="`${isAnchor(scrollTo(-1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
     [href]="voidAnchor(scrollTo(-1))"
+    aria-label="Scroll up to the previous secction"
     rel="nofollow noreferrer">
     <svg class="size-10 fill-current" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-up" />
@@ -19,6 +20,7 @@
     class="block border border-amber-500/30 rounded-b-full bg-gray-800 hover:bg-gray-700 hover:border-amber-500/50"
     [class]="`${isAnchor(scrollTo(1)) ? '' : 'cursor-not-allowed hover:bg-gray-800'}`"
     [href]="voidAnchor(scrollTo(1))"
+    aria-label="Scroll up to the next secction"
     rel="nofollow noreferrer">
     <svg class="size-10 fill-current" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-down" />

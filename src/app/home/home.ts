@@ -11,12 +11,12 @@ import { Skills } from '@app/skills/skills';
 import { Store } from '@app/store-model';
 import { getLast } from '@app/utils/array-utils';
 import { isOpenLink } from '@app/utils/nav-utils';
-import { ObserveElementDirective } from '../directives/anchor-observer-directive';
+import { AnchorObservedDirective } from '../directives/anchor-observed-directive';
 
 @Component({
   selector: 'isk-home',
   templateUrl: './home.html',
-  imports: [Masterhead, Portfolio, Skills, ObserveElementDirective],
+  imports: [Masterhead, Portfolio, Skills, AnchorObservedDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Home {

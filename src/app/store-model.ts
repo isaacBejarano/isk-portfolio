@@ -8,10 +8,12 @@ export class Store implements Stored {
   readonly navbar = {
     src: '/img/portfolio/isaac-logo.webp',
     alt: 'isaac logo',
-    anchor0: <Anchor>'about',
-    anchor1: <Anchor>'portfolio',
-    anchor2: <Anchor>'technologies',
-    anchor3: <Anchor>'footer',
+    // Define anchors in order of appearance in the viewport
+    anchor0: <Anchor>'header',
+    anchor1: <Anchor>'about',
+    anchor2: <Anchor>'portfolio',
+    anchor3: <Anchor>'technologies',
+    anchor4: <Anchor>'footer',
   };
 
   // follow

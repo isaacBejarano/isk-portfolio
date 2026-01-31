@@ -4,5 +4,5 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class ScrollService {
-  anchor = signal<Anchor>('about');
+  anchor = signal<Anchor>('header');
 }

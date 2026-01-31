@@ -10,7 +10,8 @@ import {
 } from '@angular/core';
 
 import { Scroller } from '@app/scroll/scroll';
-import { hashIt } from '@app/utils/string-utils';
+import { ScrollService } from '@app/scroll/scroll-service';
+import { hash } from '@app/utils/string-utils';
 
 @Component({
   selector: 'isk-header',
@@ -21,20 +22,35 @@ import { hashIt } from '@app/utils/string-utils';
 export class Header implements OnInit {
   // DI
   private readonly _doc = inject(DOCUMENT).defaultView;
+  private readonly _scrollSrv = inject(ScrollService);
+  protected readonly currentAnchor = inject(ScrollService).anchor;
 
   // DUMMY
   ////
 
-  readonly navbar = input.required<StoreNav>();
+  readonly storeNav = input.required<StoreNav>();
   protected readonly collapsed = signal(true);
-  hashIt = hashIt;
+  hash = hash;
 
   protected readonly anchors = computed(() => {
-    const { anchor0, anchor1, anchor2, anchor3 } = {
-      ...this.navbar(),
+    const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
+      ...this.storeNav(),
     };
-    return [anchor0, anchor1, anchor2, anchor3];
+    return { anchor0, anchor1, anchor2, anchor3, anchor4 };
   });
+
+  protected readonly nav = computed(() => {
+    const { src, alt } = { ...this.storeNav() };
+    return { src, alt };
+  });
+
+  protected readonly scrollable = computed(() =>
+    Object.entries(this.anchors()).map((entry) => entry[1]),
+  );
+
+  protected setAnchor(anchor: Anchor) {
+    this._scrollSrv.anchor.set(anchor);
+  }
 
   ngOnInit(): void {
     this.toggle(true);

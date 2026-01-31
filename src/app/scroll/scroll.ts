@@ -1,13 +1,13 @@
 import {
   ChangeDetectionStrategy,
   Component,
+  computed,
   inject,
   input,
+  output,
 } from '@angular/core';
-
-import { hashIt } from '@app/utils/string-utils';
-import { ScrollService } from './scroll-service';
-
+import { DomSanitizer } from '@angular/platform-browser';
+import { dehash, hash } from '@app/utils/string-utils';
 @Component({
   selector: 'isk-scroll',
   templateUrl: './scroll.html',
@@ -15,29 +15,41 @@ import { ScrollService } from './scroll-service';
 })
 export class Scroller {
   // DI
-  private readonly _scrollSrv = inject(ScrollService);
-  protected readonly currentAnchor = this._scrollSrv.anchor;
+  private readonly _sanitizer = inject(DomSanitizer);
 
-  // CTRL
+  // DUMMY
   ////
 
-  readonly anchors = input.required<Anchor[]>();
-  private readonly _hashIt = hashIt;
+  readonly currentAnchor = input.required<Anchor>();
+  readonly scrollable = input.required<Anchor[]>();
+  readonly $anchor = output<Anchor>();
 
-  protected scrollTo(step: 1 | -1): string {
-    const currentIdx = this.anchors().indexOf(this.currentAnchor());
-    console.log(currentIdx);
-    const nextStep = currentIdx + step;
+  private readonly _hash = hash;
+  private readonly _dehash = dehash;
 
-    if (nextStep < 0 || nextStep >= this.anchors().length) return '';
-    return this._hashIt(this.anchors()[nextStep]);
+  protected readonly pillCurrentAnchor = computed<Anchor | null>(() => {
+    if (this.currentAnchor() === 'header' || this.currentAnchor() === 'footer')
+      return null;
+    return this.currentAnchor();
+  });
+
+  protected anchorAdjacent(step: 1 | -1) {
+    const prevIdx = this.scrollable().indexOf(this.currentAnchor()) + step;
+    const anchor = this.scrollable()[prevIdx];
+    return anchor
+      ? this._hash(anchor)
+      : this._sanitizer.bypassSecurityTrustUrl('javascript:void(0)');
   }
 
-  protected voidAnchor(anchor: string): string {
-    return this.isAnchor(anchor) ? anchor : 'javascripot:void(0)';
+  protected setAnchor(anchorRef: HTMLAnchorElement) {
+    if (anchorRef.hash.length === 0) return;
+    this.$anchor.emit(this._dehash(anchorRef.hash) as Anchor);
   }
 
-  protected isAnchor(anchor: string): boolean {
-    return anchor.length > 0;
+  protected isAnchorVoid(icon: 'top' | 'bot'): boolean {
+    return (
+      (this.currentAnchor() === 'header' && icon === 'top') ||
+      (this.currentAnchor() === 'footer' && icon === 'bot')
+    );
   }
 }

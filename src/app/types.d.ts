@@ -1,4 +1,4 @@
-type Anchor = 'about' | 'portfolio' | 'technologies';
+type Anchor = 'about' | 'portfolio' | 'technologies' | 'footer' | 'header';
 type StoreNav = {
   src: string;
   alt: string;
@@ -6,6 +6,7 @@ type StoreNav = {
   anchor1: Anchor;
   anchor2: Anchor;
   anchor3: Anchor;
+  anchor4: Anchor;
 };
 
 type StoreFollow = { link1: string; link2: string };

@@ -8,14 +8,14 @@ import { RouterOutlet } from '@angular/router';
 import { Follow } from '@app/follow/follow';
 import { Footer } from '@app/footer/footer';
 import { Header } from '@app/header/header';
-import { ObserveElementDirective } from './directives/anchor-observer-directive';
+import { AnchorObservedDirective } from './directives/anchor-observed-directive';
 import { ScrollService } from './scroll/scroll-service';
 import { Store } from './store-model';
 
 @Component({
   selector: 'isk-root',
   templateUrl: './app.html',
-  imports: [Header, Follow, Footer, RouterOutlet, ObserveElementDirective],
+  imports: [Header, Follow, Footer, RouterOutlet, AnchorObservedDirective],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
@@ -28,12 +28,11 @@ export class App {
   // CTRL
   ////
 
-  protected readonly navbar = signal<StoreNav>(this._model.get('navbar'));
+  protected readonly storeNav = signal<StoreNav>(this._model.get('navbar'));
   protected readonly follow = signal<StoreFollow>(this._model.get('follow'));
   protected readonly footer = signal<StoreFooter>(this._model.get('footer'));
 
-  onSectionActive(anchor: unknown) {
-    console.log(anchor);
-    this._scrollSrv.anchor.set(anchor as Anchor);
+  onSectionActive(anchor: Anchor) {
+    this._scrollSrv.anchor.set(anchor);
   }
 }

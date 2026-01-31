@@ -1,5 +1,9 @@
 <!-- * Navigation - UI * -->
-<isk-header [navbar]="navbar()">
+<isk-header
+  iskAnchorObserved
+  id="header"
+  (visible)="onSectionActive($event)"
+  [storeNav]="storeNav()">
   <isk-follow
     css="flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm"
     [showFollow]="false"
@@ -13,7 +17,7 @@
 
 <!-- * Footer - UI * -->
 <isk-footer
-  iskObserveElement
+  iskAnchorObserved
   id="footer"
   (visible)="onSectionActive($event)"
   class="relative"
@@ -23,5 +27,3 @@
     [showFollow]="false"
     [follow]="follow()" />
 </isk-footer>
-
-<!-- TODO: webP images (dont DI) -->

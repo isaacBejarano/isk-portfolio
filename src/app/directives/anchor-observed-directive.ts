@@ -9,10 +9,10 @@ import {
 } from '@angular/core';
 
 @Directive({
-  selector: '[iskObserveElement]',
+  selector: '[iskAnchorObserved]',
   standalone: true,
 })
-export class ObserveElementDirective implements OnInit, OnDestroy {
+export class AnchorObservedDirective implements OnInit, OnDestroy {
   @Output() visible = new EventEmitter<Anchor>();
   private observer: IntersectionObserver | undefined;
 

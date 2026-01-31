@@ -19,8 +19,14 @@
 
       <nav class="w-full relative z-5 md:flex md:gap-10">
         <div class="w-12 mx-auto md:mx-0">
-          <img [src]="navbar().src" [alt]="navbar().alt" />
+          <img [src]="nav().src" [alt]="nav().alt" />
         </div>
+        <!-- / -->
+        @let route1 = anchors().anchor1;
+        <!-- / -->
+        @let route2 = anchors().anchor2;
+        <!-- / -->
+        @let route3 = anchors().anchor3;
 
         <ol
           class="absolute w-full top-0 left-0 text-amber-400/90 md:relative md:flex gap-5"
@@ -28,25 +34,28 @@
           <li class="block md:inline-block">
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
-              [href]="hashIt(navbar().anchor0)"
+              [href]="hash(route1)"
+              (click)="setAnchor(route1)"
               rel="nofollow noreferrer">
-              {{ navbar().anchor0 }}
+              {{ route1 }}
             </a>
           </li>
           <li class="block md:inline-block">
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
-              [href]="hashIt(navbar().anchor1)"
+              [href]="hash(route2)"
+              (click)="setAnchor(route2)"
               rel="nofollow noreferrer">
-              {{ navbar().anchor1 }}
+              {{ route2 }}
             </a>
           </li>
           <li class="block md:inline-block">
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
-              [href]="hashIt(navbar().anchor2)"
+              [href]="hash(route3)"
+              (click)="setAnchor(route3)"
               rel="nofollow noreferrer">
-              {{ navbar().anchor2 }}
+              {{ route3 }}
             </a>
           </li>
         </ol>
@@ -61,6 +70,8 @@
     <!-- SCROLL -->
     <isk-scroll
       class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"
-      [anchors]="anchors()" />
+      [scrollable]="scrollable()"
+      [currentAnchor]="currentAnchor()"
+      ($anchor)="setAnchor($event)" />
   </div>
 </header>

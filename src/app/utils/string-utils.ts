@@ -1,5 +1,9 @@
-function hashIt(str: string): string {
+function hash(str: string): string {
   return `#${str}`;
 }
 
-export { hashIt };
+function dehash(str: string): string {
+  return str.replace('#', '');
+}
+
+export { hash, dehash };

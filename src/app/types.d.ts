@@ -1,9 +1,7 @@
 type Anchor = 'about' | 'portfolio' | 'technologies';
 type StoreNav = {
-  // home: string; // FIXME:
   src: string;
   alt: string;
-  // hamburger: string; // FIXME:
   anchor0: Anchor;
   anchor1: Anchor;
   anchor2: Anchor;

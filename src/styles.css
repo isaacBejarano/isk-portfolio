@@ -1,9 +1,5 @@
-/* 1. Fonts
-*/
-
 @import "./css/fonts.css";
-
-/* TODO: Check fonts load */
+/* 1. Fonts */
 
 /* 2. Tailwind Config
 /* (Layer order -> properties > [theme] > [base] (globals) > [components] > [utilities] (atomics)
@@ -23,9 +19,9 @@
 
 /* 2.4 Overrides */
 @theme {
-	/* Fonts */
-	--default-mono-font-family: monospace, var(--font-mono);
-	--default-font-family: lato, var(--font-sans);
+  /* Fonts */
+  --default-mono-font-family: monospace, var(--font-mono);
+  --default-font-family: lato, var(--font-sans);
 }
 
 /* Responsive -> 'md' | '2xl' are enough */

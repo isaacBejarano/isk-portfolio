@@ -6,7 +6,7 @@ import { Injectable } from '@angular/core';
 export class Store implements Stored {
   // navbar
   readonly navbar = {
-    src: '/img/portfolio/isaac-logo.png',
+    src: '/img/portfolio/isaac-logo.webp',
     alt: 'isaac logo',
     anchor0: <Anchor>'about',
     anchor1: <Anchor>'portfolio',
@@ -31,7 +31,7 @@ export class Store implements Stored {
 
   // about
   readonly about = {
-    src: './img/portfolio/Isaac-bejarano-s4.jpg',
+    src: './img/portfolio/isaac-bejarano.webp',
     alt: 'Isaac Bejarano photo',
     title: 'Isaac Bejarano',
     legend: 'Web Developer - Angular Specialist',
@@ -49,7 +49,7 @@ export class Store implements Stored {
       {
         id: 1,
         title: 'Wordpress Page',
-        src: 'portfolio/amatller.jpg',
+        src: 'portfolio/amatller.webp',
         alt: 'casa museu amatller page',
         description: `I worked on the Casa Museu Amatller's webpage, made with Wordpress,
           implementing little vanilla HTML, CSS, JavaScript and PHP tweaks; and some plugins from the Wordpress ecosystem, like Wp-Backery (page builder) and Yoast (SEO).`,
@@ -61,7 +61,7 @@ export class Store implements Stored {
       {
         id: 2,
         title: 'Price Down Breaker',
-        src: 'portfolio/algorithms.png',
+        src: 'portfolio/price-down-breaker.webp',
         alt: 'Down Breaker',
         description: `This vanilla UI Component uses an algorithm to break a price down to its minimum bill and coin constituents.
           I have prioritized the EUR € coins and bills as a repertoire of such constituents.
@@ -76,7 +76,7 @@ export class Store implements Stored {
       {
         id: 3,
         title: 'Binary Search',
-        src: 'portfolio/binary-search.png',
+        src: 'portfolio/binary-search.webp',
         alt: 'Binary Search',
         description: `JavaScript implementation of the Binary Search algorithm, using the "Divide and Conquer" pattern,
           to search a number in a sorted array of numbers logarithmicly.
@@ -98,7 +98,7 @@ export class Store implements Stored {
       {
         id: 4,
         title: 'Quick Sort',
-        src: 'portfolio/quicksort.png',
+        src: 'portfolio/quicksort.webp',
         alt: 'Quick Sort',
         description: `JavaScript implementation of the Quick Sort sorting algorithm.
           This algorithm uses recursion as a quicker strategy over iteration to order a given list of numbers.
@@ -118,7 +118,7 @@ export class Store implements Stored {
       {
         id: 5,
         title: 'String Mirror',
-        src: 'portfolio/string-mirror.png',
+        src: 'portfolio/string-mirror.webp',
         alt: 'String Mirror',
         description: `JavaScript case-sensitive algorithm to mirror the direction and order of all the characters of a given string.
           To use this algorithm, just pass in a string as the argument for the "mirror" function.
@@ -133,7 +133,7 @@ export class Store implements Stored {
       {
         id: 6,
         title: 'Fibonacci Sequencer',
-        src: 'portfolio/fibonacci.png',
+        src: 'portfolio/fibonacci.webp',
         alt: 'Fibonacci Sequencer',
         description: `JavaScript implementation of the Fibonacci Sequence. In mathematics, that is a sequence in which each element is the sum of the two elements that precede it.
           Many writers begin the sequence with 0 and 1. To use this algorithm, just pass in an integer number as the argument for the "fibonacci" function.
@@ -146,7 +146,7 @@ export class Store implements Stored {
       {
         id: 7,
         title: 'SASS Stripes',
-        src: 'portfolio/stripes.png',
+        src: 'portfolio/stripes.webp',
         alt: 'SASS project',
         description: `This SASS UI Component, implemented as an exercise at IT Academy Barcelona,
           presents selectable items in separate stripes,
@@ -155,13 +155,13 @@ export class Store implements Stored {
         link1: 'https://github.com/isaacBejarano/sass-stripes',
         host: 'Codepen',
         link2: 'https://codepen.io/eRoboto/pen/eYZZerg',
-        tech: ['SASS'],
+        tech: ['sass'],
         year: 2020,
       },
       {
         id: 8,
         title: 'Rating Component',
-        src: 'portfolio/beers.png',
+        src: 'portfolio/beers.webp',
         alt: 'Javascript project',
         description: `Standalone vanilla UI component for rating anything (with 5 beers for example).
           It uses SASS and modern CSS pseudo-clases like ":hover" and ":active",
@@ -172,13 +172,13 @@ export class Store implements Stored {
         link1: 'https://github.com/isaacBejarano/rating-beers',
         host: 'Codepen',
         link2: 'https://codepen.io/eRoboto/pen/bGpKwgM',
-        tech: ['javascript', 'SASS'],
+        tech: ['javascript', 'sass'],
         year: 2020,
       },
       {
         id: 9,
         title: 'Responsive Website Prototype',
-        src: 'portfolio/uoc.png',
+        src: 'portfolio/uoc.webp',
         alt: 'Naturae Hub',
         description: `Responsive prototype using only vanilla HTML and CSS. Made for the UOC's
           (Universitat Oberta de Catalunya) Master on Website and Web App Development.`,
@@ -195,64 +195,64 @@ export class Store implements Stored {
 
   readonly skills: StoreSkills = {
     languages: [
-      ['HTML', './img/skills/html.png', 1],
-      ['CSS', './img/skills/css.png', 1],
-      ['JavaScript / ES6', './img/skills/javascript.png', 1],
-      ['TypeScript', './img/skills/typescript.png', 1],
-      ['PHP', './img/skills/php.png', 2],
-      ['C#', './img/skills/c-sharp-logo.png', 2],
+      ['HTML', './img/skills/html.webp', 1],
+      ['CSS', './img/skills/css.webp', 1],
+      ['JavaScript', './img/skills/javascript.webp', 1],
+      ['TypeScript', './img/skills/typescript.webp', 1],
+      ['PHP', './img/skills/php.webp', 2],
+      ['C#', './img/skills/c-sharp.webp', 2],
     ],
     environment: [
-      ['Windows Subsystem for Linux', './img/skills/wsl.png', 1],
-      ['Docker', './img/skills/docker.png', 2],
-      ['IIS', './img/skills/iis.png', 2],
-      ['Nginx', './img/skills/nginx.png', 3],
-      ['Apache', './img/skills/apache.png', 3],
+      ['Windows Subsystem for Linux', './img/skills/wsl.webp', 1],
+      ['Docker', './img/skills/docker.webp', 2],
+      ['IIS', './img/skills/iis.webp', 2],
+      ['Nginx', './img/skills/nginx.webp', 3],
+      ['Apache', './img/skills/apache.webp', 3],
     ],
     frontend: [
-      ['Angular', './img/skills/angular.png', 1],
-      ['RxJS', './img/skills/rxjs.png', 1],
-      ['Tailwind', './img/skills/tailwind.png', 1],
-      ['Angular Material', './img/skills/material.png', 1],
-      ['Bootstrap', './img/skills/bootstrap.png', 1],
-      ['Vite', './img/skills/vite.png', 1],
-      ['Parcel', './img/skills/parcel.png', 1],
-      ['Vue', './img/skills/vue.png', 2],
-      ['SASS', './img/skills/SASS.png', 2],
+      ['Angular', './img/skills/angular.webp', 1],
+      ['RxJS', './img/skills/rxjs.webp', 1],
+      ['Tailwind', './img/skills/tailwind.webp', 1],
+      ['Angular Material', './img/skills/material.webp', 1],
+      ['Bootstrap', './img/skills/bootstrap.webp', 1],
+      ['Vite', './img/skills/vite.webp', 1],
+      ['Parcel', './img/skills/parcel.webp', 1],
+      ['Vue', './img/skills/vue.webp', 2],
+      ['SASS', './img/skills/sass.webp', 2],
     ],
     backend: [
-      ['REST API Architecture', './img/skills/REST.png', 1],
-      ['Laravel', './img/skills/laravel.png', 2],
-      ['.NET', './img/skills/dotnet.png', 2],
-      ['Node.js', './img/skills/node.png', 3],
+      ['REST API Architecture', './img/skills/rest.webp', 1],
+      ['Laravel', './img/skills/laravel.webp', 2],
+      ['.NET', './img/skills/dotnet.webp', 2],
+      ['Node.js', './img/skills/node.webp', 3],
     ],
     'package managers': [
-      ['Node Package Manager', './img/skills/npm.png', 1],
-      ['Composer', './img/skills/composer.png', 2],
-      ['NuGet', './img/skills/nuget.png', 2],
+      ['Node Package Manager', './img/skills/npm.webp', 1],
+      ['Composer', './img/skills/composer.webp', 2],
+      ['NuGet', './img/skills/nuget.webp', 2],
     ],
     testing: [
-      ['Playwright', './img/skills/playwright.png', 1],
-      ['Vitest', './img/skills/vitest.png', 2],
-      ['Testing Library', './img/skills/testing-library.png', 3],
-      ['Cypress', './img/skills/cypress.png', 3],
+      ['Playwright', './img/skills/playwright.webp', 1],
+      ['Vitest', './img/skills/vitest.webp', 2],
+      ['Testing Library', './img/skills/testing-library.webp', 3],
+      ['Cypress', './img/skills/cypress.webp', 3],
     ],
-    vcs: [['git', './img/skills/git.png', 1]],
+    vcs: [['git', './img/skills/git.webp', 1]],
     'data bases': [
-      ['Postgre SQL', './img/skills/postgres.png', 2],
-      ['SQL Server', './img/skills/sqlserver.png', 2],
-      ['Maria DB', './img/skills/mariadb.png', 2],
-      ['SQLite', './img/skills/sqlite.png', 3],
-      ['Mongo DB', './img/skills/mongodb.png', 3],
+      ['Postgre SQL', './img/skills/postgres.webp', 2],
+      ['SQL Server', './img/skills/sqlserver.webp', 2],
+      ['Maria DB', './img/skills/mariadb.webp', 2],
+      ['SQLite', './img/skills/sqlite.webp', 3],
+      ['Mongo DB', './img/skills/mongodb.webp', 3],
     ],
     cms: [
-      ['Wordpress', './img/skills/wordpress.png', 2],
-      ['Drupal', './img/skills/drupal.png', 2],
+      ['Wordpress', './img/skills/wordpress.webp', 2],
+      ['Drupal', './img/skills/drupal.webp', 2],
     ],
     cloud: [
-      ['Netlify', './img/skills/netlify.png', 1],
-      ['Azure', './img/skills/azure.png', 2],
-      ['Firebase', './img/skills/firebase.png', 3],
+      ['Netlify', './img/skills/netlify.webp', 1],
+      ['Azure', './img/skills/azure.webp', 2],
+      ['Firebase', './img/skills/firebase.webp', 3],
     ],
   };
 

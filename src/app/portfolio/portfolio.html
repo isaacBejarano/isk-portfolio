@@ -8,7 +8,7 @@
   <div class="mb-10 mx-5 lg:mx-0 border border-amber-400/30 rounded-sm">
     <div class="relative p-5 from-gray-950 ">
       <img
-        class="float-left w-full mr-5.5 mb-6 mt-2 border rounded-sm shadow-amber-500/10 shadow-xl md:mb-2.5 md:w-[40%] lg:mb-4 lg:w-[50%]"
+        class="float-left w-full mr-5.5 mb-6 mt-2 border border-amber-400/20 rounded-sm shadow-amber-500/10 shadow-xl md:mb-2.5 md:w-[40%] lg:mb-4 lg:w-[50%]"
         [src]="`img/${item.src}`"
         [alt]="item.alt" />
 
@@ -60,12 +60,12 @@
         type="button">
         <img
           class="p-1 border border-amber-500/50 rounded-sm bg-linear-to-br from-gray-400 to-white"
-          src="/img/portfolio/{{ tech }}.png"
+          src="/img/portfolio/{{ tech }}.webp"
           [alt]="[item.tech[i] + ' logo']"
           width="auto"
           height="30" />
         <span
-          class="absolute z-50 -top-8 left-0 invisible group-hover/tech-pill:visible w-full p-1 bg-gray-800/90 border border-transparent rounded-t-sm rounded-b-md text-amber-400 capitalize">
+          class="absolute z-50 -bottom-8 left-0 invisible group-hover/tech-pill:visible w-full p-1 bg-gray-800/90 border border-transparent rounded-t-sm rounded-b-md text-amber-400 capitalize">
           {{ item.tech[i] }}
         </span>
       </button>

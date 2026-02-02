@@ -20,7 +20,7 @@ type Viewported = { a: Anchor; order: number };
 })
 export class AnchorObservedDirective implements OnInit, OnDestroy {
   // DI
-  private readonly _nativeEl = inject(ElementRef).nativeElement; // the HTML element using the directive
+  private readonly _nativeEl = inject(ElementRef).nativeElement; // element ref using this directive
   private readonly _storeSrv = inject(StoreService);
   private readonly _scrollSrv = inject(ScrollService);
 
@@ -46,83 +46,40 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
 
   private _intersectionObs = signal(
     new IntersectionObserver((entries) => {
-      const anchor = JSON.stringify(<Viewported>{
+      const viewported = JSON.stringify(<Viewported>{
         a: this._nativeEl.id,
         order: Number.parseInt(this._nativeEl.dataset.order, 10),
       });
 
       // Now...
       if (entries[0].isIntersecting) {
-        console.warn('Intersected -->', JSON.parse(anchor).a, JSON.parse(anchor).order);
-        // eclude rightmost:footer
         this._viewported.update((set) => {
-          set.add(anchor);
+          set.add(viewported);
           return set;
         });
 
-        const viewportedIdxs = Array.from(this._viewported())
-          .map((anchor: string) => (JSON.parse(anchor) as Viewported).order)
-          .sort();
-        const cursor = viewportedIdxs[0];
-
-        if (JSON.parse(anchor).a === <Anchor>'header') {
-          this._setAnchor(0);
-        } else if (JSON.parse(anchor).a === <Anchor>'footer') {
-          const footerIdx = this._scrollable().indexOf('footer');
-          this._setAnchor(footerIdx);
-        } else this._setAnchor(cursor);
-
-        // const viewportedIdx = Array.from(this._viewported())
-        //   .map((anchor: string) => JSON.parse(anchor) as Viewported)
-        //   .map((anchor) => anchor.order)
-        //   .sort();
-        // const leftmostIdx = viewportedIdx[0] === 0 ? 1 : viewportedIdx[0]; // exclude header:0
-
-        // console.log('leftmost --> ', leftmostIdx);
-
-        // this._scrollSrv.anchor.set(this._scrollable()[leftmostIdx]);
+        const anchor = JSON.parse(viewported).a;
+        if (['header', 'footer'].includes(anchor)) {
+          const limit = {
+            header: 0,
+            footer: this._scrollable().indexOf('footer'),
+          };
+          this._setAnchor(limit[anchor]);
+        } else {
+          const cursor = this._cursor();
+          this._setAnchor(cursor);
+        }
       } else {
-        console.error('NOT Intersected -->', JSON.parse(anchor).a, JSON.parse(anchor).order);
-
-        // if (JSON.parse(anchor).a === <Anchor>'footer') {
         this._viewported.update((set) => {
-          set.delete(anchor);
+          set.delete(viewported);
           return set;
         });
-        // }
 
-        const viewportedIdxs = Array.from(this._viewported())
-          .map((anchor: string) => (JSON.parse(anchor) as Viewported).order)
-          .sort();
-        const cursor = viewportedIdxs[0];
-
-        // if (JSON.parse(anchor).a === <Anchor>'header') {
-        //   this._setAnchor(0 + 1);
-        // } else if (JSON.parse(anchor).a === <Anchor>'footer') {
-        //   const footerIdx = this._scrollable().indexOf('footer');
-        //   this._setAnchor(footerIdx);
-        // } else
+        const cursor = this._cursor();
         this._setAnchor(cursor);
-
-        // const viewportedIdx = Array.from(this._viewported())
-        //   .map((anchor: string) => JSON.parse(anchor) as Viewported)
-        //   .map((anchor) => anchor.order)
-        //   .sort();
-        // const leftmostIdx = viewportedIdx[0] === 0 ? 1 : viewportedIdx[0]; // exclude header:0
-
-        // console.log('leftmost --> ', leftmostIdx);
-
-        // this._scrollSrv.anchor.set(this._scrollable()[leftmostIdx]);
       }
     }),
   );
-
-  private _setAnchor(limit: number = 0) {
-    console.log('limit --> ', limit);
-    this._scrollSrv.anchor.set(this._scrollable()[limit]);
-  }
-
-  // TODO: add fade-in FX
 
   ngOnInit() {
     this._intersectionObs().observe(this._nativeEl);
@@ -131,4 +88,19 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
   ngOnDestroy() {
     this._intersectionObs()?.disconnect();
   }
+
+  // AUX
+
+  private _cursor(): number {
+    const viewportedIdxs = Array.from(this._viewported())
+      .map((anchor: string) => (JSON.parse(anchor) as Viewported).order)
+      .sort();
+    return viewportedIdxs[0];
+  }
+
+  private _setAnchor(limit: number = 0): void {
+    this._scrollSrv.anchor.set(this._scrollable()[limit]);
+  }
+
+  // NOTE: Added <html.scroll-smooth> for a smother interpolation on scrolling
 }

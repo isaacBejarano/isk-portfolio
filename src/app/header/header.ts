@@ -1,7 +1,6 @@
 import {
   ChangeDetectionStrategy,
   Component,
-  computed,
   DOCUMENT,
   inject,
   input,
@@ -22,31 +21,35 @@ import { hash } from '@app/utils/string-utils';
 export class Header implements OnInit {
   // DI
   private readonly _doc = inject(DOCUMENT).defaultView;
-  protected readonly currentAnchor = inject(ScrollService).anchor;
 
   // DUMMY
   ////
 
-  readonly storeNav = input.required<StoreNav>();
+  readonly scrollable = input.required<Anchor[]>();
+
+  readonly nav = input.required<Pick<StoreNav, 'alt' | 'src'>>();
+  readonly anchors = input.required<Record<string, Anchor>>();
+  readonly currentAnchor = input.required<Anchor>();
+
   // readonly $anchor = output<Anchor>();
   protected readonly collapsed = signal(true);
   hash = hash;
 
-  protected readonly anchors = computed(() => {
-    const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
-      ...this.storeNav(),
-    };
-    return { anchor0, anchor1, anchor2, anchor3, anchor4 };
-  });
+  // protected readonly nav = computed(() => {
+  //   const { src, alt } = { ...this.storeNav() };
+  //   return { src, alt };
+  // });
 
-  protected readonly nav = computed(() => {
-    const { src, alt } = { ...this.storeNav() };
-    return { src, alt };
-  });
+  // protected readonly anchors = computed<Record<string, Anchor>>(() => {
+  //   const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
+  //     ...this.storeNav(),
+  //   };
+  //   return { anchor0, anchor1, anchor2, anchor3, anchor4 };
+  // });
 
-  protected readonly scrollable = computed(() =>
-    Object.entries(this.anchors()).map((entry) => entry[1]),
-  );
+  // protected readonly scrollable = computed<Anchor[]>(() =>
+  //   Object.entries(this.anchors()).map((entry) => entry[1]),
+  // );
 
   // protected emitAnchor(anchor: Anchor) {
   //   if (anchor.length === 0) return;

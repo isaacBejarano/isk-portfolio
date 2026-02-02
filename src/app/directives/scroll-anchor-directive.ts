@@ -1,48 +1,49 @@
 import {
-  computed,
   Directive,
   ElementRef,
   inject,
+  input,
   type OnDestroy,
   type OnInit,
   output,
   signal,
 } from '@angular/core';
-
 import { ScrollService } from '@app/scroll/scroll-service';
-import { StoreService } from '@app/store/store-service';
 
 type Viewported = { a: Anchor; order: number };
 
 @Directive({
-  selector: '[iskAnchorObserved]',
+  selector: '[iskScrollAnchor]',
   standalone: true,
 })
-export class AnchorObservedDirective implements OnInit, OnDestroy {
+export class ScrollAnchorDirective implements OnInit, OnDestroy {
   // DI
   ////
-
-  private readonly _storeSrv = inject(StoreService);
   private readonly _scrollSrv = inject(ScrollService);
+
+  // private readonly _storeSrv = inject(StoreService);
+  // private readonly _scrollSrv = inject(ScrollService);
 
   // element ref using this directive
   private readonly _nativeEl = inject(ElementRef).nativeElement;
 
-  // CTRL
+  // DUMMY
   ////
 
+  readonly scrollable = input.required<Anchor[]>();
   readonly $iskAnchor = output<Anchor>();
+  // readonly _viewported = input.required<Set<string>>();
 
-  private readonly _anchors = computed(() => {
-    const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
-      ...this._storeSrv.store().get('navbar'),
-    };
-    return { anchor0, anchor1, anchor2, anchor3, anchor4 };
-  });
+  // private readonly _anchors = computed(() => {
+  //   const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
+  //     ...this._storeSrv.store().get('navbar'),
+  //   };
+  //   return { anchor0, anchor1, anchor2, anchor3, anchor4 };
+  // });
 
-  private readonly _scrollable = computed<Anchor[]>(() =>
-    Object.entries(this._anchors()).map((entry) => entry[1]),
-  );
+  // private readonly scrollable = computed<Anchor[]>(() =>
+  //   Object.entries(this._anchors()).map((entry) => entry[1]),
+  // );
 
   private readonly _viewported = this._scrollSrv.viewported;
 
@@ -64,7 +65,7 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
         if (['header', 'footer'].includes(anchor)) {
           const limit = {
             header: 0,
-            footer: this._scrollable().indexOf('footer'),
+            footer: this.scrollable().indexOf('footer'),
           };
           this._emitAnchor(limit[anchor]);
         } else {
@@ -101,7 +102,7 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
   }
 
   private _emitAnchor(limit: number = 0): void {
-    this.$iskAnchor.emit(this._scrollable()[limit]);
+    this.$iskAnchor.emit(this.scrollable()[limit]);
   }
 
   // NOTE: Added <html.scroll-smooth> for a smother interpolation on scrolling

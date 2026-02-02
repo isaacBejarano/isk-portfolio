@@ -8,14 +8,14 @@
     [href]="anchorAdjacent(-1)"
     aria-label="Scroll up to the previous secction"
     rel="nofollow noreferrer">
-    <!-- (click)="emitAnchor(anchorPrevRef)" -->
     <svg class="size-10 fill-current" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-up" />
     </svg>
   </a>
   <!-- / -->
   @let pill = pillCurrentAnchor(); @if (pill) {
-  <p class="absolute -top-11 left-0 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg">
+  <p
+    class="absolute top-10 left-17 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg animate-none ">
     {{ pill }}
   </p>
   }
@@ -27,7 +27,6 @@
     [href]="anchorAdjacent(1)"
     aria-label="Scroll up to the next secction"
     rel="nofollow noreferrer">
-    <!-- (click)="emitAnchor(anchorNextRef)" -->
     <svg class="size-10 fill-current" viewBox="0 0 100 100">
       <use href="./svg/icon-sprite.xml#icon-down" />
     </svg>

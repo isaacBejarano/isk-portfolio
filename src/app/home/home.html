@@ -1,20 +1,23 @@
 <isk-about
-  iskAnchorObserved
-  ($iskAnchor)="onSectionActive($event)"
+  iskScrollAnchor
+  [scrollable]="scrollable()"
+  ($iskAnchor)="setAnchor($event)"
   id="about"
   data-order="1"
   [about]="about()" />
 
 <isk-portfolio
-  iskAnchorObserved
-  ($iskAnchor)="onSectionActive($event)"
+  iskScrollAnchor
+  [scrollable]="scrollable()"
+  ($iskAnchor)="setAnchor($event)"
   id="portfolio"
   data-order="2"
   [portfolio]="portfolio()" />
 
 <isk-skills
-  iskAnchorObserved
-  ($iskAnchor)="onSectionActive($event)"
+  iskScrollAnchor
+  [scrollable]="scrollable()"
+  ($iskAnchor)="setAnchor($event)"
   id="technologies"
   data-order="3"
   [skills]="skills()" />

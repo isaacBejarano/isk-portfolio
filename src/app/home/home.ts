@@ -1,12 +1,13 @@
 import { ChangeDetectionStrategy, Component, computed, inject, signal } from '@angular/core';
+
 import { Masterhead } from '@app/about/about';
 import { Portfolio } from '@app/portfolio/portfolio';
+import { ScrollAnchorDirective } from '@app/scroll/scroll-anchor-directive';
 import { ScrollService } from '@app/scroll/scroll-service';
 import { Skills } from '@app/skills/skills';
 import { StoreService } from '@app/store/store-service';
 import { getLast } from '@app/utils/array-utils';
 import { isOpenLink } from '@app/utils/nav-utils';
-import { ScrollAnchorDirective } from '../directives/scroll-anchor-directive';
 
 @Component({
   selector: 'isk-home',

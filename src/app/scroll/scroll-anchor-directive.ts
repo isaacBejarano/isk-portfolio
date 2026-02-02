@@ -8,6 +8,7 @@ import {
   output,
   signal,
 } from '@angular/core';
+
 import { ScrollService } from '@app/scroll/scroll-service';
 
 type Viewported = { a: Anchor; order: number };

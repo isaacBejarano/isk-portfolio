@@ -1,9 +1,5 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  input,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, input, signal } from '@angular/core';
+
 import { Divider } from '@app/divider/divider';
 import { Skillset } from '@app/skills/skillset/skillset';
 
@@ -38,13 +34,8 @@ export class Skills {
     'cloud',
   ];
 
-  protected isOnlyTier(
-    skills: [string, string, 1 | 2 | 3][],
-    tier: number,
-  ): boolean {
-    const areExcludedTiers = skills.every(
-      (attrs) => !attrs.includes(tier as 1 | 2 | 3),
-    );
+  protected isOnlyTier(skills: [string, string, 1 | 2 | 3][], tier: number): boolean {
+    const areExcludedTiers = skills.every((attrs) => !attrs.includes(tier as 1 | 2 | 3));
     return !areExcludedTiers;
   }
 }

@@ -1,10 +1,12 @@
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import { TitleCasePipe } from '@angular/common';
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { isOpenLink } from "../utils/nav-utils";
+import { isOpenLink } from '@app/utils/nav-utils';
 
 @Component({
-  selector: "isk-footer",
-  templateUrl: "./footer.html",
+  selector: 'isk-footer',
+  templateUrl: './footer.html',
+  imports: [TitleCasePipe],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Footer {

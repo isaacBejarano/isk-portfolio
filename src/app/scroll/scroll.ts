@@ -1,6 +1,8 @@
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
+
 import { hash } from '@app/utils/string-utils';
+
 @Component({
   selector: 'isk-scroll',
   templateUrl: './scroll.html',

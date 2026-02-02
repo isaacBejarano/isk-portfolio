@@ -2,28 +2,24 @@
   <h2 class="text-xl text-center text-amber-500/90 mb-0">TECHNOLOGIES</h2>
   <isk-divider css="" />
   <!-- grid -->
-  <div
-    class="px-5 flex flex-wrap justify-center mt-5 mb-10 gap-6 md:px-5 lg:px-0 lg:gap-8">
+  <div class="px-5 flex flex-wrap justify-center mt-5 mb-10 gap-6 md:px-5 lg:px-0 lg:gap-8">
     @for(title of tierTitles(); let idx = $index; track title) {
     <div
       class="min-w-xs flex-1 p-5 border border-amber-400/30 rounded-sm bg-linear-to-r from-gray-950 to-gray-800/50">
       <h3 class="text-white text-lg text-center mb-10">{{ title }}</h3>
       @let tier = idx + 1;
       <div id="skills-grid" class="flex flex-wrap gap-5">
-        @for (skillName of skillNames; track skillName) {
-        @if(isOnlyTier(skills()[skillName], tier)) {
+        @for (skillName of skillNames; track skillName) { @if(isOnlyTier(skills()[skillName], tier))
+        {
         <div
           class="p-3 flex-1 border border-amber-400/50 rounded-sm bg-linear-to-br from-gray-900 to-gray-700/50">
           <h3 class="pb-5">
-            <span class="block text-center text-amber-400/75 uppercase">
-              {{ skillName }}
-            </span>
+            <span class="block text-center text-amber-400/75 uppercase"> {{ skillName }} </span>
           </h3>
           <ul class="flex flex-wrap justify-evenly gap-4 ">
-            @for (skillset of skills()[skillName]; track skillset) {
-            @if(skillset[2] === tier) {
+            @for (skillset of skills()[skillName]; track skillset) { @if(skillset[2] === tier) {
             <li
-              class="min-w-max p-2 flex flex-col items-center border border-amber-400 rounded-sm bg-linear-to-br from-gray-400 to-white">
+              class="min-w-max p-2 flex flex-col items-center border border-amber-400 rounded-sm bg-linear-to-br from-gray-300/75 to-white">
               <isk-skillset [skillset]="skillset" />
             </li>
             }} @empty {<li>No skills to display yet </li>}

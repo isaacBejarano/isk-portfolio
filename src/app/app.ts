@@ -4,9 +4,9 @@ import { RouterOutlet } from '@angular/router';
 import { Follow } from '@app/follow/follow';
 import { Footer } from '@app/footer/footer';
 import { Header } from '@app/header/header';
-import { ScrollAnchorDirective } from './directives/scroll-anchor-directive';
-import { ScrollService } from './scroll/scroll-service';
-import { StoreService } from './store/store-service';
+import { ScrollAnchorDirective } from '@app/scroll/scroll-anchor-directive';
+import { ScrollService } from '@app/scroll/scroll-service';
+import { StoreService } from '@app/store/store-service';
 
 @Component({
   selector: 'isk-root',

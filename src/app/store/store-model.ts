@@ -1,8 +1,3 @@
-import { Injectable } from '@angular/core';
-
-@Injectable({
-  providedIn: 'root',
-})
 export class Store implements _StoreSchema {
   // navbar
   readonly navbar = {
@@ -20,15 +15,6 @@ export class Store implements _StoreSchema {
   readonly follow = {
     link1: 'https://www.linkedin.com/in/isaac-bejarano',
     link2: 'https://github.com/isaacBejarano',
-  };
-
-  // footer
-  readonly footer = {
-    tools: [
-      ['angular', 'https://angular.dev'],
-      ['tailwind', 'https://tailwindcss.com/'],
-    ],
-    copyright: 'Isaac Bejarano',
   };
 
   // about
@@ -256,6 +242,15 @@ export class Store implements _StoreSchema {
       ['Azure', './img/skills/azure.webp', 2],
       ['Firebase', './img/skills/firebase.webp', 3],
     ],
+  };
+
+  // footer
+  readonly footer = {
+    tools: [
+      ['angular', 'https://angular.dev'],
+      ['tailwind', 'https://tailwindcss.com/'],
+    ],
+    copyright: 'Isaac Bejarano',
   };
 
   get<U extends keyof Store>(key: U) {

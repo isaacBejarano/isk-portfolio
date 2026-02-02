@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable({
   providedIn: 'root',
 })
-export class Store implements Stored {
+export class Store implements _StoreSchema {
   // navbar
   readonly navbar = {
     src: '/img/portfolio/isaac-logo.webp',

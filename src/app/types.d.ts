@@ -61,7 +61,8 @@ type SkillNames =
 
 type StoreSkills = Record<SkillNames, [string, string, 1 | 2 | 3][]>;
 
-type Stored = {
+// Biome --> Exception to correctness.noUnusedVariables -> vars/types with underscore
+type _StoreSchema = {
   navbar: StoreNav;
   follow: StoreFollow;
   footer: StoreFooter;

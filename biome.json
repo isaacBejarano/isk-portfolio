@@ -10,12 +10,29 @@
   },
   "formatter": {
     "enabled": true,
-    "indentStyle": "space"
+    "indentStyle": "space",
+    "lineWidth": 100
   },
   "linter": {
     "enabled": true,
     "rules": {
-      "recommended": true
+      "recommended": true,
+      "correctness": {
+        "noUnusedVariables": {
+          "level": "error",
+          "fix": "none"
+        }
+      },
+      "complexity": {
+        "noUselessLoneBlockStatements": {
+          "level": "error",
+          "fix": "none"
+        }
+      },
+      "style": {
+        "useImportType": "warn",
+        "noCommonJs": "on"
+      }
     }
   },
   "javascript": {

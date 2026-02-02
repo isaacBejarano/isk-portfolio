@@ -1,10 +1,10 @@
-import { ChangeDetectionStrategy, Component, input } from "@angular/core";
+import { ChangeDetectionStrategy, Component, input } from '@angular/core';
 
-import { isOpenLink } from "@app/utils/nav-utils";
+import { isOpenLink } from '@app/utils/nav-utils';
 
 @Component({
-  selector: "isk-follow",
-  templateUrl: "./follow.html",
+  selector: 'isk-follow',
+  templateUrl: './follow.html',
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Follow {

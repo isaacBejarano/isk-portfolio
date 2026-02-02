@@ -41,89 +41,87 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
   private readonly _scrollable = computed<Anchor[]>(() =>
     Object.entries(this._anchors()).map((entry) => entry[1]),
   );
-  private readonly _lastIdx = computed<number>(() =>
-    this._scrollable().indexOf(this._scrollSrv.anchor()),
-  );
 
   private readonly _viewported = this._scrollSrv.viewported;
-  // private readonly _enteredIdx = signal(0);
 
   private _intersectionObs = signal(
-    new IntersectionObserver(
-      (entries) => {
-        const cursorIdx = this._scrollable().indexOf(this._nativeEl.id);
+    new IntersectionObserver((entries) => {
+      const anchor = JSON.stringify(<Viewported>{
+        a: this._nativeEl.id,
+        order: Number.parseInt(this._nativeEl.dataset.order, 10),
+      });
 
-        // FIXME: En mobile sí funciona, porque sólo hay 1 seccion en viewport a la vez
-        // snapshot
-        if (entries[0].isIntersecting) {
-          console.warn('ON VIEWPORT NOW...', this._nativeEl.id, this._nativeEl.dataset.order);
+      // Now...
+      if (entries[0].isIntersecting) {
+        console.warn('Intersected -->', JSON.parse(anchor).a, JSON.parse(anchor).order);
+        // eclude rightmost:footer
+        this._viewported.update((set) => {
+          set.add(anchor);
+          return set;
+        });
 
-          const newAnchor = JSON.stringify(<Viewported>{
-            a: this._nativeEl.id,
-            order: Number.parseInt(this._nativeEl.dataset.order, 10),
-          });
-          this._viewported.add(newAnchor);
+        const viewportedIdxs = Array.from(this._viewported())
+          .map((anchor: string) => (JSON.parse(anchor) as Viewported).order)
+          .sort();
+        const cursor = viewportedIdxs[0];
 
-          console.table(Array.from(this._viewported).map((anchor: string) => JSON.parse(anchor)));
-          const viewportedIdx = Array.from(this._viewported)
-            .map((anchor: string) => JSON.parse(anchor) as Viewported)
-            .map((anchor) => anchor.order)
-            .sort();
-          console.warn(viewportedIdx);
-          this._scrollSrv.anchor.set(this._scrollable()[viewportedIdx.pop()]);
-        }
+        if (JSON.parse(anchor).a === <Anchor>'header') {
+          this._setAnchor(0);
+        } else if (JSON.parse(anchor).a === <Anchor>'footer') {
+          const footerIdx = this._scrollable().indexOf('footer');
+          this._setAnchor(footerIdx);
+        } else this._setAnchor(cursor);
 
-        // console.log(entries[0].isIntersecting);
+        // const viewportedIdx = Array.from(this._viewported())
+        //   .map((anchor: string) => JSON.parse(anchor) as Viewported)
+        //   .map((anchor) => anchor.order)
+        //   .sort();
+        // const leftmostIdx = viewportedIdx[0] === 0 ? 1 : viewportedIdx[0]; // exclude header:0
 
-        if (entries[0].isIntersecting && cursorIdx > this._lastIdx()) {
-          console.log('entering...', this._nativeEl.id);
-          // bottom reached!
-          if (this._nativeEl.id === <Anchor>'footer') {
-            // visible.set([]); // cleanup
-            this._viewported.add(JSON.stringify({ a: 'technologies', order: 3 }));
-          }
-          // top reached!
-          else if (this._nativeEl.id === <Anchor>'header') {
-            this._viewported.clear(); // cleanup
-            this._viewported.add(JSON.stringify({ a: 'header', order: 0 })); // cleanup
-          }
+        // console.log('leftmost --> ', leftmostIdx);
 
-          // this._enteredIdx.set(cursorIdx);
-          // this._scrollSrv.anchor.set(this._scrollable()[cursorIdx]);
-        } else if (entries[0].isIntersecting && cursorIdx < this._lastIdx()) {
-          console.log('leaving...', this._nativeEl.id);
-        } else if (entries[0].isIntersecting && cursorIdx === this._lastIdx()) {
-          console.log('same anchor...', this._nativeEl.id);
-          if (this._nativeEl.id === <Anchor>'header') {
-            // this._enteredIdx.set(0);
-            // this._scrollSrv.anchor.set('header'); // _lastIdx:0
-          }
-        } else if (!entries[0].isIntersecting && cursorIdx === this._lastIdx()) {
-          console.log('not intersect...', this._nativeEl.id);
+        // this._scrollSrv.anchor.set(this._scrollable()[leftmostIdx]);
+      } else {
+        console.error('NOT Intersected -->', JSON.parse(anchor).a, JSON.parse(anchor).order);
 
-          // if (cursorIdx < this._enteredIdx()) {
-          // this._scrollSrv.anchor.set(this._scrollable()[cursorIdx + 1]); // down
-          // } else if (cursorIdx === this._enteredIdx()) {
-          // this._scrollSrv.anchor.set(this._scrollable()[cursorIdx - 1]); // up
-          // } else if (cursorIdx > this._enteredIdx()) {
-          // console.log('INTERSECTED');
-          // }
-        } else if (!entries[0].isIntersecting && cursorIdx < this._lastIdx()) {
-          console.warn('jump?');
-        } else console.error('uncaught');
-      },
-      {
-        // threshold: 0.1,
-        // Ajusta este "umbral" según necesites
-        // FIXME: rootMargin: '-200px 0px -200px',
-        /*
-        Esto crea una "línea invisible" en el viewport:
-          El elemento no se considera "activo" en cuanto toca el borde inferior, sino cuando entra en la zona central/superior.
-          Esto evita que dos secciones se marquen como activas al mismo tiempo si son pequeñas
-        */
-      },
-    ),
+        // if (JSON.parse(anchor).a === <Anchor>'footer') {
+        this._viewported.update((set) => {
+          set.delete(anchor);
+          return set;
+        });
+        // }
+
+        const viewportedIdxs = Array.from(this._viewported())
+          .map((anchor: string) => (JSON.parse(anchor) as Viewported).order)
+          .sort();
+        const cursor = viewportedIdxs[0];
+
+        // if (JSON.parse(anchor).a === <Anchor>'header') {
+        //   this._setAnchor(0 + 1);
+        // } else if (JSON.parse(anchor).a === <Anchor>'footer') {
+        //   const footerIdx = this._scrollable().indexOf('footer');
+        //   this._setAnchor(footerIdx);
+        // } else
+        this._setAnchor(cursor);
+
+        // const viewportedIdx = Array.from(this._viewported())
+        //   .map((anchor: string) => JSON.parse(anchor) as Viewported)
+        //   .map((anchor) => anchor.order)
+        //   .sort();
+        // const leftmostIdx = viewportedIdx[0] === 0 ? 1 : viewportedIdx[0]; // exclude header:0
+
+        // console.log('leftmost --> ', leftmostIdx);
+
+        // this._scrollSrv.anchor.set(this._scrollable()[leftmostIdx]);
+      }
+    }),
   );
+
+  private _setAnchor(limit: number = 0) {
+    console.log('limit --> ', limit);
+    this._scrollSrv.anchor.set(this._scrollable()[limit]);
+  }
+
   // TODO: add fade-in FX
 
   ngOnInit() {

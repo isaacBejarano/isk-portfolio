@@ -21,6 +21,10 @@
         "noUnusedVariables": {
           "level": "error",
           "fix": "none"
+        },
+        "noUnusedPrivateClassMembers": {
+          "level": "error",
+          "fix": "none"
         }
       },
       "complexity": {

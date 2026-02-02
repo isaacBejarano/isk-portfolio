@@ -20,24 +20,26 @@ type Viewported = { a: Anchor; order: number };
 })
 export class AnchorObservedDirective implements OnInit, OnDestroy {
   // DI
-  private readonly _nativeEl = inject(ElementRef).nativeElement; // element ref using this directive
+  ////
+
   private readonly _storeSrv = inject(StoreService);
   private readonly _scrollSrv = inject(ScrollService);
 
-  // MODEL
-  private readonly _store = this._storeSrv.store;
+  // element ref using this directive
+  private readonly _nativeEl = inject(ElementRef).nativeElement;
 
   // CTRL
   ////
 
-  readonly $iskVisible = output<Anchor>();
-  private readonly _storeNav = signal<StoreNav>(this._store().get('navbar'));
+  readonly $iskAnchor = output<Anchor>();
+
   private readonly _anchors = computed(() => {
     const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
-      ...this._storeNav(),
+      ...this._storeSrv.store().get('navbar'),
     };
     return { anchor0, anchor1, anchor2, anchor3, anchor4 };
   });
+
   private readonly _scrollable = computed<Anchor[]>(() =>
     Object.entries(this._anchors()).map((entry) => entry[1]),
   );
@@ -64,10 +66,10 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
             header: 0,
             footer: this._scrollable().indexOf('footer'),
           };
-          this._setAnchor(limit[anchor]);
+          this._emitAnchor(limit[anchor]);
         } else {
           const cursor = this._cursor();
-          this._setAnchor(cursor);
+          this._emitAnchor(cursor);
         }
       } else {
         this._viewported.update((set) => {
@@ -76,7 +78,7 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
         });
 
         const cursor = this._cursor();
-        this._setAnchor(cursor);
+        this._emitAnchor(cursor);
       }
     }),
   );
@@ -98,8 +100,8 @@ export class AnchorObservedDirective implements OnInit, OnDestroy {
     return viewportedIdxs[0];
   }
 
-  private _setAnchor(limit: number = 0): void {
-    this._scrollSrv.anchor.set(this._scrollable()[limit]);
+  private _emitAnchor(limit: number = 0): void {
+    this.$iskAnchor.emit(this._scrollable()[limit]);
   }
 
   // NOTE: Added <html.scroll-smooth> for a smother interpolation on scrolling

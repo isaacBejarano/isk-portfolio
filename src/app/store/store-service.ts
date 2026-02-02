@@ -7,9 +7,5 @@ import { Store } from '@app/store/store-model';
 })
 export class StoreService {
   // MODEL
-  private readonly _model = signal(new Store()).asReadonly();
-
-  get store() {
-    return this._model;
-  }
+  readonly store = signal(new Store()).asReadonly();
 }

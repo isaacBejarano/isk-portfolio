@@ -4,7 +4,9 @@ import { Injectable, signal } from '@angular/core';
   providedIn: 'root',
 })
 export class ScrollService {
+  // SRV
+  ////
+
   readonly anchor = signal<Anchor>('header');
-  // serialized 'Viewported' for uniqueness
-  readonly viewported = signal(new Set<string>());
+  readonly viewported = signal(new Set<string>()); // serialized Set value for uniqueness
 }

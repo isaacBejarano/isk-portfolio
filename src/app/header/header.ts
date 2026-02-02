@@ -6,7 +6,6 @@ import {
   inject,
   input,
   type OnInit,
-  output,
   signal,
 } from '@angular/core';
 
@@ -29,7 +28,7 @@ export class Header implements OnInit {
   ////
 
   readonly storeNav = input.required<StoreNav>();
-  readonly $anchor = output<Anchor>();
+  // readonly $anchor = output<Anchor>();
   protected readonly collapsed = signal(true);
   hash = hash;
 
@@ -49,10 +48,10 @@ export class Header implements OnInit {
     Object.entries(this.anchors()).map((entry) => entry[1]),
   );
 
-  protected emitAnchor(anchor: Anchor) {
-    if (anchor.length === 0) return;
-    this.$anchor.emit(anchor);
-  }
+  // protected emitAnchor(anchor: Anchor) {
+  //   if (anchor.length === 0) return;
+  //   this.$anchor.emit(anchor);
+  // }
 
   ngOnInit(): void {
     this.toggle(true);

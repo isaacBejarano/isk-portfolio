@@ -1,13 +1,6 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  computed,
-  inject,
-  input,
-  output,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { DomSanitizer } from '@angular/platform-browser';
-import { dehash, hash } from '@app/utils/string-utils';
+import { hash } from '@app/utils/string-utils';
 @Component({
   selector: 'isk-scroll',
   templateUrl: './scroll.html',
@@ -22,14 +15,13 @@ export class Scroller {
 
   readonly currentAnchor = input.required<Anchor>();
   readonly scrollable = input.required<Anchor[]>();
-  readonly $anchor = output<Anchor>();
+  // readonly $anchor = output<Anchor>();
 
   private readonly _hash = hash;
-  private readonly _dehash = dehash;
+  // private readonly _dehash = dehash;
 
   protected readonly pillCurrentAnchor = computed<Anchor | null>(() => {
-    if (this.currentAnchor() === 'header' || this.currentAnchor() === 'footer')
-      return null;
+    if (this.currentAnchor() === 'header' || this.currentAnchor() === 'footer') return null;
     return this.currentAnchor();
   });
 
@@ -41,10 +33,10 @@ export class Scroller {
       : this._sanitizer.bypassSecurityTrustUrl('javascript:void(0)');
   }
 
-  protected emitAnchor(anchorRef: HTMLAnchorElement) {
-    if (anchorRef.hash.length === 0) return;
-    this.$anchor.emit(this._dehash(anchorRef.hash) as Anchor);
-  }
+  // protected emitAnchor(anchorRef: HTMLAnchorElement) {
+  //   if (anchorRef.hash.length === 0) return;
+  //   this.$anchor.emit(this._dehash(anchorRef.hash) as Anchor);
+  // }
 
   protected isAnchorVoid(icon: 'top' | 'bot'): boolean {
     // FIXME: update currentAnchor from directive too

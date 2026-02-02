@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { Masterhead } from '@app/about/about';
 import { Portfolio } from '@app/portfolio/portfolio';
 import { ScrollService } from '@app/scroll/scroll-service';
@@ -31,14 +26,12 @@ export class Home {
 
   protected readonly skills = signal<StoreSkills>(this._model.get('skills'));
   protected readonly about = signal<StoreAbout>(this._model.get('about'));
-  protected readonly portfolio = signal<StorePortfolio>(
-    this._model.get('portfolio'),
-  );
+  protected readonly portfolio = signal<StorePortfolio>(this._model.get('portfolio'));
 
   isOpenLink = isOpenLink;
   getLast = getLast;
 
   onSectionActive(anchor: Anchor) {
-    this._scrollSrv.anchor.set(anchor); // TODO:
+    this._scrollSrv.anchor.set(anchor);
   }
 }

@@ -1,11 +1,11 @@
 <!-- * Navigation - UI * -->
 <isk-header
   iskAnchorObserved
+  ($iskAnchor)="onSectionActive($event)"
   id="header"
   data-order="0"
-  ($iskVisible)="onSectionActive($event)"
-  ($anchor)="onSectionActive($event)"
   [storeNav]="storeNav()">
+  <!-- ($anchor)="onSectionActive($event)" -->
   <isk-follow
     css="flex gap-2 p-2 border border-amber-500/30 text-amber-500 rounded-sm"
     [showFollow]="false"
@@ -20,9 +20,9 @@
 <!-- * Footer - UI * -->
 <isk-footer
   iskAnchorObserved
+  ($iskAnchor)="onSectionActive($event)"
   id="footer"
   data-order="4"
-  ($iskVisible)="onSectionActive($event)"
   class="relative"
   [footer]="footer()">
   <isk-follow

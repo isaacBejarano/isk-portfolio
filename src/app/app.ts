@@ -1,9 +1,4 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  inject,
-  signal,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { Follow } from '@app/follow/follow';
@@ -35,6 +30,6 @@ export class App {
   protected readonly footer = signal<StoreFooter>(this._store().get('footer'));
 
   onSectionActive(anchor: Anchor) {
-    this._scrollSrv.anchor.set(anchor); // TODO:
+    this._scrollSrv.anchor.set(anchor);
   }
 }

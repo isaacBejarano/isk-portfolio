@@ -18,32 +18,14 @@ type Viewported = { a: Anchor; order: number };
 })
 export class ScrollAnchorDirective implements OnInit, OnDestroy {
   // DI
-  ////
   private readonly _scrollSrv = inject(ScrollService);
-
-  // private readonly _storeSrv = inject(StoreService);
-  // private readonly _scrollSrv = inject(ScrollService);
-
-  // element ref using this directive
-  private readonly _nativeEl = inject(ElementRef).nativeElement;
+  private readonly _nativeEl = inject(ElementRef).nativeElement; // using this directive
 
   // DUMMY
   ////
 
   readonly scrollable = input.required<Anchor[]>();
   readonly $iskAnchor = output<Anchor>();
-  // readonly _viewported = input.required<Set<string>>();
-
-  // private readonly _anchors = computed(() => {
-  //   const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
-  //     ...this._storeSrv.store().get('navbar'),
-  //   };
-  //   return { anchor0, anchor1, anchor2, anchor3, anchor4 };
-  // });
-
-  // private readonly scrollable = computed<Anchor[]>(() =>
-  //   Object.entries(this._anchors()).map((entry) => entry[1]),
-  // );
 
   private readonly _viewported = this._scrollSrv.viewported;
 

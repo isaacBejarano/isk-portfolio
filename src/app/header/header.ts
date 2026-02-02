@@ -9,7 +9,6 @@ import {
 } from '@angular/core';
 
 import { Scroller } from '@app/scroll/scroll';
-import { ScrollService } from '@app/scroll/scroll-service';
 import { hash } from '@app/utils/string-utils';
 
 @Component({
@@ -25,36 +24,15 @@ export class Header implements OnInit {
   // DUMMY
   ////
 
+  hash = hash;
+
   readonly scrollable = input.required<Anchor[]>();
 
   readonly nav = input.required<Pick<StoreNav, 'alt' | 'src'>>();
   readonly anchors = input.required<Record<string, Anchor>>();
   readonly currentAnchor = input.required<Anchor>();
 
-  // readonly $anchor = output<Anchor>();
   protected readonly collapsed = signal(true);
-  hash = hash;
-
-  // protected readonly nav = computed(() => {
-  //   const { src, alt } = { ...this.storeNav() };
-  //   return { src, alt };
-  // });
-
-  // protected readonly anchors = computed<Record<string, Anchor>>(() => {
-  //   const { anchor0, anchor1, anchor2, anchor3, anchor4 } = {
-  //     ...this.storeNav(),
-  //   };
-  //   return { anchor0, anchor1, anchor2, anchor3, anchor4 };
-  // });
-
-  // protected readonly scrollable = computed<Anchor[]>(() =>
-  //   Object.entries(this.anchors()).map((entry) => entry[1]),
-  // );
-
-  // protected emitAnchor(anchor: Anchor) {
-  //   if (anchor.length === 0) return;
-  //   this.$anchor.emit(anchor);
-  // }
 
   ngOnInit(): void {
     this.toggle(true);

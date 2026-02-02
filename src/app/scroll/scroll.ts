@@ -15,10 +15,8 @@ export class Scroller {
 
   readonly currentAnchor = input.required<Anchor>();
   readonly scrollable = input.required<Anchor[]>();
-  // readonly $anchor = output<Anchor>();
 
   private readonly _hash = hash;
-  // private readonly _dehash = dehash;
 
   protected readonly pillCurrentAnchor = computed<Anchor | null>(() => {
     if (this.currentAnchor() === 'header' || this.currentAnchor() === 'footer') return null;
@@ -33,13 +31,7 @@ export class Scroller {
       : this._sanitizer.bypassSecurityTrustUrl('javascript:void(0)');
   }
 
-  // protected emitAnchor(anchorRef: HTMLAnchorElement) {
-  //   if (anchorRef.hash.length === 0) return;
-  //   this.$anchor.emit(this._dehash(anchorRef.hash) as Anchor);
-  // }
-
   protected isAnchorVoid(icon: 'top' | 'bot'): boolean {
-    // FIXME: update currentAnchor from directive too
     return (
       (this.currentAnchor() === 'header' && icon === 'top') ||
       (this.currentAnchor() === 'footer' && icon === 'bot')

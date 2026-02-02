@@ -35,7 +35,7 @@
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
               [href]="hash(route1)"
-              (click)="setAnchor(route1)"
+              (click)="emitAnchor(route1)"
               rel="nofollow noreferrer">
               {{ route1 }}
             </a>
@@ -44,7 +44,7 @@
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
               [href]="hash(route2)"
-              (click)="setAnchor(route2)"
+              (click)="emitAnchor(route2)"
               rel="nofollow noreferrer">
               {{ route2 }}
             </a>
@@ -53,7 +53,7 @@
             <a
               class="block uppercase text-right p-2 bg-gray-800/95 hover:bg-yellow-900/95 rounded-t-sm border-t border-amber-400/30 md:rounded-sm md:border-0 md:bg-linear-to-br from-gray-800/50 to-gray-800"
               [href]="hash(route3)"
-              (click)="setAnchor(route3)"
+              (click)="emitAnchor(route3)"
               rel="nofollow noreferrer">
               {{ route3 }}
             </a>
@@ -72,6 +72,6 @@
       class="fixed bottom-0 z-5 left-0 xl:left-1/20 2xl:left-1/8"
       [scrollable]="scrollable()"
       [currentAnchor]="currentAnchor()"
-      ($anchor)="setAnchor($event)" />
+      ($anchor)="emitAnchor($event)" />
   </div>
 </header>

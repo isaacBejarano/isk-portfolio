@@ -1,3 +1,4 @@
+<!-- TODO: hiden if Js void -->
 <div
   class="relative flex flex-col gap-2 p-2 m-2 bg-gray-950/75 border border-amber-500/30 rounded-full text-amber-500">
   <a
@@ -5,7 +6,7 @@
     class="block border rounded-t-full"
     [class]="isAnchorVoid('top') ? 'cursor-not-allowed bg-gray-800 border-amber-500/30 text-transparent' : 'bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50'"
     [href]="anchorAdjacent(-1)"
-    (click)="setAnchor(anchorPrevRef)"
+    (click)="emitAnchor(anchorPrevRef)"
     aria-label="Scroll up to the previous secction"
     rel="nofollow noreferrer">
     <svg class="size-10 fill-current" viewBox="0 0 100 100">
@@ -25,7 +26,7 @@
     class="block border rounded-b-full"
     [class]="isAnchorVoid('bot') ? 'cursor-not-allowed bg-gray-800 border-amber-500/30 text-transparent' : 'bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50'"
     [href]="anchorAdjacent(1)"
-    (click)="setAnchor(anchorNextRef)"
+    (click)="emitAnchor(anchorNextRef)"
     aria-label="Scroll up to the next secction"
     rel="nofollow noreferrer">
     <svg class="size-10 fill-current" viewBox="0 0 100 100">

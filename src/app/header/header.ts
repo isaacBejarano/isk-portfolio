@@ -6,6 +6,7 @@ import {
   inject,
   input,
   type OnInit,
+  output,
   signal,
 } from '@angular/core';
 
@@ -22,13 +23,13 @@ import { hash } from '@app/utils/string-utils';
 export class Header implements OnInit {
   // DI
   private readonly _doc = inject(DOCUMENT).defaultView;
-  private readonly _scrollSrv = inject(ScrollService);
   protected readonly currentAnchor = inject(ScrollService).anchor;
 
   // DUMMY
   ////
 
   readonly storeNav = input.required<StoreNav>();
+  readonly $anchor = output<Anchor>();
   protected readonly collapsed = signal(true);
   hash = hash;
 
@@ -48,8 +49,9 @@ export class Header implements OnInit {
     Object.entries(this.anchors()).map((entry) => entry[1]),
   );
 
-  protected setAnchor(anchor: Anchor) {
-    this._scrollSrv.anchor.set(anchor);
+  protected emitAnchor(anchor: Anchor) {
+    if (anchor.length === 0) return;
+    this.$anchor.emit(anchor);
   }
 
   ngOnInit(): void {

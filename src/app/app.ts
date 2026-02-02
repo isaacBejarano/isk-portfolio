@@ -5,12 +5,13 @@ import {
   signal,
 } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+
 import { Follow } from '@app/follow/follow';
 import { Footer } from '@app/footer/footer';
 import { Header } from '@app/header/header';
 import { AnchorObservedDirective } from './directives/anchor-observed-directive';
 import { ScrollService } from './scroll/scroll-service';
-import { Store } from './store-model';
+import { StoreService } from './store/store-service';
 
 @Component({
   selector: 'isk-root',
@@ -21,18 +22,19 @@ import { Store } from './store-model';
 export class App {
   // DI
   private readonly _scrollSrv = inject(ScrollService);
+  private readonly _storeSrv = inject(StoreService);
 
   // MODEL
-  private readonly _model = new Store();
+  private readonly _store = this._storeSrv.store;
 
   // CTRL
   ////
 
-  protected readonly storeNav = signal<StoreNav>(this._model.get('navbar'));
-  protected readonly follow = signal<StoreFollow>(this._model.get('follow'));
-  protected readonly footer = signal<StoreFooter>(this._model.get('footer'));
+  protected readonly storeNav = signal<StoreNav>(this._store().get('navbar'));
+  protected readonly follow = signal<StoreFollow>(this._store().get('follow'));
+  protected readonly footer = signal<StoreFooter>(this._store().get('footer'));
 
   onSectionActive(anchor: Anchor) {
-    this._scrollSrv.anchor.set(anchor);
+    this._scrollSrv.anchor.set(anchor); // TODO:
   }
 }

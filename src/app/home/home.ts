@@ -8,7 +8,7 @@ import { Masterhead } from '@app/about/about';
 import { Portfolio } from '@app/portfolio/portfolio';
 import { ScrollService } from '@app/scroll/scroll-service';
 import { Skills } from '@app/skills/skills';
-import { Store } from '@app/store-model';
+import { Store } from '@app/store/store-model';
 import { getLast } from '@app/utils/array-utils';
 import { isOpenLink } from '@app/utils/nav-utils';
 import { AnchorObservedDirective } from '../directives/anchor-observed-directive';
@@ -39,6 +39,6 @@ export class Home {
   getLast = getLast;
 
   onSectionActive(anchor: Anchor) {
-    this._scrollSrv.anchor.set(anchor);
+    this._scrollSrv.anchor.set(anchor); // TODO:
   }
 }

@@ -41,12 +41,13 @@ export class Scroller {
       : this._sanitizer.bypassSecurityTrustUrl('javascript:void(0)');
   }
 
-  protected setAnchor(anchorRef: HTMLAnchorElement) {
+  protected emitAnchor(anchorRef: HTMLAnchorElement) {
     if (anchorRef.hash.length === 0) return;
     this.$anchor.emit(this._dehash(anchorRef.hash) as Anchor);
   }
 
   protected isAnchorVoid(icon: 'top' | 'bot'): boolean {
+    // FIXME: update currentAnchor from directive too
     return (
       (this.currentAnchor() === 'header' && icon === 'top') ||
       (this.currentAnchor() === 'footer' && icon === 'bot')

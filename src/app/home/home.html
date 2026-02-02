@@ -1,17 +1,17 @@
 <isk-about
   iskAnchorObserved
   id="about"
-  (visible)="onSectionActive($event)"
+  ($iskVisible)="onSectionActive($event)"
   [about]="about()" />
 
 <isk-portfolio
   iskAnchorObserved
   id="portfolio"
-  (visible)="onSectionActive($event)"
+  ($iskVisible)="onSectionActive($event)"
   [portfolio]="portfolio()" />
 
 <isk-skills
   iskAnchorObserved
   id="technologies"
-  (visible)="onSectionActive($event)"
+  ($iskVisible)="onSectionActive($event)"
   [skills]="skills()" />

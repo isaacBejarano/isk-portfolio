@@ -1,10 +1,11 @@
 <div
   class="relative flex flex-col gap-2 p-2 m-2 bg-gray-950/75 border border-amber-500/30 rounded-full text-amber-500">
-  @if (!isAnchorVoid('top')) {
   <a
     #anchorPrevRef
-    class="block border rounded-t-full bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50 animate-fadeIn"
+    class="block border rounded-t-full bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50"
+    [class.hidden]="isAnchorVoid('top')"
     [class.rounded-b-full]="isAnchorVoid('bot')"
+    [class.animate-fadeIn]="!isAnchorVoid('top') && !isAnchorVoid('bot')"
     [href]="anchorAdjacent(-1)"
     aria-label="Scroll up to the previous secction"
     rel="nofollow noreferrer">
@@ -12,14 +13,20 @@
       <use href="./svg/icon-sprite.xml#icon-up" />
     </svg>
   </a>
-  }<!-- / --> @let pill = pillCurrentAnchor(); @if (pill) {
+  <!-- / -->
+
+  @let pill = pillCurrentAnchor();
+  <!-- / -->
+  @if (pill) {
   <p class="absolute top-10 left-17 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg">
     {{ pill }}
   </p>
-  }<!-- / --> @if (!isAnchorVoid('bot')) {
+  }<!-- / -->
+
   <a
     #anchorNextRef
-    class="block border rounded-b-full bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50 animate-fadeIn"
+    class="block border rounded-b-full bg-gray-800 border-amber-500/30 hover:bg-gray-700 hover:border-amber-500/50"
+    [class.hidden]="isAnchorVoid('bot')"
     [class.rounded-t-full]="isAnchorVoid('top')"
     [href]="anchorAdjacent(1)"
     aria-label="Scroll up to the next secction"
@@ -28,5 +35,4 @@
       <use href="./svg/icon-sprite.xml#icon-down" />
     </svg>
   </a>
-  }
 </div>

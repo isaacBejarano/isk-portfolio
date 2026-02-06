@@ -72,6 +72,17 @@
             }
           },
           "defaultConfiguration": "development"
+        },
+        "e2e": {
+          "builder": "playwright-ng-schematics:playwright",
+          "options": {
+            "devServerTarget": "portfolio:serve"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "portfolio:serve:production"
+            }
+          }
         }
       }
     }

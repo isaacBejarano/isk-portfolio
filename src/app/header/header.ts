@@ -39,9 +39,9 @@ export class Header implements OnInit {
   }
 
   protected toggle(init: boolean) {
-  if(!this._doc?.visualViewport) return;
+    if (!this._doc?.visualViewport) return;
 
-    const md = parseInt(this._doc.visualViewport!.width.toFixed(0), 10);
+    const md = parseInt(this._doc.visualViewport?.width.toFixed(0), 10);
     if (md < 768) this.collapsed.update((v) => (init ? true : !v));
     else this.collapsed.set(false);
   }

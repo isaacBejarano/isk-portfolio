@@ -70,3 +70,56 @@ type _StoreSchema = {
   portfolio: StorePortfolio;
   skills: StoreSkills;
 };
+
+// Models
+////
+
+type ArticleStock = { stock: number; articleCurrency: Currency };
+type Currency = 'EUR' | 'USD';
+type Locale = 'es-ES' | 'en-US';
+
+// HTML attrs.
+////
+
+type ImgExtension = 'webp' | 'png';
+
+// UI
+////
+
+type BtnStyleBase =
+  | 'emerald-outlined'
+  | 'rose-outlined'
+  | 'amber-outlined'
+  | 'gray-outlined'
+  | 'disabled-gray-outlined'
+  | 'pink-link'
+  | 'slate-link';
+
+// Navigation
+////
+
+type AppRouteSatic =
+  | ''
+  | 'login'
+  | 'register'
+  | 'article/list'
+  | 'article/create'
+  | 'logout'
+  | '**';
+type AppRouteDynamic = `article/${number | ':id'}`; // with path variable
+type AppRoutePaths = { path: AppRouteSatic | AppRouteDynamic };
+
+// API
+////
+
+type Env = { api: string; credentialsPayloadUnit: CredentialsPayload };
+type CredentialsPayload = { username: string; password: CredentialsDefaulPassword };
+type CredentialsDefaulPassword = 'SECRET'; // remove by 'string' when in real env
+type LoginResponse = RegisterResponse & { token: string };
+type RegisterResponse = { msg: string };
+
+// Interceptors
+////
+
+type SnackIcons = 'icon-warning' | 'icon-check';
+type ProgressbarPercent = 0 | 25 | 50 | 75 | 100;

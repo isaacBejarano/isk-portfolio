@@ -28,13 +28,11 @@
     "fire:deploy": "firebase deploy --only hosting"
   },
   "dependencies": {
-    "@angular/animations": "^21.1.0",
     "@angular/common": "^21.1.0",
     "@angular/compiler": "^21.1.0",
     "@angular/core": "^21.1.0",
     "@angular/forms": "^21.1.0",
     "@angular/platform-browser": "^21.1.0",
-    "@angular/platform-browser-dynamic": "^21.1.0",
     "@angular/router": "^21.1.0",
     "rxjs": "^7.4.0",
     "tslib": "^2.3.0"
@@ -43,12 +41,8 @@
     "@angular/build": "^21.1.0",
     "@angular/cli": "^21.1.0",
     "@angular/compiler-cli": "^21.1.0",
-    "@biomejs/biome": "2.3.11",
-    "@playwright/test": "1.58.2",
     "@tailwindcss/postcss": "^4.1.18",
-    "@types/node": "^16.11.11",
-    "playwright-ng-schematics": "^21.0.3",
-    "firebase-tools": "^13.35.1",
+    "firebase-tools": "^15.5.1",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.18",
     "typescript": "~5.9.3"

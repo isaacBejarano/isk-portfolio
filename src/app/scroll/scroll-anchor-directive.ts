@@ -44,13 +44,13 @@ export class ScrollAnchorDirective implements OnInit, OnDestroy {
           return set;
         });
 
-        const anchor = JSON.parse(viewported).a;
+        const anchor = JSON.parse(viewported).a as Anchor;
         if (['header', 'footer'].includes(anchor)) {
           const limit = {
             header: 0,
             footer: this.scrollable().indexOf('footer'),
           };
-          this._emitAnchor(limit[anchor]);
+          this._emitAnchor(limit[anchor as 'header'|'footer']);
         } else {
           const cursor = this._cursor();
           this._emitAnchor(cursor);

@@ -1,4 +1,4 @@
-import { CURRENCY_LOCALES } from '@app/app-constants';
+import { CURRENCY_LOCALES } from '../app-constants';
 
 function localeFromCurrency(currency: Currency): Locale {
   return CURRENCY_LOCALES[currency];

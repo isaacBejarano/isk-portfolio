@@ -83,6 +83,9 @@
               "devServerTarget": "portfolio:serve:production"
             }
           }
+        },
+        "test": {
+          "builder": "@angular/build:unit-test"
         }
       }
     }

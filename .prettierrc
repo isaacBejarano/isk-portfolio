@@ -1,0 +1,14 @@
+{
+  "overrides": [
+    {
+      "files": "*.html",
+      "options": {
+        "parser": "angular",
+        "embeddedLanguageFormatting": "off",
+        "htmlWhitespaceSensitivity": "ignore",
+        "bracketSameLine": true,
+        "useEditorConfig": true
+      }
+    }
+  ]
+}

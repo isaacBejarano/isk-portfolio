@@ -5,14 +5,11 @@
 
   <!-- Copyright Section-->
   <div class="py-4">
-    <span class="text-center text-white/75"> Handcrafted with ❤️ with </span>
+    <span class="text-center text-white/75">Handcrafted with ❤️ with</span>
     <div class="flex justify-center mt-2">
       @let tool1Name = footer().tools[0][0] | titlecase;
-      <!-- / -->
       @let tool1Href = footer().tools[0][1];
-      <!-- / -->
       @let tool2Name = footer().tools[1][0] | titlecase;
-      <!-- / -->
       @let tool2Href = footer().tools[1][1];
 
       <a
@@ -66,7 +63,7 @@
             </clipPath>
           </defs>
         </svg>
-        <span class="capitalize text-white"> {{ tool1Name }} </span>
+        <span class="capitalize text-white">{{ tool1Name }}</span>
       </a>
 
       <span class="block mx-2 text-white/50 self-end">&</span>
@@ -78,15 +75,20 @@
         target="_blank"
         (click)="isOpenLink(tool2Name)">
         <!-- TAILWIND SVG -->
-        <svg xmlns="http://www.w3.org/2000/svg" height="65" class="w-27 mx-auto">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          height="65"
+          class="w-27 mx-auto">
           <path
             d="M52.898 0C38.792 0 29.976 7.053 26.45 21.16c5.29-7.054 11.462-9.699 18.515-7.935 4.024 1.005 6.9 3.926 10.084 7.157 5.186 5.264 11.189 11.357 24.3 11.357 14.106 0 22.922-7.053 26.449-21.16-5.29 7.054-11.462 9.699-18.515 7.935-4.024-1.005-6.9-3.926-10.084-7.157C72.012 6.093 66.01 0 52.898 0zM26.45 31.739c-14.106 0-22.922 7.053-26.449 21.16 5.29-7.054 11.461-9.699 18.514-7.935 4.025 1.007 6.9 3.926 10.084 7.157 5.186 5.264 11.19 11.357 24.3 11.357 14.107 0 22.923-7.053 26.45-21.16-5.29 7.054-11.462 9.699-18.515 7.935-4.024-1.005-6.9-3.926-10.084-7.156-5.186-5.265-11.189-11.358-24.3-11.358z"
             fill="#38bdf8" />
         </svg>
-        <span class="capitalize text-white"> {{ tool2Name }} </span>
+        <span class="capitalize text-white">{{ tool2Name }}</span>
       </a>
     </div>
 
-    <small class="block text-white/75 mt-4"> by {{ footer().copyright }}, {{ year }} </small>
+    <small class="block text-white/75 mt-4">
+      by {{ footer().copyright }}, {{ year }}
+    </small>
   </div>
 </footer>

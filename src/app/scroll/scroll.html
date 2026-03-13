@@ -13,15 +13,14 @@
       <use href="./svg/icon-sprite.xml#icon-up" />
     </svg>
   </a>
-  <!-- / -->
 
   @let pill = pillCurrentAnchor();
-  <!-- / -->
   @if (pill) {
-  <p class="absolute top-10 left-17 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg">
-    {{ pill }}
-  </p>
-  }<!-- / -->
+    <p
+      class="absolute top-10 left-17 p-1 px-2 bg-gray-950/80 border border-amber-500/30 rounded-lg">
+      {{ pill }}
+    </p>
+  }
 
   <a
     #anchorNextRef

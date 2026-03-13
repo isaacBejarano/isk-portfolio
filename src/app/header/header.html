@@ -1,6 +1,7 @@
 <!-- Navigation-->
 <header class="mb-10 bg-linear-to-t from-stone-900 to-stone-950">
-  <div class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2">
+  <div
+    class="max-w-5xl mx-auto flex flex-wrap gap-2 justify-between align-middle p-2">
     <!-- MENU -->
     <div class="flex-1 flex gap-2 p-2  ">
       <button
@@ -20,11 +21,8 @@
         <div class="w-12 mx-auto md:mx-0">
           <img [src]="nav().src" [alt]="nav().alt" />
         </div>
-        <!-- / -->
         @let route1 = anchors()['anchor1'];
-        <!-- / -->
         @let route2 = anchors()['anchor2'];
-        <!-- / -->
         @let route3 = anchors()['anchor3'];
 
         <ol

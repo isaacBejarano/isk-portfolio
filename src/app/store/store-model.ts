@@ -189,10 +189,10 @@ export class Store implements _StoreSchema {
       ['TypeScript', './img/skills/typescript.webp', 1],
       ['PHP', './img/skills/php.webp', 2],
       ['C#', './img/skills/c-sharp.webp', 2],
-      ['RegExp (regular expressions)', './img/skills/regex.webp', 2],
+      ['RegExp (Regular Expressions)', './img/skills/regex.webp', 2],
     ],
     environment: [
-      ['Windows Subsystem for Linux', './img/skills/wsl.webp', 1],
+      ['WSL (Windows Subsystem for Linux)', './img/skills/wsl.webp', 2],
       ['Docker', './img/skills/docker.webp', 2],
       ['IIS', './img/skills/iis.webp', 2],
       ['Nginx', './img/skills/nginx.webp', 3],
@@ -213,7 +213,7 @@ export class Store implements _StoreSchema {
       ['REST API Architecture', './img/skills/rest.webp', 1],
       ['Laravel', './img/skills/laravel.webp', 2],
       ['.NET', './img/skills/dotnet.webp', 2],
-      ['Node.js', './img/skills/node.webp', 3],
+      ['Node.js', './img/skills/node.webp', 2],
     ],
     'package managers': [
       ['Node Package Manager', './img/skills/npm.webp', 1],

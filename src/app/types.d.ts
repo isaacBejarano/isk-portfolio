@@ -22,7 +22,7 @@ type Img = {
   alt: string;
 };
 
-type StoreAbout = { legend: string } & Img;
+type StoreAbout = { role: string; specialist: string } & Img;
 
 type StorePortfolio = {
   common: StorePortfolioCommon;
@@ -113,7 +113,10 @@ type AppRoutePaths = { path: AppRouteSatic | AppRouteDynamic };
 ////
 
 type Env = { api: string; credentialsPayloadUnit: CredentialsPayload };
-type CredentialsPayload = { username: string; password: CredentialsDefaulPassword };
+type CredentialsPayload = {
+  username: string;
+  password: CredentialsDefaulPassword;
+};
 type CredentialsDefaulPassword = 'SECRET'; // remove by 'string' when in real env
 type LoginResponse = RegisterResponse & { token: string };
 type RegisterResponse = { msg: string };

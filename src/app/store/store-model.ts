@@ -22,7 +22,8 @@ export class Store implements _StoreSchema {
     src: './img/portfolio/isaac-bejarano.webp',
     alt: 'Isaac Bejarano photo',
     title: 'Isaac Bejarano',
-    legend: 'Web Developer - Angular Specialist',
+    role: 'Frontend Developer',
+    specialist: 'Angular Specialist',
   };
 
   // portfolio

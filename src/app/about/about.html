@@ -1,112 +1,911 @@
-<header class="mb-10">
-  <h1 class="text-xl text-center text-amber-500/90 mb-0 uppercase">{{ about().title }}</h1>
-  <p class="text-white text-center font-light text-lg">{{ about().legend }}</p>
+<div class="mb-10">
+  <div
+    class="relative w-[1000px] min-h-[1500px] mx-auto p-10 m-10 bg-amber-50 border border-gray-900/10 text-gray-900 rounded-sm shadow-black/40 shadow-md font-mono bg-[url(/img/tails/handmadepaper_@2X.png)] bg-blend-luminosity">
+    <!-- divider wateramrk 1 -->
+    <div
+      class="absolute top-0 left-0 w-full flex justify-between gap-5 px-2 pt-1">
+      @for (item of items(9); track item.id) {
+        <svg class="size-8 fill-amber-900/10" viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-code" />
+        </svg>
+      }
+    </div>
 
-  <isk-divider css="mt-3" />
+    <!-- divider wateramrk 2 -->
+    <div
+      class="absolute left-0 top-[53.5rem] w-full flex justify-between gap-5 px-2 pt-1">
+      @for (item of items(9); track item.id) {
+        <svg class="size-8 fill-amber-900/10" viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-code" />
+        </svg>
+      }
+    </div>
 
-  <div class="px-5 py-5 lg:px-0">
-    <img
-      class="float-left mr-7 mb-5 mt-2.5 border border-amber-500/50 rounded-sm shadow-amber-500/15 shadow-xl w-[150px] lg:w-[200px]"
-      width="200"
-      height="auto"
-      [src]="about().src"
-      [alt]="about().alt" />
+    <!-- divider wateramrk 3 -->
+    <div
+      class="absolute left-0 top-[78rem] w-full flex justify-between gap-5 px-2 pt-1">
+      @for (item of items(9); track item.id) {
+        <svg class="size-8 fill-amber-900/10" viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-code" />
+        </svg>
+      }
+    </div>
 
-    <p class="pb-3 text-white text-justify">
-      <span class="block">Hi!</span>
-      <span class="block">My name is Isaac.</span>
-    </p>
+    <!-- divider wateramrk 4 -->
+    <div
+      class="absolute left-0 top-[102rem] w-full flex justify-between gap-5 px-2 pt-1">
+      @for (item of items(9); track item.id) {
+        <svg class="size-8 fill-amber-900/10" viewBox="0 0 100 100">
+          <use href="./svg/icon-sprite.xml#icon-code" />
+        </svg>
+      }
+    </div>
 
-    <p class="pb-3 text-white text-justify">
-      I'm a well-seasoned Web Developer with more than 3 years of experience in the field.
-      <br />
-      I'm currently finishing a <abbr class="text-amber-500" title="Master of Science">MSc</abbr> on
-      <b class="font-semibold">
-        <span class="text-pink-500"> Website and Web App Development </span>
-      </b>
-      at <abbr class="text-amber-500" title="Univeersitat Oberta de Catalunya">UOC</abbr>
-      University.
-    </p>
+    <!-- Stamp -->
+    <div
+      class="absolute z-1 top-23 right-20 w-[300px] -rotate-18 border-10 border-double border-red-600 text-red-600 rounded-sm uppercase text-center leading-[0.9] mix-blend-multiply">
+      <p class="block text-[2.75rem] pt-1.5">USER AGENT:</p>
+      <p class="block text-[3rem]">IDENTIFIED</p>
+      <p class="text-xs text-justify px-3 pb-1 font-bold">
+        Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko)
+        Chrome/146.0.0.0 Safari/537.36
+      </p>
+    </div>
 
-    <p class="pb-3 text-white text-justify">
-      I'm a specialist on creating
-      <abbr class="text-amber-500" title="Single Page Applications">SPA</abbr>
-      from scratch with
-      <span class="font-semibold text-cyan-200"> Angular </span>
-      and modern <b class="font-semibold"> Frontend </b> tooling like
-      <b class="font-semibold text-cyan-200"> Tailwind </b>
+    <!-- Header -->
+    <header>
+      <h1 class="text-2xl font-black uppercase">{{ about().title }}</h1>
+      <p class="mb-10 text-xl text-amber-900">
+        {{ about().role }} -
+        <b>{{ about().specialist }}</b>
+      </p>
+    </header>
+
+    <!-- Clip -->
+    <svg
+      class="absolute top-35 -left-18 z-1 rotate-25 size-40 fill-gray-400 stroke-6 stroke-gray-800/50 drop-shadow-sm drop-shadow-black/50"
+      viewBox="0 0 100 100">
+      <use href="./svg/icon-sprite.xml#icon-clip" />
+    </svg>
+    <div
+      class="absolute top-[247px] left-[0px] z-1 size-[30px] rotate-2 bg-amber-50 bg-[url(/img/tails/handmadepaper_@2X.png)] bg-blend-luminosity"></div>
+
+    <!-- image + About -->
+    <section class="mb-10">
+      <img
+        class="float-left mr-7 mb-5 mt-2.5 -rotate-5 border border-amber-950 shadow-md shadow-amber-950"
+        width="200"
+        height="auto"
+        src="img/portfolio/isaac-bejarano.webp"
+        [alt]="imgAlt()" />
+
+      <p class="pb-3 text-justify">
+        <span class="block">Hi!</span>
+        <span class="block">My name is Isaac.</span>
+      </p>
+
+      <p class="pb-3 text-justify">
+        I'm a well-seasoned Web Developer with
+        <br />
+        more than
+        <b>3 years of experience</b>
+        in the
+        <br />
+        field.
+      </p>
+
+      <p class="pb-3 text-justify">
+        I'm currently finishing a
+        <b>Master of Science</b>
+        in
+        <b class="font-semibold">
+          <span class="text-amber-900">Website and Web App Development</span>
+        </b>
+        at
+        <span class="font-bold">UOC</span>
+        University (Universitat Oberta de Catalunya).
+      </p>
+
+      <p class="pb-3 text-justify">
+        I'm a specialist on creating SPAs from scratch with
+        <span class="font-semibold text-amber-900">Angular</span>
+        and modern Frontend tooling like
+        <b class="font-semibold text-amber-900">Tailwind</b>
+        and Vite.
+      </p>
+
+      <p class="pb-3 text-justify">
+        After graduating in
+        <b class="font-semibold">
+          <span class="text-amber-900">Communication and Media Studies</span>
+        </b>
+        at
+        <b>URL</b>
+        University (Universitat Ramon Llull), I kept learning image
+        post-production technologies and
+        <b class="font-semibold">English</b>
+        and
+        <b class="font-semibold">German</b>
+        as foreign languages. Both concepts of image manipulation and
+        linguistics made me think on how similar or different are human
+        languages an high level programming languages like
+        <b class="font-semibold">JavaScript</b>
+        . I then remembered the classes I took on programming with Pascal as a
+        teenager at school.
+      </p>
+
+      <p class="pb-3 text-justify">
+        That thought triggered my curiosity and I suddenly started to learn
+        <b class="font-semibold">Web Development</b>
+        by myself, mainly contructing webpages on topics I enjoyed. Of course,
+        all those websites were not deployed anywhere. They were just for fun
+        and for the sake of learning something exciting.
+      </p>
+
+      <p class="pb-3 text-justify">
+        I ended up enrolling in multiple training courses, as well as
+        specialized
+        <b class="font-semibold">certificate courses</b>
+        to broaden my knowledge on web technologies. I worked as a trainee in a
+        couple of companies and I eventually worked full-time as a
+        <b class="font-semibold">Full Stack</b>
+        developer at an
+        <b class="font-semibold">IT Consultancy</b>
+        , although where I truly shine is the
+        <b class="font-semibold text-amber-900">Frontend Development</b>
+        .
+      </p>
+
+      <p class="pb-3 text-justify">
+        I consider myself a creative person, yet analytic; teamwork-oriented;
+        always eager to think about new ideas to make our life better as
+        developers and human beings. I deeply believe that a workplace with a
+        peaceful atmosphere is a must. And knowledge sharing and having a good
+        sense of humor are crucial for me too. Please don't be afraid if I dare
+        to display some of it.👽
+      </p>
+
+      <p>Time to make some magic tricks!</p>
+    </section>
+    <!-- 👽😉 -->
+
+    <!-- Top perks -->
+    <section class="relative mb-10">
+      <h2 class="mb-5 text-2xl">
+        <span class="text-amber-900 font-bold uppercase">Top Skills</span>
+        <span class="text-amber-900/40">♥♣♦♠</span>
+      </h2>
+
+      <ul class="flex flex-wrap gap-5 mb-5 font-semibold">
+        <li
+          class="p-2 px-4 text-purple-700 bg-linear-to-tr from-purple-100/75 from-90% to-white/25 to-10% border border-purple-400/25 rotate-5 shadow-xs">
+          Angular
+        </li>
+        <li
+          class="p-2 px-4 text-purple-700 bg-linear-to-tr from-purple-100/75 from-90% to-white/25 to-10% border border-purple-400/25 -rotate-1 shadow-xs">
+          TypeScript
+        </li>
+        <li
+          class="p-2 px-4 text-purple-700 bg-linear-to-tr from-purple-100/75 from-90% to-white/25 to-10% border border-purple-400/25 -rotate-3 shadow-xs">
+          Tailwind
+        </li>
+        <li
+          class="p-2 px-4 text-purple-700 bg-linear-to-tr from-purple-100/75 from-90% to-white/25 to-10% border border-purple-400/25 rotate-3 shadow-xs">
+          HTML & CSS
+        </li>
+        <li
+          class="p-2 px-4 text-purple-700 bg-linear-to-tr from-purple-100/75 from-90% to-white/25 to-10% border border-purple-400/25 -rotate-2 shadow-xs">
+          RxJS
+        </li>
+        <li
+          class="p-2 px-4 text-sky-700 bg-linear-to-tr from-sky-100/75 from-90% to-white/25 to-10% border border-sky-400/25 rotate-2 shadow-xs">
+          REST API
+        </li>
+        <li
+          class="p-2 px-4 text-sky-700 bg-linear-to-tr from-sky-100/75 from-90% to-white/25 to-10% border border-sky-400/25 -rotate-1 shadow-xs">
+          SEO & Web Vitals
+        </li>
+        <li
+          class="p-2 px-4 text-sky-700 bg-linear-to-tr from-sky-100/75 from-90% to-white/25 to-10% border border-sky-400/25 rotate-2 shadow-xs">
+          Object Oriented Programming
+        </li>
+        <li
+          class="p-2 px-4 text-sky-700 bg-linear-to-tr from-sky-100/75 from-90% to-white/25 to-10% border border-sky-400/25 -rotate-1 shadow-xs">
+          Functional Programming
+        </li>
+        <li
+          class="p-2 px-4 text-emerald-700 bg-linear-to-tr from-emerald-100/75 from-90% to-white/25 to-10% border border-emerald-400/25 -rotate-2 shadow-xs">
+          Sense of Humor
+        </li>
+        <li
+          class="p-2 px-4 text-emerald-700 bg-linear-to-tr from-emerald-100/75 from-90% to-white/25 to-10% border border-emerald-400/25 -rotate-1 shadow-xs">
+          Patience
+        </li>
+        <li
+          class="p-2 px-4 text-emerald-700 bg-linear-to-tr from-emerald-100/75 from-90% to-white/25 to-10% border border-emerald-400/25 -rotate-2 shadow-xs">
+          Knowledge Sharing
+        </li>
+        <li
+          class="p-2 px-4 text-emerald-700 bg-linear-to-tr from-emerald-100/75 from-90% to-white/25 to-10% border border-emerald-400/25 rotate-1 shadow-xs">
+          Polimathic Interests
+        </li>
+      </ul>
+
+      <p class="pb-3 text-justify">
+        You can take a more detailed look at my tech skills, visiting my
+        <b class="font-semibold">LinkedIn</b>
+        profile at
+        <a
+          class="text-blue-700 underline underline-offset-4"
+          href="https://www.linkedin.com/in/isaac-bejarano"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://www.linkedin.com/in/isaac-bejarano
+        </a>
+        , or my online
+        <b class="font-semibold">portfolio</b>
+        at
+        <a
+          class="text-blue-700 underline underline-offset-4"
+          href="https://isaacbejarano.com/"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://isaacbejarano.com/
+        </a>
+      </p>
+
+      <p class="pb-3 text-justify">
+        And if you fancy, you can also visit my
+        <b class="font-semibold">GitHub</b>
+        profile and take a look at my cross-language interests as a developer.
+        Feel free to give my repos a star:
+        <a
+          class="text-blue-700 underline underline-offset-4"
+          href="https://github.com/isaacBejarano"
+          target="_blank"
+          rel="noopener noreferrer">
+          https://github.com/isaacBejarano
+        </a>
+      </p>
+    </section>
+
+    <!-- Lang / Edu / Certs -->
+    <section class="mb-10 flex gap-5 justify-between">
+      <!-- Languages -->
+      <div class="w-[225px]">
+        <h2 class="mb-5 -ml-2 px-2 w-fit text-2xl uppercase">
+          <span class="text-amber-900 font-bold">Languages</span>
+          <span class="text-amber-900/50">ᚠᚢᛏᚻᚨᚱᚲ</span>
+        </h2>
+
+        <ul class="mb-5 ml-5 list-disc">
+          <li>
+            <span class="text-amber-950 font-semibold text-lg">English</span>
+            <small>(Bilingual)</small>
+          </li>
+          <li>
+            <span class="text-amber-950 text-lg font-semibold">Spanish</span>
+            <small>(Native)</small>
+          </li>
+          <li>
+            <span class="text-amber-950 text-lg font-semibold">German</span>
+            <small>(Working Knowledge)</small>
+          </li>
+          <li>
+            <span class="text-amber-950 text-lg font-semibold">Catalan</span>
+            <small>(Native)</small>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Education -->
+      <div class="flex-1">
+        <h2 class="mb-5 -ml-2 px-2 w-fit text-2xl uppercase">
+          <span class="text-amber-900 font-bold">Education</span>
+          <span class="text-amber-900/75">🕮</span>
+        </h2>
+
+        <ul class="mb-5 ml-5 list-disc flex flex-col gap-3">
+          <li class="leading-4">
+            <span class="font-semibold">Master of Science</span>
+            in
+            <br />
+            <span class="font-semibold text-amber-950">
+              Web and App Development
+            </span>
+            <br />
+            <small>
+              <b>Open University of Catalonia</b>
+            </small>
+            <small>[2027]</small>
+          </li>
+          <li class="leading-4">
+            <span class="font-semibold">Bachelor's Degree</span>
+            in
+            <br />
+            <span class="font-semibold text-amber-950">
+              Communication and Media Studies
+            </span>
+            <br />
+            <small>
+              <b>Ramon Llull University</b>
+            </small>
+            <small>[2005]</small>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Certs -->
+      <div class="w-[360px]">
+        <h2 class="mb-5 -ml-2 px-2 w-fit text-2xl uppercase">
+          <span class="text-amber-900 font-bold">Certifications</span>
+          <span class="text-amber-900/60">🎖</span>
+        </h2>
+
+        <!-- dates 'Certifications' (!= certificate)  otorgan estatus profesional que obtienes tras aprobar un examen oficial de una entidad reconocida (Microsoft, CIFO, etc.) -->
+        <ul class="mb-5 ml-5 list-disc flex flex-col gap-3">
+          <li class="leading-4">
+            <span class="font-semibold text-amber-950">Frontend Angular</span>
+            <br />
+            <small>
+              <b>IT Academy</b>
+              (Barcelona Activa) [2021]
+            </small>
+          </li>
+          <li class="leading-4">
+            <span class="font-semibold text-amber-950">
+              Web Development and Deployment
+            </span>
+            <br />
+            <small>
+              <b>CIFO</b>
+              (Spanish Professional Certification Courses) [2019]
+            </small>
+          </li>
+          <li class="leading-4">
+            <span class="font-semibold text-amber-950">
+              Digital Photographic Production
+            </span>
+            <br />
+            <small>
+              <b>CIFO</b>
+              (Spanish Professional Certification Courses) [2018]
+            </small>
+          </li>
+          <li class="leading-4">
+            <span class="font-semibold text-amber-950">
+              Certificate in Advanced German
+            </span>
+            <br />
+            <small>
+              <b>EOI</b>
+              (Spanish Official Language School)
+            </small>
+            <br />
+            <small>B2 Level in the CEFR system</small>
+            <small>[2011]</small>
+          </li>
+          <li class="leading-4">
+            <span class="font-semibold text-amber-950">
+              Certificate in Advanced English
+            </span>
+            <br />
+            <small><b>University of Cambridge</b></small>
+            <br />
+            <small>C1 Level in the CEFR system</small>
+            <small>[2008]</small>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Experience -->
+    <section class="mb-10">
+      <h2 class="mb-5 -ml-2 px-2 w-fit text-2xl uppercase">
+        <span class="text-amber-900 font-bold">Experience</span>
+        <span class="text-amber-900/50">⚒</span>
+      </h2>
+
+      <!-- 2024 -->
+      <div
+        class="relative p-5 mb-8 border border-amber-950/25 rounded-xs shadow-sm shadow-amber-900/50 bg-white/75 rotate-1">
+        <header class="mb-5 text-center">
+          <h3 class="font-semibold text-md">Haley Consultores Informáticos</h3>
+          <small>2 years 11 months</small>
+          <small class="block">Barcelona, Catalonia, Spain</small>
+          <span
+            class="absolute top-5 -left-10 p-2 -rotate-40 w-[130px] text-amber-700 bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 shadow-xs">
+            MISSION 4
+          </span>
+          <span
+            class="absolute bottom-5 -right-12 z-1 -rotate-55 h-[40px] w-[130px] bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 shadow-xs"></span>
+        </header>
+
+        <div class="mb-5">
+          <p class="font-semibold italic">Proficient with:</p>
+          <ul class="list-disc pl-4 italic">
+            <li>
+              <span class="text-amber-900">Angular Frontend</span>
+              Development from scratch and also from legacy projects.
+            </li>
+            <li>
+              CSS component's library (
+              <span class="text-amber-900">Angular Material</span>
+              ).
+            </li>
+            <li>
+              Angular
+              <span class="text-amber-900">
+                code documentation and assessment
+              </span>
+              for owned and third party source code.
+            </li>
+          </ul>
+        </div>
+
+        <div class="mb-5">
+          <p class="font-semibold italic">Working experience with:</p>
+          <ul class="list-disc pl-4 italic">
+            <li>
+              <span class="text-amber-900">.NET Backend</span>
+              Development support.
+            </li>
+            <li>
+              <span class="text-amber-900">Azure DevOps</span>
+              repositories, Kanban and gitflow.
+            </li>
+            <li>
+              Occasional use of
+              <span class="text-amber-900">Docker</span>
+              for local development.
+            </li>
+            <li>
+              Occasional implementation of Unit and E2E testing with
+              <span class="text-amber-900">Jasmine</span>
+              and
+              <span class="text-amber-900">Cypress</span>
+              .
+            </li>
+          </ul>
+        </div>
+
+        <div class="flex gap-10 justify-between">
+          <div>
+            <header class="mb-2.5">
+              <h4 class="text-amber-900 text-xl font-semibold">
+                Angular Developer
+              </h4>
+              <small>December 2021 - October 2024 (2 years 11 months)</small>
+            </header>
+
+            <p class="text-justify">
+              I worked for this IT Consultancy on a daily-basis, designing
+              <b>Angular</b>
+              Web Apps and
+              <b>Ionic</b>
+              Mobile Apps, designing components, as well as coming up with
+              algorithms, design patterns and state management to solve problems
+              which were affecting the Frontend development in the company's
+              projects -specially in legacy Angular 6+ projects.
+            </p>
+          </div>
+
+          <div>
+            <header class="mb-2.5">
+              <h4 class="text-amber-900 text-xl font-semibold">
+                .NET Developer
+              </h4>
+              <small>June 2023 - October 2024 (1 year 5 months)</small>
+            </header>
+
+            <p class="text-justify">
+              Then I gradually transitioned into a Full Stack supporting role,
+              contributing to API endpoints design and Backend business logic
+              development using
+              <b>.NET</b>
+              , getting working experience with controllers, services,
+              migrations, the .NET SDK, the Entity Framework Core ORM, cloud
+              continuous integration on Azure, as well as documenting
+              <b>REST API</b>
+              s with Swagger.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="absolute top-0 right-0 p-5 mix-blend-luminosity flex justify-end gap-2">
+          <img
+            class="size-8 -rotate-4"
+            width="auto"
+            height="auto"
+            src="img/skills/angular.webp"
+            [alt]="icongAlt('angular')" />
+          <img
+            class="size-8 rotate-6"
+            width="auto"
+            height="auto"
+            src="img/skills/rxjs.webp"
+            [alt]="icongAlt('rxjs')" />
+          <img
+            class="size-8 rotate-8"
+            width="auto"
+            height="auto"
+            src="img/skills/material.webp"
+            [alt]="icongAlt('material')" />
+          <img
+            class="w-7 h-8 -rotate-1"
+            width="auto"
+            height="auto"
+            src="img/skills/c-sharp.webp"
+            [alt]="icongAlt('c-sharp')" />
+          <img
+            class="size-8 -rotate-1"
+            width="auto"
+            height="auto"
+            src="img/skills/dotnet.webp"
+            [alt]="icongAlt('dotnet')" />
+          <img
+            class="size-8 rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/typescript.webp"
+            [alt]="icongAlt('typescript')" />
+          <img
+            class="size-8 -rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/azure.webp"
+            [alt]="icongAlt('azure')" />
+        </div>
+      </div>
+
+      <!-- 2023 -->
+      <div
+        class="relative p-5 mb-8 border border-amber-950/25 rounded-xs shadow-sm shadow-amber-900/50 bg-white/75 rotate-0">
+        <header class="mb-5 text-center">
+          <h3 class="font-semibold text-md">Celler MontPicolis</h3>
+          <small>December 2020 - June 2021 (7 months)</small>
+          <small class="block">Barcelona, Catalonia, Spain</small>
+          <span
+            class="absolute top-0 left-0 w-[130px] text-amber-700 bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 -rotate-45 -translate-x-7 translate-y-5 shadow-xs">
+            MISSION 3
+          </span>
+          <span
+            class="absolute top-0 -right-12 z-1 rotate-65 h-[40px] w-[130px] bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 shadow-xs"></span>
+        </header>
+
+        <div class="mb-5">
+          <p class="font-semibold italic">Proficient with:</p>
+          <ul class="list-disc pl-4 italic">
+            <li>
+              <span class="text-amber-900">Headless REST API</span>
+              use and implementation with WordPress, following
+              <b>Roy Fielding</b>
+              's definition and reaching the Level 3 (
+              <span class="text-amber-900">hateoas</span>
+              ) on
+              <b>Richardson</b>
+              's model, extending the API with custom endpoints coded in PHP.
+            </li>
+            <li>
+              <span class="text-amber-900">Angular Frontend</span>
+              Development from scratch, with
+              <span class="text-amber-900">SSG Prerendering</span>
+              (Scully).
+            </li>
+            <li>
+              <span class="text-amber-900">Technical SEO</span>
+              fetching WordPress SEO-Yoast plugin's endpoints and using
+              Angular's Renderer2, Title and Meta classes to dynamically
+              generate meta tags, cannonical, title, description as well as open
+              graph meta tags.
+            </li>
+            <li>
+              <span class="text-amber-900">Web Vitals</span>
+              on Lighthouse over 95 in SEO, Performance, Accessibility and Best
+              Practices.
+            </li>
+            <li>
+              CSS component's library (
+              <span class="text-amber-900">Bootstrap</span>
+              ).
+            </li>
+            <li>
+              Installation of WordPress in an
+              <span class="text-amber-900">Apache</span>
+              server.
+            </li>
+            <li>
+              <span class="text-amber-900">Authentication</span>
+              with OAuth 1.0 one-legged.
+            </li>
+            <li>
+              <span class="text-amber-900">WordPress Administration</span>
+              : firewall and users with different permisions.
+            </li>
+            <li>
+              <span class="text-amber-900">WordPress Security</span>
+              : restrict access to static file's folders through
+              <span class="text-amber-900">.htaccess</span>
+              , implementation of Google's
+              <span class="text-amber-900">reCaptcha</span>
+              v3 and
+              <span class="text-amber-900">2FA Authentication</span>
+              .
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <header class="mb-2.5">
+            <h4 class="text-amber-900 text-xl font-semibold">
+              Angular & WordPress Developer and Admin
+            </h4>
+          </header>
+
+          <p class="text-justify">
+            I designed a whole
+            <b>eCommerce MVP</b>
+            website project, using
+            <b>Angular</b>
+            for the Frontend SPA and PHP to tweak the WordPress
+            <b>REST API</b>
+            into a
+            <b>headless API</b>
+            .
+          </p>
+        </div>
+
+        <div
+          class="absolute top-0 right-0 p-5 mix-blend-luminosity flex justify-end gap-2">
+          <img
+            class="w-16 h-8 -rotate-8"
+            width="auto"
+            height="auto"
+            src="img/skills/rest.webp"
+            [alt]="icongAlt('rest')" />
+          <img
+            class="size-8 rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/angular.webp"
+            [alt]="icongAlt('angular')" />
+          <img
+            class="w-10 h-8 -rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/bootstrap.webp"
+            [alt]="icongAlt('bootstrap')" />
+          <img
+            class="size-8 rotate-15"
+            width="auto"
+            height="auto"
+            src="img/skills/wordpress.webp"
+            [alt]="icongAlt('wordpress')" />
+          <img
+            class="w-10 h-8 -rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/php.webp"
+            [alt]="icongAlt('php')" />
+          <img
+            class="size-8 -rotate-2"
+            width="auto"
+            height="auto"
+            src="img/skills/typescript.webp"
+            [alt]="icongAlt('typescript')" />
+        </div>
+      </div>
+
+      <!-- 2020 -->
+      <div
+        class="relative p-5 mb-8 border border-amber-950/25 rounded-xs shadow-sm shadow-amber-900/50 bg-white/75 -rotate-1">
+        <header class="mb-5 text-center">
+          <h3 class="font-semibold text-md">IT Academy (Barcelona Activa)</h3>
+          <small>November 2020 - December 2020 (2 months)</small>
+          <small class="block">Barcelona, Catalonia, Spain</small>
+          <span
+            class="absolute top-3 -left-10 p-2 -rotate-65 w-[130px] text-amber-700 bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 shadow-xs">
+            MISSION 2
+          </span>
+          <span
+            class="absolute top-5 -right-13 z-1 rotate-55 h-[40px] w-[130px] bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 shadow-xs"></span>
+        </header>
+
+        <div class="mb-5">
+          <p class="font-semibold italic">Proficient with:</p>
+          <ul class="list-disc pl-4 italic">
+            <li>
+              Vanilla
+              <span class="text-amber-900">CSS</span>
+              ,
+              <span class="text-amber-900">HTML</span>
+              and
+              <span class="text-amber-900">JavaScript</span>
+              .
+            </li>
+            <li>
+              <span class="text-amber-900">WordPress Theme</span>
+              customization.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <header class="mb-2.5">
+            <h4 class="text-amber-900 text-xl font-semibold">
+              Wordpress Developer
+            </h4>
+          </header>
+
+          <p class="text-justify">
+            Internship project for the IT Academy Barcelona certified bootcamp.
+            My responsibilities included reviewing and implementing
+            <b>CSS</b>
+            ,
+            <b>HTML</b>
+            and
+            <b>JavaScript</b>
+            components for views generated from a
+            <b>WordPress</b>
+            Backend. This project was the personal website of Lluís Fernández
+            Alà for promoting his candidature to the presidency of the Football
+            Club Barcelona.
+          </p>
+        </div>
+
+        <div
+          class="absolute top-0 right-0 p-5 mix-blend-luminosity flex justify-end gap-2">
+          <img
+            class="size-8 -rotate-8"
+            width="auto"
+            height="auto"
+            src="img/skills/wordpress.webp"
+            [alt]="icongAlt('wordpress')" />
+          <img
+            class="size-8 -rotate-4"
+            width="auto"
+            height="auto"
+            src="img/skills/html.webp"
+            [alt]="icongAlt('html')" />
+          <img
+            class="size-8 -rotate-1"
+            width="auto"
+            height="auto"
+            src="img/skills/css.webp"
+            [alt]="icongAlt('css')" />
+          <img
+            class="size-8 rotate-2"
+            width="auto"
+            height="auto"
+            src="img/skills/javascript.webp"
+            [alt]="icongAlt('javascript')" />
+        </div>
+      </div>
+
+      <!-- 2018 -->
+      <div
+        class="relative p-5 border border-amber-950/25 rounded-xs shadow-sm shadow-amber-900/50 bg-white/75 rotate-1">
+        <header class="mb-5 text-center">
+          <h3 class="font-semibold text-md">Mediatics</h3>
+          <small>July 2018 - August 2018 (2 months)</small>
+          <small class="block">Barcelona, Catalonia, Spain</small>
+          <span
+            class="absolute top-0 -left-10 p-2 -rotate-15 w-[130px] text-amber-700 bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 shadow-xs">
+            MISSION 1
+          </span>
+          <span
+            class="absolute -top-6 -right-8 z-1 rotate-15 h-[40px] w-[130px] bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 shadow-xs"></span>
+          <span
+            class="absolute -bottom-6 right-18 z-1 rotate-87 h-[40px] w-[100px] bg-linear-to-tr from-amber-100/75 from-90% to-white/25 to-10% border border-amber-400/50 p-2 shadow-xs"></span>
+        </header>
+
+        <div class="mb-5">
+          <p class="font-semibold italic">Proficient with:</p>
+          <ul class="list-disc pl-4 italic">
+            <li>
+              <span class="text-amber-900">
+                WordPress ecosystem of plugins and themes
+              </span>
+              .
+            </li>
+            <li>
+              <span class="text-amber-900">Image optimization</span>
+              (processed with Photoshop and plugins for format conversion).
+            </li>
+            <li>
+              <span class="text-amber-900">
+                JavaScript and CSS post-processing
+              </span>
+              for optimization through minification.
+            </li>
+            <li>
+              Deployment of websites to the
+              <span class="text-amber-900">Apache server</span>
+              using the
+              <b>FTPS protocol</b>
+              .
+            </li>
+            <li>
+              <span class="text-amber-900">PHP</span>
+              to tweak WordPress plugins and themes to expand their
+              functionalities beyond defaults.
+            </li>
+            <li>
+              <span class="text-amber-900">JavaScript</span>
+              used in Custom Post Types to extend WordPress plugin and theme UI
+              functionalities.
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <header class="mb-2.5">
+            <h4 class="text-amber-900 text-xl font-semibold">
+              WordPress Developer and Admin
+            </h4>
+          </header>
+
+          <p class="text-justify">
+            Internship in this SEO-focused online marketing consultancy, being
+            responsible for the layout and development of webpages with
+            WordPress for
+            <b>SME</b>
+            and
+            <b>Institutions</b>
+            .
+          </p>
+        </div>
+
+        <div
+          class="absolute top-0 right-0 p-5 mix-blend-luminosity flex justify-end gap-2">
+          <img
+            class="size-8 rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/wordpress.webp"
+            [alt]="icongAlt('wordpress')" />
+          <img
+            class="w-10 h-8 rotate-2"
+            width="auto"
+            height="auto"
+            src="img/skills/php.webp"
+            [alt]="icongAlt('php')" />
+          <img
+            class="size-8 rotate-2"
+            width="auto"
+            height="auto"
+            src="img/skills/html.webp"
+            [alt]="icongAlt('html')" />
+          <img
+            class="size-8 -rotate-5"
+            width="auto"
+            height="auto"
+            src="img/skills/css.webp"
+            [alt]="icongAlt('css')" />
+          <img
+            class="size-8 -rotate-2"
+            width="auto"
+            height="auto"
+            src="img/skills/javascript.webp"
+            [alt]="icongAlt('javascript')" />
+          <img
+            class="size-8 rotate-8"
+            width="auto"
+            height="auto"
+            src="img/skills/apache.webp"
+            [alt]="icongAlt('apache')" />
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <p
+      class="absolute w-full bottom-0 left-0 mb-8 text-amber-900 text-center text-sm">
+      100% handcrafted -AI free- resume made with
+      <b>Angular</b>
       and
-      <b class="font-semibold"> Vite </b>.
+      <b>Tailwind</b>
     </p>
-
-    <p class="pb-3 text-white text-justify">
-      After graduating on
-      <b class="font-semibold">
-        <span class="text-pink-500"> Communication and Media Studies </span>
-      </b>
-      at <abbr class="text-amber-500" title="Universitat Ramon Llull">URL</abbr>
-      University, I kept learning image post-production technologies and
-      <b class="font-semibold"> English </b> and <b class="font-semibold"> German </b>
-      as foreign languages. Both concepts of image manipulation and linguistics made me think on how
-      similar or different are human languages an high level programming languages like
-      <b class="font-semibold"> JavaScript </b>. I then remembered the classes I took on programming
-      with <b class="font-semibold"> Pascal </b>
-      as a teenager at school.
-    </p>
-
-    <p class="pb-3 text-white text-justify">
-      That thought triggered my curiosity and I suddenly started to learn
-      <b class="font-semibold"> Web Development </b> by myself, mainly contructing Webpages on
-      topics I enjoyed. Of course, all those websites were not deployed anywhere. They were just for
-      fun and for the sake of learning something exciting.
-    </p>
-
-    <p class="pb-3 text-white text-justify">
-      I ended up enrolling in multiple training courses, as well as specialized
-      <b class="font-semibold">certificate courses</b> to broaden my knowledge of the
-      <b class="font-semibold"> Web Tech Stack</b>. I worked as a trainee in a couple of companies
-      and I eventually worked full-time as a <b class="font-semibold">Full Stack</b>
-      web developer at an <b class="font-semibold">IT Consultancy</b>. <br />
-      That said, I truly shine as a <b class="font-semibold text-cyan-200">Frontend</b> Developer.
-    </p>
-
-    <p class="pb-3 text-white text-justify">
-      You can take a look at my working experience on the filed, visiting my
-      <b class="font-semibold">LinkedIn</b>
-      profile:
-      <br />
-      <a
-        class="text-cyan-500/90 underline underline-offset-4"
-        href="https://www.linkedin.com/in/isaac-bejarano"
-        target="_blank"
-        rel="noopener noreferrer">
-        https://www.linkedin.com/in/isaac-bejarano
-      </a>
-    </p>
-
-    <p class="pb-3 text-white text-justify">
-      And you can also visit my <b class="font-semibold"> GitHub </b> profile and take a look at my
-      cross-language and cross-role interests as a developer. <br />
-      And if you fancy some of my open projects and repos, give them a star:
-      <br />
-      <a
-        class="text-cyan-500/90 underline underline-offset-4"
-        href="https://github.com/isaacBejarano"
-        target="_blank"
-        rel="noopener noreferrer">
-        https://github.com/isaacBejarano
-      </a>
-    </p>
-
-    <p class="pb-3 text-white text-justify">
-      Finally, I'm proud to say I consider myself a creative person, yet analytic;
-      teamwork-oriented, always eager to think about new ideas to make our life better as developers
-      and human beings. I deeply believe that a workplace with a peaceful atmosphere is a must. And
-      knowledge sharing and having a good sense of humor are crucial for me too. I don't expect you
-      to have it, and I don't mind if you have none; but please don't be afraid if I dare to display
-      my inner fire. 😉
-    </p>
-
-    <p class="text-white text-justify font-semibold">Time to make some magic tricks!</p>
   </div>
-</header>
+</div>
